@@ -5,6 +5,12 @@
 const STORE_KEY = "wine_srs_v1";
 const INTERVAL = { 1: 1, 2: 1, 3: 2, 4: 4, 5: 8 }; // Leitner box -> sessions until due
 
+// A flight is capped so a session stays a habit rather than a chore. This caps
+// how many of the due cards get served; it does not touch the box arithmetic
+// or INTERVAL above. Undrawn cards stay due and come back next flight.
+const FLIGHT_SIZE = 20;    // cards served per flight
+const NEW_PER_FLIGHT = 5;  // at most this many never-seen cards per flight
+
 let CARDS = [];
 let BY_ID = {};
 
@@ -58,43 +64,70 @@ function cardHint(c) {
   return c.region;
 }
 
-/* ---------------- home ---------------- */
-function dueCount() {
-  const cur = state.totalSessions + 1;
-  return CARDS.filter(c => {
-    const s = state.cards[c.id];
-    if (!s || s.seen === 0) return true;
-    return (cur - s.lastSession) >= (INTERVAL[s.box] || 1);
-  }).length;
+/* ---------------- due ---------------- */
+// A card is due if it has never been seen, or if enough sessions have passed
+// for its box. `cur` is the session number the card would be answered in.
+function isDue(c, cur) {
+  const s = state.cards[c.id];
+  if (!s || s.seen === 0) return true;
+  return (cur - s.lastSession) >= (INTERVAL[s.box] || 1);
 }
+const isNew = c => (state.cards[c.id]?.seen || 0) === 0;
+function dueCards(cur) { return CARDS.filter(c => isDue(c, cur)); }
+
+/* ---------------- home ---------------- */
+function dueCount() { return dueCards(state.totalSessions + 1).length; }
+// How many cards the next flight will actually serve. The top-up in buildQueue
+// means a flight is always as full as the due pool allows.
+function flightSize() { return Math.min(FLIGHT_SIZE, dueCount()) || Math.min(FLIGHT_SIZE, CARDS.length); }
 const masteredCount = () => CARDS.filter(c => (state.cards[c.id]?.box || 1) >= 5).length;
 const seenCount = () => CARDS.filter(c => (state.cards[c.id]?.seen || 0) > 0).length;
 
 function renderHome() {
   $("streakNum").textContent = state.streak || 0;
   const due = dueCount();
-  $("hDue").textContent = due;
+  const flight = flightSize();
+  // Honest numbers: show what this flight pours, not the whole backlog.
+  $("hDue").textContent = due > flight ? flight + " of " + due : due;
+  $("hDueLabel").textContent = due > flight ? "In this flight" : "Due today";
   $("hMastered").textContent = masteredCount() + "/" + CARDS.length;
   $("hSeen").textContent = seenCount() + "/" + CARDS.length;
   const lead = $("homeLead");
   const today = ymd(new Date());
   if (state.lastPracticed === today && due === 0) lead.innerHTML = "All caught up for today. <em>Pour another</em> if you like.";
   else if (due === 0) lead.innerHTML = "Nothing forced today. A <em>free flight</em> keeps it sharp.";
+  else if (due > flight) lead.innerHTML = "<em>" + due + "</em> cards are ready. Tonight&rsquo;s flight pours <em>" + flight + "</em>.";
   else lead.innerHTML = "You have <em>" + due + "</em> card" + (due === 1 ? "" : "s") + " ready to taste.";
 }
 
 /* ---------------- session ---------------- */
+// Weakest boxes first, jittered so the same run of cards does not repeat in the
+// same order every flight. Unchanged from before the flight cap.
+function weakFirst(cards) {
+  cards.forEach(c => c._k = (state.cards[c.id]?.box || 1) + Math.random() * 1.15);
+  return cards.slice().sort((a, b) => a._k - b._k);
+}
+
+// Selects up to FLIGHT_SIZE cards from everything due. New material is
+// introduced at a trickle (NEW_PER_FLIGHT) in deck order, which is the
+// curriculum order: France before Italy before the rest, grape homes before
+// label decoding. Reviews fill the remainder weak-first; if there are not
+// enough reviews, the flight tops up with more new cards so it is always as
+// full as the due pool allows.
 function buildQueue() {
   const cur = state.totalSessions; // already incremented at start
-  let due = CARDS.filter(c => {
-    const s = state.cards[c.id];
-    if (!s || s.seen === 0) return true;
-    return (cur - s.lastSession) >= (INTERVAL[s.box] || 1);
-  });
-  if (due.length === 0) due = CARDS.slice(); // free review
-  due.forEach(c => c._k = (state.cards[c.id]?.box || 1) + Math.random() * 1.15); // weak first, jittered
-  due.sort((a, b) => a._k - b._k);
-  return due.map(c => c.id);
+  let due = dueCards(cur);
+  if (due.length === 0) due = CARDS.slice(); // free review: nothing forced today
+
+  const fresh = due.filter(isNew);            // deck order preserved
+  const review = due.filter(c => !isNew(c));
+
+  const picked = fresh.slice(0, NEW_PER_FLIGHT);
+  picked.push(...weakFirst(review).slice(0, FLIGHT_SIZE - picked.length));
+  if (picked.length < FLIGHT_SIZE) {
+    picked.push(...fresh.slice(NEW_PER_FLIGHT, NEW_PER_FLIGHT + FLIGHT_SIZE - picked.length));
+  }
+  return weakFirst(picked).map(c => c.id);
 }
 
 function startSession() {
