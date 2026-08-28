@@ -135,6 +135,17 @@
       Currently tasting as <b id="profileWho">Me</b>.</p>
     <ul class="plist" id="profileList"></ul>
     <button class="btn-primary" id="addProfileBtn">Add a taster</button>
+    <div class="block">
+      <h3>Backup &amp; restore</h3>
+      <p class="pnote">There is no account and nothing leaves this device. A backup
+        file holds every taster here &mdash; keep it somewhere safe, or open it on
+        another phone or browser to carry your progress across.</p>
+      <div class="pio">
+        <button class="link" id="exportBtn">Save a backup file</button>
+        <button class="link" id="importBtn">Restore from a file</button>
+      </div>
+      <input type="file" id="importFile" accept="application/json,.json" hidden>
+    </div>
   </section>
 
   <div class="foot"><span id="cardCount">0</span> cards &middot; French focus, then Tuscany, then the world</div>

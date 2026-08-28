@@ -3,7 +3,7 @@
 // localStorage as a fallback. Card types and direction rules are in CLAUDE.md.
 
 import {
-  FLIGHT_SIZE, freshCardState, dueCards as pickDue, buildQueue as pickQueue,
+  FLIGHT_SIZE, MAX_BOX, freshCardState, dueCards as pickDue, buildQueue as pickQueue,
   applyAnswer, ymd, nextStreak,
 } from "./engine/schedule.js";
 
@@ -477,6 +477,90 @@ async function addProfile() {
   await switchProfile(who.id);   // a new taster starts their own fresh deck
 }
 
+/* ---------------- backup and restore ----------------
+   There is no server, so a file is how progress moves between devices and how
+   it survives a cleared browser. A backup holds every profile on this device. */
+const BACKUP_APP = "la-cave", BACKUP_FORMAT = 1;
+
+// Backup files are untrusted input, so a restored state is rebuilt field by
+// field rather than trusted as-is. Card ids not in the current deck are
+// dropped; missing ones come back as fresh.
+const num = (v, d = 0) => (Number.isFinite(v) ? v : d);
+// Clamped, not just coerced: a finite but absurd counter would render as a
+// 13-digit streak. Nothing legitimate approaches this.
+const CAP = 1e6;
+const whole = (v, d = 0) => Math.min(CAP, Math.max(0, Math.round(num(v, d))));
+function sanitizeState(raw) {
+  if (!raw || typeof raw !== "object") return null;
+  const src = (raw.cards && typeof raw.cards === "object") ? raw.cards : {};
+  const cards = {};
+  for (const c of CARDS) {
+    const s = src[c.id];
+    cards[c.id] = (s && typeof s === "object")
+      ? { box: Math.min(MAX_BOX, Math.max(1, Math.round(num(s.box, 1)))),
+          correct: whole(s.correct), wrong: whole(s.wrong),
+          seen: whole(s.seen), lastSession: whole(s.lastSession) }
+      : freshCardState();
+  }
+  const lp = raw.lastPracticed;
+  return { version: 1, cards,
+    totalSessions: whole(raw.totalSessions), streak: whole(raw.streak), bestStreak: whole(raw.bestStreak),
+    lastPracticed: (typeof lp === "string" && /^\d{4}-\d{2}-\d{2}$/.test(lp)) ? lp : null };
+}
+
+async function exportBackup() {
+  const progress = {};
+  for (const p of profiles) {
+    const s = parse(await readKey(progressKey(p.id)));
+    if (s) progress[p.id] = s;
+  }
+  const payload = {
+    app: BACKUP_APP, format: BACKUP_FORMAT, deck: DECK_ID,
+    exportedAt: new Date().toISOString(), cardCount: CARDS.length,
+    profiles: profiles.map(p => ({ id: p.id, name: p.name, created: p.created })),
+    progress,
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "la-cave-progress-" + ymd(new Date()) + ".json";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 2000);
+}
+
+async function importBackup(file) {
+  let data;
+  try { data = JSON.parse(await file.text()); }
+  catch (e) { alert("That file could not be read as JSON."); return; }
+  if (!data || data.app !== BACKUP_APP || !Array.isArray(data.profiles)) {
+    alert("That does not look like a La Cave backup."); return;
+  }
+  let added = 0, replaced = 0, skipped = 0;
+  for (const p of data.profiles) {
+    const name = (String(p && p.name || "").trim() || "Taster").slice(0, 32);
+    const restored = sanitizeState(data.progress && data.progress[p && p.id]);
+    if (!restored) { skipped++; continue; }
+    // Same name means the same person moving devices: offer to replace rather
+    // than silently creating a duplicate.
+    const existing = profiles.find(x => x.name.toLowerCase() === name.toLowerCase());
+    if (existing) {
+      if (!confirm("Replace " + existing.name + "'s progress with the backup? This cannot be undone.")) { skipped++; continue; }
+      writeKey(progressKey(existing.id), JSON.stringify(restored));
+      replaced++;
+    } else {
+      const who = { id: newProfileId(), name, created: whole(p.created, Date.now()) };
+      profiles.push(who);
+      writeKey(progressKey(who.id), JSON.stringify(restored));
+      added++;
+    }
+  }
+  if (added || replaced) { saveProfiles(); await adoptActiveProfile(); }
+  renderProfiles(); renderHome();
+  alert("Restored from backup.\n" + added + " taster(s) added, " + replaced + " replaced" +
+        (skipped ? ", " + skipped + " skipped." : "."));
+}
+
 /* ---------------- wiring ---------------- */
 function wire() {
   $("startBtn").onclick = startSession;
@@ -500,6 +584,13 @@ function wire() {
   $("toProfiles").onclick = () => { renderProfiles(); show("profiles"); };
   $("profilesBack").onclick = () => { renderHome(); show("home"); };
   $("addProfileBtn").onclick = addProfile;
+  $("exportBtn").onclick = exportBackup;
+  $("importBtn").onclick = () => $("importFile").click();
+  $("importFile").onchange = async (e) => {
+    const file = e.target.files && e.target.files[0];
+    e.target.value = "";                 // so the same file can be picked twice
+    if (file) await importBackup(file);
+  };
   document.addEventListener("keydown", e => {
     if (!$("session").classList.contains("active")) return;
     if (e.key === " " || e.key === "Enter") { e.preventDefault(); if (!revealed) flip(); }
