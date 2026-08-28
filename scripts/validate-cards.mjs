@@ -16,6 +16,8 @@ const required = {
 };
 
 let errors = [];
+let warnings = [];
+const revPrompts = new Map();
 const ids = new Set();
 for (const c of cards) {
   const at = c.id || JSON.stringify(c).slice(0, 40);
@@ -48,7 +50,13 @@ for (const c of cards) {
   if (c.type === "place2grape") claim(`t1|${c.country}|${c.region}|${c.notes}`, c, "place+notes");
   if (c.type === "decode") {
     claim(`t2f|${c.appellation}`, c, "appellation");
-    claim(`t2r|${c.grape}|${c.country}|${c.region}|${c.notes}`, c, "reverse decode");
+    // The reverse face ("name the wine") is not rendered any more -- see
+    // reversible() in src/app.js. Two decode cards sharing a grape, region and
+    // notes are therefore no longer ambiguous, so this is only a warning. It
+    // would have to become an error again if that direction ever came back.
+    const rev = `t2r|${c.grape}|${c.country}|${c.region}|${c.notes}`;
+    if (revPrompts.has(rev)) warnings.push(`identical reverse face: ${revPrompts.get(rev)} and ${c.id}`);
+    else revPrompts.set(rev, c.id);
   }
 }
 
@@ -58,6 +66,10 @@ console.log("group:", by("group"));
 console.log("type :", by("type"));
 const fr = cards.filter(c => c.group === "France").length;
 console.log("France %:", Math.round(fr / cards.length * 100));
+
+if (warnings.length) {
+  console.warn("\nwarnings (not failures):\n" + warnings.map(w => "  - " + w).join("\n"));
+}
 
 if (errors.length) {
   console.error("\nFAIL:\n" + errors.map(e => "  - " + e).join("\n"));

@@ -4,7 +4,7 @@
 // Bump CACHE when the shell changes. Stale-while-revalidate means a stale
 // version self-heals on the next load even if this is forgotten, but bumping
 // makes the update immediate.
-const CACHE = "lacave-v8";
+const CACHE = "lacave-v9";
 
 // Relative URLs resolve against this script's location, so the app still works
 // when served from a subpath such as /memory-trainer/.

@@ -92,11 +92,15 @@ Prompt: country + region + tasting notes. Answer: the grape.
 `{ type, group, grape, country, region, notes }`
 Determinate (place + notes → one grape). Never reversed: a bare grape does not map to one region.
 
-### Type 2 — `decode` (both directions)
-The bottle-reading skill. An appellation is unique, so this one is safe to flip.
+### Type 2 — `decode` (one direction only)
+The bottle-reading skill.
 `{ type, group, appellation, grape, country, region, notes, trap? }`
-- forward: show the appellation → recall grape + region + notes.
-- reverse: show grape + region + notes → recall the appellation.
+Show the appellation → recall grape + region + notes.
+**Not reversed.** Showing grape + region + notes and asking you to name the wine
+has no single answer: Pauillac, Margaux, Saint-Julien and Saint-Estephe are all
+"Cabernet Sauvignon blend, Bordeaux, Left Bank", separable only by memorising
+which tasting note went with which. The reverse rendering still exists in
+`facesFor` but is unreachable while `reversible()` returns false.
 `trap: true` marks look-alikes (the two Montepulcianos) and renders a warning-colored label.
 
 ### Type 3 — `grapehome` (one direction only)
@@ -104,7 +108,12 @@ Prompt: the grape. Answer: its classic home + where else it grows.
 `{ type, group, grape, home, also }`
 Never reversed: "where does Cabernet grow" has many answers, so it can only be the answer, never the prompt.
 
-**Direction rule lives in one place:** `reversible(c)` in `src/app.js` returns true only for `decode`. If you add a type, update `reversible`, `facesFor`, `cardLabel`, and `cardHint`.
+**The card model, in one line:** the front is always a **place or a label**; the
+back is always the **grape, its region and its notes**. Nothing flips.
+
+**Direction rule lives in one place:** `reversible(c)` in `src/app.js`, which
+currently returns `false` for everything. If you add a type, update
+`reversible`, `facesFor`, `cardLabel`, and `cardHint`.
 
 `group` is one of `France` | `Italy` | `Rest` and drives the per-region stats.
 

@@ -59,7 +59,11 @@ cloning the repo runs step 1 and repeats it.
 ## What it does
 
 - Three card types (see `CLAUDE.md`): place → grape, bottle decode, and grape → home.
-- Randomized direction per run for the reversible cards, never the same card twice in a run.
+- Every card runs one way: a place or a label on the front, the grape, its
+  region and its notes on the back.
+- Miss a card and it comes back later in the same flight. You do not finish a
+  flight until every card in it is right; only the first attempt counts toward
+  your box and stats.
 - A 5-level Leitner scheduler: cards you miss come back every session, mastered cards fade to occasional review.
 - Streaks, per-region accuracy, and a "hardest for you" list in the cellar book.
 - Progress is saved in IndexedDB, mirrored to `localStorage` as a fallback, under

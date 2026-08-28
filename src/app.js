@@ -177,9 +177,18 @@ function show(id) {
 const $ = id => document.getElementById(id);
 
 /* ---------------- card helpers ---------------- */
-// Only bottle-decode cards may flip. place2grape and grapehome have a single
-// determinate answer, so they always run in their authored direction.
-function reversible(c) { return c.type === "decode"; }
+// The direction rule lives here, and nothing is currently reversible.
+//
+// A prompt is always a place or a label; the answer is always the grape, its
+// region and its notes. `decode` used to also run backwards -- show the grape,
+// region and notes and ask you to name the wine -- but that has no single
+// answer: plenty of appellations share a grape and a region, so Pauillac,
+// Margaux, Saint-Julien and Saint-Estephe were separable only by remembering
+// which tasting note belonged to which.
+//
+// The reverse rendering is still in facesFor. To bring it back, this function
+// and that branch have to change together.
+function reversible(c) { return false; }
 function cardLabel(c) { return c.type === "decode" ? c.appellation : c.grape; }
 function cardHint(c) {
   if (c.type === "decode") return c.grape;
@@ -272,14 +281,16 @@ function facesFor(c, dir) {
       answer: specDetail(c.home, "", "Also grown: " + c.also, "Its home")
     };
   }
-  // decode
+  // decode: label on the front, what is in the bottle on the back
   const appPrompt = specHeadline(c.appellation, "On the label", "Grape & region?", c.trap);
+  const detAnswer = specDetail(c.grape, c.country + "  \u00b7  " + c.region, c.notes, "What's in it", "");
+  if (dir !== "rev") return { prompt: appPrompt, answer: detAnswer };
+
+  // Unreachable while reversible() returns false. Kept so the direction can be
+  // restored in one place if the "name the wine" prompt is ever wanted again.
   const appAnswer = specHeadline(c.appellation, "On the label", "", c.trap);
   const detPrompt = specDetail(c.grape, c.country + "  \u00b7  " + c.region, c.notes, "What's in it", "Name the wine");
-  const detAnswer = specDetail(c.grape, c.country + "  \u00b7  " + c.region, c.notes, "What's in it", "");
-  return dir === "rev"
-    ? { prompt: detPrompt, answer: appAnswer }
-    : { prompt: appPrompt, answer: detAnswer };
+  return { prompt: detPrompt, answer: appAnswer };
 }
 
 function renderCard() {
