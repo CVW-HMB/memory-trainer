@@ -37,6 +37,13 @@ the free plan; the app is still the wine trainer. The deck is 200 cards
 IndexedDB under `srs_v2:wine`, the app installs and runs offline, and the
 scheduler is covered by 29 tests (`npm test`).
 
+**Since shipping**, on request: mastered cards no longer starve under the flight
+cap (4 review seats reserved for the longest-overdue, `INTERVAL[5]` 8 -> 10);
+missed cards repeat inside the flight until cleared, with only the first attempt
+counting; every card runs one way (place or label in front, grape/region/notes
+behind) and `grapehome` is retired, taking the deck to 161; per-person profiles;
+and backup/restore to a file. See `local-files/worklog.md`.
+
 Part 2 below is now the live roadmap. D1 (extract the deck adapter) is the
 natural first move — and M6 already did half the groundwork by moving the
 scheduler into `src/engine/schedule.js`, so what is left in `src/app.js` is
