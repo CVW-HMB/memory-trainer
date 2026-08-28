@@ -1,0 +1,7402 @@
+[
+  {
+    "id": "fra-v-etre",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "être",
+    "gloss": "to be",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-etre-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "être",
+    "english": "to be",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "suis"
+      ],
+      [
+        "tu",
+        "es"
+      ],
+      [
+        "il / elle / on",
+        "est"
+      ],
+      [
+        "nous",
+        "sommes"
+      ],
+      [
+        "vous",
+        "êtes"
+      ],
+      [
+        "ils / elles",
+        "sont"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "am"
+      ],
+      [
+        "you",
+        "are"
+      ],
+      [
+        "he / she / one",
+        "is"
+      ],
+      [
+        "we",
+        "are"
+      ],
+      [
+        "you (plural)",
+        "are"
+      ],
+      [
+        "they",
+        "are"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-etre-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "être",
+    "english": "to be",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "ai été"
+      ],
+      [
+        "tu",
+        "as été"
+      ],
+      [
+        "il / elle / on",
+        "a été"
+      ],
+      [
+        "nous",
+        "avons été"
+      ],
+      [
+        "vous",
+        "avez été"
+      ],
+      [
+        "ils / elles",
+        "ont été"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "was"
+      ],
+      [
+        "you",
+        "was"
+      ],
+      [
+        "he / she / one",
+        "was"
+      ],
+      [
+        "we",
+        "was"
+      ],
+      [
+        "you (plural)",
+        "was"
+      ],
+      [
+        "they",
+        "was"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-etre-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "être",
+    "english": "to be",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "serai"
+      ],
+      [
+        "tu",
+        "seras"
+      ],
+      [
+        "il / elle / on",
+        "sera"
+      ],
+      [
+        "nous",
+        "serons"
+      ],
+      [
+        "vous",
+        "serez"
+      ],
+      [
+        "ils / elles",
+        "seront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will be"
+      ],
+      [
+        "you",
+        "will be"
+      ],
+      [
+        "he / she / one",
+        "will be"
+      ],
+      [
+        "we",
+        "will be"
+      ],
+      [
+        "you (plural)",
+        "will be"
+      ],
+      [
+        "they",
+        "will be"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-la-maison",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la maison",
+    "gloss": "the house",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-l-appartement",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "l'appartement",
+    "gloss": "the apartment",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-la-porte",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la porte",
+    "gloss": "the door",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-la-fenetre",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la fenêtre",
+    "gloss": "the window",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-avoir",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "avoir",
+    "gloss": "to have",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-avoir-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "avoir",
+    "english": "to have",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "ai"
+      ],
+      [
+        "tu",
+        "as"
+      ],
+      [
+        "il / elle / on",
+        "a"
+      ],
+      [
+        "nous",
+        "avons"
+      ],
+      [
+        "vous",
+        "avez"
+      ],
+      [
+        "ils / elles",
+        "ont"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "have"
+      ],
+      [
+        "you",
+        "have"
+      ],
+      [
+        "he / she / one",
+        "has"
+      ],
+      [
+        "we",
+        "have"
+      ],
+      [
+        "you (plural)",
+        "have"
+      ],
+      [
+        "they",
+        "have"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-avoir-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "avoir",
+    "english": "to have",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "ai eu"
+      ],
+      [
+        "tu",
+        "as eu"
+      ],
+      [
+        "il / elle / on",
+        "a eu"
+      ],
+      [
+        "nous",
+        "avons eu"
+      ],
+      [
+        "vous",
+        "avez eu"
+      ],
+      [
+        "ils / elles",
+        "ont eu"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "had"
+      ],
+      [
+        "you",
+        "had"
+      ],
+      [
+        "he / she / one",
+        "had"
+      ],
+      [
+        "we",
+        "had"
+      ],
+      [
+        "you (plural)",
+        "had"
+      ],
+      [
+        "they",
+        "had"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-avoir-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "avoir",
+    "english": "to have",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "aurai"
+      ],
+      [
+        "tu",
+        "auras"
+      ],
+      [
+        "il / elle / on",
+        "aura"
+      ],
+      [
+        "nous",
+        "aurons"
+      ],
+      [
+        "vous",
+        "aurez"
+      ],
+      [
+        "ils / elles",
+        "auront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will have"
+      ],
+      [
+        "you",
+        "will have"
+      ],
+      [
+        "he / she / one",
+        "will have"
+      ],
+      [
+        "we",
+        "will have"
+      ],
+      [
+        "you (plural)",
+        "will have"
+      ],
+      [
+        "they",
+        "will have"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-la-cle",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la clé",
+    "gloss": "the key",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-la-cuisine",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la cuisine",
+    "gloss": "the kitchen",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-la-chambre",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la chambre",
+    "gloss": "the bedroom",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-la-salle-de-bains",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la salle de bains",
+    "gloss": "the bathroom",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-faire",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "faire",
+    "gloss": "to do, to make",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-faire-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "faire",
+    "english": "to do, to make",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "fais"
+      ],
+      [
+        "tu",
+        "fais"
+      ],
+      [
+        "il / elle / on",
+        "fait"
+      ],
+      [
+        "nous",
+        "faisons"
+      ],
+      [
+        "vous",
+        "faites"
+      ],
+      [
+        "ils / elles",
+        "font"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "do"
+      ],
+      [
+        "you",
+        "do"
+      ],
+      [
+        "he / she / one",
+        "does"
+      ],
+      [
+        "we",
+        "do"
+      ],
+      [
+        "you (plural)",
+        "do"
+      ],
+      [
+        "they",
+        "do"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-faire-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "faire",
+    "english": "to do, to make",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "ai fait"
+      ],
+      [
+        "tu",
+        "as fait"
+      ],
+      [
+        "il / elle / on",
+        "a fait"
+      ],
+      [
+        "nous",
+        "avons fait"
+      ],
+      [
+        "vous",
+        "avez fait"
+      ],
+      [
+        "ils / elles",
+        "ont fait"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "did"
+      ],
+      [
+        "you",
+        "did"
+      ],
+      [
+        "he / she / one",
+        "did"
+      ],
+      [
+        "we",
+        "did"
+      ],
+      [
+        "you (plural)",
+        "did"
+      ],
+      [
+        "they",
+        "did"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-faire-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "faire",
+    "english": "to do, to make",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "ferai"
+      ],
+      [
+        "tu",
+        "feras"
+      ],
+      [
+        "il / elle / on",
+        "fera"
+      ],
+      [
+        "nous",
+        "ferons"
+      ],
+      [
+        "vous",
+        "ferez"
+      ],
+      [
+        "ils / elles",
+        "feront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will do"
+      ],
+      [
+        "you",
+        "will do"
+      ],
+      [
+        "he / she / one",
+        "will do"
+      ],
+      [
+        "we",
+        "will do"
+      ],
+      [
+        "you (plural)",
+        "will do"
+      ],
+      [
+        "they",
+        "will do"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-le-salon",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le salon",
+    "gloss": "the living room",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-le-lit",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le lit",
+    "gloss": "the bed",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-l-oreiller",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "l'oreiller",
+    "gloss": "the pillow",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-la-couverture",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la couverture",
+    "gloss": "the blanket",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-aller",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "aller",
+    "gloss": "to go",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-aller-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "aller",
+    "english": "to go",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "vais"
+      ],
+      [
+        "tu",
+        "vas"
+      ],
+      [
+        "il / elle / on",
+        "va"
+      ],
+      [
+        "nous",
+        "allons"
+      ],
+      [
+        "vous",
+        "allez"
+      ],
+      [
+        "ils / elles",
+        "vont"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "go"
+      ],
+      [
+        "you",
+        "go"
+      ],
+      [
+        "he / she / one",
+        "goes"
+      ],
+      [
+        "we",
+        "go"
+      ],
+      [
+        "you (plural)",
+        "go"
+      ],
+      [
+        "they",
+        "go"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-aller-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "aller",
+    "english": "to go",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "suis allé(e)"
+      ],
+      [
+        "tu",
+        "es allé(e)"
+      ],
+      [
+        "il / elle / on",
+        "est allé(e)"
+      ],
+      [
+        "nous",
+        "sommes allés"
+      ],
+      [
+        "vous",
+        "êtes allés"
+      ],
+      [
+        "ils / elles",
+        "sont allés"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "went"
+      ],
+      [
+        "you",
+        "went"
+      ],
+      [
+        "he / she / one",
+        "went"
+      ],
+      [
+        "we",
+        "went"
+      ],
+      [
+        "you (plural)",
+        "went"
+      ],
+      [
+        "they",
+        "went"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-aller-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "aller",
+    "english": "to go",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "irai"
+      ],
+      [
+        "tu",
+        "iras"
+      ],
+      [
+        "il / elle / on",
+        "ira"
+      ],
+      [
+        "nous",
+        "irons"
+      ],
+      [
+        "vous",
+        "irez"
+      ],
+      [
+        "ils / elles",
+        "iront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will go"
+      ],
+      [
+        "you",
+        "will go"
+      ],
+      [
+        "he / she / one",
+        "will go"
+      ],
+      [
+        "we",
+        "will go"
+      ],
+      [
+        "you (plural)",
+        "will go"
+      ],
+      [
+        "they",
+        "will go"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-la-chaise",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la chaise",
+    "gloss": "the chair",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-la-table",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la table",
+    "gloss": "the table",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-le-canape",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le canapé",
+    "gloss": "the couch",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-la-lampe",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la lampe",
+    "gloss": "the lamp",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-pouvoir",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "pouvoir",
+    "gloss": "to be able to, can",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-pouvoir-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "pouvoir",
+    "english": "to be able to, can",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "peux"
+      ],
+      [
+        "tu",
+        "peux"
+      ],
+      [
+        "il / elle / on",
+        "peut"
+      ],
+      [
+        "nous",
+        "pouvons"
+      ],
+      [
+        "vous",
+        "pouvez"
+      ],
+      [
+        "ils / elles",
+        "peuvent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "can"
+      ],
+      [
+        "you",
+        "can"
+      ],
+      [
+        "he / she / one",
+        "can"
+      ],
+      [
+        "we",
+        "can"
+      ],
+      [
+        "you (plural)",
+        "can"
+      ],
+      [
+        "they",
+        "can"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-pouvoir-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "pouvoir",
+    "english": "to be able to, can",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "ai pu"
+      ],
+      [
+        "tu",
+        "as pu"
+      ],
+      [
+        "il / elle / on",
+        "a pu"
+      ],
+      [
+        "nous",
+        "avons pu"
+      ],
+      [
+        "vous",
+        "avez pu"
+      ],
+      [
+        "ils / elles",
+        "ont pu"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "could"
+      ],
+      [
+        "you",
+        "could"
+      ],
+      [
+        "he / she / one",
+        "could"
+      ],
+      [
+        "we",
+        "could"
+      ],
+      [
+        "you (plural)",
+        "could"
+      ],
+      [
+        "they",
+        "could"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-pouvoir-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "pouvoir",
+    "english": "to be able to, can",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "pourrai"
+      ],
+      [
+        "tu",
+        "pourras"
+      ],
+      [
+        "il / elle / on",
+        "pourra"
+      ],
+      [
+        "nous",
+        "pourrons"
+      ],
+      [
+        "vous",
+        "pourrez"
+      ],
+      [
+        "ils / elles",
+        "pourront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will be able to"
+      ],
+      [
+        "you",
+        "will be able to"
+      ],
+      [
+        "he / she / one",
+        "will be able to"
+      ],
+      [
+        "we",
+        "will be able to"
+      ],
+      [
+        "you (plural)",
+        "will be able to"
+      ],
+      [
+        "they",
+        "will be able to"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-le-miroir",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le miroir",
+    "gloss": "the mirror",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-la-douche",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la douche",
+    "gloss": "the shower",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-l-evier",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "l'évier",
+    "gloss": "the kitchen sink",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-le-frigo",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le frigo",
+    "gloss": "the fridge",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-vouloir",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "vouloir",
+    "gloss": "to want",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-vouloir-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "vouloir",
+    "english": "to want",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "veux"
+      ],
+      [
+        "tu",
+        "veux"
+      ],
+      [
+        "il / elle / on",
+        "veut"
+      ],
+      [
+        "nous",
+        "voulons"
+      ],
+      [
+        "vous",
+        "voulez"
+      ],
+      [
+        "ils / elles",
+        "veulent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "want"
+      ],
+      [
+        "you",
+        "want"
+      ],
+      [
+        "he / she / one",
+        "wants"
+      ],
+      [
+        "we",
+        "want"
+      ],
+      [
+        "you (plural)",
+        "want"
+      ],
+      [
+        "they",
+        "want"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-vouloir-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "vouloir",
+    "english": "to want",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "ai voulu"
+      ],
+      [
+        "tu",
+        "as voulu"
+      ],
+      [
+        "il / elle / on",
+        "a voulu"
+      ],
+      [
+        "nous",
+        "avons voulu"
+      ],
+      [
+        "vous",
+        "avez voulu"
+      ],
+      [
+        "ils / elles",
+        "ont voulu"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "wanted"
+      ],
+      [
+        "you",
+        "wanted"
+      ],
+      [
+        "he / she / one",
+        "wanted"
+      ],
+      [
+        "we",
+        "wanted"
+      ],
+      [
+        "you (plural)",
+        "wanted"
+      ],
+      [
+        "they",
+        "wanted"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-vouloir-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "vouloir",
+    "english": "to want",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "voudrai"
+      ],
+      [
+        "tu",
+        "voudras"
+      ],
+      [
+        "il / elle / on",
+        "voudra"
+      ],
+      [
+        "nous",
+        "voudrons"
+      ],
+      [
+        "vous",
+        "voudrez"
+      ],
+      [
+        "ils / elles",
+        "voudront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will want"
+      ],
+      [
+        "you",
+        "will want"
+      ],
+      [
+        "he / she / one",
+        "will want"
+      ],
+      [
+        "we",
+        "will want"
+      ],
+      [
+        "you (plural)",
+        "will want"
+      ],
+      [
+        "they",
+        "will want"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-le-four",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le four",
+    "gloss": "the oven",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-la-cuisiniere",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la cuisinière",
+    "gloss": "the stove",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-l-armoire",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "l'armoire",
+    "gloss": "the closet",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-le-tiroir",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le tiroir",
+    "gloss": "the drawer",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-dire",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "dire",
+    "gloss": "to say",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-dire-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "dire",
+    "english": "to say",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "dis"
+      ],
+      [
+        "tu",
+        "dis"
+      ],
+      [
+        "il / elle / on",
+        "dit"
+      ],
+      [
+        "nous",
+        "disons"
+      ],
+      [
+        "vous",
+        "dites"
+      ],
+      [
+        "ils / elles",
+        "disent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "say"
+      ],
+      [
+        "you",
+        "say"
+      ],
+      [
+        "he / she / one",
+        "says"
+      ],
+      [
+        "we",
+        "say"
+      ],
+      [
+        "you (plural)",
+        "say"
+      ],
+      [
+        "they",
+        "say"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-dire-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "dire",
+    "english": "to say",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "ai dit"
+      ],
+      [
+        "tu",
+        "as dit"
+      ],
+      [
+        "il / elle / on",
+        "a dit"
+      ],
+      [
+        "nous",
+        "avons dit"
+      ],
+      [
+        "vous",
+        "avez dit"
+      ],
+      [
+        "ils / elles",
+        "ont dit"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "said"
+      ],
+      [
+        "you",
+        "said"
+      ],
+      [
+        "he / she / one",
+        "said"
+      ],
+      [
+        "we",
+        "said"
+      ],
+      [
+        "you (plural)",
+        "said"
+      ],
+      [
+        "they",
+        "said"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-dire-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "dire",
+    "english": "to say",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "dirai"
+      ],
+      [
+        "tu",
+        "diras"
+      ],
+      [
+        "il / elle / on",
+        "dira"
+      ],
+      [
+        "nous",
+        "dirons"
+      ],
+      [
+        "vous",
+        "direz"
+      ],
+      [
+        "ils / elles",
+        "diront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will say"
+      ],
+      [
+        "you",
+        "will say"
+      ],
+      [
+        "he / she / one",
+        "will say"
+      ],
+      [
+        "we",
+        "will say"
+      ],
+      [
+        "you (plural)",
+        "will say"
+      ],
+      [
+        "they",
+        "will say"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-l-escalier",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "l'escalier",
+    "gloss": "the stairs",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-le-plafond",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le plafond",
+    "gloss": "the ceiling",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-le-sol",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le sol",
+    "gloss": "the floor",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-le-mur",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le mur",
+    "gloss": "the wall",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-voir",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "voir",
+    "gloss": "to see",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-voir-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "voir",
+    "english": "to see",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "vois"
+      ],
+      [
+        "tu",
+        "vois"
+      ],
+      [
+        "il / elle / on",
+        "voit"
+      ],
+      [
+        "nous",
+        "voyons"
+      ],
+      [
+        "vous",
+        "voyez"
+      ],
+      [
+        "ils / elles",
+        "voient"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "see"
+      ],
+      [
+        "you",
+        "see"
+      ],
+      [
+        "he / she / one",
+        "sees"
+      ],
+      [
+        "we",
+        "see"
+      ],
+      [
+        "you (plural)",
+        "see"
+      ],
+      [
+        "they",
+        "see"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-voir-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "voir",
+    "english": "to see",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "ai vu"
+      ],
+      [
+        "tu",
+        "as vu"
+      ],
+      [
+        "il / elle / on",
+        "a vu"
+      ],
+      [
+        "nous",
+        "avons vu"
+      ],
+      [
+        "vous",
+        "avez vu"
+      ],
+      [
+        "ils / elles",
+        "ont vu"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "saw"
+      ],
+      [
+        "you",
+        "saw"
+      ],
+      [
+        "he / she / one",
+        "saw"
+      ],
+      [
+        "we",
+        "saw"
+      ],
+      [
+        "you (plural)",
+        "saw"
+      ],
+      [
+        "they",
+        "saw"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-voir-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "voir",
+    "english": "to see",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "verrai"
+      ],
+      [
+        "tu",
+        "verras"
+      ],
+      [
+        "il / elle / on",
+        "verra"
+      ],
+      [
+        "nous",
+        "verrons"
+      ],
+      [
+        "vous",
+        "verrez"
+      ],
+      [
+        "ils / elles",
+        "verront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will see"
+      ],
+      [
+        "you",
+        "will see"
+      ],
+      [
+        "he / she / one",
+        "will see"
+      ],
+      [
+        "we",
+        "will see"
+      ],
+      [
+        "you (plural)",
+        "will see"
+      ],
+      [
+        "they",
+        "will see"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-la-poubelle",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la poubelle",
+    "gloss": "the garbage",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-la-serviette-de-bain",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la serviette de bain",
+    "gloss": "the bath towel",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-le-savon",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le savon",
+    "gloss": "the soap",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-les-vetements",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "les vêtements",
+    "gloss": "the clothes",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-savoir",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "savoir",
+    "gloss": "to know (a fact)",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-savoir-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "savoir",
+    "english": "to know (a fact)",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "sais"
+      ],
+      [
+        "tu",
+        "sais"
+      ],
+      [
+        "il / elle / on",
+        "sait"
+      ],
+      [
+        "nous",
+        "savons"
+      ],
+      [
+        "vous",
+        "savez"
+      ],
+      [
+        "ils / elles",
+        "savent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "know"
+      ],
+      [
+        "you",
+        "know"
+      ],
+      [
+        "he / she / one",
+        "knows"
+      ],
+      [
+        "we",
+        "know"
+      ],
+      [
+        "you (plural)",
+        "know"
+      ],
+      [
+        "they",
+        "know"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-savoir-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "savoir",
+    "english": "to know (a fact)",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "ai su"
+      ],
+      [
+        "tu",
+        "as su"
+      ],
+      [
+        "il / elle / on",
+        "a su"
+      ],
+      [
+        "nous",
+        "avons su"
+      ],
+      [
+        "vous",
+        "avez su"
+      ],
+      [
+        "ils / elles",
+        "ont su"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "knew"
+      ],
+      [
+        "you",
+        "knew"
+      ],
+      [
+        "he / she / one",
+        "knew"
+      ],
+      [
+        "we",
+        "knew"
+      ],
+      [
+        "you (plural)",
+        "knew"
+      ],
+      [
+        "they",
+        "knew"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-savoir-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "savoir",
+    "english": "to know (a fact)",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "saurai"
+      ],
+      [
+        "tu",
+        "sauras"
+      ],
+      [
+        "il / elle / on",
+        "saura"
+      ],
+      [
+        "nous",
+        "saurons"
+      ],
+      [
+        "vous",
+        "saurez"
+      ],
+      [
+        "ils / elles",
+        "sauront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will know"
+      ],
+      [
+        "you",
+        "will know"
+      ],
+      [
+        "he / she / one",
+        "will know"
+      ],
+      [
+        "we",
+        "will know"
+      ],
+      [
+        "you (plural)",
+        "will know"
+      ],
+      [
+        "they",
+        "will know"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-le-lave-linge",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le lave-linge",
+    "gloss": "the washing machine",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-la-prise",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la prise",
+    "gloss": "the electrical outlet",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-l-ampoule",
+    "group": "House",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "l'ampoule",
+    "gloss": "the light bulb",
+    "kindTerm": "À la maison",
+    "kindGloss": "Around the house"
+  },
+  {
+    "id": "fra-v-la-ville",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la ville",
+    "gloss": "the city",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-venir",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "venir",
+    "gloss": "to come",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-venir-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "venir",
+    "english": "to come",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "viens"
+      ],
+      [
+        "tu",
+        "viens"
+      ],
+      [
+        "il / elle / on",
+        "vient"
+      ],
+      [
+        "nous",
+        "venons"
+      ],
+      [
+        "vous",
+        "venez"
+      ],
+      [
+        "ils / elles",
+        "viennent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "come"
+      ],
+      [
+        "you",
+        "come"
+      ],
+      [
+        "he / she / one",
+        "comes"
+      ],
+      [
+        "we",
+        "come"
+      ],
+      [
+        "you (plural)",
+        "come"
+      ],
+      [
+        "they",
+        "come"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-venir-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "venir",
+    "english": "to come",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "suis venu(e)"
+      ],
+      [
+        "tu",
+        "es venu(e)"
+      ],
+      [
+        "il / elle / on",
+        "est venu(e)"
+      ],
+      [
+        "nous",
+        "sommes venus"
+      ],
+      [
+        "vous",
+        "êtes venus"
+      ],
+      [
+        "ils / elles",
+        "sont venus"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "came"
+      ],
+      [
+        "you",
+        "came"
+      ],
+      [
+        "he / she / one",
+        "came"
+      ],
+      [
+        "we",
+        "came"
+      ],
+      [
+        "you (plural)",
+        "came"
+      ],
+      [
+        "they",
+        "came"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-venir-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "venir",
+    "english": "to come",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "viendrai"
+      ],
+      [
+        "tu",
+        "viendras"
+      ],
+      [
+        "il / elle / on",
+        "viendra"
+      ],
+      [
+        "nous",
+        "viendrons"
+      ],
+      [
+        "vous",
+        "viendrez"
+      ],
+      [
+        "ils / elles",
+        "viendront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will come"
+      ],
+      [
+        "you",
+        "will come"
+      ],
+      [
+        "he / she / one",
+        "will come"
+      ],
+      [
+        "we",
+        "will come"
+      ],
+      [
+        "you (plural)",
+        "will come"
+      ],
+      [
+        "they",
+        "will come"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-la-rue",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la rue",
+    "gloss": "the street",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-le-coin",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le coin",
+    "gloss": "the corner",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-la-place",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la place",
+    "gloss": "the square",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-le-quartier",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le quartier",
+    "gloss": "the neighborhood",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-devoir",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "devoir",
+    "gloss": "to have to, must",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-devoir-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "devoir",
+    "english": "to have to, must",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "dois"
+      ],
+      [
+        "tu",
+        "dois"
+      ],
+      [
+        "il / elle / on",
+        "doit"
+      ],
+      [
+        "nous",
+        "devons"
+      ],
+      [
+        "vous",
+        "devez"
+      ],
+      [
+        "ils / elles",
+        "doivent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "must"
+      ],
+      [
+        "you",
+        "must"
+      ],
+      [
+        "he / she / one",
+        "must"
+      ],
+      [
+        "we",
+        "must"
+      ],
+      [
+        "you (plural)",
+        "must"
+      ],
+      [
+        "they",
+        "must"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-devoir-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "devoir",
+    "english": "to have to, must",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "ai dû"
+      ],
+      [
+        "tu",
+        "as dû"
+      ],
+      [
+        "il / elle / on",
+        "a dû"
+      ],
+      [
+        "nous",
+        "avons dû"
+      ],
+      [
+        "vous",
+        "avez dû"
+      ],
+      [
+        "ils / elles",
+        "ont dû"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "had to"
+      ],
+      [
+        "you",
+        "had to"
+      ],
+      [
+        "he / she / one",
+        "had to"
+      ],
+      [
+        "we",
+        "had to"
+      ],
+      [
+        "you (plural)",
+        "had to"
+      ],
+      [
+        "they",
+        "had to"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-devoir-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "devoir",
+    "english": "to have to, must",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "devrai"
+      ],
+      [
+        "tu",
+        "devras"
+      ],
+      [
+        "il / elle / on",
+        "devra"
+      ],
+      [
+        "nous",
+        "devrons"
+      ],
+      [
+        "vous",
+        "devrez"
+      ],
+      [
+        "ils / elles",
+        "devront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will have to"
+      ],
+      [
+        "you",
+        "will have to"
+      ],
+      [
+        "he / she / one",
+        "will have to"
+      ],
+      [
+        "we",
+        "will have to"
+      ],
+      [
+        "you (plural)",
+        "will have to"
+      ],
+      [
+        "they",
+        "will have to"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-le-magasin",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le magasin",
+    "gloss": "the shop",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-le-marche",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le marché",
+    "gloss": "the market",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-la-boulangerie",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la boulangerie",
+    "gloss": "the bakery",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-la-pharmacie",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la pharmacie",
+    "gloss": "the pharmacy",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-prendre",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "prendre",
+    "gloss": "to take",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-prendre-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "prendre",
+    "english": "to take",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "prends"
+      ],
+      [
+        "tu",
+        "prends"
+      ],
+      [
+        "il / elle / on",
+        "prend"
+      ],
+      [
+        "nous",
+        "prenons"
+      ],
+      [
+        "vous",
+        "prenez"
+      ],
+      [
+        "ils / elles",
+        "prennent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "take"
+      ],
+      [
+        "you",
+        "take"
+      ],
+      [
+        "he / she / one",
+        "takes"
+      ],
+      [
+        "we",
+        "take"
+      ],
+      [
+        "you (plural)",
+        "take"
+      ],
+      [
+        "they",
+        "take"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-prendre-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "prendre",
+    "english": "to take",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "ai pris"
+      ],
+      [
+        "tu",
+        "as pris"
+      ],
+      [
+        "il / elle / on",
+        "a pris"
+      ],
+      [
+        "nous",
+        "avons pris"
+      ],
+      [
+        "vous",
+        "avez pris"
+      ],
+      [
+        "ils / elles",
+        "ont pris"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "took"
+      ],
+      [
+        "you",
+        "took"
+      ],
+      [
+        "he / she / one",
+        "took"
+      ],
+      [
+        "we",
+        "took"
+      ],
+      [
+        "you (plural)",
+        "took"
+      ],
+      [
+        "they",
+        "took"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-prendre-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "prendre",
+    "english": "to take",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "prendrai"
+      ],
+      [
+        "tu",
+        "prendras"
+      ],
+      [
+        "il / elle / on",
+        "prendra"
+      ],
+      [
+        "nous",
+        "prendrons"
+      ],
+      [
+        "vous",
+        "prendrez"
+      ],
+      [
+        "ils / elles",
+        "prendront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will take"
+      ],
+      [
+        "you",
+        "will take"
+      ],
+      [
+        "he / she / one",
+        "will take"
+      ],
+      [
+        "we",
+        "will take"
+      ],
+      [
+        "you (plural)",
+        "will take"
+      ],
+      [
+        "they",
+        "will take"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-la-banque",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la banque",
+    "gloss": "the bank",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-l-arret-de-bus",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "l'arrêt de bus",
+    "gloss": "the bus stop",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-le-bus",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le bus",
+    "gloss": "the bus",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-le-metro",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le métro",
+    "gloss": "the subway",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-mettre",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "mettre",
+    "gloss": "to put",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-mettre-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "mettre",
+    "english": "to put",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "mets"
+      ],
+      [
+        "tu",
+        "mets"
+      ],
+      [
+        "il / elle / on",
+        "met"
+      ],
+      [
+        "nous",
+        "mettons"
+      ],
+      [
+        "vous",
+        "mettez"
+      ],
+      [
+        "ils / elles",
+        "mettent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "put"
+      ],
+      [
+        "you",
+        "put"
+      ],
+      [
+        "he / she / one",
+        "puts"
+      ],
+      [
+        "we",
+        "put"
+      ],
+      [
+        "you (plural)",
+        "put"
+      ],
+      [
+        "they",
+        "put"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-mettre-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "mettre",
+    "english": "to put",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "ai mis"
+      ],
+      [
+        "tu",
+        "as mis"
+      ],
+      [
+        "il / elle / on",
+        "a mis"
+      ],
+      [
+        "nous",
+        "avons mis"
+      ],
+      [
+        "vous",
+        "avez mis"
+      ],
+      [
+        "ils / elles",
+        "ont mis"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "put"
+      ],
+      [
+        "you",
+        "put"
+      ],
+      [
+        "he / she / one",
+        "put"
+      ],
+      [
+        "we",
+        "put"
+      ],
+      [
+        "you (plural)",
+        "put"
+      ],
+      [
+        "they",
+        "put"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-mettre-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "mettre",
+    "english": "to put",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "mettrai"
+      ],
+      [
+        "tu",
+        "mettras"
+      ],
+      [
+        "il / elle / on",
+        "mettra"
+      ],
+      [
+        "nous",
+        "mettrons"
+      ],
+      [
+        "vous",
+        "mettrez"
+      ],
+      [
+        "ils / elles",
+        "mettront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will put"
+      ],
+      [
+        "you",
+        "will put"
+      ],
+      [
+        "he / she / one",
+        "will put"
+      ],
+      [
+        "we",
+        "will put"
+      ],
+      [
+        "you (plural)",
+        "will put"
+      ],
+      [
+        "they",
+        "will put"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-le-train",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le train",
+    "gloss": "the train",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-la-gare",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la gare",
+    "gloss": "the train station",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-l-aeroport",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "l'aéroport",
+    "gloss": "the airport",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-la-voiture",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la voiture",
+    "gloss": "the car",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-parler",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "parler",
+    "gloss": "to speak",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-parler-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "parler",
+    "english": "to speak",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "parle"
+      ],
+      [
+        "tu",
+        "parles"
+      ],
+      [
+        "il / elle / on",
+        "parle"
+      ],
+      [
+        "nous",
+        "parlons"
+      ],
+      [
+        "vous",
+        "parlez"
+      ],
+      [
+        "ils / elles",
+        "parlent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "speak"
+      ],
+      [
+        "you",
+        "speak"
+      ],
+      [
+        "he / she / one",
+        "speaks"
+      ],
+      [
+        "we",
+        "speak"
+      ],
+      [
+        "you (plural)",
+        "speak"
+      ],
+      [
+        "they",
+        "speak"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-parler-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "parler",
+    "english": "to speak",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "ai parlé"
+      ],
+      [
+        "tu",
+        "as parlé"
+      ],
+      [
+        "il / elle / on",
+        "a parlé"
+      ],
+      [
+        "nous",
+        "avons parlé"
+      ],
+      [
+        "vous",
+        "avez parlé"
+      ],
+      [
+        "ils / elles",
+        "ont parlé"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "spoke"
+      ],
+      [
+        "you",
+        "spoke"
+      ],
+      [
+        "he / she / one",
+        "spoke"
+      ],
+      [
+        "we",
+        "spoke"
+      ],
+      [
+        "you (plural)",
+        "spoke"
+      ],
+      [
+        "they",
+        "spoke"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-parler-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "parler",
+    "english": "to speak",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "parlerai"
+      ],
+      [
+        "tu",
+        "parleras"
+      ],
+      [
+        "il / elle / on",
+        "parlera"
+      ],
+      [
+        "nous",
+        "parlerons"
+      ],
+      [
+        "vous",
+        "parlerez"
+      ],
+      [
+        "ils / elles",
+        "parleront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will speak"
+      ],
+      [
+        "you",
+        "will speak"
+      ],
+      [
+        "he / she / one",
+        "will speak"
+      ],
+      [
+        "we",
+        "will speak"
+      ],
+      [
+        "you (plural)",
+        "will speak"
+      ],
+      [
+        "they",
+        "will speak"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-le-velo",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le vélo",
+    "gloss": "the bicycle",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-le-feu",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le feu",
+    "gloss": "the traffic light",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-le-pont",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le pont",
+    "gloss": "the bridge",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-l-eglise",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "l'église",
+    "gloss": "the church",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-donner",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "donner",
+    "gloss": "to give",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-donner-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "donner",
+    "english": "to give",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "donne"
+      ],
+      [
+        "tu",
+        "donnes"
+      ],
+      [
+        "il / elle / on",
+        "donne"
+      ],
+      [
+        "nous",
+        "donnons"
+      ],
+      [
+        "vous",
+        "donnez"
+      ],
+      [
+        "ils / elles",
+        "donnent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "give"
+      ],
+      [
+        "you",
+        "give"
+      ],
+      [
+        "he / she / one",
+        "gives"
+      ],
+      [
+        "we",
+        "give"
+      ],
+      [
+        "you (plural)",
+        "give"
+      ],
+      [
+        "they",
+        "give"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-donner-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "donner",
+    "english": "to give",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "ai donné"
+      ],
+      [
+        "tu",
+        "as donné"
+      ],
+      [
+        "il / elle / on",
+        "a donné"
+      ],
+      [
+        "nous",
+        "avons donné"
+      ],
+      [
+        "vous",
+        "avez donné"
+      ],
+      [
+        "ils / elles",
+        "ont donné"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "gave"
+      ],
+      [
+        "you",
+        "gave"
+      ],
+      [
+        "he / she / one",
+        "gave"
+      ],
+      [
+        "we",
+        "gave"
+      ],
+      [
+        "you (plural)",
+        "gave"
+      ],
+      [
+        "they",
+        "gave"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-donner-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "donner",
+    "english": "to give",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "donnerai"
+      ],
+      [
+        "tu",
+        "donneras"
+      ],
+      [
+        "il / elle / on",
+        "donnera"
+      ],
+      [
+        "nous",
+        "donnerons"
+      ],
+      [
+        "vous",
+        "donnerez"
+      ],
+      [
+        "ils / elles",
+        "donneront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will give"
+      ],
+      [
+        "you",
+        "will give"
+      ],
+      [
+        "he / she / one",
+        "will give"
+      ],
+      [
+        "we",
+        "will give"
+      ],
+      [
+        "you (plural)",
+        "will give"
+      ],
+      [
+        "they",
+        "will give"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-le-musee",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le musée",
+    "gloss": "the museum",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-le-parc",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le parc",
+    "gloss": "the park",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-la-plage",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la plage",
+    "gloss": "the beach",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-l-hopital",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "l'hôpital",
+    "gloss": "the hospital",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-s-appeler",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "s'appeler",
+    "gloss": "to be called",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-s-appeler-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'appeler",
+    "english": "to be called",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "m'appelle"
+      ],
+      [
+        "tu",
+        "t'appelles"
+      ],
+      [
+        "il / elle / on",
+        "s'appelle"
+      ],
+      [
+        "nous",
+        "nous appelons"
+      ],
+      [
+        "vous",
+        "vous appelez"
+      ],
+      [
+        "ils / elles",
+        "s'appellent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "am called"
+      ],
+      [
+        "you",
+        "are called"
+      ],
+      [
+        "he / she / one",
+        "is called"
+      ],
+      [
+        "we",
+        "are called"
+      ],
+      [
+        "you (plural)",
+        "are called"
+      ],
+      [
+        "they",
+        "are called"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-s-appeler-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'appeler",
+    "english": "to be called",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me suis appelé(e)"
+      ],
+      [
+        "tu",
+        "t'es appelé(e)"
+      ],
+      [
+        "il / elle / on",
+        "s'est appelé(e)"
+      ],
+      [
+        "nous",
+        "nous sommes appelés"
+      ],
+      [
+        "vous",
+        "vous êtes appelés"
+      ],
+      [
+        "ils / elles",
+        "se sont appelés"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "was called"
+      ],
+      [
+        "you",
+        "was called"
+      ],
+      [
+        "he / she / one",
+        "was called"
+      ],
+      [
+        "we",
+        "was called"
+      ],
+      [
+        "you (plural)",
+        "was called"
+      ],
+      [
+        "they",
+        "was called"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-s-appeler-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'appeler",
+    "english": "to be called",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "m'appellerai"
+      ],
+      [
+        "tu",
+        "t'appelleras"
+      ],
+      [
+        "il / elle / on",
+        "s'appellera"
+      ],
+      [
+        "nous",
+        "nous appellerons"
+      ],
+      [
+        "vous",
+        "vous appellerez"
+      ],
+      [
+        "ils / elles",
+        "s'appelleront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will be called"
+      ],
+      [
+        "you",
+        "will be called"
+      ],
+      [
+        "he / she / one",
+        "will be called"
+      ],
+      [
+        "we",
+        "will be called"
+      ],
+      [
+        "you (plural)",
+        "will be called"
+      ],
+      [
+        "they",
+        "will be called"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-le-commissariat",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le commissariat",
+    "gloss": "the police station",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-la-poste",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la poste",
+    "gloss": "the post office",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-la-bibliotheque",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la bibliothèque",
+    "gloss": "the library",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-l-hotel",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "l'hôtel",
+    "gloss": "the hotel",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-se-lever",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "se lever",
+    "gloss": "to get up",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-se-lever-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se lever",
+    "english": "to get up",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me lève"
+      ],
+      [
+        "tu",
+        "te lèves"
+      ],
+      [
+        "il / elle / on",
+        "se lève"
+      ],
+      [
+        "nous",
+        "nous levons"
+      ],
+      [
+        "vous",
+        "vous levez"
+      ],
+      [
+        "ils / elles",
+        "se lèvent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "get up"
+      ],
+      [
+        "you",
+        "get up"
+      ],
+      [
+        "he / she / one",
+        "gets up"
+      ],
+      [
+        "we",
+        "get up"
+      ],
+      [
+        "you (plural)",
+        "get up"
+      ],
+      [
+        "they",
+        "get up"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-lever-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se lever",
+    "english": "to get up",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me suis levé(e)"
+      ],
+      [
+        "tu",
+        "t'es levé(e)"
+      ],
+      [
+        "il / elle / on",
+        "s'est levé(e)"
+      ],
+      [
+        "nous",
+        "nous sommes levés"
+      ],
+      [
+        "vous",
+        "vous êtes levés"
+      ],
+      [
+        "ils / elles",
+        "se sont levés"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "got up"
+      ],
+      [
+        "you",
+        "got up"
+      ],
+      [
+        "he / she / one",
+        "got up"
+      ],
+      [
+        "we",
+        "got up"
+      ],
+      [
+        "you (plural)",
+        "got up"
+      ],
+      [
+        "they",
+        "got up"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-lever-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se lever",
+    "english": "to get up",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me lèverai"
+      ],
+      [
+        "tu",
+        "te lèveras"
+      ],
+      [
+        "il / elle / on",
+        "se lèvera"
+      ],
+      [
+        "nous",
+        "nous lèverons"
+      ],
+      [
+        "vous",
+        "vous lèverez"
+      ],
+      [
+        "ils / elles",
+        "se lèveront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will get up"
+      ],
+      [
+        "you",
+        "will get up"
+      ],
+      [
+        "he / she / one",
+        "will get up"
+      ],
+      [
+        "we",
+        "will get up"
+      ],
+      [
+        "you (plural)",
+        "will get up"
+      ],
+      [
+        "they",
+        "will get up"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-l-entree",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "l'entrée",
+    "gloss": "the entrance",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-la-sortie",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la sortie",
+    "gloss": "the exit",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-l-ascenseur",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "l'ascenseur",
+    "gloss": "the elevator",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-le-batiment",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le bâtiment",
+    "gloss": "the building",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-se-reveiller",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "se réveiller",
+    "gloss": "to wake up",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-se-reveiller-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se réveiller",
+    "english": "to wake up",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me réveille"
+      ],
+      [
+        "tu",
+        "te réveilles"
+      ],
+      [
+        "il / elle / on",
+        "se réveille"
+      ],
+      [
+        "nous",
+        "nous réveillons"
+      ],
+      [
+        "vous",
+        "vous réveillez"
+      ],
+      [
+        "ils / elles",
+        "se réveillent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "wake up"
+      ],
+      [
+        "you",
+        "wake up"
+      ],
+      [
+        "he / she / one",
+        "wakes up"
+      ],
+      [
+        "we",
+        "wake up"
+      ],
+      [
+        "you (plural)",
+        "wake up"
+      ],
+      [
+        "they",
+        "wake up"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-reveiller-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se réveiller",
+    "english": "to wake up",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me suis réveillé(e)"
+      ],
+      [
+        "tu",
+        "t'es réveillé(e)"
+      ],
+      [
+        "il / elle / on",
+        "s'est réveillé(e)"
+      ],
+      [
+        "nous",
+        "nous sommes réveillés"
+      ],
+      [
+        "vous",
+        "vous êtes réveillés"
+      ],
+      [
+        "ils / elles",
+        "se sont réveillés"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "woke up"
+      ],
+      [
+        "you",
+        "woke up"
+      ],
+      [
+        "he / she / one",
+        "woke up"
+      ],
+      [
+        "we",
+        "woke up"
+      ],
+      [
+        "you (plural)",
+        "woke up"
+      ],
+      [
+        "they",
+        "woke up"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-reveiller-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se réveiller",
+    "english": "to wake up",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me réveillerai"
+      ],
+      [
+        "tu",
+        "te réveilleras"
+      ],
+      [
+        "il / elle / on",
+        "se réveillera"
+      ],
+      [
+        "nous",
+        "nous réveillerons"
+      ],
+      [
+        "vous",
+        "vous réveillerez"
+      ],
+      [
+        "ils / elles",
+        "se réveilleront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will wake up"
+      ],
+      [
+        "you",
+        "will wake up"
+      ],
+      [
+        "he / she / one",
+        "will wake up"
+      ],
+      [
+        "we",
+        "will wake up"
+      ],
+      [
+        "you (plural)",
+        "will wake up"
+      ],
+      [
+        "they",
+        "will wake up"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-le-trottoir",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le trottoir",
+    "gloss": "the sidewalk",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-le-plan",
+    "group": "Town",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le plan",
+    "gloss": "the map",
+    "kindTerm": "En ville",
+    "kindGloss": "Around town"
+  },
+  {
+    "id": "fra-v-le-restaurant",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le restaurant",
+    "gloss": "the restaurant",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-bar",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le bar",
+    "gloss": "the bar",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-se-coucher",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "se coucher",
+    "gloss": "to go to bed",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-se-coucher-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se coucher",
+    "english": "to go to bed",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me couche"
+      ],
+      [
+        "tu",
+        "te couches"
+      ],
+      [
+        "il / elle / on",
+        "se couche"
+      ],
+      [
+        "nous",
+        "nous couchons"
+      ],
+      [
+        "vous",
+        "vous couchez"
+      ],
+      [
+        "ils / elles",
+        "se couchent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "go to bed"
+      ],
+      [
+        "you",
+        "go to bed"
+      ],
+      [
+        "he / she / one",
+        "goes to bed"
+      ],
+      [
+        "we",
+        "go to bed"
+      ],
+      [
+        "you (plural)",
+        "go to bed"
+      ],
+      [
+        "they",
+        "go to bed"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-coucher-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se coucher",
+    "english": "to go to bed",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me suis couché(e)"
+      ],
+      [
+        "tu",
+        "t'es couché(e)"
+      ],
+      [
+        "il / elle / on",
+        "s'est couché(e)"
+      ],
+      [
+        "nous",
+        "nous sommes couchés"
+      ],
+      [
+        "vous",
+        "vous êtes couchés"
+      ],
+      [
+        "ils / elles",
+        "se sont couchés"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "went to bed"
+      ],
+      [
+        "you",
+        "went to bed"
+      ],
+      [
+        "he / she / one",
+        "went to bed"
+      ],
+      [
+        "we",
+        "went to bed"
+      ],
+      [
+        "you (plural)",
+        "went to bed"
+      ],
+      [
+        "they",
+        "went to bed"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-coucher-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se coucher",
+    "english": "to go to bed",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me coucherai"
+      ],
+      [
+        "tu",
+        "te coucheras"
+      ],
+      [
+        "il / elle / on",
+        "se couchera"
+      ],
+      [
+        "nous",
+        "nous coucherons"
+      ],
+      [
+        "vous",
+        "vous coucherez"
+      ],
+      [
+        "ils / elles",
+        "se coucheront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will go to bed"
+      ],
+      [
+        "you",
+        "will go to bed"
+      ],
+      [
+        "he / she / one",
+        "will go to bed"
+      ],
+      [
+        "we",
+        "will go to bed"
+      ],
+      [
+        "you (plural)",
+        "will go to bed"
+      ],
+      [
+        "they",
+        "will go to bed"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-la-carte",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la carte",
+    "gloss": "the menu",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-l-addition",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "l'addition",
+    "gloss": "the bill",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-serveur",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le serveur",
+    "gloss": "the waiter",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-pourboire",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le pourboire",
+    "gloss": "the tip",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-se-laver",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "se laver",
+    "gloss": "to wash up",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-se-laver-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se laver",
+    "english": "to wash up",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me lave"
+      ],
+      [
+        "tu",
+        "te laves"
+      ],
+      [
+        "il / elle / on",
+        "se lave"
+      ],
+      [
+        "nous",
+        "nous lavons"
+      ],
+      [
+        "vous",
+        "vous lavez"
+      ],
+      [
+        "ils / elles",
+        "se lavent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "wash up"
+      ],
+      [
+        "you",
+        "wash up"
+      ],
+      [
+        "he / she / one",
+        "washes up"
+      ],
+      [
+        "we",
+        "wash up"
+      ],
+      [
+        "you (plural)",
+        "wash up"
+      ],
+      [
+        "they",
+        "wash up"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-laver-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se laver",
+    "english": "to wash up",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me suis lavé(e)"
+      ],
+      [
+        "tu",
+        "t'es lavé(e)"
+      ],
+      [
+        "il / elle / on",
+        "s'est lavé(e)"
+      ],
+      [
+        "nous",
+        "nous sommes lavés"
+      ],
+      [
+        "vous",
+        "vous êtes lavés"
+      ],
+      [
+        "ils / elles",
+        "se sont lavés"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "washed up"
+      ],
+      [
+        "you",
+        "washed up"
+      ],
+      [
+        "he / she / one",
+        "washed up"
+      ],
+      [
+        "we",
+        "washed up"
+      ],
+      [
+        "you (plural)",
+        "washed up"
+      ],
+      [
+        "they",
+        "washed up"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-laver-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se laver",
+    "english": "to wash up",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me laverai"
+      ],
+      [
+        "tu",
+        "te laveras"
+      ],
+      [
+        "il / elle / on",
+        "se lavera"
+      ],
+      [
+        "nous",
+        "nous laverons"
+      ],
+      [
+        "vous",
+        "vous laverez"
+      ],
+      [
+        "ils / elles",
+        "se laveront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will wash up"
+      ],
+      [
+        "you",
+        "will wash up"
+      ],
+      [
+        "he / she / one",
+        "will wash up"
+      ],
+      [
+        "we",
+        "will wash up"
+      ],
+      [
+        "you (plural)",
+        "will wash up"
+      ],
+      [
+        "they",
+        "will wash up"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-l-assiette",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "l'assiette",
+    "gloss": "the plate",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-verre",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le verre",
+    "gloss": "the glass (tumbler)",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-verre-a-vin",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le verre à vin",
+    "gloss": "the wine glass",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-la-tasse",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la tasse",
+    "gloss": "the cup",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-s-habiller",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "s'habiller",
+    "gloss": "to get dressed",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-s-habiller-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'habiller",
+    "english": "to get dressed",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "m'habille"
+      ],
+      [
+        "tu",
+        "t'habilles"
+      ],
+      [
+        "il / elle / on",
+        "s'habille"
+      ],
+      [
+        "nous",
+        "nous habillons"
+      ],
+      [
+        "vous",
+        "vous habillez"
+      ],
+      [
+        "ils / elles",
+        "s'habillent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "get dressed"
+      ],
+      [
+        "you",
+        "get dressed"
+      ],
+      [
+        "he / she / one",
+        "gets dressed"
+      ],
+      [
+        "we",
+        "get dressed"
+      ],
+      [
+        "you (plural)",
+        "get dressed"
+      ],
+      [
+        "they",
+        "get dressed"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-s-habiller-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'habiller",
+    "english": "to get dressed",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me suis habillé(e)"
+      ],
+      [
+        "tu",
+        "t'es habillé(e)"
+      ],
+      [
+        "il / elle / on",
+        "s'est habillé(e)"
+      ],
+      [
+        "nous",
+        "nous sommes habillés"
+      ],
+      [
+        "vous",
+        "vous êtes habillés"
+      ],
+      [
+        "ils / elles",
+        "se sont habillés"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "got dressed"
+      ],
+      [
+        "you",
+        "got dressed"
+      ],
+      [
+        "he / she / one",
+        "got dressed"
+      ],
+      [
+        "we",
+        "got dressed"
+      ],
+      [
+        "you (plural)",
+        "got dressed"
+      ],
+      [
+        "they",
+        "got dressed"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-s-habiller-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'habiller",
+    "english": "to get dressed",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "m'habillerai"
+      ],
+      [
+        "tu",
+        "t'habilleras"
+      ],
+      [
+        "il / elle / on",
+        "s'habillera"
+      ],
+      [
+        "nous",
+        "nous habillerons"
+      ],
+      [
+        "vous",
+        "vous habillerez"
+      ],
+      [
+        "ils / elles",
+        "s'habilleront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will get dressed"
+      ],
+      [
+        "you",
+        "will get dressed"
+      ],
+      [
+        "he / she / one",
+        "will get dressed"
+      ],
+      [
+        "we",
+        "will get dressed"
+      ],
+      [
+        "you (plural)",
+        "will get dressed"
+      ],
+      [
+        "they",
+        "will get dressed"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-la-bouteille",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la bouteille",
+    "gloss": "the bottle",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-la-fourchette",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la fourchette",
+    "gloss": "the fork",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-couteau",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le couteau",
+    "gloss": "the knife",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-la-cuillere",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la cuillère",
+    "gloss": "the spoon",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-s-asseoir",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "s'asseoir",
+    "gloss": "to sit down",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-s-asseoir-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'asseoir",
+    "english": "to sit down",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "m'assieds"
+      ],
+      [
+        "tu",
+        "t'assieds"
+      ],
+      [
+        "il / elle / on",
+        "s'assied"
+      ],
+      [
+        "nous",
+        "nous asseyons"
+      ],
+      [
+        "vous",
+        "vous asseyez"
+      ],
+      [
+        "ils / elles",
+        "s'asseyent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "sit down"
+      ],
+      [
+        "you",
+        "sit down"
+      ],
+      [
+        "he / she / one",
+        "sits down"
+      ],
+      [
+        "we",
+        "sit down"
+      ],
+      [
+        "you (plural)",
+        "sit down"
+      ],
+      [
+        "they",
+        "sit down"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-s-asseoir-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'asseoir",
+    "english": "to sit down",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me suis assis(e)"
+      ],
+      [
+        "tu",
+        "t'es assis(e)"
+      ],
+      [
+        "il / elle / on",
+        "s'est assis(e)"
+      ],
+      [
+        "nous",
+        "nous sommes assis"
+      ],
+      [
+        "vous",
+        "vous êtes assis"
+      ],
+      [
+        "ils / elles",
+        "se sont assis"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "sat down"
+      ],
+      [
+        "you",
+        "sat down"
+      ],
+      [
+        "he / she / one",
+        "sat down"
+      ],
+      [
+        "we",
+        "sat down"
+      ],
+      [
+        "you (plural)",
+        "sat down"
+      ],
+      [
+        "they",
+        "sat down"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-s-asseoir-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'asseoir",
+    "english": "to sit down",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "m'assiérai"
+      ],
+      [
+        "tu",
+        "t'assiéras"
+      ],
+      [
+        "il / elle / on",
+        "s'assiéra"
+      ],
+      [
+        "nous",
+        "nous assiérons"
+      ],
+      [
+        "vous",
+        "vous assiérez"
+      ],
+      [
+        "ils / elles",
+        "s'assiéront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will sit down"
+      ],
+      [
+        "you",
+        "will sit down"
+      ],
+      [
+        "he / she / one",
+        "will sit down"
+      ],
+      [
+        "we",
+        "will sit down"
+      ],
+      [
+        "you (plural)",
+        "will sit down"
+      ],
+      [
+        "they",
+        "will sit down"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-la-serviette-de-table",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la serviette de table",
+    "gloss": "the napkin",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-petit-dejeuner",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le petit-déjeuner",
+    "gloss": "breakfast",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-dejeuner",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le déjeuner",
+    "gloss": "lunch",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-diner",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le dîner",
+    "gloss": "dinner",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-se-sentir",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "se sentir",
+    "gloss": "to feel",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-se-sentir-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se sentir",
+    "english": "to feel",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me sens"
+      ],
+      [
+        "tu",
+        "te sens"
+      ],
+      [
+        "il / elle / on",
+        "se sent"
+      ],
+      [
+        "nous",
+        "nous sentons"
+      ],
+      [
+        "vous",
+        "vous sentez"
+      ],
+      [
+        "ils / elles",
+        "se sentent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "feel"
+      ],
+      [
+        "you",
+        "feel"
+      ],
+      [
+        "he / she / one",
+        "feels"
+      ],
+      [
+        "we",
+        "feel"
+      ],
+      [
+        "you (plural)",
+        "feel"
+      ],
+      [
+        "they",
+        "feel"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-sentir-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se sentir",
+    "english": "to feel",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me suis senti(e)"
+      ],
+      [
+        "tu",
+        "t'es senti(e)"
+      ],
+      [
+        "il / elle / on",
+        "s'est senti(e)"
+      ],
+      [
+        "nous",
+        "nous sommes sentis"
+      ],
+      [
+        "vous",
+        "vous êtes sentis"
+      ],
+      [
+        "ils / elles",
+        "se sont sentis"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "felt"
+      ],
+      [
+        "you",
+        "felt"
+      ],
+      [
+        "he / she / one",
+        "felt"
+      ],
+      [
+        "we",
+        "felt"
+      ],
+      [
+        "you (plural)",
+        "felt"
+      ],
+      [
+        "they",
+        "felt"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-sentir-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se sentir",
+    "english": "to feel",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me sentirai"
+      ],
+      [
+        "tu",
+        "te sentiras"
+      ],
+      [
+        "il / elle / on",
+        "se sentira"
+      ],
+      [
+        "nous",
+        "nous sentirons"
+      ],
+      [
+        "vous",
+        "vous sentirez"
+      ],
+      [
+        "ils / elles",
+        "se sentiront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will feel"
+      ],
+      [
+        "you",
+        "will feel"
+      ],
+      [
+        "he / she / one",
+        "will feel"
+      ],
+      [
+        "we",
+        "will feel"
+      ],
+      [
+        "you (plural)",
+        "will feel"
+      ],
+      [
+        "they",
+        "will feel"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-le-pain",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le pain",
+    "gloss": "the bread",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-fromage",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le fromage",
+    "gloss": "the cheese",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-jambon",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le jambon",
+    "gloss": "the ham",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-poulet",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le poulet",
+    "gloss": "the chicken",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-s-en-aller",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "s'en aller",
+    "gloss": "to leave, to go away",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-s-en-aller-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'en aller",
+    "english": "to leave, to go away",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "m'en vais"
+      ],
+      [
+        "tu",
+        "t'en vas"
+      ],
+      [
+        "il / elle / on",
+        "s'en va"
+      ],
+      [
+        "nous",
+        "nous en allons"
+      ],
+      [
+        "vous",
+        "vous en allez"
+      ],
+      [
+        "ils / elles",
+        "s'en vont"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "leave"
+      ],
+      [
+        "you",
+        "leave"
+      ],
+      [
+        "he / she / one",
+        "leaves"
+      ],
+      [
+        "we",
+        "leave"
+      ],
+      [
+        "you (plural)",
+        "leave"
+      ],
+      [
+        "they",
+        "leave"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-s-en-aller-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'en aller",
+    "english": "to leave, to go away",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "m'en suis allé(e)"
+      ],
+      [
+        "tu",
+        "t'en es allé(e)"
+      ],
+      [
+        "il / elle / on",
+        "s'en est allé(e)"
+      ],
+      [
+        "nous",
+        "nous en sommes allés"
+      ],
+      [
+        "vous",
+        "vous en êtes allés"
+      ],
+      [
+        "ils / elles",
+        "s'en sont allés"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "left"
+      ],
+      [
+        "you",
+        "left"
+      ],
+      [
+        "he / she / one",
+        "left"
+      ],
+      [
+        "we",
+        "left"
+      ],
+      [
+        "you (plural)",
+        "left"
+      ],
+      [
+        "they",
+        "left"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-s-en-aller-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'en aller",
+    "english": "to leave, to go away",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "m'en irai"
+      ],
+      [
+        "tu",
+        "t'en iras"
+      ],
+      [
+        "il / elle / on",
+        "s'en ira"
+      ],
+      [
+        "nous",
+        "nous en irons"
+      ],
+      [
+        "vous",
+        "vous en irez"
+      ],
+      [
+        "ils / elles",
+        "s'en iront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will leave"
+      ],
+      [
+        "you",
+        "will leave"
+      ],
+      [
+        "he / she / one",
+        "will leave"
+      ],
+      [
+        "we",
+        "will leave"
+      ],
+      [
+        "you (plural)",
+        "will leave"
+      ],
+      [
+        "they",
+        "will leave"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-la-viande",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la viande",
+    "gloss": "the meat",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-poisson",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le poisson",
+    "gloss": "the fish",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-les-legumes",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "les légumes",
+    "gloss": "the vegetables",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-la-salade",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la salade",
+    "gloss": "the salad",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-se-souvenir",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "se souvenir",
+    "gloss": "to remember",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-se-souvenir-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se souvenir",
+    "english": "to remember",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me souviens"
+      ],
+      [
+        "tu",
+        "te souviens"
+      ],
+      [
+        "il / elle / on",
+        "se souvient"
+      ],
+      [
+        "nous",
+        "nous souvenons"
+      ],
+      [
+        "vous",
+        "vous souvenez"
+      ],
+      [
+        "ils / elles",
+        "se souviennent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "remember"
+      ],
+      [
+        "you",
+        "remember"
+      ],
+      [
+        "he / she / one",
+        "remembers"
+      ],
+      [
+        "we",
+        "remember"
+      ],
+      [
+        "you (plural)",
+        "remember"
+      ],
+      [
+        "they",
+        "remember"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-souvenir-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se souvenir",
+    "english": "to remember",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me suis souvenu(e)"
+      ],
+      [
+        "tu",
+        "t'es souvenu(e)"
+      ],
+      [
+        "il / elle / on",
+        "s'est souvenu(e)"
+      ],
+      [
+        "nous",
+        "nous sommes souvenus"
+      ],
+      [
+        "vous",
+        "vous êtes souvenus"
+      ],
+      [
+        "ils / elles",
+        "se sont souvenus"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "remembered"
+      ],
+      [
+        "you",
+        "remembered"
+      ],
+      [
+        "he / she / one",
+        "remembered"
+      ],
+      [
+        "we",
+        "remembered"
+      ],
+      [
+        "you (plural)",
+        "remembered"
+      ],
+      [
+        "they",
+        "remembered"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-souvenir-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se souvenir",
+    "english": "to remember",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me souviendrai"
+      ],
+      [
+        "tu",
+        "te souviendras"
+      ],
+      [
+        "il / elle / on",
+        "se souviendra"
+      ],
+      [
+        "nous",
+        "nous souviendrons"
+      ],
+      [
+        "vous",
+        "vous souviendrez"
+      ],
+      [
+        "ils / elles",
+        "se souviendront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will remember"
+      ],
+      [
+        "you",
+        "will remember"
+      ],
+      [
+        "he / she / one",
+        "will remember"
+      ],
+      [
+        "we",
+        "will remember"
+      ],
+      [
+        "you (plural)",
+        "will remember"
+      ],
+      [
+        "they",
+        "will remember"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-la-soupe",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la soupe",
+    "gloss": "the soup",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-riz",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le riz",
+    "gloss": "the rice",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-les-ufs",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "les œufs",
+    "gloss": "the eggs",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-fruit",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le fruit",
+    "gloss": "the fruit",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-s-amuser",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "s'amuser",
+    "gloss": "to have fun",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-s-amuser-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'amuser",
+    "english": "to have fun",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "m'amuse"
+      ],
+      [
+        "tu",
+        "t'amuses"
+      ],
+      [
+        "il / elle / on",
+        "s'amuse"
+      ],
+      [
+        "nous",
+        "nous amusons"
+      ],
+      [
+        "vous",
+        "vous amusez"
+      ],
+      [
+        "ils / elles",
+        "s'amusent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "have fun"
+      ],
+      [
+        "you",
+        "have fun"
+      ],
+      [
+        "he / she / one",
+        "has fun"
+      ],
+      [
+        "we",
+        "have fun"
+      ],
+      [
+        "you (plural)",
+        "have fun"
+      ],
+      [
+        "they",
+        "have fun"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-s-amuser-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'amuser",
+    "english": "to have fun",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me suis amusé(e)"
+      ],
+      [
+        "tu",
+        "t'es amusé(e)"
+      ],
+      [
+        "il / elle / on",
+        "s'est amusé(e)"
+      ],
+      [
+        "nous",
+        "nous sommes amusés"
+      ],
+      [
+        "vous",
+        "vous êtes amusés"
+      ],
+      [
+        "ils / elles",
+        "se sont amusés"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "had fun"
+      ],
+      [
+        "you",
+        "had fun"
+      ],
+      [
+        "he / she / one",
+        "had fun"
+      ],
+      [
+        "we",
+        "had fun"
+      ],
+      [
+        "you (plural)",
+        "had fun"
+      ],
+      [
+        "they",
+        "had fun"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-s-amuser-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'amuser",
+    "english": "to have fun",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "m'amuserai"
+      ],
+      [
+        "tu",
+        "t'amuseras"
+      ],
+      [
+        "il / elle / on",
+        "s'amusera"
+      ],
+      [
+        "nous",
+        "nous amuserons"
+      ],
+      [
+        "vous",
+        "vous amuserez"
+      ],
+      [
+        "ils / elles",
+        "s'amuseront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will have fun"
+      ],
+      [
+        "you",
+        "will have fun"
+      ],
+      [
+        "he / she / one",
+        "will have fun"
+      ],
+      [
+        "we",
+        "will have fun"
+      ],
+      [
+        "you (plural)",
+        "will have fun"
+      ],
+      [
+        "they",
+        "will have fun"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-le-dessert",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le dessert",
+    "gloss": "the dessert",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-sucre",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le sucre",
+    "gloss": "the sugar",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-sel",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le sel",
+    "gloss": "the salt",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-poivre",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le poivre",
+    "gloss": "the pepper",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-s-inquieter",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "s'inquiéter",
+    "gloss": "to worry",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-s-inquieter-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'inquiéter",
+    "english": "to worry",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "m'inquiète"
+      ],
+      [
+        "tu",
+        "t'inquiètes"
+      ],
+      [
+        "il / elle / on",
+        "s'inquiète"
+      ],
+      [
+        "nous",
+        "nous inquiétons"
+      ],
+      [
+        "vous",
+        "vous inquiétez"
+      ],
+      [
+        "ils / elles",
+        "s'inquiètent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "worry"
+      ],
+      [
+        "you",
+        "worry"
+      ],
+      [
+        "he / she / one",
+        "worries"
+      ],
+      [
+        "we",
+        "worry"
+      ],
+      [
+        "you (plural)",
+        "worry"
+      ],
+      [
+        "they",
+        "worry"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-s-inquieter-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'inquiéter",
+    "english": "to worry",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me suis inquiété(e)"
+      ],
+      [
+        "tu",
+        "t'es inquiété(e)"
+      ],
+      [
+        "il / elle / on",
+        "s'est inquiété(e)"
+      ],
+      [
+        "nous",
+        "nous sommes inquiétés"
+      ],
+      [
+        "vous",
+        "vous êtes inquiétés"
+      ],
+      [
+        "ils / elles",
+        "se sont inquiétés"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "worried"
+      ],
+      [
+        "you",
+        "worried"
+      ],
+      [
+        "he / she / one",
+        "worried"
+      ],
+      [
+        "we",
+        "worried"
+      ],
+      [
+        "you (plural)",
+        "worried"
+      ],
+      [
+        "they",
+        "worried"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-s-inquieter-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "s'inquiéter",
+    "english": "to worry",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "m'inquiéterai"
+      ],
+      [
+        "tu",
+        "t'inquiéteras"
+      ],
+      [
+        "il / elle / on",
+        "s'inquiétera"
+      ],
+      [
+        "nous",
+        "nous inquiéterons"
+      ],
+      [
+        "vous",
+        "vous inquiéterez"
+      ],
+      [
+        "ils / elles",
+        "s'inquiéteront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will worry"
+      ],
+      [
+        "you",
+        "will worry"
+      ],
+      [
+        "he / she / one",
+        "will worry"
+      ],
+      [
+        "we",
+        "will worry"
+      ],
+      [
+        "you (plural)",
+        "will worry"
+      ],
+      [
+        "they",
+        "will worry"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-l-huile",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "l'huile",
+    "gloss": "the oil",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-l-eau",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "l'eau",
+    "gloss": "the water",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-vin",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le vin",
+    "gloss": "the wine",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-la-biere",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la bière",
+    "gloss": "the beer",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-se-depecher",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "se dépêcher",
+    "gloss": "to hurry",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-se-depecher-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se dépêcher",
+    "english": "to hurry",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me dépêche"
+      ],
+      [
+        "tu",
+        "te dépêches"
+      ],
+      [
+        "il / elle / on",
+        "se dépêche"
+      ],
+      [
+        "nous",
+        "nous dépêchons"
+      ],
+      [
+        "vous",
+        "vous dépêchez"
+      ],
+      [
+        "ils / elles",
+        "se dépêchent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "hurry"
+      ],
+      [
+        "you",
+        "hurry"
+      ],
+      [
+        "he / she / one",
+        "hurries"
+      ],
+      [
+        "we",
+        "hurry"
+      ],
+      [
+        "you (plural)",
+        "hurry"
+      ],
+      [
+        "they",
+        "hurry"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-depecher-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se dépêcher",
+    "english": "to hurry",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me suis dépêché(e)"
+      ],
+      [
+        "tu",
+        "t'es dépêché(e)"
+      ],
+      [
+        "il / elle / on",
+        "s'est dépêché(e)"
+      ],
+      [
+        "nous",
+        "nous sommes dépêchés"
+      ],
+      [
+        "vous",
+        "vous êtes dépêchés"
+      ],
+      [
+        "ils / elles",
+        "se sont dépêchés"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "hurried"
+      ],
+      [
+        "you",
+        "hurried"
+      ],
+      [
+        "he / she / one",
+        "hurried"
+      ],
+      [
+        "we",
+        "hurried"
+      ],
+      [
+        "you (plural)",
+        "hurried"
+      ],
+      [
+        "they",
+        "hurried"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-depecher-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se dépêcher",
+    "english": "to hurry",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me dépêcherai"
+      ],
+      [
+        "tu",
+        "te dépêcheras"
+      ],
+      [
+        "il / elle / on",
+        "se dépêchera"
+      ],
+      [
+        "nous",
+        "nous dépêcherons"
+      ],
+      [
+        "vous",
+        "vous dépêcherez"
+      ],
+      [
+        "ils / elles",
+        "se dépêcheront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will hurry"
+      ],
+      [
+        "you",
+        "will hurry"
+      ],
+      [
+        "he / she / one",
+        "will hurry"
+      ],
+      [
+        "we",
+        "will hurry"
+      ],
+      [
+        "you (plural)",
+        "will hurry"
+      ],
+      [
+        "they",
+        "will hurry"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-le-cafe",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le café",
+    "gloss": "the coffee",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-the",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le thé",
+    "gloss": "the tea",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-le-beurre",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le beurre",
+    "gloss": "the butter",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-la-confiture",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la confiture",
+    "gloss": "the jam",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-se-reposer",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "se reposer",
+    "gloss": "to rest",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-se-reposer-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se reposer",
+    "english": "to rest",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me repose"
+      ],
+      [
+        "tu",
+        "te reposes"
+      ],
+      [
+        "il / elle / on",
+        "se repose"
+      ],
+      [
+        "nous",
+        "nous reposons"
+      ],
+      [
+        "vous",
+        "vous reposez"
+      ],
+      [
+        "ils / elles",
+        "se reposent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "rest"
+      ],
+      [
+        "you",
+        "rest"
+      ],
+      [
+        "he / she / one",
+        "rests"
+      ],
+      [
+        "we",
+        "rest"
+      ],
+      [
+        "you (plural)",
+        "rest"
+      ],
+      [
+        "they",
+        "rest"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-reposer-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se reposer",
+    "english": "to rest",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me suis reposé(e)"
+      ],
+      [
+        "tu",
+        "t'es reposé(e)"
+      ],
+      [
+        "il / elle / on",
+        "s'est reposé(e)"
+      ],
+      [
+        "nous",
+        "nous sommes reposés"
+      ],
+      [
+        "vous",
+        "vous êtes reposés"
+      ],
+      [
+        "ils / elles",
+        "se sont reposés"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "rested"
+      ],
+      [
+        "you",
+        "rested"
+      ],
+      [
+        "he / she / one",
+        "rested"
+      ],
+      [
+        "we",
+        "rested"
+      ],
+      [
+        "you (plural)",
+        "rested"
+      ],
+      [
+        "they",
+        "rested"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-reposer-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se reposer",
+    "english": "to rest",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me reposerai"
+      ],
+      [
+        "tu",
+        "te reposeras"
+      ],
+      [
+        "il / elle / on",
+        "se reposera"
+      ],
+      [
+        "nous",
+        "nous reposerons"
+      ],
+      [
+        "vous",
+        "vous reposerez"
+      ],
+      [
+        "ils / elles",
+        "se reposeront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will rest"
+      ],
+      [
+        "you",
+        "will rest"
+      ],
+      [
+        "he / she / one",
+        "will rest"
+      ],
+      [
+        "we",
+        "will rest"
+      ],
+      [
+        "you (plural)",
+        "will rest"
+      ],
+      [
+        "they",
+        "will rest"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-le-croissant",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "le croissant",
+    "gloss": "the croissant",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-la-baguette",
+    "group": "Table",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "la baguette",
+    "gloss": "the baguette",
+    "kindTerm": "Manger et boire",
+    "kindGloss": "Eating and drinking"
+  },
+  {
+    "id": "fra-v-rouge",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "rouge",
+    "gloss": "red",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-bleu",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "bleu",
+    "gloss": "blue",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-se-promener",
+    "group": "Verbs",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "se promener",
+    "gloss": "to go for a walk",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs"
+  },
+  {
+    "id": "fra-c-se-promener-present",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se promener",
+    "english": "to go for a walk",
+    "tense": "Présent",
+    "tenseEn": "Present",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me promène"
+      ],
+      [
+        "tu",
+        "te promènes"
+      ],
+      [
+        "il / elle / on",
+        "se promène"
+      ],
+      [
+        "nous",
+        "nous promenons"
+      ],
+      [
+        "vous",
+        "vous promenez"
+      ],
+      [
+        "ils / elles",
+        "se promènent"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "go for a walk"
+      ],
+      [
+        "you",
+        "go for a walk"
+      ],
+      [
+        "he / she / one",
+        "goes for a walk"
+      ],
+      [
+        "we",
+        "go for a walk"
+      ],
+      [
+        "you (plural)",
+        "go for a walk"
+      ],
+      [
+        "they",
+        "go for a walk"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-promener-passe-compose",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se promener",
+    "english": "to go for a walk",
+    "tense": "Passé composé",
+    "tenseEn": "Simple past",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me suis promené(e)"
+      ],
+      [
+        "tu",
+        "t'es promené(e)"
+      ],
+      [
+        "il / elle / on",
+        "s'est promené(e)"
+      ],
+      [
+        "nous",
+        "nous sommes promenés"
+      ],
+      [
+        "vous",
+        "vous êtes promenés"
+      ],
+      [
+        "ils / elles",
+        "se sont promenés"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "went for a walk"
+      ],
+      [
+        "you",
+        "went for a walk"
+      ],
+      [
+        "he / she / one",
+        "went for a walk"
+      ],
+      [
+        "we",
+        "went for a walk"
+      ],
+      [
+        "you (plural)",
+        "went for a walk"
+      ],
+      [
+        "they",
+        "went for a walk"
+      ]
+    ]
+  },
+  {
+    "id": "fra-c-se-promener-futur-simple",
+    "group": "Verbs",
+    "type": "conjugation",
+    "lang": "fr",
+    "verb": "se promener",
+    "english": "to go for a walk",
+    "tense": "Futur simple",
+    "tenseEn": "Future",
+    "kindTerm": "Verbes",
+    "kindGloss": "Verbs",
+    "forms": [
+      [
+        "je",
+        "me promènerai"
+      ],
+      [
+        "tu",
+        "te promèneras"
+      ],
+      [
+        "il / elle / on",
+        "se promènera"
+      ],
+      [
+        "nous",
+        "nous promènerons"
+      ],
+      [
+        "vous",
+        "vous promènerez"
+      ],
+      [
+        "ils / elles",
+        "se promèneront"
+      ]
+    ],
+    "formsEn": [
+      [
+        "I",
+        "will go for a walk"
+      ],
+      [
+        "you",
+        "will go for a walk"
+      ],
+      [
+        "he / she / one",
+        "will go for a walk"
+      ],
+      [
+        "we",
+        "will go for a walk"
+      ],
+      [
+        "you (plural)",
+        "will go for a walk"
+      ],
+      [
+        "they",
+        "will go for a walk"
+      ]
+    ]
+  },
+  {
+    "id": "fra-v-vert",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "vert",
+    "gloss": "green",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-jaune",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "jaune",
+    "gloss": "yellow",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-noir",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "noir",
+    "gloss": "black",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-blanc",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "blanc",
+    "gloss": "white",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-aujourd-hui",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "aujourd'hui",
+    "gloss": "today",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-demain",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "demain",
+    "gloss": "tomorrow",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-hier",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "hier",
+    "gloss": "yesterday",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-maintenant",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "maintenant",
+    "gloss": "now",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-toujours",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "toujours",
+    "gloss": "always",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-jamais",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "jamais",
+    "gloss": "never",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-peut-etre",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "peut-être",
+    "gloss": "maybe",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-bien-sur",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "bien sûr",
+    "gloss": "of course",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-je-suis-desole",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "je suis désolé",
+    "gloss": "I am sorry",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-s-il-vous-plait",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "s'il vous plaît",
+    "gloss": "please",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-merci",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "merci",
+    "gloss": "thank you",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-de-rien",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "de rien",
+    "gloss": "you are welcome",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-combien-ca-coute",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "combien ça coûte ?",
+    "gloss": "how much does it cost?",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "fra-v-encore",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "fr",
+    "term": "encore",
+    "gloss": "again",
+    "kindTerm": "Tous les jours",
+    "kindGloss": "Everyday"
+  }
+]

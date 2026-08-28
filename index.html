@@ -39,8 +39,15 @@
   <!-- DECK CHOOSER (front page) -->
   <section class="view" id="decks" aria-label="Choose a deck">
     <p class="home-lead" id="deckLead">Choose a deck.</p>
-    <ul class="decklist" id="deckList"></ul>
-    <p class="pnote">More decks will appear here as they are added.</p>
+    <label class="deckpick">
+      <span class="dp-label">Deck</span>
+      <select id="deckSelect" aria-label="Choose a deck"></select>
+    </label>
+    <div class="deckinfo">
+      <p class="dp-sub" id="deckSubtitle"></p>
+      <p class="dp-prog" id="deckProgress"></p>
+    </div>
+    <button class="btn-primary" id="openDeckBtn">Open deck</button>
     <div class="home-foot">
       <button class="link" id="deckWhoBtn">Tasting as <b id="deckWho">Me</b></button>
     </div>

@@ -23,8 +23,8 @@
   },
   {
     "id": "spanish",
-    "name": "Spanish – English",
-    "subtitle": "The most-used verbs across three tenses, plus enough words to hold a conversation.",
+    "name": "Mexican Spanish – English",
+    "subtitle": "The most-used verbs across three tenses, plus enough words to hold a conversation. Mexican usage: ustedes, no vosotros.",
     "file": "./data/spanish.json",
     "groupsTitle": "By theme",
     "groups": [
@@ -50,5 +50,35 @@
       }
     ],
     "tagline": "verbs first, then enough to hold a conversation"
+  },
+  {
+    "id": "french",
+    "name": "French – English",
+    "subtitle": "The same shape as the Spanish deck: the most-used verbs across three tenses, plus everyday words.",
+    "file": "./data/french.json",
+    "groupsTitle": "By theme",
+    "tagline": "verbs first, then enough to hold a conversation",
+    "groups": [
+      {
+        "id": "Verbs",
+        "label": "Verbs"
+      },
+      {
+        "id": "House",
+        "label": "Around the house"
+      },
+      {
+        "id": "Town",
+        "label": "Around town"
+      },
+      {
+        "id": "Table",
+        "label": "Eating & drinking"
+      },
+      {
+        "id": "Everyday",
+        "label": "Everyday"
+      }
+    ]
   }
 ]

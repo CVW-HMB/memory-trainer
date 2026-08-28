@@ -604,7 +604,9 @@ function wire() {
   $("sumCellar").onclick = () => { renderCellar(); show("cellar"); };
   $("sumHome").onclick = () => { renderHome(); show("home"); };
   $("cellarBack").onclick = () => { renderHome(); show("home"); };
-  $("toDecks").onclick = async () => { await renderDecks(); show("decks"); };
+  $("toDecks").onclick = async () => { show("decks"); await renderDecks(); };
+  $("deckSelect").onchange = describeSelectedDeck;
+  $("openDeckBtn").onclick = () => chooseDeck($("deckSelect").value);
   $("deckWhoBtn").onclick = () => { renderProfiles(); show("profiles"); };
   $("resetBtn").onclick = async () => {
     const who = activeProfile();
@@ -679,27 +681,29 @@ async function deckSummary(deck) {
 async function renderDecks() {
   document.title = APP_NAME;          // no deck loaded yet
   $("deckWho").textContent = (activeProfile() || {}).name || "Me";
-  const list = $("deckList");
-  list.innerHTML = DECKS.map(d => `
-    <li><button class="deckrow" data-id="${d.id}">
-      <span class="dname"></span><span class="dsub"></span>
-      <span class="dprog" id="dp-${d.id}">&hellip;</span>
-    </button></li>`).join("");
-  // Deck names come from a data file; set them as text, not markup.
+
+  const sel = $("deckSelect");
+  sel.replaceChildren();
   for (const d of DECKS) {
-    const row = list.querySelector(`.deckrow[data-id="${d.id}"]`);
-    if (!row) continue;
-    row.querySelector(".dname").textContent = d.name;
-    row.querySelector(".dsub").textContent = d.subtitle || "";
+    const o = document.createElement("option");
+    o.value = d.id;
+    o.textContent = d.name;           // deck names are data: set as text
+    sel.appendChild(o);
   }
-  for (const d of DECKS) {
-    const el = $("dp-" + d.id);
-    if (el) el.textContent = await deckSummary(d);
-  }
-  list.onclick = (e) => {
-    const b = e.target.closest(".deckrow");
-    if (b) chooseDeck(b.dataset.id);
-  };
+  // DECK_ID holds the last deck used, so it starts selected.
+  if (DECKS.some(d => d.id === DECK_ID)) sel.value = DECK_ID;
+  await describeSelectedDeck();
+}
+
+// Keeps the blurb and the progress line under the dropdown in step with it.
+async function describeSelectedDeck() {
+  const deck = DECKS.find(d => d.id === $("deckSelect").value) || DECKS[0];
+  if (!deck) return;
+  $("deckSubtitle").textContent = deck.subtitle || "";
+  $("deckProgress").textContent = "\u2026";
+  const summary = await deckSummary(deck);
+  // Guard against a slower lookup landing after the choice changed.
+  if ($("deckSelect").value === deck.id) $("deckProgress").textContent = summary;
 }
 
 /* ---------------- boot ---------------- */

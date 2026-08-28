@@ -1,5 +1,5 @@
 """
-Generates data/spanish.json.
+Generates data/spanish.json -- MEXICAN Spanish.
 
 Deck shape (see CLAUDE.md):
   - Every card is REVERSIBLE. A translation pair is one-to-one by construction,
@@ -7,6 +7,14 @@ Deck shape (see CLAUDE.md):
   - Each face is written entirely in one language: prompts, pronouns and the
     little category label included. A side never mixes the two.
   - Conjugation cards always carry the WHOLE table, never a single form.
+
+Mexican Spanish specifically:
+  - NO vosotros. Mexico uses ustedes for every plural "you", so the tables have
+    five rows, not six. The source data below is written with the six standard
+    forms and mx() drops the vosotros one, which is safer than retyping.
+  - Vocabulary uses Mexican words where they differ from Peninsular Spanish:
+    carro, departamento, refrigerador, camion, elevador, banqueta.
+  - English glosses are American: garbage, subway, elevator, sidewalk.
 
 Run: npm run cards:es
 """
@@ -27,8 +35,14 @@ GROUPS = {
     "Everyday": ("Cada día", "Everyday"),
 }
 
-PRON_ES = ["yo", "tú", "él / ella / Ud.", "nosotros", "vosotros", "ellos / Uds."]
-PRON_EN = ["I", "you", "he / she / you", "we", "you all", "they"]
+PRON_ES = ["yo", "tú", "él / ella / usted", "nosotros", "ellos / ustedes"]
+PRON_EN = ["I", "you", "he / she / you", "we", "they / you all"]
+
+
+def mx(forms):
+    """Mexican Spanish has no vosotros: drop the 2nd person plural form."""
+    assert len(forms) == 6, forms
+    return forms[:4] + forms[5:]
 
 TENSES = [("Presente", "Present"), ("Pretérito", "Simple past"), ("Futuro", "Future")]
 
@@ -36,16 +50,17 @@ TENSES = [("Presente", "Present"), ("Pretérito", "Simple past"), ("Futuro", "Fu
 def vocab(group, es, en):
     ges, gen = GROUPS[group]
     cards.append({"id": f"es-v-{slug(es)}", "group": group, "type": "vocab",
-                  "es": es, "en": en, "kindEs": ges, "kindEn": gen})
+                  "lang": "es", "term": es, "gloss": en,
+                  "kindTerm": ges, "kindGloss": gen})
 
 
 def pres(base, third=None):
-    """English present: only the third person singular differs."""
-    return [base, base, third or (base + "s"), base, base, base]
+    """English present, five rows: only the third person singular differs."""
+    return [base, base, third or (base + "s"), base, base]
 
 
 def same(form):
-    return [form] * 6
+    return [form] * 5
 
 
 def verb(infinitive, english, es_forms, en_forms):
@@ -55,10 +70,11 @@ def verb(infinitive, english, es_forms, en_forms):
         cards.append({
             "id": f"es-c-{slug(infinitive)}-{slug(tes)}",
             "group": "Verbs", "type": "conjugation",
-            "verb": infinitive, "english": english,
-            "tenseEs": tes, "tenseEn": ten,
-            "es": [[p, f] for p, f in zip(PRON_ES, es_forms[tes])],
-            "en": [[p, f] for p, f in zip(PRON_EN, en_forms[tes])],
+            "lang": "es", "verb": infinitive, "english": english,
+            "tense": tes, "tenseEn": ten,
+            "kindTerm": GROUPS["Verbs"][0], "kindGloss": GROUPS["Verbs"][1],
+            "forms": [[p, f] for p, f in zip(PRON_ES, mx(es_forms[tes]))],
+            "formsEn": [[p, f] for p, f in zip(PRON_EN, en_forms[tes])],
         })
 
 
@@ -77,16 +93,16 @@ verb("ser", "to be (permanent, identity)",
      S(["soy", "eres", "es", "somos", "sois", "son"],
        ["fui", "fuiste", "fue", "fuimos", "fuisteis", "fueron"],
        ["seré", "serás", "será", "seremos", "seréis", "serán"]),
-     E(["am", "are", "is", "are", "are", "are"],
-       ["was", "were", "was", "were", "were", "were"],
+     E(["am", "are", "is", "are", "are"],
+       ["was", "were", "was", "were", "were"],
        same("will be")))
 
 verb("estar", "to be (state, location)",
      S(["estoy", "estás", "está", "estamos", "estáis", "están"],
        ["estuve", "estuviste", "estuvo", "estuvimos", "estuvisteis", "estuvieron"],
        ["estaré", "estarás", "estará", "estaremos", "estaréis", "estarán"]),
-     E(["am", "are", "is", "are", "are", "are"],
-       ["was", "were", "was", "were", "were", "were"],
+     E(["am", "are", "is", "are", "are"],
+       ["was", "were", "was", "were", "were"],
        same("will be")))
 
 verb("tener", "to have",
@@ -172,8 +188,8 @@ verb("llamarse", "to be called",
      S(["me llamo", "te llamas", "se llama", "nos llamamos", "os llamáis", "se llaman"],
        ["me llamé", "te llamaste", "se llamó", "nos llamamos", "os llamasteis", "se llamaron"],
        ["me llamaré", "te llamarás", "se llamará", "nos llamaremos", "os llamaréis", "se llamarán"]),
-     E(["am called", "are called", "is called", "are called", "are called", "are called"],
-       ["was called", "were called", "was called", "were called", "were called", "were called"],
+     E(["am called", "are called", "is called", "are called", "are called"],
+       ["was called", "were called", "was called", "were called", "were called"],
        same("will be called")))
 
 verb("levantarse", "to get up",
@@ -262,16 +278,16 @@ verb("preocuparse", "to worry",
 
 # ===================== around the house (35) =====================
 for es, en in [
-    ("la casa", "the house"), ("el piso", "the apartment"), ("la puerta", "the door"),
+    ("la casa", "the house"), ("el departamento", "the apartment"), ("la puerta", "the door"),
     ("la ventana", "the window"), ("la llave", "the key"), ("la cocina", "the kitchen"),
     ("el dormitorio", "the bedroom"), ("el baño", "the bathroom"), ("la sala", "the living room"),
     ("la cama", "the bed"), ("la almohada", "the pillow"), ("la manta", "the blanket"),
     ("la silla", "the chair"), ("la mesa", "the table"), ("el sofá", "the couch"),
-    ("la lámpara", "the lamp"), ("el espejo", "the mirror"), ("la ducha", "the shower"),
-    ("el fregadero", "the kitchen sink"), ("la nevera", "the fridge"), ("el horno", "the oven"),
+    ("la lámpara", "the lamp"), ("el espejo", "the mirror"), ("la regadera", "the shower"),
+    ("el fregadero", "the kitchen sink"), ("el refrigerador", "the fridge"), ("el horno", "the oven"),
     ("la estufa", "the stove"), ("el armario", "the closet"), ("el cajón", "the drawer"),
     ("la escalera", "the stairs"), ("el techo", "the ceiling"), ("el suelo", "the floor"),
-    ("la pared", "the wall"), ("la basura", "the rubbish"), ("la toalla", "the towel"),
+    ("la pared", "the wall"), ("la basura", "the garbage"), ("la toalla", "the towel"),
     ("el jabón", "the soap"), ("la ropa", "the clothes"), ("la lavadora", "the washing machine"),
     ("el enchufe", "the electrical outlet"), ("la bombilla", "the light bulb"),
 ]:
@@ -280,24 +296,24 @@ for es, en in [
 # ===================== around town (35) =====================
 for es, en in [
     ("la ciudad", "the city"), ("la calle", "the street"), ("la esquina", "the corner"),
-    ("la plaza", "the square"), ("el barrio", "the neighbourhood"), ("la tienda", "the shop"),
+    ("la plaza", "the square"), ("la colonia", "the neighborhood"), ("la tienda", "the shop"),
     ("el mercado", "the market"), ("la panadería", "the bakery"), ("la farmacia", "the pharmacy"),
-    ("el banco", "the bank"), ("la parada", "the bus stop"), ("el autobús", "the bus"),
-    ("el metro", "the underground"), ("el tren", "the train"), ("la estación", "the station"),
-    ("el aeropuerto", "the airport"), ("el coche", "the car"), ("la bicicleta", "the bicycle"),
+    ("el banco", "the bank"), ("la parada", "the bus stop"), ("el camión", "the bus"),
+    ("el metro", "the subway"), ("el tren", "the train"), ("la estación", "the station"),
+    ("el aeropuerto", "the airport"), ("el carro", "the car"), ("la bicicleta", "the bicycle"),
     ("el semáforo", "the traffic light"), ("el puente", "the bridge"), ("la iglesia", "the church"),
     ("el museo", "the museum"), ("el parque", "the park"), ("la playa", "the beach"),
-    ("el hospital", "the hospital"), ("la comisaría", "the police station"), ("el correo", "the post office"),
+    ("el hospital", "the hospital"), ("la estación de policía", "the police station"), ("la oficina de correos", "the post office"),
     ("la biblioteca", "the library"), ("el hotel", "the hotel"), ("la entrada", "the entrance"),
-    ("la salida", "the exit"), ("el ascensor", "the lift"), ("el edificio", "the building"),
-    ("la acera", "the pavement"), ("el mapa", "the map"),
+    ("la salida", "the exit"), ("el elevador", "the elevator"), ("el edificio", "the building"),
+    ("la banqueta", "the sidewalk"), ("el mapa", "the map"),
 ]:
     vocab("Town", es, en)
 
 # ===================== eating and drinking (40) =====================
 for es, en in [
-    ("el restaurante", "the restaurant"), ("el bar", "the bar"), ("la carta", "the menu"),
-    ("la cuenta", "the bill"), ("el camarero", "the waiter"), ("la propina", "the tip"),
+    ("el restaurante", "the restaurant"), ("el bar", "the bar"), ("el menú", "the menu"),
+    ("la cuenta", "the bill"), ("el mesero", "the waiter"), ("la propina", "the tip"),
     ("el plato", "the plate"), ("el vaso", "the glass (tumbler)"), ("la copa", "the wine glass"),
     ("la taza", "the cup"), ("la botella", "the bottle"), ("el tenedor", "the fork"),
     ("el cuchillo", "the knife"), ("la cuchara", "the spoon"), ("la servilleta", "the napkin"),
@@ -309,7 +325,8 @@ for es, en in [
     ("el postre", "the dessert"), ("el azúcar", "the sugar"), ("la sal", "the salt"),
     ("la pimienta", "the pepper"), ("el aceite", "the oil"), ("el agua", "the water"),
     ("el vino", "the wine"), ("la cerveza", "the beer"), ("el café", "the coffee"),
-    ("el té", "the tea"),
+    ("el té", "the tea"), ("la tortilla", "the tortilla"),
+    ("los frijoles", "the beans"), ("el aguacate", "the avocado"), ("la salsa", "the salsa"),
 ]:
     vocab("Table", es, en)
 
@@ -351,9 +368,9 @@ assert not dupes, "duplicate ids: " + str(dupes)
 
 # Every card flips, so both faces must be unique across the whole deck.
 def face_es(c):
-    return c["es"] if c["type"] == "vocab" else c["verb"] + "|" + c["tenseEs"]
+    return c["term"] if c["type"] == "vocab" else c["verb"] + "|" + c["tense"]
 def face_en(c):
-    return c["en"] if c["type"] == "vocab" else c["english"] + "|" + c["tenseEn"]
+    return c["gloss"] if c["type"] == "vocab" else c["english"] + "|" + c["tenseEn"]
 
 for side, fn in (("Spanish", face_es), ("English", face_en)):
     seen = {}
@@ -364,7 +381,8 @@ for side, fn in (("Spanish", face_es), ("English", face_en)):
 
 for c in cards:
     if c["type"] == "conjugation":
-        assert len(c["es"]) == 6 and len(c["en"]) == 6, c["id"]
+        # Five rows: Mexican Spanish has no vosotros.
+        assert len(c["forms"]) == 5 and len(c["formsEn"]) == 5, c["id"]
 
 from collections import Counter
 here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

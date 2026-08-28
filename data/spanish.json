@@ -3,20 +3,24 @@
     "id": "es-v-ser",
     "group": "Verbs",
     "type": "vocab",
-    "es": "ser",
-    "en": "to be (permanent, identity)",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "ser",
+    "gloss": "to be (permanent, identity)",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-ser-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "ser",
     "english": "to be (permanent, identity)",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "soy"
@@ -26,7 +30,7 @@
         "eres"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "es"
       ],
       [
@@ -34,15 +38,11 @@
         "somos"
       ],
       [
-        "vosotros",
-        "sois"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "son"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "am"
@@ -60,11 +60,7 @@
         "are"
       ],
       [
-        "you all",
-        "are"
-      ],
-      [
-        "they",
+        "they / you all",
         "are"
       ]
     ]
@@ -73,11 +69,14 @@
     "id": "es-c-ser-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "ser",
     "english": "to be (permanent, identity)",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "fui"
@@ -87,7 +86,7 @@
         "fuiste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "fue"
       ],
       [
@@ -95,15 +94,11 @@
         "fuimos"
       ],
       [
-        "vosotros",
-        "fuisteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "fueron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "was"
@@ -121,11 +116,7 @@
         "were"
       ],
       [
-        "you all",
-        "were"
-      ],
-      [
-        "they",
+        "they / you all",
         "were"
       ]
     ]
@@ -134,11 +125,14 @@
     "id": "es-c-ser-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "ser",
     "english": "to be (permanent, identity)",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "seré"
@@ -148,7 +142,7 @@
         "serás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "será"
       ],
       [
@@ -156,15 +150,11 @@
         "seremos"
       ],
       [
-        "vosotros",
-        "seréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "serán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will be"
@@ -182,11 +172,7 @@
         "will be"
       ],
       [
-        "you all",
-        "will be"
-      ],
-      [
-        "they",
+        "they / you all",
         "will be"
       ]
     ]
@@ -195,56 +181,64 @@
     "id": "es-v-la-casa",
     "group": "House",
     "type": "vocab",
-    "es": "la casa",
-    "en": "the house",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la casa",
+    "gloss": "the house",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
-    "id": "es-v-el-piso",
+    "id": "es-v-el-departamento",
     "group": "House",
     "type": "vocab",
-    "es": "el piso",
-    "en": "the apartment",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "el departamento",
+    "gloss": "the apartment",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-la-puerta",
     "group": "House",
     "type": "vocab",
-    "es": "la puerta",
-    "en": "the door",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la puerta",
+    "gloss": "the door",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-la-ventana",
     "group": "House",
     "type": "vocab",
-    "es": "la ventana",
-    "en": "the window",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la ventana",
+    "gloss": "the window",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-estar",
     "group": "Verbs",
     "type": "vocab",
-    "es": "estar",
-    "en": "to be (state, location)",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "estar",
+    "gloss": "to be (state, location)",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-estar-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "estar",
     "english": "to be (state, location)",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "estoy"
@@ -254,7 +248,7 @@
         "estás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "está"
       ],
       [
@@ -262,15 +256,11 @@
         "estamos"
       ],
       [
-        "vosotros",
-        "estáis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "están"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "am"
@@ -288,11 +278,7 @@
         "are"
       ],
       [
-        "you all",
-        "are"
-      ],
-      [
-        "they",
+        "they / you all",
         "are"
       ]
     ]
@@ -301,11 +287,14 @@
     "id": "es-c-estar-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "estar",
     "english": "to be (state, location)",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "estuve"
@@ -315,7 +304,7 @@
         "estuviste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "estuvo"
       ],
       [
@@ -323,15 +312,11 @@
         "estuvimos"
       ],
       [
-        "vosotros",
-        "estuvisteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "estuvieron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "was"
@@ -349,11 +334,7 @@
         "were"
       ],
       [
-        "you all",
-        "were"
-      ],
-      [
-        "they",
+        "they / you all",
         "were"
       ]
     ]
@@ -362,11 +343,14 @@
     "id": "es-c-estar-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "estar",
     "english": "to be (state, location)",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "estaré"
@@ -376,7 +360,7 @@
         "estarás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "estará"
       ],
       [
@@ -384,15 +368,11 @@
         "estaremos"
       ],
       [
-        "vosotros",
-        "estaréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "estarán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will be"
@@ -410,11 +390,7 @@
         "will be"
       ],
       [
-        "you all",
-        "will be"
-      ],
-      [
-        "they",
+        "they / you all",
         "will be"
       ]
     ]
@@ -423,56 +399,64 @@
     "id": "es-v-la-llave",
     "group": "House",
     "type": "vocab",
-    "es": "la llave",
-    "en": "the key",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la llave",
+    "gloss": "the key",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-la-cocina",
     "group": "House",
     "type": "vocab",
-    "es": "la cocina",
-    "en": "the kitchen",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la cocina",
+    "gloss": "the kitchen",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-el-dormitorio",
     "group": "House",
     "type": "vocab",
-    "es": "el dormitorio",
-    "en": "the bedroom",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "el dormitorio",
+    "gloss": "the bedroom",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-el-bano",
     "group": "House",
     "type": "vocab",
-    "es": "el baño",
-    "en": "the bathroom",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "el baño",
+    "gloss": "the bathroom",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-tener",
     "group": "Verbs",
     "type": "vocab",
-    "es": "tener",
-    "en": "to have",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "tener",
+    "gloss": "to have",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-tener-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "tener",
     "english": "to have",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "tengo"
@@ -482,7 +466,7 @@
         "tienes"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "tiene"
       ],
       [
@@ -490,15 +474,11 @@
         "tenemos"
       ],
       [
-        "vosotros",
-        "tenéis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "tienen"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "have"
@@ -516,11 +496,7 @@
         "have"
       ],
       [
-        "you all",
-        "have"
-      ],
-      [
-        "they",
+        "they / you all",
         "have"
       ]
     ]
@@ -529,11 +505,14 @@
     "id": "es-c-tener-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "tener",
     "english": "to have",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "tuve"
@@ -543,7 +522,7 @@
         "tuviste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "tuvo"
       ],
       [
@@ -551,15 +530,11 @@
         "tuvimos"
       ],
       [
-        "vosotros",
-        "tuvisteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "tuvieron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "had"
@@ -577,11 +552,7 @@
         "had"
       ],
       [
-        "you all",
-        "had"
-      ],
-      [
-        "they",
+        "they / you all",
         "had"
       ]
     ]
@@ -590,11 +561,14 @@
     "id": "es-c-tener-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "tener",
     "english": "to have",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "tendré"
@@ -604,7 +578,7 @@
         "tendrás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "tendrá"
       ],
       [
@@ -612,15 +586,11 @@
         "tendremos"
       ],
       [
-        "vosotros",
-        "tendréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "tendrán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will have"
@@ -638,11 +608,7 @@
         "will have"
       ],
       [
-        "you all",
-        "will have"
-      ],
-      [
-        "they",
+        "they / you all",
         "will have"
       ]
     ]
@@ -651,56 +617,64 @@
     "id": "es-v-la-sala",
     "group": "House",
     "type": "vocab",
-    "es": "la sala",
-    "en": "the living room",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la sala",
+    "gloss": "the living room",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-la-cama",
     "group": "House",
     "type": "vocab",
-    "es": "la cama",
-    "en": "the bed",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la cama",
+    "gloss": "the bed",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-la-almohada",
     "group": "House",
     "type": "vocab",
-    "es": "la almohada",
-    "en": "the pillow",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la almohada",
+    "gloss": "the pillow",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-la-manta",
     "group": "House",
     "type": "vocab",
-    "es": "la manta",
-    "en": "the blanket",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la manta",
+    "gloss": "the blanket",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-hacer",
     "group": "Verbs",
     "type": "vocab",
-    "es": "hacer",
-    "en": "to do, to make",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "hacer",
+    "gloss": "to do, to make",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-hacer-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "hacer",
     "english": "to do, to make",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "hago"
@@ -710,7 +684,7 @@
         "haces"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "hace"
       ],
       [
@@ -718,15 +692,11 @@
         "hacemos"
       ],
       [
-        "vosotros",
-        "hacéis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "hacen"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "do"
@@ -744,11 +714,7 @@
         "do"
       ],
       [
-        "you all",
-        "do"
-      ],
-      [
-        "they",
+        "they / you all",
         "do"
       ]
     ]
@@ -757,11 +723,14 @@
     "id": "es-c-hacer-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "hacer",
     "english": "to do, to make",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "hice"
@@ -771,7 +740,7 @@
         "hiciste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "hizo"
       ],
       [
@@ -779,15 +748,11 @@
         "hicimos"
       ],
       [
-        "vosotros",
-        "hicisteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "hicieron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "did"
@@ -805,11 +770,7 @@
         "did"
       ],
       [
-        "you all",
-        "did"
-      ],
-      [
-        "they",
+        "they / you all",
         "did"
       ]
     ]
@@ -818,11 +779,14 @@
     "id": "es-c-hacer-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "hacer",
     "english": "to do, to make",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "haré"
@@ -832,7 +796,7 @@
         "harás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "hará"
       ],
       [
@@ -840,15 +804,11 @@
         "haremos"
       ],
       [
-        "vosotros",
-        "haréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "harán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will do"
@@ -866,11 +826,7 @@
         "will do"
       ],
       [
-        "you all",
-        "will do"
-      ],
-      [
-        "they",
+        "they / you all",
         "will do"
       ]
     ]
@@ -879,56 +835,64 @@
     "id": "es-v-la-silla",
     "group": "House",
     "type": "vocab",
-    "es": "la silla",
-    "en": "the chair",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la silla",
+    "gloss": "the chair",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-la-mesa",
     "group": "House",
     "type": "vocab",
-    "es": "la mesa",
-    "en": "the table",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la mesa",
+    "gloss": "the table",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-el-sofa",
     "group": "House",
     "type": "vocab",
-    "es": "el sofá",
-    "en": "the couch",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "el sofá",
+    "gloss": "the couch",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-la-lampara",
     "group": "House",
     "type": "vocab",
-    "es": "la lámpara",
-    "en": "the lamp",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la lámpara",
+    "gloss": "the lamp",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-poder",
     "group": "Verbs",
     "type": "vocab",
-    "es": "poder",
-    "en": "to be able to, can",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "poder",
+    "gloss": "to be able to, can",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-poder-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "poder",
     "english": "to be able to, can",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "puedo"
@@ -938,7 +902,7 @@
         "puedes"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "puede"
       ],
       [
@@ -946,15 +910,11 @@
         "podemos"
       ],
       [
-        "vosotros",
-        "podéis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "pueden"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "can"
@@ -972,11 +932,7 @@
         "can"
       ],
       [
-        "you all",
-        "can"
-      ],
-      [
-        "they",
+        "they / you all",
         "can"
       ]
     ]
@@ -985,11 +941,14 @@
     "id": "es-c-poder-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "poder",
     "english": "to be able to, can",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "pude"
@@ -999,7 +958,7 @@
         "pudiste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "pudo"
       ],
       [
@@ -1007,15 +966,11 @@
         "pudimos"
       ],
       [
-        "vosotros",
-        "pudisteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "pudieron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "could"
@@ -1033,11 +988,7 @@
         "could"
       ],
       [
-        "you all",
-        "could"
-      ],
-      [
-        "they",
+        "they / you all",
         "could"
       ]
     ]
@@ -1046,11 +997,14 @@
     "id": "es-c-poder-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "poder",
     "english": "to be able to, can",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "podré"
@@ -1060,7 +1014,7 @@
         "podrás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "podrá"
       ],
       [
@@ -1068,15 +1022,11 @@
         "podremos"
       ],
       [
-        "vosotros",
-        "podréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "podrán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will be able to"
@@ -1094,11 +1044,7 @@
         "will be able to"
       ],
       [
-        "you all",
-        "will be able to"
-      ],
-      [
-        "they",
+        "they / you all",
         "will be able to"
       ]
     ]
@@ -1107,56 +1053,64 @@
     "id": "es-v-el-espejo",
     "group": "House",
     "type": "vocab",
-    "es": "el espejo",
-    "en": "the mirror",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "el espejo",
+    "gloss": "the mirror",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
-    "id": "es-v-la-ducha",
+    "id": "es-v-la-regadera",
     "group": "House",
     "type": "vocab",
-    "es": "la ducha",
-    "en": "the shower",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la regadera",
+    "gloss": "the shower",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-el-fregadero",
     "group": "House",
     "type": "vocab",
-    "es": "el fregadero",
-    "en": "the kitchen sink",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "el fregadero",
+    "gloss": "the kitchen sink",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
-    "id": "es-v-la-nevera",
+    "id": "es-v-el-refrigerador",
     "group": "House",
     "type": "vocab",
-    "es": "la nevera",
-    "en": "the fridge",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "el refrigerador",
+    "gloss": "the fridge",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-decir",
     "group": "Verbs",
     "type": "vocab",
-    "es": "decir",
-    "en": "to say",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "decir",
+    "gloss": "to say",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-decir-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "decir",
     "english": "to say",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "digo"
@@ -1166,7 +1120,7 @@
         "dices"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "dice"
       ],
       [
@@ -1174,15 +1128,11 @@
         "decimos"
       ],
       [
-        "vosotros",
-        "decís"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "dicen"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "say"
@@ -1200,11 +1150,7 @@
         "say"
       ],
       [
-        "you all",
-        "say"
-      ],
-      [
-        "they",
+        "they / you all",
         "say"
       ]
     ]
@@ -1213,11 +1159,14 @@
     "id": "es-c-decir-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "decir",
     "english": "to say",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "dije"
@@ -1227,7 +1176,7 @@
         "dijiste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "dijo"
       ],
       [
@@ -1235,15 +1184,11 @@
         "dijimos"
       ],
       [
-        "vosotros",
-        "dijisteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "dijeron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "said"
@@ -1261,11 +1206,7 @@
         "said"
       ],
       [
-        "you all",
-        "said"
-      ],
-      [
-        "they",
+        "they / you all",
         "said"
       ]
     ]
@@ -1274,11 +1215,14 @@
     "id": "es-c-decir-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "decir",
     "english": "to say",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "diré"
@@ -1288,7 +1232,7 @@
         "dirás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "dirá"
       ],
       [
@@ -1296,15 +1240,11 @@
         "diremos"
       ],
       [
-        "vosotros",
-        "diréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "dirán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will say"
@@ -1322,11 +1262,7 @@
         "will say"
       ],
       [
-        "you all",
-        "will say"
-      ],
-      [
-        "they",
+        "they / you all",
         "will say"
       ]
     ]
@@ -1335,56 +1271,64 @@
     "id": "es-v-el-horno",
     "group": "House",
     "type": "vocab",
-    "es": "el horno",
-    "en": "the oven",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "el horno",
+    "gloss": "the oven",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-la-estufa",
     "group": "House",
     "type": "vocab",
-    "es": "la estufa",
-    "en": "the stove",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la estufa",
+    "gloss": "the stove",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-el-armario",
     "group": "House",
     "type": "vocab",
-    "es": "el armario",
-    "en": "the closet",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "el armario",
+    "gloss": "the closet",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-el-cajon",
     "group": "House",
     "type": "vocab",
-    "es": "el cajón",
-    "en": "the drawer",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "el cajón",
+    "gloss": "the drawer",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-ir",
     "group": "Verbs",
     "type": "vocab",
-    "es": "ir",
-    "en": "to go",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "ir",
+    "gloss": "to go",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-ir-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "ir",
     "english": "to go",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "voy"
@@ -1394,7 +1338,7 @@
         "vas"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "va"
       ],
       [
@@ -1402,15 +1346,11 @@
         "vamos"
       ],
       [
-        "vosotros",
-        "vais"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "van"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "go"
@@ -1428,11 +1368,7 @@
         "go"
       ],
       [
-        "you all",
-        "go"
-      ],
-      [
-        "they",
+        "they / you all",
         "go"
       ]
     ]
@@ -1441,11 +1377,14 @@
     "id": "es-c-ir-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "ir",
     "english": "to go",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "fui"
@@ -1455,7 +1394,7 @@
         "fuiste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "fue"
       ],
       [
@@ -1463,15 +1402,11 @@
         "fuimos"
       ],
       [
-        "vosotros",
-        "fuisteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "fueron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "went"
@@ -1489,11 +1424,7 @@
         "went"
       ],
       [
-        "you all",
-        "went"
-      ],
-      [
-        "they",
+        "they / you all",
         "went"
       ]
     ]
@@ -1502,11 +1433,14 @@
     "id": "es-c-ir-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "ir",
     "english": "to go",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "iré"
@@ -1516,7 +1450,7 @@
         "irás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "irá"
       ],
       [
@@ -1524,15 +1458,11 @@
         "iremos"
       ],
       [
-        "vosotros",
-        "iréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "irán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will go"
@@ -1550,11 +1480,7 @@
         "will go"
       ],
       [
-        "you all",
-        "will go"
-      ],
-      [
-        "they",
+        "they / you all",
         "will go"
       ]
     ]
@@ -1563,56 +1489,64 @@
     "id": "es-v-la-escalera",
     "group": "House",
     "type": "vocab",
-    "es": "la escalera",
-    "en": "the stairs",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la escalera",
+    "gloss": "the stairs",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-el-techo",
     "group": "House",
     "type": "vocab",
-    "es": "el techo",
-    "en": "the ceiling",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "el techo",
+    "gloss": "the ceiling",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-el-suelo",
     "group": "House",
     "type": "vocab",
-    "es": "el suelo",
-    "en": "the floor",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "el suelo",
+    "gloss": "the floor",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-la-pared",
     "group": "House",
     "type": "vocab",
-    "es": "la pared",
-    "en": "the wall",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la pared",
+    "gloss": "the wall",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-ver",
     "group": "Verbs",
     "type": "vocab",
-    "es": "ver",
-    "en": "to see",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "ver",
+    "gloss": "to see",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-ver-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "ver",
     "english": "to see",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "veo"
@@ -1622,7 +1556,7 @@
         "ves"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "ve"
       ],
       [
@@ -1630,15 +1564,11 @@
         "vemos"
       ],
       [
-        "vosotros",
-        "veis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "ven"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "see"
@@ -1656,11 +1586,7 @@
         "see"
       ],
       [
-        "you all",
-        "see"
-      ],
-      [
-        "they",
+        "they / you all",
         "see"
       ]
     ]
@@ -1669,11 +1595,14 @@
     "id": "es-c-ver-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "ver",
     "english": "to see",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "vi"
@@ -1683,7 +1612,7 @@
         "viste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "vio"
       ],
       [
@@ -1691,15 +1620,11 @@
         "vimos"
       ],
       [
-        "vosotros",
-        "visteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "vieron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "saw"
@@ -1717,11 +1642,7 @@
         "saw"
       ],
       [
-        "you all",
-        "saw"
-      ],
-      [
-        "they",
+        "they / you all",
         "saw"
       ]
     ]
@@ -1730,11 +1651,14 @@
     "id": "es-c-ver-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "ver",
     "english": "to see",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "veré"
@@ -1744,7 +1668,7 @@
         "verás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "verá"
       ],
       [
@@ -1752,15 +1676,11 @@
         "veremos"
       ],
       [
-        "vosotros",
-        "veréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "verán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will see"
@@ -1778,11 +1698,7 @@
         "will see"
       ],
       [
-        "you all",
-        "will see"
-      ],
-      [
-        "they",
+        "they / you all",
         "will see"
       ]
     ]
@@ -1791,56 +1707,64 @@
     "id": "es-v-la-basura",
     "group": "House",
     "type": "vocab",
-    "es": "la basura",
-    "en": "the rubbish",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la basura",
+    "gloss": "the garbage",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-la-toalla",
     "group": "House",
     "type": "vocab",
-    "es": "la toalla",
-    "en": "the towel",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la toalla",
+    "gloss": "the towel",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-el-jabon",
     "group": "House",
     "type": "vocab",
-    "es": "el jabón",
-    "en": "the soap",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "el jabón",
+    "gloss": "the soap",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-la-ropa",
     "group": "House",
     "type": "vocab",
-    "es": "la ropa",
-    "en": "the clothes",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la ropa",
+    "gloss": "the clothes",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-dar",
     "group": "Verbs",
     "type": "vocab",
-    "es": "dar",
-    "en": "to give",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "dar",
+    "gloss": "to give",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-dar-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "dar",
     "english": "to give",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "doy"
@@ -1850,7 +1774,7 @@
         "das"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "da"
       ],
       [
@@ -1858,15 +1782,11 @@
         "damos"
       ],
       [
-        "vosotros",
-        "dais"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "dan"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "give"
@@ -1884,11 +1804,7 @@
         "give"
       ],
       [
-        "you all",
-        "give"
-      ],
-      [
-        "they",
+        "they / you all",
         "give"
       ]
     ]
@@ -1897,11 +1813,14 @@
     "id": "es-c-dar-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "dar",
     "english": "to give",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "di"
@@ -1911,7 +1830,7 @@
         "diste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "dio"
       ],
       [
@@ -1919,15 +1838,11 @@
         "dimos"
       ],
       [
-        "vosotros",
-        "disteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "dieron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "gave"
@@ -1945,11 +1860,7 @@
         "gave"
       ],
       [
-        "you all",
-        "gave"
-      ],
-      [
-        "they",
+        "they / you all",
         "gave"
       ]
     ]
@@ -1958,11 +1869,14 @@
     "id": "es-c-dar-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "dar",
     "english": "to give",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "daré"
@@ -1972,7 +1886,7 @@
         "darás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "dará"
       ],
       [
@@ -1980,15 +1894,11 @@
         "daremos"
       ],
       [
-        "vosotros",
-        "daréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "darán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will give"
@@ -2006,11 +1916,7 @@
         "will give"
       ],
       [
-        "you all",
-        "will give"
-      ],
-      [
-        "they",
+        "they / you all",
         "will give"
       ]
     ]
@@ -2019,56 +1925,64 @@
     "id": "es-v-la-lavadora",
     "group": "House",
     "type": "vocab",
-    "es": "la lavadora",
-    "en": "the washing machine",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la lavadora",
+    "gloss": "the washing machine",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-el-enchufe",
     "group": "House",
     "type": "vocab",
-    "es": "el enchufe",
-    "en": "the electrical outlet",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "el enchufe",
+    "gloss": "the electrical outlet",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-la-bombilla",
     "group": "House",
     "type": "vocab",
-    "es": "la bombilla",
-    "en": "the light bulb",
-    "kindEs": "En casa",
-    "kindEn": "Around the house"
+    "lang": "es",
+    "term": "la bombilla",
+    "gloss": "the light bulb",
+    "kindTerm": "En casa",
+    "kindGloss": "Around the house"
   },
   {
     "id": "es-v-la-ciudad",
     "group": "Town",
     "type": "vocab",
-    "es": "la ciudad",
-    "en": "the city",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la ciudad",
+    "gloss": "the city",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-saber",
     "group": "Verbs",
     "type": "vocab",
-    "es": "saber",
-    "en": "to know (a fact)",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "saber",
+    "gloss": "to know (a fact)",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-saber-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "saber",
     "english": "to know (a fact)",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "sé"
@@ -2078,7 +1992,7 @@
         "sabes"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "sabe"
       ],
       [
@@ -2086,15 +2000,11 @@
         "sabemos"
       ],
       [
-        "vosotros",
-        "sabéis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "saben"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "know"
@@ -2112,11 +2022,7 @@
         "know"
       ],
       [
-        "you all",
-        "know"
-      ],
-      [
-        "they",
+        "they / you all",
         "know"
       ]
     ]
@@ -2125,11 +2031,14 @@
     "id": "es-c-saber-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "saber",
     "english": "to know (a fact)",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "supe"
@@ -2139,7 +2048,7 @@
         "supiste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "supo"
       ],
       [
@@ -2147,15 +2056,11 @@
         "supimos"
       ],
       [
-        "vosotros",
-        "supisteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "supieron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "knew"
@@ -2173,11 +2078,7 @@
         "knew"
       ],
       [
-        "you all",
-        "knew"
-      ],
-      [
-        "they",
+        "they / you all",
         "knew"
       ]
     ]
@@ -2186,11 +2087,14 @@
     "id": "es-c-saber-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "saber",
     "english": "to know (a fact)",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "sabré"
@@ -2200,7 +2104,7 @@
         "sabrás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "sabrá"
       ],
       [
@@ -2208,15 +2112,11 @@
         "sabremos"
       ],
       [
-        "vosotros",
-        "sabréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "sabrán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will know"
@@ -2234,11 +2134,7 @@
         "will know"
       ],
       [
-        "you all",
-        "will know"
-      ],
-      [
-        "they",
+        "they / you all",
         "will know"
       ]
     ]
@@ -2247,56 +2143,64 @@
     "id": "es-v-la-calle",
     "group": "Town",
     "type": "vocab",
-    "es": "la calle",
-    "en": "the street",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la calle",
+    "gloss": "the street",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-la-esquina",
     "group": "Town",
     "type": "vocab",
-    "es": "la esquina",
-    "en": "the corner",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la esquina",
+    "gloss": "the corner",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-la-plaza",
     "group": "Town",
     "type": "vocab",
-    "es": "la plaza",
-    "en": "the square",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la plaza",
+    "gloss": "the square",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
-    "id": "es-v-el-barrio",
+    "id": "es-v-la-colonia",
     "group": "Town",
     "type": "vocab",
-    "es": "el barrio",
-    "en": "the neighbourhood",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la colonia",
+    "gloss": "the neighborhood",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-querer",
     "group": "Verbs",
     "type": "vocab",
-    "es": "querer",
-    "en": "to want",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "querer",
+    "gloss": "to want",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-querer-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "querer",
     "english": "to want",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "quiero"
@@ -2306,7 +2210,7 @@
         "quieres"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "quiere"
       ],
       [
@@ -2314,15 +2218,11 @@
         "queremos"
       ],
       [
-        "vosotros",
-        "queréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "quieren"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "want"
@@ -2340,11 +2240,7 @@
         "want"
       ],
       [
-        "you all",
-        "want"
-      ],
-      [
-        "they",
+        "they / you all",
         "want"
       ]
     ]
@@ -2353,11 +2249,14 @@
     "id": "es-c-querer-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "querer",
     "english": "to want",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "quise"
@@ -2367,7 +2266,7 @@
         "quisiste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "quiso"
       ],
       [
@@ -2375,15 +2274,11 @@
         "quisimos"
       ],
       [
-        "vosotros",
-        "quisisteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "quisieron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "wanted"
@@ -2401,11 +2296,7 @@
         "wanted"
       ],
       [
-        "you all",
-        "wanted"
-      ],
-      [
-        "they",
+        "they / you all",
         "wanted"
       ]
     ]
@@ -2414,11 +2305,14 @@
     "id": "es-c-querer-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "querer",
     "english": "to want",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "querré"
@@ -2428,7 +2322,7 @@
         "querrás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "querrá"
       ],
       [
@@ -2436,15 +2330,11 @@
         "querremos"
       ],
       [
-        "vosotros",
-        "querréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "querrán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will want"
@@ -2462,11 +2352,7 @@
         "will want"
       ],
       [
-        "you all",
-        "will want"
-      ],
-      [
-        "they",
+        "they / you all",
         "will want"
       ]
     ]
@@ -2475,56 +2361,64 @@
     "id": "es-v-la-tienda",
     "group": "Town",
     "type": "vocab",
-    "es": "la tienda",
-    "en": "the shop",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la tienda",
+    "gloss": "the shop",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-el-mercado",
     "group": "Town",
     "type": "vocab",
-    "es": "el mercado",
-    "en": "the market",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "el mercado",
+    "gloss": "the market",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-la-panaderia",
     "group": "Town",
     "type": "vocab",
-    "es": "la panadería",
-    "en": "the bakery",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la panadería",
+    "gloss": "the bakery",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-la-farmacia",
     "group": "Town",
     "type": "vocab",
-    "es": "la farmacia",
-    "en": "the pharmacy",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la farmacia",
+    "gloss": "the pharmacy",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-venir",
     "group": "Verbs",
     "type": "vocab",
-    "es": "venir",
-    "en": "to come",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "venir",
+    "gloss": "to come",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-venir-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "venir",
     "english": "to come",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "vengo"
@@ -2534,7 +2428,7 @@
         "vienes"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "viene"
       ],
       [
@@ -2542,15 +2436,11 @@
         "venimos"
       ],
       [
-        "vosotros",
-        "venís"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "vienen"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "come"
@@ -2568,11 +2458,7 @@
         "come"
       ],
       [
-        "you all",
-        "come"
-      ],
-      [
-        "they",
+        "they / you all",
         "come"
       ]
     ]
@@ -2581,11 +2467,14 @@
     "id": "es-c-venir-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "venir",
     "english": "to come",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "vine"
@@ -2595,7 +2484,7 @@
         "viniste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "vino"
       ],
       [
@@ -2603,15 +2492,11 @@
         "vinimos"
       ],
       [
-        "vosotros",
-        "vinisteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "vinieron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "came"
@@ -2629,11 +2514,7 @@
         "came"
       ],
       [
-        "you all",
-        "came"
-      ],
-      [
-        "they",
+        "they / you all",
         "came"
       ]
     ]
@@ -2642,11 +2523,14 @@
     "id": "es-c-venir-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "venir",
     "english": "to come",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "vendré"
@@ -2656,7 +2540,7 @@
         "vendrás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "vendrá"
       ],
       [
@@ -2664,15 +2548,11 @@
         "vendremos"
       ],
       [
-        "vosotros",
-        "vendréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "vendrán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will come"
@@ -2690,11 +2570,7 @@
         "will come"
       ],
       [
-        "you all",
-        "will come"
-      ],
-      [
-        "they",
+        "they / you all",
         "will come"
       ]
     ]
@@ -2703,56 +2579,64 @@
     "id": "es-v-el-banco",
     "group": "Town",
     "type": "vocab",
-    "es": "el banco",
-    "en": "the bank",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "el banco",
+    "gloss": "the bank",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-la-parada",
     "group": "Town",
     "type": "vocab",
-    "es": "la parada",
-    "en": "the bus stop",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la parada",
+    "gloss": "the bus stop",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
-    "id": "es-v-el-autobus",
+    "id": "es-v-el-camion",
     "group": "Town",
     "type": "vocab",
-    "es": "el autobús",
-    "en": "the bus",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "el camión",
+    "gloss": "the bus",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-el-metro",
     "group": "Town",
     "type": "vocab",
-    "es": "el metro",
-    "en": "the underground",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "el metro",
+    "gloss": "the subway",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-poner",
     "group": "Verbs",
     "type": "vocab",
-    "es": "poner",
-    "en": "to put, to place",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "poner",
+    "gloss": "to put, to place",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-poner-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "poner",
     "english": "to put, to place",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "pongo"
@@ -2762,7 +2646,7 @@
         "pones"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "pone"
       ],
       [
@@ -2770,15 +2654,11 @@
         "ponemos"
       ],
       [
-        "vosotros",
-        "ponéis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "ponen"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "put"
@@ -2796,11 +2676,7 @@
         "put"
       ],
       [
-        "you all",
-        "put"
-      ],
-      [
-        "they",
+        "they / you all",
         "put"
       ]
     ]
@@ -2809,11 +2685,14 @@
     "id": "es-c-poner-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "poner",
     "english": "to put, to place",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "puse"
@@ -2823,7 +2702,7 @@
         "pusiste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "puso"
       ],
       [
@@ -2831,15 +2710,11 @@
         "pusimos"
       ],
       [
-        "vosotros",
-        "pusisteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "pusieron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "put"
@@ -2857,11 +2732,7 @@
         "put"
       ],
       [
-        "you all",
-        "put"
-      ],
-      [
-        "they",
+        "they / you all",
         "put"
       ]
     ]
@@ -2870,11 +2741,14 @@
     "id": "es-c-poner-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "poner",
     "english": "to put, to place",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "pondré"
@@ -2884,7 +2758,7 @@
         "pondrás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "pondrá"
       ],
       [
@@ -2892,15 +2766,11 @@
         "pondremos"
       ],
       [
-        "vosotros",
-        "pondréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "pondrán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will put"
@@ -2918,11 +2788,7 @@
         "will put"
       ],
       [
-        "you all",
-        "will put"
-      ],
-      [
-        "they",
+        "they / you all",
         "will put"
       ]
     ]
@@ -2931,56 +2797,64 @@
     "id": "es-v-el-tren",
     "group": "Town",
     "type": "vocab",
-    "es": "el tren",
-    "en": "the train",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "el tren",
+    "gloss": "the train",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-la-estacion",
     "group": "Town",
     "type": "vocab",
-    "es": "la estación",
-    "en": "the station",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la estación",
+    "gloss": "the station",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-el-aeropuerto",
     "group": "Town",
     "type": "vocab",
-    "es": "el aeropuerto",
-    "en": "the airport",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "el aeropuerto",
+    "gloss": "the airport",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
-    "id": "es-v-el-coche",
+    "id": "es-v-el-carro",
     "group": "Town",
     "type": "vocab",
-    "es": "el coche",
-    "en": "the car",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "el carro",
+    "gloss": "the car",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-salir",
     "group": "Verbs",
     "type": "vocab",
-    "es": "salir",
-    "en": "to go out",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "salir",
+    "gloss": "to go out",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-salir-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "salir",
     "english": "to go out",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "salgo"
@@ -2990,7 +2864,7 @@
         "sales"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "sale"
       ],
       [
@@ -2998,15 +2872,11 @@
         "salimos"
       ],
       [
-        "vosotros",
-        "salís"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "salen"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "go out"
@@ -3024,11 +2894,7 @@
         "go out"
       ],
       [
-        "you all",
-        "go out"
-      ],
-      [
-        "they",
+        "they / you all",
         "go out"
       ]
     ]
@@ -3037,11 +2903,14 @@
     "id": "es-c-salir-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "salir",
     "english": "to go out",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "salí"
@@ -3051,7 +2920,7 @@
         "saliste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "salió"
       ],
       [
@@ -3059,15 +2928,11 @@
         "salimos"
       ],
       [
-        "vosotros",
-        "salisteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "salieron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "went out"
@@ -3085,11 +2950,7 @@
         "went out"
       ],
       [
-        "you all",
-        "went out"
-      ],
-      [
-        "they",
+        "they / you all",
         "went out"
       ]
     ]
@@ -3098,11 +2959,14 @@
     "id": "es-c-salir-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "salir",
     "english": "to go out",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "saldré"
@@ -3112,7 +2976,7 @@
         "saldrás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "saldrá"
       ],
       [
@@ -3120,15 +2984,11 @@
         "saldremos"
       ],
       [
-        "vosotros",
-        "saldréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "saldrán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will go out"
@@ -3146,11 +3006,7 @@
         "will go out"
       ],
       [
-        "you all",
-        "will go out"
-      ],
-      [
-        "they",
+        "they / you all",
         "will go out"
       ]
     ]
@@ -3159,56 +3015,64 @@
     "id": "es-v-la-bicicleta",
     "group": "Town",
     "type": "vocab",
-    "es": "la bicicleta",
-    "en": "the bicycle",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la bicicleta",
+    "gloss": "the bicycle",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-el-semaforo",
     "group": "Town",
     "type": "vocab",
-    "es": "el semáforo",
-    "en": "the traffic light",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "el semáforo",
+    "gloss": "the traffic light",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-el-puente",
     "group": "Town",
     "type": "vocab",
-    "es": "el puente",
-    "en": "the bridge",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "el puente",
+    "gloss": "the bridge",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-la-iglesia",
     "group": "Town",
     "type": "vocab",
-    "es": "la iglesia",
-    "en": "the church",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la iglesia",
+    "gloss": "the church",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-hablar",
     "group": "Verbs",
     "type": "vocab",
-    "es": "hablar",
-    "en": "to speak",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "hablar",
+    "gloss": "to speak",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-hablar-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "hablar",
     "english": "to speak",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "hablo"
@@ -3218,7 +3082,7 @@
         "hablas"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "habla"
       ],
       [
@@ -3226,15 +3090,11 @@
         "hablamos"
       ],
       [
-        "vosotros",
-        "habláis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "hablan"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "speak"
@@ -3252,11 +3112,7 @@
         "speak"
       ],
       [
-        "you all",
-        "speak"
-      ],
-      [
-        "they",
+        "they / you all",
         "speak"
       ]
     ]
@@ -3265,11 +3121,14 @@
     "id": "es-c-hablar-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "hablar",
     "english": "to speak",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "hablé"
@@ -3279,7 +3138,7 @@
         "hablaste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "habló"
       ],
       [
@@ -3287,15 +3146,11 @@
         "hablamos"
       ],
       [
-        "vosotros",
-        "hablasteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "hablaron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "spoke"
@@ -3313,11 +3168,7 @@
         "spoke"
       ],
       [
-        "you all",
-        "spoke"
-      ],
-      [
-        "they",
+        "they / you all",
         "spoke"
       ]
     ]
@@ -3326,11 +3177,14 @@
     "id": "es-c-hablar-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "hablar",
     "english": "to speak",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "hablaré"
@@ -3340,7 +3194,7 @@
         "hablarás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "hablará"
       ],
       [
@@ -3348,15 +3202,11 @@
         "hablaremos"
       ],
       [
-        "vosotros",
-        "hablaréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "hablarán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will speak"
@@ -3374,11 +3224,7 @@
         "will speak"
       ],
       [
-        "you all",
-        "will speak"
-      ],
-      [
-        "they",
+        "they / you all",
         "will speak"
       ]
     ]
@@ -3387,56 +3233,64 @@
     "id": "es-v-el-museo",
     "group": "Town",
     "type": "vocab",
-    "es": "el museo",
-    "en": "the museum",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "el museo",
+    "gloss": "the museum",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-el-parque",
     "group": "Town",
     "type": "vocab",
-    "es": "el parque",
-    "en": "the park",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "el parque",
+    "gloss": "the park",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-la-playa",
     "group": "Town",
     "type": "vocab",
-    "es": "la playa",
-    "en": "the beach",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la playa",
+    "gloss": "the beach",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-el-hospital",
     "group": "Town",
     "type": "vocab",
-    "es": "el hospital",
-    "en": "the hospital",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "el hospital",
+    "gloss": "the hospital",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-llamarse",
     "group": "Verbs",
     "type": "vocab",
-    "es": "llamarse",
-    "en": "to be called",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "llamarse",
+    "gloss": "to be called",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-llamarse-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "llamarse",
     "english": "to be called",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me llamo"
@@ -3446,7 +3300,7 @@
         "te llamas"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se llama"
       ],
       [
@@ -3454,15 +3308,11 @@
         "nos llamamos"
       ],
       [
-        "vosotros",
-        "os llamáis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se llaman"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "am called"
@@ -3480,11 +3330,7 @@
         "are called"
       ],
       [
-        "you all",
-        "are called"
-      ],
-      [
-        "they",
+        "they / you all",
         "are called"
       ]
     ]
@@ -3493,11 +3339,14 @@
     "id": "es-c-llamarse-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "llamarse",
     "english": "to be called",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me llamé"
@@ -3507,7 +3356,7 @@
         "te llamaste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se llamó"
       ],
       [
@@ -3515,15 +3364,11 @@
         "nos llamamos"
       ],
       [
-        "vosotros",
-        "os llamasteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se llamaron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "was called"
@@ -3541,11 +3386,7 @@
         "were called"
       ],
       [
-        "you all",
-        "were called"
-      ],
-      [
-        "they",
+        "they / you all",
         "were called"
       ]
     ]
@@ -3554,11 +3395,14 @@
     "id": "es-c-llamarse-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "llamarse",
     "english": "to be called",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me llamaré"
@@ -3568,7 +3412,7 @@
         "te llamarás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se llamará"
       ],
       [
@@ -3576,15 +3420,11 @@
         "nos llamaremos"
       ],
       [
-        "vosotros",
-        "os llamaréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se llamarán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will be called"
@@ -3602,69 +3442,73 @@
         "will be called"
       ],
       [
-        "you all",
-        "will be called"
-      ],
-      [
-        "they",
+        "they / you all",
         "will be called"
       ]
     ]
   },
   {
-    "id": "es-v-la-comisaria",
+    "id": "es-v-la-estacion-de-policia",
     "group": "Town",
     "type": "vocab",
-    "es": "la comisaría",
-    "en": "the police station",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la estación de policía",
+    "gloss": "the police station",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
-    "id": "es-v-el-correo",
+    "id": "es-v-la-oficina-de-correos",
     "group": "Town",
     "type": "vocab",
-    "es": "el correo",
-    "en": "the post office",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la oficina de correos",
+    "gloss": "the post office",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-la-biblioteca",
     "group": "Town",
     "type": "vocab",
-    "es": "la biblioteca",
-    "en": "the library",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la biblioteca",
+    "gloss": "the library",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-el-hotel",
     "group": "Town",
     "type": "vocab",
-    "es": "el hotel",
-    "en": "the hotel",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "el hotel",
+    "gloss": "the hotel",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-levantarse",
     "group": "Verbs",
     "type": "vocab",
-    "es": "levantarse",
-    "en": "to get up",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "levantarse",
+    "gloss": "to get up",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-levantarse-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "levantarse",
     "english": "to get up",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me levanto"
@@ -3674,7 +3518,7 @@
         "te levantas"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se levanta"
       ],
       [
@@ -3682,15 +3526,11 @@
         "nos levantamos"
       ],
       [
-        "vosotros",
-        "os levantáis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se levantan"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "get up"
@@ -3708,11 +3548,7 @@
         "get up"
       ],
       [
-        "you all",
-        "get up"
-      ],
-      [
-        "they",
+        "they / you all",
         "get up"
       ]
     ]
@@ -3721,11 +3557,14 @@
     "id": "es-c-levantarse-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "levantarse",
     "english": "to get up",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me levanté"
@@ -3735,7 +3574,7 @@
         "te levantaste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se levantó"
       ],
       [
@@ -3743,15 +3582,11 @@
         "nos levantamos"
       ],
       [
-        "vosotros",
-        "os levantasteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se levantaron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "got up"
@@ -3769,11 +3604,7 @@
         "got up"
       ],
       [
-        "you all",
-        "got up"
-      ],
-      [
-        "they",
+        "they / you all",
         "got up"
       ]
     ]
@@ -3782,11 +3613,14 @@
     "id": "es-c-levantarse-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "levantarse",
     "english": "to get up",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me levantaré"
@@ -3796,7 +3630,7 @@
         "te levantarás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se levantará"
       ],
       [
@@ -3804,15 +3638,11 @@
         "nos levantaremos"
       ],
       [
-        "vosotros",
-        "os levantaréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se levantarán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will get up"
@@ -3830,11 +3660,7 @@
         "will get up"
       ],
       [
-        "you all",
-        "will get up"
-      ],
-      [
-        "they",
+        "they / you all",
         "will get up"
       ]
     ]
@@ -3843,56 +3669,64 @@
     "id": "es-v-la-entrada",
     "group": "Town",
     "type": "vocab",
-    "es": "la entrada",
-    "en": "the entrance",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la entrada",
+    "gloss": "the entrance",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-la-salida",
     "group": "Town",
     "type": "vocab",
-    "es": "la salida",
-    "en": "the exit",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la salida",
+    "gloss": "the exit",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
-    "id": "es-v-el-ascensor",
+    "id": "es-v-el-elevador",
     "group": "Town",
     "type": "vocab",
-    "es": "el ascensor",
-    "en": "the lift",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "el elevador",
+    "gloss": "the elevator",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-el-edificio",
     "group": "Town",
     "type": "vocab",
-    "es": "el edificio",
-    "en": "the building",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "el edificio",
+    "gloss": "the building",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-despertarse",
     "group": "Verbs",
     "type": "vocab",
-    "es": "despertarse",
-    "en": "to wake up",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "despertarse",
+    "gloss": "to wake up",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-despertarse-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "despertarse",
     "english": "to wake up",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me despierto"
@@ -3902,7 +3736,7 @@
         "te despiertas"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se despierta"
       ],
       [
@@ -3910,15 +3744,11 @@
         "nos despertamos"
       ],
       [
-        "vosotros",
-        "os despertáis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se despiertan"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "wake up"
@@ -3936,11 +3766,7 @@
         "wake up"
       ],
       [
-        "you all",
-        "wake up"
-      ],
-      [
-        "they",
+        "they / you all",
         "wake up"
       ]
     ]
@@ -3949,11 +3775,14 @@
     "id": "es-c-despertarse-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "despertarse",
     "english": "to wake up",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me desperté"
@@ -3963,7 +3792,7 @@
         "te despertaste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se despertó"
       ],
       [
@@ -3971,15 +3800,11 @@
         "nos despertamos"
       ],
       [
-        "vosotros",
-        "os despertasteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se despertaron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "woke up"
@@ -3997,11 +3822,7 @@
         "woke up"
       ],
       [
-        "you all",
-        "woke up"
-      ],
-      [
-        "they",
+        "they / you all",
         "woke up"
       ]
     ]
@@ -4010,11 +3831,14 @@
     "id": "es-c-despertarse-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "despertarse",
     "english": "to wake up",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me despertaré"
@@ -4024,7 +3848,7 @@
         "te despertarás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se despertará"
       ],
       [
@@ -4032,15 +3856,11 @@
         "nos despertaremos"
       ],
       [
-        "vosotros",
-        "os despertaréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se despertarán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will wake up"
@@ -4058,69 +3878,73 @@
         "will wake up"
       ],
       [
-        "you all",
-        "will wake up"
-      ],
-      [
-        "they",
+        "they / you all",
         "will wake up"
       ]
     ]
   },
   {
-    "id": "es-v-la-acera",
+    "id": "es-v-la-banqueta",
     "group": "Town",
     "type": "vocab",
-    "es": "la acera",
-    "en": "the pavement",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "la banqueta",
+    "gloss": "the sidewalk",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-el-mapa",
     "group": "Town",
     "type": "vocab",
-    "es": "el mapa",
-    "en": "the map",
-    "kindEs": "En la ciudad",
-    "kindEn": "Around town"
+    "lang": "es",
+    "term": "el mapa",
+    "gloss": "the map",
+    "kindTerm": "En la ciudad",
+    "kindGloss": "Around town"
   },
   {
     "id": "es-v-el-restaurante",
     "group": "Table",
     "type": "vocab",
-    "es": "el restaurante",
-    "en": "the restaurant",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el restaurante",
+    "gloss": "the restaurant",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-el-bar",
     "group": "Table",
     "type": "vocab",
-    "es": "el bar",
-    "en": "the bar",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el bar",
+    "gloss": "the bar",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-acostarse",
     "group": "Verbs",
     "type": "vocab",
-    "es": "acostarse",
-    "en": "to go to bed",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "acostarse",
+    "gloss": "to go to bed",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-acostarse-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "acostarse",
     "english": "to go to bed",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me acuesto"
@@ -4130,7 +3954,7 @@
         "te acuestas"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se acuesta"
       ],
       [
@@ -4138,15 +3962,11 @@
         "nos acostamos"
       ],
       [
-        "vosotros",
-        "os acostáis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se acuestan"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "go to bed"
@@ -4164,11 +3984,7 @@
         "go to bed"
       ],
       [
-        "you all",
-        "go to bed"
-      ],
-      [
-        "they",
+        "they / you all",
         "go to bed"
       ]
     ]
@@ -4177,11 +3993,14 @@
     "id": "es-c-acostarse-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "acostarse",
     "english": "to go to bed",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me acosté"
@@ -4191,7 +4010,7 @@
         "te acostaste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se acostó"
       ],
       [
@@ -4199,15 +4018,11 @@
         "nos acostamos"
       ],
       [
-        "vosotros",
-        "os acostasteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se acostaron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "went to bed"
@@ -4225,11 +4040,7 @@
         "went to bed"
       ],
       [
-        "you all",
-        "went to bed"
-      ],
-      [
-        "they",
+        "they / you all",
         "went to bed"
       ]
     ]
@@ -4238,11 +4049,14 @@
     "id": "es-c-acostarse-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "acostarse",
     "english": "to go to bed",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me acostaré"
@@ -4252,7 +4066,7 @@
         "te acostarás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se acostará"
       ],
       [
@@ -4260,15 +4074,11 @@
         "nos acostaremos"
       ],
       [
-        "vosotros",
-        "os acostaréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se acostarán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will go to bed"
@@ -4286,69 +4096,73 @@
         "will go to bed"
       ],
       [
-        "you all",
-        "will go to bed"
-      ],
-      [
-        "they",
+        "they / you all",
         "will go to bed"
       ]
     ]
   },
   {
-    "id": "es-v-la-carta",
+    "id": "es-v-el-menu",
     "group": "Table",
     "type": "vocab",
-    "es": "la carta",
-    "en": "the menu",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el menú",
+    "gloss": "the menu",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-la-cuenta",
     "group": "Table",
     "type": "vocab",
-    "es": "la cuenta",
-    "en": "the bill",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "la cuenta",
+    "gloss": "the bill",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
-    "id": "es-v-el-camarero",
+    "id": "es-v-el-mesero",
     "group": "Table",
     "type": "vocab",
-    "es": "el camarero",
-    "en": "the waiter",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el mesero",
+    "gloss": "the waiter",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-la-propina",
     "group": "Table",
     "type": "vocab",
-    "es": "la propina",
-    "en": "the tip",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "la propina",
+    "gloss": "the tip",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-ducharse",
     "group": "Verbs",
     "type": "vocab",
-    "es": "ducharse",
-    "en": "to take a shower",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "ducharse",
+    "gloss": "to take a shower",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-ducharse-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "ducharse",
     "english": "to take a shower",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me ducho"
@@ -4358,7 +4172,7 @@
         "te duchas"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se ducha"
       ],
       [
@@ -4366,15 +4180,11 @@
         "nos duchamos"
       ],
       [
-        "vosotros",
-        "os ducháis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se duchan"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "take a shower"
@@ -4392,11 +4202,7 @@
         "take a shower"
       ],
       [
-        "you all",
-        "take a shower"
-      ],
-      [
-        "they",
+        "they / you all",
         "take a shower"
       ]
     ]
@@ -4405,11 +4211,14 @@
     "id": "es-c-ducharse-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "ducharse",
     "english": "to take a shower",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me duché"
@@ -4419,7 +4228,7 @@
         "te duchaste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se duchó"
       ],
       [
@@ -4427,15 +4236,11 @@
         "nos duchamos"
       ],
       [
-        "vosotros",
-        "os duchasteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se ducharon"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "took a shower"
@@ -4453,11 +4258,7 @@
         "took a shower"
       ],
       [
-        "you all",
-        "took a shower"
-      ],
-      [
-        "they",
+        "they / you all",
         "took a shower"
       ]
     ]
@@ -4466,11 +4267,14 @@
     "id": "es-c-ducharse-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "ducharse",
     "english": "to take a shower",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me ducharé"
@@ -4480,7 +4284,7 @@
         "te ducharás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se duchará"
       ],
       [
@@ -4488,15 +4292,11 @@
         "nos ducharemos"
       ],
       [
-        "vosotros",
-        "os ducharéis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se ducharán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will take a shower"
@@ -4514,11 +4314,7 @@
         "will take a shower"
       ],
       [
-        "you all",
-        "will take a shower"
-      ],
-      [
-        "they",
+        "they / you all",
         "will take a shower"
       ]
     ]
@@ -4527,56 +4323,64 @@
     "id": "es-v-el-plato",
     "group": "Table",
     "type": "vocab",
-    "es": "el plato",
-    "en": "the plate",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el plato",
+    "gloss": "the plate",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-el-vaso",
     "group": "Table",
     "type": "vocab",
-    "es": "el vaso",
-    "en": "the glass (tumbler)",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el vaso",
+    "gloss": "the glass (tumbler)",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-la-copa",
     "group": "Table",
     "type": "vocab",
-    "es": "la copa",
-    "en": "the wine glass",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "la copa",
+    "gloss": "the wine glass",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-la-taza",
     "group": "Table",
     "type": "vocab",
-    "es": "la taza",
-    "en": "the cup",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "la taza",
+    "gloss": "the cup",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-vestirse",
     "group": "Verbs",
     "type": "vocab",
-    "es": "vestirse",
-    "en": "to get dressed",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "vestirse",
+    "gloss": "to get dressed",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-vestirse-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "vestirse",
     "english": "to get dressed",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me visto"
@@ -4586,7 +4390,7 @@
         "te vistes"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se viste"
       ],
       [
@@ -4594,15 +4398,11 @@
         "nos vestimos"
       ],
       [
-        "vosotros",
-        "os vestís"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se visten"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "get dressed"
@@ -4620,11 +4420,7 @@
         "get dressed"
       ],
       [
-        "you all",
-        "get dressed"
-      ],
-      [
-        "they",
+        "they / you all",
         "get dressed"
       ]
     ]
@@ -4633,11 +4429,14 @@
     "id": "es-c-vestirse-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "vestirse",
     "english": "to get dressed",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me vestí"
@@ -4647,7 +4446,7 @@
         "te vestiste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se vistió"
       ],
       [
@@ -4655,15 +4454,11 @@
         "nos vestimos"
       ],
       [
-        "vosotros",
-        "os vestisteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se vistieron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "got dressed"
@@ -4681,11 +4476,7 @@
         "got dressed"
       ],
       [
-        "you all",
-        "got dressed"
-      ],
-      [
-        "they",
+        "they / you all",
         "got dressed"
       ]
     ]
@@ -4694,11 +4485,14 @@
     "id": "es-c-vestirse-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "vestirse",
     "english": "to get dressed",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me vestiré"
@@ -4708,7 +4502,7 @@
         "te vestirás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se vestirá"
       ],
       [
@@ -4716,15 +4510,11 @@
         "nos vestiremos"
       ],
       [
-        "vosotros",
-        "os vestiréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se vestirán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will get dressed"
@@ -4742,11 +4532,7 @@
         "will get dressed"
       ],
       [
-        "you all",
-        "will get dressed"
-      ],
-      [
-        "they",
+        "they / you all",
         "will get dressed"
       ]
     ]
@@ -4755,56 +4541,64 @@
     "id": "es-v-la-botella",
     "group": "Table",
     "type": "vocab",
-    "es": "la botella",
-    "en": "the bottle",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "la botella",
+    "gloss": "the bottle",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-el-tenedor",
     "group": "Table",
     "type": "vocab",
-    "es": "el tenedor",
-    "en": "the fork",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el tenedor",
+    "gloss": "the fork",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-el-cuchillo",
     "group": "Table",
     "type": "vocab",
-    "es": "el cuchillo",
-    "en": "the knife",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el cuchillo",
+    "gloss": "the knife",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-la-cuchara",
     "group": "Table",
     "type": "vocab",
-    "es": "la cuchara",
-    "en": "the spoon",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "la cuchara",
+    "gloss": "the spoon",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-sentarse",
     "group": "Verbs",
     "type": "vocab",
-    "es": "sentarse",
-    "en": "to sit down",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "sentarse",
+    "gloss": "to sit down",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-sentarse-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "sentarse",
     "english": "to sit down",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me siento"
@@ -4814,7 +4608,7 @@
         "te sientas"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se sienta"
       ],
       [
@@ -4822,15 +4616,11 @@
         "nos sentamos"
       ],
       [
-        "vosotros",
-        "os sentáis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se sientan"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "sit down"
@@ -4848,11 +4638,7 @@
         "sit down"
       ],
       [
-        "you all",
-        "sit down"
-      ],
-      [
-        "they",
+        "they / you all",
         "sit down"
       ]
     ]
@@ -4861,11 +4647,14 @@
     "id": "es-c-sentarse-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "sentarse",
     "english": "to sit down",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me senté"
@@ -4875,7 +4664,7 @@
         "te sentaste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se sentó"
       ],
       [
@@ -4883,15 +4672,11 @@
         "nos sentamos"
       ],
       [
-        "vosotros",
-        "os sentasteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se sentaron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "sat down"
@@ -4909,11 +4694,7 @@
         "sat down"
       ],
       [
-        "you all",
-        "sat down"
-      ],
-      [
-        "they",
+        "they / you all",
         "sat down"
       ]
     ]
@@ -4922,11 +4703,14 @@
     "id": "es-c-sentarse-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "sentarse",
     "english": "to sit down",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me sentaré"
@@ -4936,7 +4720,7 @@
         "te sentarás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se sentará"
       ],
       [
@@ -4944,15 +4728,11 @@
         "nos sentaremos"
       ],
       [
-        "vosotros",
-        "os sentaréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se sentarán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will sit down"
@@ -4970,11 +4750,7 @@
         "will sit down"
       ],
       [
-        "you all",
-        "will sit down"
-      ],
-      [
-        "they",
+        "they / you all",
         "will sit down"
       ]
     ]
@@ -4983,56 +4759,64 @@
     "id": "es-v-la-servilleta",
     "group": "Table",
     "type": "vocab",
-    "es": "la servilleta",
-    "en": "the napkin",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "la servilleta",
+    "gloss": "the napkin",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-el-desayuno",
     "group": "Table",
     "type": "vocab",
-    "es": "el desayuno",
-    "en": "breakfast",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el desayuno",
+    "gloss": "breakfast",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-la-comida",
     "group": "Table",
     "type": "vocab",
-    "es": "la comida",
-    "en": "lunch",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "la comida",
+    "gloss": "lunch",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-la-cena",
     "group": "Table",
     "type": "vocab",
-    "es": "la cena",
-    "en": "dinner",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "la cena",
+    "gloss": "dinner",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-sentirse",
     "group": "Verbs",
     "type": "vocab",
-    "es": "sentirse",
-    "en": "to feel",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "sentirse",
+    "gloss": "to feel",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-sentirse-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "sentirse",
     "english": "to feel",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me siento"
@@ -5042,7 +4826,7 @@
         "te sientes"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se siente"
       ],
       [
@@ -5050,15 +4834,11 @@
         "nos sentimos"
       ],
       [
-        "vosotros",
-        "os sentís"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se sienten"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "feel"
@@ -5076,11 +4856,7 @@
         "feel"
       ],
       [
-        "you all",
-        "feel"
-      ],
-      [
-        "they",
+        "they / you all",
         "feel"
       ]
     ]
@@ -5089,11 +4865,14 @@
     "id": "es-c-sentirse-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "sentirse",
     "english": "to feel",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me sentí"
@@ -5103,7 +4882,7 @@
         "te sentiste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se sintió"
       ],
       [
@@ -5111,15 +4890,11 @@
         "nos sentimos"
       ],
       [
-        "vosotros",
-        "os sentisteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se sintieron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "felt"
@@ -5137,11 +4912,7 @@
         "felt"
       ],
       [
-        "you all",
-        "felt"
-      ],
-      [
-        "they",
+        "they / you all",
         "felt"
       ]
     ]
@@ -5150,11 +4921,14 @@
     "id": "es-c-sentirse-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "sentirse",
     "english": "to feel",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me sentiré"
@@ -5164,7 +4938,7 @@
         "te sentirás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se sentirá"
       ],
       [
@@ -5172,15 +4946,11 @@
         "nos sentiremos"
       ],
       [
-        "vosotros",
-        "os sentiréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se sentirán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will feel"
@@ -5198,11 +4968,7 @@
         "will feel"
       ],
       [
-        "you all",
-        "will feel"
-      ],
-      [
-        "they",
+        "they / you all",
         "will feel"
       ]
     ]
@@ -5211,56 +4977,64 @@
     "id": "es-v-el-pan",
     "group": "Table",
     "type": "vocab",
-    "es": "el pan",
-    "en": "the bread",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el pan",
+    "gloss": "the bread",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-el-queso",
     "group": "Table",
     "type": "vocab",
-    "es": "el queso",
-    "en": "the cheese",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el queso",
+    "gloss": "the cheese",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-el-jamon",
     "group": "Table",
     "type": "vocab",
-    "es": "el jamón",
-    "en": "the ham",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el jamón",
+    "gloss": "the ham",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-el-pollo",
     "group": "Table",
     "type": "vocab",
-    "es": "el pollo",
-    "en": "the chicken",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el pollo",
+    "gloss": "the chicken",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-irse",
     "group": "Verbs",
     "type": "vocab",
-    "es": "irse",
-    "en": "to leave, to go away",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "irse",
+    "gloss": "to leave, to go away",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-irse-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "irse",
     "english": "to leave, to go away",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me voy"
@@ -5270,7 +5044,7 @@
         "te vas"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se va"
       ],
       [
@@ -5278,15 +5052,11 @@
         "nos vamos"
       ],
       [
-        "vosotros",
-        "os vais"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se van"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "leave"
@@ -5304,11 +5074,7 @@
         "leave"
       ],
       [
-        "you all",
-        "leave"
-      ],
-      [
-        "they",
+        "they / you all",
         "leave"
       ]
     ]
@@ -5317,11 +5083,14 @@
     "id": "es-c-irse-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "irse",
     "english": "to leave, to go away",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me fui"
@@ -5331,7 +5100,7 @@
         "te fuiste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se fue"
       ],
       [
@@ -5339,15 +5108,11 @@
         "nos fuimos"
       ],
       [
-        "vosotros",
-        "os fuisteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se fueron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "left"
@@ -5365,11 +5130,7 @@
         "left"
       ],
       [
-        "you all",
-        "left"
-      ],
-      [
-        "they",
+        "they / you all",
         "left"
       ]
     ]
@@ -5378,11 +5139,14 @@
     "id": "es-c-irse-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "irse",
     "english": "to leave, to go away",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me iré"
@@ -5392,7 +5156,7 @@
         "te irás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se irá"
       ],
       [
@@ -5400,15 +5164,11 @@
         "nos iremos"
       ],
       [
-        "vosotros",
-        "os iréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se irán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will leave"
@@ -5426,11 +5186,7 @@
         "will leave"
       ],
       [
-        "you all",
-        "will leave"
-      ],
-      [
-        "they",
+        "they / you all",
         "will leave"
       ]
     ]
@@ -5439,56 +5195,64 @@
     "id": "es-v-la-carne",
     "group": "Table",
     "type": "vocab",
-    "es": "la carne",
-    "en": "the meat",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "la carne",
+    "gloss": "the meat",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-el-pescado",
     "group": "Table",
     "type": "vocab",
-    "es": "el pescado",
-    "en": "the fish",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el pescado",
+    "gloss": "the fish",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-las-verduras",
     "group": "Table",
     "type": "vocab",
-    "es": "las verduras",
-    "en": "the vegetables",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "las verduras",
+    "gloss": "the vegetables",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-la-ensalada",
     "group": "Table",
     "type": "vocab",
-    "es": "la ensalada",
-    "en": "the salad",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "la ensalada",
+    "gloss": "the salad",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-quedarse",
     "group": "Verbs",
     "type": "vocab",
-    "es": "quedarse",
-    "en": "to stay",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "quedarse",
+    "gloss": "to stay",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-quedarse-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "quedarse",
     "english": "to stay",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me quedo"
@@ -5498,7 +5262,7 @@
         "te quedas"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se queda"
       ],
       [
@@ -5506,15 +5270,11 @@
         "nos quedamos"
       ],
       [
-        "vosotros",
-        "os quedáis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se quedan"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "stay"
@@ -5532,11 +5292,7 @@
         "stay"
       ],
       [
-        "you all",
-        "stay"
-      ],
-      [
-        "they",
+        "they / you all",
         "stay"
       ]
     ]
@@ -5545,11 +5301,14 @@
     "id": "es-c-quedarse-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "quedarse",
     "english": "to stay",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me quedé"
@@ -5559,7 +5318,7 @@
         "te quedaste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se quedó"
       ],
       [
@@ -5567,15 +5326,11 @@
         "nos quedamos"
       ],
       [
-        "vosotros",
-        "os quedasteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se quedaron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "stayed"
@@ -5593,11 +5348,7 @@
         "stayed"
       ],
       [
-        "you all",
-        "stayed"
-      ],
-      [
-        "they",
+        "they / you all",
         "stayed"
       ]
     ]
@@ -5606,11 +5357,14 @@
     "id": "es-c-quedarse-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "quedarse",
     "english": "to stay",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me quedaré"
@@ -5620,7 +5374,7 @@
         "te quedarás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se quedará"
       ],
       [
@@ -5628,15 +5382,11 @@
         "nos quedaremos"
       ],
       [
-        "vosotros",
-        "os quedaréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se quedarán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will stay"
@@ -5654,11 +5404,7 @@
         "will stay"
       ],
       [
-        "you all",
-        "will stay"
-      ],
-      [
-        "they",
+        "they / you all",
         "will stay"
       ]
     ]
@@ -5667,56 +5413,64 @@
     "id": "es-v-la-sopa",
     "group": "Table",
     "type": "vocab",
-    "es": "la sopa",
-    "en": "the soup",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "la sopa",
+    "gloss": "the soup",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-el-arroz",
     "group": "Table",
     "type": "vocab",
-    "es": "el arroz",
-    "en": "the rice",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el arroz",
+    "gloss": "the rice",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-los-huevos",
     "group": "Table",
     "type": "vocab",
-    "es": "los huevos",
-    "en": "the eggs",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "los huevos",
+    "gloss": "the eggs",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-la-fruta",
     "group": "Table",
     "type": "vocab",
-    "es": "la fruta",
-    "en": "the fruit",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "la fruta",
+    "gloss": "the fruit",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-ponerse",
     "group": "Verbs",
     "type": "vocab",
-    "es": "ponerse",
-    "en": "to put on (clothing)",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "ponerse",
+    "gloss": "to put on (clothing)",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-ponerse-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "ponerse",
     "english": "to put on (clothing)",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me pongo"
@@ -5726,7 +5480,7 @@
         "te pones"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se pone"
       ],
       [
@@ -5734,15 +5488,11 @@
         "nos ponemos"
       ],
       [
-        "vosotros",
-        "os ponéis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se ponen"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "put on"
@@ -5760,11 +5510,7 @@
         "put on"
       ],
       [
-        "you all",
-        "put on"
-      ],
-      [
-        "they",
+        "they / you all",
         "put on"
       ]
     ]
@@ -5773,11 +5519,14 @@
     "id": "es-c-ponerse-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "ponerse",
     "english": "to put on (clothing)",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me puse"
@@ -5787,7 +5536,7 @@
         "te pusiste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se puso"
       ],
       [
@@ -5795,15 +5544,11 @@
         "nos pusimos"
       ],
       [
-        "vosotros",
-        "os pusisteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se pusieron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "put on"
@@ -5821,11 +5566,7 @@
         "put on"
       ],
       [
-        "you all",
-        "put on"
-      ],
-      [
-        "they",
+        "they / you all",
         "put on"
       ]
     ]
@@ -5834,11 +5575,14 @@
     "id": "es-c-ponerse-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "ponerse",
     "english": "to put on (clothing)",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me pondré"
@@ -5848,7 +5592,7 @@
         "te pondrás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se pondrá"
       ],
       [
@@ -5856,15 +5600,11 @@
         "nos pondremos"
       ],
       [
-        "vosotros",
-        "os pondréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se pondrán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will put on"
@@ -5882,11 +5622,7 @@
         "will put on"
       ],
       [
-        "you all",
-        "will put on"
-      ],
-      [
-        "they",
+        "they / you all",
         "will put on"
       ]
     ]
@@ -5895,56 +5631,64 @@
     "id": "es-v-el-postre",
     "group": "Table",
     "type": "vocab",
-    "es": "el postre",
-    "en": "the dessert",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el postre",
+    "gloss": "the dessert",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-el-azucar",
     "group": "Table",
     "type": "vocab",
-    "es": "el azúcar",
-    "en": "the sugar",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el azúcar",
+    "gloss": "the sugar",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-la-sal",
     "group": "Table",
     "type": "vocab",
-    "es": "la sal",
-    "en": "the salt",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "la sal",
+    "gloss": "the salt",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-la-pimienta",
     "group": "Table",
     "type": "vocab",
-    "es": "la pimienta",
-    "en": "the pepper",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "la pimienta",
+    "gloss": "the pepper",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-acordarse",
     "group": "Verbs",
     "type": "vocab",
-    "es": "acordarse",
-    "en": "to remember",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "acordarse",
+    "gloss": "to remember",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-acordarse-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "acordarse",
     "english": "to remember",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me acuerdo"
@@ -5954,7 +5698,7 @@
         "te acuerdas"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se acuerda"
       ],
       [
@@ -5962,15 +5706,11 @@
         "nos acordamos"
       ],
       [
-        "vosotros",
-        "os acordáis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se acuerdan"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "remember"
@@ -5988,11 +5728,7 @@
         "remember"
       ],
       [
-        "you all",
-        "remember"
-      ],
-      [
-        "they",
+        "they / you all",
         "remember"
       ]
     ]
@@ -6001,11 +5737,14 @@
     "id": "es-c-acordarse-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "acordarse",
     "english": "to remember",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me acordé"
@@ -6015,7 +5754,7 @@
         "te acordaste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se acordó"
       ],
       [
@@ -6023,15 +5762,11 @@
         "nos acordamos"
       ],
       [
-        "vosotros",
-        "os acordasteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se acordaron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "remembered"
@@ -6049,11 +5784,7 @@
         "remembered"
       ],
       [
-        "you all",
-        "remembered"
-      ],
-      [
-        "they",
+        "they / you all",
         "remembered"
       ]
     ]
@@ -6062,11 +5793,14 @@
     "id": "es-c-acordarse-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "acordarse",
     "english": "to remember",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me acordaré"
@@ -6076,7 +5810,7 @@
         "te acordarás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se acordará"
       ],
       [
@@ -6084,15 +5818,11 @@
         "nos acordaremos"
       ],
       [
-        "vosotros",
-        "os acordaréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se acordarán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will remember"
@@ -6110,11 +5840,7 @@
         "will remember"
       ],
       [
-        "you all",
-        "will remember"
-      ],
-      [
-        "they",
+        "they / you all",
         "will remember"
       ]
     ]
@@ -6123,56 +5849,64 @@
     "id": "es-v-el-aceite",
     "group": "Table",
     "type": "vocab",
-    "es": "el aceite",
-    "en": "the oil",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el aceite",
+    "gloss": "the oil",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-el-agua",
     "group": "Table",
     "type": "vocab",
-    "es": "el agua",
-    "en": "the water",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el agua",
+    "gloss": "the water",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-el-vino",
     "group": "Table",
     "type": "vocab",
-    "es": "el vino",
-    "en": "the wine",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el vino",
+    "gloss": "the wine",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-la-cerveza",
     "group": "Table",
     "type": "vocab",
-    "es": "la cerveza",
-    "en": "the beer",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "la cerveza",
+    "gloss": "the beer",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-olvidarse",
     "group": "Verbs",
     "type": "vocab",
-    "es": "olvidarse",
-    "en": "to forget",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "olvidarse",
+    "gloss": "to forget",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-olvidarse-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "olvidarse",
     "english": "to forget",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me olvido"
@@ -6182,7 +5916,7 @@
         "te olvidas"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se olvida"
       ],
       [
@@ -6190,15 +5924,11 @@
         "nos olvidamos"
       ],
       [
-        "vosotros",
-        "os olvidáis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se olvidan"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "forget"
@@ -6216,11 +5946,7 @@
         "forget"
       ],
       [
-        "you all",
-        "forget"
-      ],
-      [
-        "they",
+        "they / you all",
         "forget"
       ]
     ]
@@ -6229,11 +5955,14 @@
     "id": "es-c-olvidarse-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "olvidarse",
     "english": "to forget",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me olvidé"
@@ -6243,7 +5972,7 @@
         "te olvidaste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se olvidó"
       ],
       [
@@ -6251,15 +5980,11 @@
         "nos olvidamos"
       ],
       [
-        "vosotros",
-        "os olvidasteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se olvidaron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "forgot"
@@ -6277,11 +6002,7 @@
         "forgot"
       ],
       [
-        "you all",
-        "forgot"
-      ],
-      [
-        "they",
+        "they / you all",
         "forgot"
       ]
     ]
@@ -6290,11 +6011,14 @@
     "id": "es-c-olvidarse-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "olvidarse",
     "english": "to forget",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me olvidaré"
@@ -6304,7 +6028,7 @@
         "te olvidarás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se olvidará"
       ],
       [
@@ -6312,15 +6036,11 @@
         "nos olvidaremos"
       ],
       [
-        "vosotros",
-        "os olvidaréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se olvidarán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will forget"
@@ -6338,11 +6058,7 @@
         "will forget"
       ],
       [
-        "you all",
-        "will forget"
-      ],
-      [
-        "they",
+        "they / you all",
         "will forget"
       ]
     ]
@@ -6351,56 +6067,64 @@
     "id": "es-v-el-cafe",
     "group": "Table",
     "type": "vocab",
-    "es": "el café",
-    "en": "the coffee",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el café",
+    "gloss": "the coffee",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-el-te",
     "group": "Table",
     "type": "vocab",
-    "es": "el té",
-    "en": "the tea",
-    "kindEs": "Comer y beber",
-    "kindEn": "Eating and drinking"
+    "lang": "es",
+    "term": "el té",
+    "gloss": "the tea",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
-    "id": "es-v-rojo",
-    "group": "Everyday",
+    "id": "es-v-la-tortilla",
+    "group": "Table",
     "type": "vocab",
-    "es": "rojo",
-    "en": "red",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "la tortilla",
+    "gloss": "the tortilla",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
-    "id": "es-v-azul",
-    "group": "Everyday",
+    "id": "es-v-los-frijoles",
+    "group": "Table",
     "type": "vocab",
-    "es": "azul",
-    "en": "blue",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "los frijoles",
+    "gloss": "the beans",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
     "id": "es-v-divertirse",
     "group": "Verbs",
     "type": "vocab",
-    "es": "divertirse",
-    "en": "to have fun",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "divertirse",
+    "gloss": "to have fun",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-divertirse-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "divertirse",
     "english": "to have fun",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me divierto"
@@ -6410,7 +6134,7 @@
         "te diviertes"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se divierte"
       ],
       [
@@ -6418,15 +6142,11 @@
         "nos divertimos"
       ],
       [
-        "vosotros",
-        "os divertís"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se divierten"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "have fun"
@@ -6444,11 +6164,7 @@
         "have fun"
       ],
       [
-        "you all",
-        "have fun"
-      ],
-      [
-        "they",
+        "they / you all",
         "have fun"
       ]
     ]
@@ -6457,11 +6173,14 @@
     "id": "es-c-divertirse-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "divertirse",
     "english": "to have fun",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me divertí"
@@ -6471,7 +6190,7 @@
         "te divertiste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se divirtió"
       ],
       [
@@ -6479,15 +6198,11 @@
         "nos divertimos"
       ],
       [
-        "vosotros",
-        "os divertisteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se divirtieron"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "had fun"
@@ -6505,11 +6220,7 @@
         "had fun"
       ],
       [
-        "you all",
-        "had fun"
-      ],
-      [
-        "they",
+        "they / you all",
         "had fun"
       ]
     ]
@@ -6518,11 +6229,14 @@
     "id": "es-c-divertirse-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "divertirse",
     "english": "to have fun",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me divertiré"
@@ -6532,7 +6246,7 @@
         "te divertirás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se divertirá"
       ],
       [
@@ -6540,15 +6254,11 @@
         "nos divertiremos"
       ],
       [
-        "vosotros",
-        "os divertiréis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se divertirán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will have fun"
@@ -6566,69 +6276,73 @@
         "will have fun"
       ],
       [
-        "you all",
-        "will have fun"
-      ],
-      [
-        "they",
+        "they / you all",
         "will have fun"
       ]
     ]
   },
   {
-    "id": "es-v-verde",
-    "group": "Everyday",
+    "id": "es-v-el-aguacate",
+    "group": "Table",
     "type": "vocab",
-    "es": "verde",
-    "en": "green",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "el aguacate",
+    "gloss": "the avocado",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
-    "id": "es-v-amarillo",
-    "group": "Everyday",
+    "id": "es-v-la-salsa",
+    "group": "Table",
     "type": "vocab",
-    "es": "amarillo",
-    "en": "yellow",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "la salsa",
+    "gloss": "the salsa",
+    "kindTerm": "Comer y beber",
+    "kindGloss": "Eating and drinking"
   },
   {
-    "id": "es-v-negro",
+    "id": "es-v-rojo",
     "group": "Everyday",
     "type": "vocab",
-    "es": "negro",
-    "en": "black",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "rojo",
+    "gloss": "red",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
   },
   {
-    "id": "es-v-blanco",
+    "id": "es-v-azul",
     "group": "Everyday",
     "type": "vocab",
-    "es": "blanco",
-    "en": "white",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "azul",
+    "gloss": "blue",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
   },
   {
     "id": "es-v-preocuparse",
     "group": "Verbs",
     "type": "vocab",
-    "es": "preocuparse",
-    "en": "to worry",
-    "kindEs": "Verbos",
-    "kindEn": "Verbs"
+    "lang": "es",
+    "term": "preocuparse",
+    "gloss": "to worry",
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs"
   },
   {
     "id": "es-c-preocuparse-presente",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "preocuparse",
     "english": "to worry",
-    "tenseEs": "Presente",
+    "tense": "Presente",
     "tenseEn": "Present",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me preocupo"
@@ -6638,7 +6352,7 @@
         "te preocupas"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se preocupa"
       ],
       [
@@ -6646,15 +6360,11 @@
         "nos preocupamos"
       ],
       [
-        "vosotros",
-        "os preocupáis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se preocupan"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "worry"
@@ -6672,11 +6382,7 @@
         "worry"
       ],
       [
-        "you all",
-        "worry"
-      ],
-      [
-        "they",
+        "they / you all",
         "worry"
       ]
     ]
@@ -6685,11 +6391,14 @@
     "id": "es-c-preocuparse-preterito",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "preocuparse",
     "english": "to worry",
-    "tenseEs": "Pretérito",
+    "tense": "Pretérito",
     "tenseEn": "Simple past",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me preocupé"
@@ -6699,7 +6408,7 @@
         "te preocupaste"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se preocupó"
       ],
       [
@@ -6707,15 +6416,11 @@
         "nos preocupamos"
       ],
       [
-        "vosotros",
-        "os preocupasteis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se preocuparon"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "worried"
@@ -6733,11 +6438,7 @@
         "worried"
       ],
       [
-        "you all",
-        "worried"
-      ],
-      [
-        "they",
+        "they / you all",
         "worried"
       ]
     ]
@@ -6746,11 +6447,14 @@
     "id": "es-c-preocuparse-futuro",
     "group": "Verbs",
     "type": "conjugation",
+    "lang": "es",
     "verb": "preocuparse",
     "english": "to worry",
-    "tenseEs": "Futuro",
+    "tense": "Futuro",
     "tenseEn": "Future",
-    "es": [
+    "kindTerm": "Verbos",
+    "kindGloss": "Verbs",
+    "forms": [
       [
         "yo",
         "me preocuparé"
@@ -6760,7 +6464,7 @@
         "te preocuparás"
       ],
       [
-        "él / ella / Ud.",
+        "él / ella / usted",
         "se preocupará"
       ],
       [
@@ -6768,15 +6472,11 @@
         "nos preocuparemos"
       ],
       [
-        "vosotros",
-        "os preocuparéis"
-      ],
-      [
-        "ellos / Uds.",
+        "ellos / ustedes",
         "se preocuparán"
       ]
     ],
-    "en": [
+    "formsEn": [
       [
         "I",
         "will worry"
@@ -6794,139 +6494,189 @@
         "will worry"
       ],
       [
-        "you all",
-        "will worry"
-      ],
-      [
-        "they",
+        "they / you all",
         "will worry"
       ]
     ]
   },
   {
+    "id": "es-v-verde",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "es",
+    "term": "verde",
+    "gloss": "green",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "es-v-amarillo",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "es",
+    "term": "amarillo",
+    "gloss": "yellow",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "es-v-negro",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "es",
+    "term": "negro",
+    "gloss": "black",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
+  },
+  {
+    "id": "es-v-blanco",
+    "group": "Everyday",
+    "type": "vocab",
+    "lang": "es",
+    "term": "blanco",
+    "gloss": "white",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
+  },
+  {
     "id": "es-v-hoy",
     "group": "Everyday",
     "type": "vocab",
-    "es": "hoy",
-    "en": "today",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "hoy",
+    "gloss": "today",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
   },
   {
     "id": "es-v-manana",
     "group": "Everyday",
     "type": "vocab",
-    "es": "mañana",
-    "en": "tomorrow",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "mañana",
+    "gloss": "tomorrow",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
   },
   {
     "id": "es-v-ayer",
     "group": "Everyday",
     "type": "vocab",
-    "es": "ayer",
-    "en": "yesterday",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "ayer",
+    "gloss": "yesterday",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
   },
   {
     "id": "es-v-ahora",
     "group": "Everyday",
     "type": "vocab",
-    "es": "ahora",
-    "en": "now",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "ahora",
+    "gloss": "now",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
   },
   {
     "id": "es-v-siempre",
     "group": "Everyday",
     "type": "vocab",
-    "es": "siempre",
-    "en": "always",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "siempre",
+    "gloss": "always",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
   },
   {
     "id": "es-v-nunca",
     "group": "Everyday",
     "type": "vocab",
-    "es": "nunca",
-    "en": "never",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "nunca",
+    "gloss": "never",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
   },
   {
     "id": "es-v-tal-vez",
     "group": "Everyday",
     "type": "vocab",
-    "es": "tal vez",
-    "en": "maybe",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "tal vez",
+    "gloss": "maybe",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
   },
   {
     "id": "es-v-claro",
     "group": "Everyday",
     "type": "vocab",
-    "es": "claro",
-    "en": "of course",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "claro",
+    "gloss": "of course",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
   },
   {
     "id": "es-v-lo-siento",
     "group": "Everyday",
     "type": "vocab",
-    "es": "lo siento",
-    "en": "I am sorry",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "lo siento",
+    "gloss": "I am sorry",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
   },
   {
     "id": "es-v-por-favor",
     "group": "Everyday",
     "type": "vocab",
-    "es": "por favor",
-    "en": "please",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "por favor",
+    "gloss": "please",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
   },
   {
     "id": "es-v-gracias",
     "group": "Everyday",
     "type": "vocab",
-    "es": "gracias",
-    "en": "thank you",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "gracias",
+    "gloss": "thank you",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
   },
   {
     "id": "es-v-de-nada",
     "group": "Everyday",
     "type": "vocab",
-    "es": "de nada",
-    "en": "you are welcome",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "de nada",
+    "gloss": "you are welcome",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
   },
   {
     "id": "es-v-cuanto-cuesta",
     "group": "Everyday",
     "type": "vocab",
-    "es": "¿cuánto cuesta?",
-    "en": "how much does it cost?",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "¿cuánto cuesta?",
+    "gloss": "how much does it cost?",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
   },
   {
     "id": "es-v-otra-vez",
     "group": "Everyday",
     "type": "vocab",
-    "es": "otra vez",
-    "en": "again",
-    "kindEs": "Cada día",
-    "kindEn": "Everyday"
+    "lang": "es",
+    "term": "otra vez",
+    "gloss": "again",
+    "kindTerm": "Cada día",
+    "kindGloss": "Everyday"
   }
 ]

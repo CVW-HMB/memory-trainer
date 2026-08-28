@@ -10,6 +10,7 @@
     "start": "uv run python -m http.server 8000",
     "cards": "uv run python scripts/generate_cards.py",
     "cards:es": "uv run python scripts/generate_spanish.py",
+    "cards:fr": "uv run python scripts/generate_french.py",
     "validate": "node scripts/validate-cards.mjs",
     "setup:py": "uv sync"
   },

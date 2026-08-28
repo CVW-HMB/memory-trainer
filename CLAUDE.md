@@ -23,7 +23,11 @@ scheduler (`npm test`).
 "choose a deck" screen:
 
 - `wine` — "Wines, Grapes, Regions", 161 cards, `data/cards.json`.
-- `spanish` — "Spanish – English", 250 cards, `data/spanish.json`.
+- `spanish` — "Mexican Spanish – English", 254 cards, `data/spanish.json`.
+- `french` — "French – English", 254 cards, `data/french.json`.
+
+The picker is a **dropdown**, not a list: it scales, and a phone gets its native
+picker for free.
 
 Progress is keyed `srs_v2:<profile>:<deck>`, so decks never collide. Each deck
 declares its own `groups` (with labels), `groupsTitle` and footer `tagline`, so
@@ -144,10 +148,19 @@ Both **are** reversible — safe here in a way it is not for wine, because a
 translation pair is one-to-one by construction and the validator enforces that
 no two cards share either face.
 
-- `vocab` — `{ es, en, kindEs, kindEn }`. One word or phrase per side.
-- `conjugation` — `{ verb, english, tenseEs, tenseEn, es[], en[] }`. A whole
-  table for one verb in one tense, rendered identically on both faces so they
-  read the same way.
+Fields are language-neutral so the same types serve every language deck: the
+foreign side is `term`, the English side is `gloss`, and `lang` picks the prompt
+wording ("¿En inglés?" against "En anglais ?").
+
+- `vocab` — `{ lang, term, gloss, kindTerm, kindGloss }`. One word per side.
+- `conjugation` — `{ lang, verb, english, tense, tenseEn, forms[], formsEn[] }`.
+  A whole table for one verb in one tense, rendered identically on both faces.
+
+**Mexican Spanish has no `vosotros`** — five rows, not six; `ustedes` covers
+every plural "you". Vocabulary is Mexican (carro, departamento, refrigerador,
+camión, elevador, banqueta) and the English glosses are American. French keeps
+`vous`, so its tables have six rows, and its past tense is the **passé composé**
+— the one people actually speak.
 
 Two rules that deck lives by:
 - **Each face is entirely in one language** — the prompt line, the pronouns and

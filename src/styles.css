@@ -158,17 +158,30 @@ header{display:flex; align-items:baseline; justify-content:space-between; gap:14
 .reset:hover{color:var(--rose)}
 
 /* deck chooser */
-#decks{justify-content:center; gap:20px}
-.decklist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px}
-.deckrow{width:100%; text-align:left; background:linear-gradient(180deg,var(--panel),#2a1017);
-  border:1px solid var(--line); border-radius:16px; padding:18px 18px; display:flex;
-  flex-direction:column; gap:5px; transition:border-color .15s, transform .1s}
-.deckrow:hover{border-color:var(--brass)}
-.deckrow:active{transform:translateY(1px)}
-.deckrow .dname{font-family:"Cormorant Garamond",serif; font-size:24px; font-weight:600; color:var(--cream); line-height:1.15}
-.deckrow .dsub{font-size:13px; color:var(--muted); line-height:1.45}
-.deckrow .dprog{font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--brass-dim);
-  font-variant-numeric:tabular-nums; margin-top:4px}
+#decks{justify-content:center; gap:18px}
+.deckpick{display:flex; flex-direction:column; gap:8px}
+.dp-label{font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted)}
+/* A real <select>, so the phone gets its native picker and the keyboard works.
+   appearance:none to drop the platform chrome, with our own caret. */
+#deckSelect{
+  appearance:none; -webkit-appearance:none;
+  width:100%; min-height:60px; padding:16px 44px 16px 18px;
+  font-family:"Cormorant Garamond",serif; font-size:23px; font-weight:600;
+  color:var(--cream); background:linear-gradient(180deg,var(--panel),#2a1017);
+  border:1px solid var(--line); border-radius:14px; cursor:pointer;
+  background-image:linear-gradient(45deg,transparent 50%,var(--brass) 50%),
+                   linear-gradient(135deg,var(--brass) 50%,transparent 50%);
+  background-position:calc(100% - 22px) calc(50% + 2px), calc(100% - 16px) calc(50% + 2px);
+  background-size:6px 6px, 6px 6px;
+  background-repeat:no-repeat;
+  transition:border-color .15s;
+}
+#deckSelect:hover{border-color:var(--brass)}
+#deckSelect option{background:var(--panel); color:var(--cream); font-size:16px}
+.deckinfo{min-height:64px}
+.dp-sub{margin:0; font-size:13.5px; color:var(--muted); line-height:1.5}
+.dp-prog{margin:8px 0 0; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--brass-dim); font-variant-numeric:tabular-nums}
 
 /* profiles */
 #profiles{gap:18px}

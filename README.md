@@ -5,15 +5,19 @@ and let the scheduler decide what you see next. One engine, any number of decks:
 the scheduling and the mastery numbers mean the same thing whatever you are
 studying.
 
-Two decks ship today:
+Three decks ship today:
 
 - **Wines, Grapes, Regions** — 161 cards. Learning wine the way it helps you in
   a restaurant: which grapes grow where, and how to read a label you have never
   seen. France-first, then Tuscany-led Italy, then the wines you will actually
   meet on a US list.
-- **Spanish – English** — 250 cards. The 15 most common verbs and the 15 most
-  common reflexive verbs across present, past and future, plus the vocabulary
-  for a house, a town and a table.
+- **Mexican Spanish – English** — 254 cards. The 15 most common verbs and the 15
+  most common reflexive verbs across present, past and future, plus the
+  vocabulary for a house, a town and a table. Mexican usage throughout: no
+  `vosotros`, and carro/departamento/refrigerador rather than the Peninsular
+  words.
+- **French – English** — 254 cards. The same shape, with the passé composé as
+  the past tense.
 
 **Live: https://cvw-hmb.github.io/memory-trainer/** — served by GitHub Pages from
 `main` at the repo root. Every path in the app is relative, so it works under the
@@ -38,7 +42,8 @@ npm start            # or: uv run python -m http.server 8000
 Then open http://localhost:8000.
 
 ```bash
-npm run cards:es    # regenerate the Spanish deck
+npm run cards:es    # regenerate the Mexican Spanish deck
+npm run cards:fr    # regenerate the French deck
 npm test            # scheduler tests (node --test, no dependencies)
 npm run validate    # dataset schema, unique ids, spoiler check
 ```
@@ -102,7 +107,8 @@ cloning the repo runs step 1 and repeats it.
 ```
 index.html            app shell
 data/decks.json       deck index (the "choose a deck" screen)
-data/spanish.json     the Spanish deck
+data/spanish.json     the Mexican Spanish deck
+data/french.json      the French deck
 src/decks/            card types: registry, render specs, wine, vocab
 src/app.js            UI, rendering, storage, wiring
 src/engine/schedule.js  the Leitner scheduler (pure, no DOM)

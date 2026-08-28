@@ -15,8 +15,8 @@ const REQUIRED = {
   place2grape: ["grape", "country", "region", "notes"],
   decode: ["appellation", "grape", "country", "region", "notes"],
   grapehome: ["grape", "home", "also"],
-  vocab: ["es", "en", "kindEs", "kindEn"],
-  conjugation: ["verb", "english", "tenseEs", "tenseEn"],
+  vocab: ["lang", "term", "gloss", "kindTerm", "kindGloss"],
+  conjugation: ["lang", "verb", "english", "tense", "tenseEn", "kindTerm", "kindGloss"],
 };
 
 // Which faces a card presents, and whether it may be shown in both directions.
@@ -29,10 +29,10 @@ const FACES = {
                                     back: c => `wine|${c.grape}|${c.country}|${c.region}|${c.notes}` },
   grapehome:   { reversible: false, front: c => `grape|${c.grape}`,
                                     back: c => `home|${c.home}` },
-  vocab:       { reversible: true,  front: c => `es|${c.es}`,
-                                    back: c => `en|${c.en}` },
-  conjugation: { reversible: true,  front: c => `es|${c.verb}|${c.tenseEs}`,
-                                    back: c => `en|${c.english}|${c.tenseEn}` },
+  vocab:       { reversible: true,  front: c => `term|${c.term}`,
+                                    back: c => `gloss|${c.gloss}` },
+  conjugation: { reversible: true,  front: c => `term|${c.verb}|${c.tense}`,
+                                    back: c => `gloss|${c.english}|${c.tenseEn}` },
 };
 
 let failed = false;
@@ -60,8 +60,8 @@ for (const deck of read("./data/decks.json")) {
     if (c.type === "conjugation") {
       const ok = a => Array.isArray(a) && a.length >= 2 &&
                       a.every(r => Array.isArray(r) && r.length === 2 && r[0] && r[1]);
-      if (!ok(c.es) || !ok(c.en)) errors.push(`${at}: es/en must be arrays of [pronoun, form] pairs`);
-      else if (c.es.length !== c.en.length) errors.push(`${at}: es has ${c.es.length} forms, en has ${c.en.length}`);
+      if (!ok(c.forms) || !ok(c.formsEn)) errors.push(`${at}: forms/formsEn must be arrays of [pronoun, form] pairs`);
+      else if (c.forms.length !== c.formsEn.length) errors.push(`${at}: forms has ${c.forms.length}, formsEn has ${c.formsEn.length}`);
     }
 
     // Spoiler guard: a wine card's tasting notes must not name the grape.
