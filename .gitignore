@@ -39,3 +39,6 @@ build/
 
 # ---- Logs ----
 *.log
+
+# ---- Local-only notes (not pushed) ----
+local-files/

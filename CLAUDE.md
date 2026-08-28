@@ -17,6 +17,27 @@ Needs a static server because the app `fetch`es `data/cards.json`:
 
 The Python side is managed by **uv** with a local `./.venv`: `npm run setup:py` (= `uv sync`) creates it from `pyproject.toml` + `.python-version` (3.14, the current stable line). The generator is stdlib-only, so the venv pins the interpreter rather than installing packages. Every Python entry point goes through `uv run`, so no manual activation is needed — do not add `python3 ...` calls back into `package.json`. `.venv/` is gitignored; commit `pyproject.toml`, `.python-version`, and `uv.lock`.
 
+## Local notes (`local-files/`)
+
+`local-files/` is the owner's scratch space: project notes, card drafts, TODOs.
+It is **git-ignored**, so nothing in it reaches GitHub and nothing in the app may
+depend on it. Never move a file out of it into the repo without being asked, and
+never put secrets in the tracked tree instead.
+
+**Required at the end of every full iteration** (a prompt, or a group of prompts,
+carried through to a working and verified state):
+
+1. Append an entry to `local-files/worklog.md`, newest first, under a dated
+   heading. Say what changed, what was verified and how, and — importantly — any
+   open question, deferred decision, or thing deliberately not done. The log is
+   for picking work back up cold, so record the *why*, not just the diff.
+2. Update any other file in `local-files/` the work touched or made stale.
+3. If the work changed how the repo is run, built, or structured, update this
+   file and `README.md` too — those are the tracked, shareable source of truth.
+   `local-files/` is history and context; it does not replace real docs.
+
+Create the folder with `mkdir local-files` if a fresh clone lacks it.
+
 ## The card model (important)
 
 The relationship between grape and region is many-to-many, which breaks card symmetry. That constraint drove the whole design, so preserve it.
