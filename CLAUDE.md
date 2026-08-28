@@ -8,13 +8,20 @@ A wine flashcard trainer. The learning goal is real-world: walk into a restauran
 
 The current app is a single-page static web app (vanilla JS, no framework, no build step). It is intentionally small so it is easy to extend. Progress persists in `localStorage`.
 
-**Where this is going:** wine is the first deck, not the product. The destination is a
-general multi-deck trainer — decks live in `data/decks/`, you launch the app and pick
-one, and the app presents itself as that deck (Spanish vocabulary, physics, wine). The
-scheduling and mastery measurement stay identical across decks so progress means the
-same thing whatever the subject. Creating a deck should mean writing a spreadsheet and
-dropping it in. **`PLAN.md` is the roadmap and holds the PR-by-PR breakdown — read it
-before starting feature work, and keep it updated as PRs land.**
+**Current focus — MVP:** finish the wine app. One deck, done properly: deployed,
+phone-ready, offline, durable progress. `PLAN.md` **Part 1** is the only work in
+scope right now. Do not build deck abstraction, a deck picker, generic card types,
+or an importer until Part 1 ships.
+
+**Where this eventually goes:** wine is the first deck, not the product. The
+destination is a general multi-deck trainer — decks in `data/decks/`, pick one at
+launch, and the app presents itself as that deck (Spanish vocabulary, physics,
+wine), with identical scheduling and mastery measurement across decks. That is
+`PLAN.md` **Part 2**, deliberately deferred.
+
+**`PLAN.md` is the roadmap — read it before starting feature work and keep it
+updated as work lands.** The one concession Part 1 makes to Part 2 is namespacing
+the storage key (M5); otherwise build for one deck.
 
 The wine-specific rules below (one determinate answer per prompt, declared
 reversibility, stable ids) are not wine-specific in spirit. They apply to every deck.
@@ -117,10 +124,10 @@ When expanding the deck, keep the France-first weighting and the "popular in a U
 
 ## Roadmap
 
-**`PLAN.md` is the roadmap.** It holds the target architecture and the PR-by-PR
-breakdown (Pages deploy, deck adapter, deck picker, per-deck storage, generic card
-types, spreadsheet import, PWA/offline, IndexedDB). Do not keep a competing list
-here — update `PLAN.md` as PRs land.
+**`PLAN.md` is the roadmap.** Part 1 is the MVP — finishing the wine app (Pages
+deploy, session-length cap, touch pass, PWA/offline, IndexedDB, scheduler tests,
+edge cases). Part 2 is the multi-deck generalization, deferred until Part 1 ships.
+Do not keep a competing list here — update `PLAN.md` as work lands.
 
 Content work continues alongside it: expand toward ~200 wine cards, still
 France-first, and add a "learn" pass that introduces a card as `place2grape`

@@ -1,212 +1,210 @@
-# Plan: from wine trainer to a multi-deck trainer
+# Plan
 
-## The goal
+## The long-term goal
 
 One small web app, runnable from a laptop or a phone browser, that trains you on
 **any** deck of flashcards using the same scheduling and mastery measurement.
+Decks live in a folder in this repo; you launch the app, pick a deck, and the app
+presents itself as that deck — Spanish vocabulary, physics, wine. Creating a deck
+means writing a spreadsheet and dropping it in.
 
-- Decks live in a folder in this repo. Launch the app, pick a deck, and that deck
-  is set for the session.
-- The app presents itself as the deck: pick the Spanish deck and it is a
-  vocabulary trainer; pick wine and it is the wine trainer. Same engine
-  underneath — name, subtitle, and vocabulary come from the deck.
-- Creating a deck means writing a spreadsheet and dropping it in.
-- The yes/no self-rating, the Leitner boxes, the mastery and streak measurement
-  are the point. They stay identical across every deck, so progress means the
-  same thing whatever you are learning.
-- It must work well on a phone: daily training, offline, installed to the home
-  screen.
+## But first: finish the wine app
 
-## How hard is this, honestly
+**Part 1 below is the MVP and the only thing being built right now.** It ships a
+finished, phone-ready, offline wine trainer with the current deck. No deck
+abstraction, no picker, no importer — one deck, done properly.
 
-**Moderate, and front-loaded with easy wins.** The engine is already generic; the
-wine coupling is thinner than it looks.
+The reason is not just scope discipline. Generalizing an app that is not yet good
+means generalizing the wrong things: you would build a deck picker before knowing
+what a finished session feels like on a phone. Finish one deck, learn what
+"finished" means, then make it repeatable.
 
-Already deck-agnostic (`src/app.js`): the Leitner scheduler (`buildQueue`,
-`answer`), streaks, per-`group` stats, the flight builder. They key off card `id`
-and `group` and never inspect a wine field.
+Part 2 is written down so the MVP does not paint itself into a corner, but it is
+**not** in scope until Part 1 ships.
 
-Already a generic contract: `specHeadline` / `specDetail` (app.js:124-125) describe
-a card face as "one big line" or "lead + context + notes" — no wine in them. The
-renderer (`fillFace`) consumes only those.
+---
 
-Genuinely wine-specific, and it is a short list: `reversible`, `cardLabel`,
-`cardHint`, and `facesFor` — about 30 lines that translate wine fields into those
-generic specs. That is the seam. Everything else is additive.
+# Part 1 — MVP: the finished wine app
 
-So the honest sizing:
-- Deck-picking and multi-deck storage: **easy**, mostly plumbing.
-- Generic card types and a spreadsheet importer: **moderate**, well-understood.
-- Phone/PWA/offline: **moderate**, fiddly rather than hard.
-- The scheduler: **already done**. Do not rewrite it.
+Goal: open it on your phone, train daily, offline, with progress that survives.
+One deck. Done when you would actually use it every day without wishing for
+anything.
 
-The main risk is not difficulty, it is doing things in the wrong order — see the
-sequencing warnings below.
+## What is already good
+
+Do not rebuild these. The engine is sound:
+
+- The Leitner scheduler (`buildQueue`, `answer`) — boxes, intervals, weak-first
+  ordering with jitter, no within-run repeats, random direction per run.
+- Streaks and per-region stats, the cellar book, the end-of-session summary.
+- 100 cards, validated, correctly weighted (France 70 / Italy 18 / Rest 12).
+- `index.html` already sets `viewport-fit=cover`, so safe-area work has a base.
+- `freshState` pre-populates every card, so no missing-state crashes.
+
+## M1 — Deploy to GitHub Pages
+Do this **first**. Every other MVP item needs to be tested on a real phone, and
+that is painful until there is a URL.
+
+- No code changes required: all paths are already relative (`./data/cards.json`,
+  `./src/app.js`, `./src/styles.css`).
+- Enable Pages on `main` / root, or add a deploy workflow.
+- **Decision required before starting:** Pages from a private repo needs a paid
+  plan. On Free, the repo must go public. Nothing in the repo is sensitive and
+  `local-files/` is ignored, so going public is low-risk.
+- Done when: the live URL loads on a phone and a session can be completed.
+
+## M2 — Cap the session length
+**This is the biggest gap in the app today.** `buildQueue` returns every due
+card, and every unseen card counts as due — so **the first flight is all 100
+cards**, and flights stay long afterward because box-1 cards are due every
+session. That is not a daily habit, it is a chore, and it is the single thing
+most likely to stop you using it.
+
+- Add a target flight size (start around 20; make it a constant, not a setting).
+- Keep the existing weak-first ordering, then take the top N.
+- Mix in a few unseen cards per flight so new material is introduced steadily
+  rather than 100 at once.
+- Show honest numbers on the home screen: "20 of 47 due" beats "47 due".
+- Do **not** change the box arithmetic or intervals. Only how many of the due
+  cards a flight serves.
+- Done when: a first-run session is ~20 cards, and the deck is still fully
+  learnable over repeated days.
+
+## M3 — Touch and small-screen pass
+- Thumb-reachable rating buttons; large tap targets.
+- Safe-area insets (notch, home indicator); no accidental zoom on double-tap.
+- Handle iOS dynamic viewport height properly (`dvh`, not `100vh`).
+- Keep the keyboard shortcuts for laptop use.
+- Done when: a full session on a phone needs no pinching or precision taps.
+
+## M4 — PWA: installable and offline
+- `manifest.webmanifest`: name, `display: standalone`, theme `#241016`.
+- **App icons** — real image files at the required sizes, plus
+  `apple-touch-icon`. This is a genuine task, not a line of config.
+- Add the `theme-color` meta tag (not currently present).
+- Service worker precaching the shell and `cards.json`.
+- Also protects progress: installed PWAs are exempt from Safari's 7-day storage
+  eviction.
+- Done when: it installs to an iPhone home screen and runs in airplane mode.
+
+## M5 — Storage hardening
+- Move progress from `localStorage` to IndexedDB; call
+  `navigator.storage.persist()`; migrate existing `wine_srs_v1` data.
+- **Namespace the key now** — store under a deck-scoped key (`srs_v2:wine`)
+  even though there is only one deck. It costs nothing today and saves a second
+  migration in Part 2. This is the one concession the MVP makes to the long-term
+  plan, and it is worth it.
+- Done when: progress survives reload, reinstall, and a week of not opening it.
+
+## M6 — Lock the scheduler with tests
+There are no tests. The scheduler *is* the product — "if mastery numbers move,
+that's a bug" is unenforceable without something to catch it.
+
+- Use Node's built-in test runner (`node --test`), zero dependencies.
+- Cover: box promotion and demotion, `INTERVAL` due arithmetic, streak
+  increment/reset across day boundaries, no within-run repeats, and the M2 cap.
+- Add `npm test`; keep it fast.
+- Done when: refactoring the scheduler without changing behavior is safe.
+
+## M7 — Finish the edges
+- A "reset progress" path (currently impossible without devtools).
+- Empty and edge states: nothing due, everything mastered, first ever run.
+- Content pass toward ~200 cards, still France-first.
+- Optional, only if it still feels unfinished: a "learn" pass that introduces a
+  card as `place2grape` before it can appear as a `decode` reverse.
+- Done when: you would send it to someone without a caveat.
+
+## MVP guardrails
+- **One deck.** No deck abstraction, no picker, no importer, no generic card
+  types. If a change only makes sense for a second deck, it belongs in Part 2.
+- The only forward-looking concession is the namespaced storage key in M5.
+- Do not add wine-specific coupling to new code. Not the same as abstracting —
+  just do not make Part 2 harder for free.
+- Do not rewrite the scheduler. M2 changes how many cards a flight serves, not
+  how boxes work.
+
+---
+
+# Part 2 — Generalize to any deck (after the MVP ships)
+
+Not in scope yet. Recorded so Part 1 does not block it.
+
+## Why this is not as big as it sounds
+
+The engine is already deck-agnostic. `buildQueue`, `answer`, streaks and group
+stats key off card `id` and `group` and never inspect a wine field. And
+`specHeadline` / `specDetail` (`src/app.js:124-125`) are already a generic render
+contract — "one big line" or "lead + context + notes", with no wine in them.
+
+The only wine-coupled code is `reversible`, `cardLabel`, `cardHint`, and
+`facesFor`: roughly 30 lines translating wine fields into those generic specs.
+That is the entire seam.
 
 ## Target architecture
 
 ```
 data/
-  decks.json              index: id, name, subtitle, theme, file, cardCount
-  decks/
-    wine.json             cards + deck metadata
-    spanish.json
-    physics.json
+  decks.json              index: id, name, subtitle, theme, file
+  decks/wine.json         cards + deck metadata
 src/
-  app.js                  shell: routing, session loop, stats
-  engine/
-    schedule.js           Leitner, unchanged behavior
-    store.js              per-deck progress
-  decks/
-    registry.js           type -> compiler lookup
-    basic.js              generic front/back compiler
-    wine.js               the three wine types
+  engine/                 schedule.js, store.js
+  decks/                  registry.js, basic.js, wine.js
 ```
 
-A **deck** is metadata plus cards. A **card type** is a compiler: it turns a card
-row into `{prompt, answer}` render specs and declares whether it is reversible.
-The wine types become the first compilers rather than special cases in the
-renderer.
+A **deck** is metadata plus cards. A **card type** is a compiler: it turns a row
+into `{prompt, answer}` render specs and declares whether it is reversible. The
+wine types become the first compiler rather than special cases in the renderer.
 
-Generic core card, what the engine speaks:
+Generic core card: `{ id, deck, group, type, front, back, extra, reversible }`.
 
-```
-{ id, deck, group, type, front, back, extra, reversible }
-```
+Minimum spreadsheet: `type | group | front | back | notes | reversible`.
 
-The minimum spreadsheet for a new deck:
+## The PRs
 
-| type  | group | front | back | notes | reversible |
-|-------|-------|-------|------|-------|------------|
+- **D1 — Extract the deck adapter.** Move `reversible`/`cardLabel`/`cardHint`/
+  `facesFor` into `src/decks/wine.js` behind a type registry. Pure refactor, no
+  behavior change. Done when `grep -i grape src/app.js` is empty. *(Good first
+  move: needs no decisions.)*
+- **D2 — Deck manifest.** `data/decks.json` + `data/decks/wine.json` with
+  metadata; update the generator to emit it.
+- **D3 — Deck picker.** Launch screen listing decks; the chosen deck sets the
+  session and supplies the app's name, subtitle, and theme. Remember the last
+  deck used.
+- **D4 — Per-deck progress.** Extend M5's namespaced key to real multi-deck
+  storage. **Decision:** is the daily streak global or per-deck? Recommend
+  global — it measures the habit, not the subject.
+- **D5 — Generic `basic` card type.** `{front, back, notes, reversible}`. Done
+  when a hand-written Spanish deck trains end to end with no new JS.
+- **D6 — Generalize the validator.** Per-deck schema, unique ids, and a
+  duplicate-prompt warning.
+- **D7 — Spreadsheet to deck, offline.** `scripts/import_deck.py` converting
+  `.csv`/`.xlsx` to deck JSON via `uv run`, with stable content-derived ids.
+- **D8 — In-browser import.** Drag a spreadsheet onto the launch screen; parse
+  client-side, save to IndexedDB. **Decision:** `.xlsx` via SheetJS (~1 CDN file)
+  vs. CSV-only (zero deps). Recommend SheetJS — importing the spreadsheet you
+  already have is the point. Imported decks live in the browser, not the repo.
+- **D9 — Deck health check.** Surface duplicate prompts, answer-leaking hints,
+  and lopsided groups at import time, with a preview before saving.
 
-## Rules that carry over
+## Rules that generalize to every deck
 
-These came out of the wine deck and are not wine-specific. They apply to every
-deck:
-
-- **One determinate answer per prompt.** A prompt that maps to several correct
-  answers cannot be graded yes/no. This cannot be auto-enforced for arbitrary
-  decks, so the importer must *warn* on duplicate prompts.
-- **Reversibility is declared, never assumed.** A card flips only if the deck
-  says that direction is also determinate.
-- **Card ids are stable.** Progress is keyed by id. Renaming an id resets that
-  card.
+- **One determinate answer per prompt.** A prompt with several correct answers
+  cannot be graded yes/no. Not auto-enforceable for arbitrary decks, so the
+  importer must warn on duplicate prompts.
+- **Reversibility is declared, never assumed.**
+- **Card ids are stable.** Progress is keyed by id.
 - **Do not leak the answer into the hint fields.**
 
 ## Sequencing warnings
 
-1. **Do per-deck storage (PR 5) before any second deck ships.** Progress lives
-   under one `wine_srs_v1` key today. Add decks first and they collide, and you
-   pay for a second migration later.
-2. **Do IndexedDB (PR 11) before in-browser import (PR 12).** Imported decks need
-   somewhere to live that is not `localStorage`.
-3. **Do not rewrite the scheduler.** Every PR below leaves `buildQueue` and the
-   box arithmetic alone. If mastery numbers move, something broke.
+1. Per-deck storage (D4) must land before a second deck ships, or progress
+   collides. M5's namespaced key is what makes this cheap.
+2. IndexedDB (M5) before in-browser import (D8) — imported decks need a home.
+3. Never rewrite the scheduler as a side effect. If mastery or streak numbers
+   move unexpectedly, that is a bug, not a new baseline. M6's tests enforce this.
 
----
+## Not in scope, either part
 
-# The PRs
-
-Each is a branch off `main`, squash-merged when code complete. Each leaves the
-app working — no PR depends on a later one to be runnable.
-
-## Phase 0 — ship what exists
-
-### PR 1 — Publish to GitHub Pages
-Serve the current app at `cvw-hmb.github.io/wine-trainer`. No code changes needed:
-every path is already relative (`./data/cards.json`, `./src/app.js`).
-- Enable Pages on `main` / root, or add a deploy workflow.
-- **Decision required:** Pages from a private repo needs a paid plan. On Free,
-  the repo must go public.
-- Done when: the live URL loads and a session can be completed on a phone.
-
-## Phase 1 — decouple the engine from wine
-
-### PR 2 — Extract the deck adapter (no behavior change)
-Move `reversible`, `cardLabel`, `cardHint`, `facesFor` out of `app.js` into
-`src/decks/wine.js`, reached through a `type -> compiler` registry.
-- `app.js` stops naming any wine field.
-- Done when: the app behaves identically and `grep -i grape src/app.js` is empty.
-
-### PR 3 — Deck manifest and `data/decks/`
-Introduce `data/decks.json` (the index) and move the cards to
-`data/decks/wine.json` with metadata: `id`, `name`, `subtitle`, `theme`.
-- Keep `data/cards.json` generation working, or update the generator to emit the
-  new shape.
-- Done when: the app loads wine through the manifest.
-
-### PR 4 — Deck picker
-A launch screen listing decks from `data/decks.json`. Picking one sets it for the
-session; the header, title, and copy come from that deck's metadata.
-- Remember the last deck used.
-- Done when: the app titles itself from the chosen deck.
-
-### PR 5 — Per-deck progress (blocking prerequisite)
-Move storage to a per-deck key (e.g. `srs_v2:<deckId>`), with a one-time
-migration of `wine_srs_v1` into the wine deck.
-- Stats, streaks, and mastery become per-deck. Decide and document whether the
-  daily streak is global or per-deck — recommend **global**, since it measures
-  the habit, not the subject.
-- Done when: two decks hold independent progress and existing wine progress
-  survives the upgrade.
-
-## Phase 2 — any deck, no custom code
-
-### PR 6 — Generic `basic` card type
-A compiler for `{front, back, notes, reversible}` covering vocabulary, terms,
-formulas — most decks.
-- Done when: a hand-written Spanish deck JSON trains end to end with no new JS.
-
-### PR 7 — Generalize the validator
-`scripts/validate-cards.mjs` validates any deck: schema per type, unique ids,
-and the duplicate-prompt warning that protects the one-answer rule.
-- Done when: `npm run validate` checks every deck in `data/decks/`.
-
-### PR 8 — Spreadsheet to deck (offline)
-A Python script (`scripts/import_deck.py`) converting `.csv`/`.xlsx` into deck
-JSON, run via `uv run`.
-- Deterministic, stable ids derived from content.
-- Done when: dropping a spreadsheet in and running one command produces a
-  playable deck in the repo.
-
-## Phase 3 — make it a phone app
-
-### PR 9 — Touch and small-screen pass
-Tap targets, safe-area insets, no accidental zoom, thumb-reachable rating
-buttons. Keyboard shortcuts stay for the laptop.
-- Done when: a full session on a phone needs no pinching or precision taps.
-
-### PR 10 — PWA: installable and offline
-`manifest.webmanifest` (standalone, theme `#241016`, icons) plus a service worker
-precaching the shell and every deck.
-- Also protects saved progress: installed PWAs are exempt from Safari's 7-day
-  storage eviction.
-- Done when: it installs to an iPhone home screen and runs in airplane mode.
-
-### PR 11 — IndexedDB and persistent storage
-Move progress from `localStorage` to IndexedDB, call
-`navigator.storage.persist()`, migrate existing data.
-- Done when: progress survives with no storage warnings, and import has a home.
-
-## Phase 4 — drop a spreadsheet into the running app
-
-### PR 12 — In-browser deck import
-Drag a `.csv`/`.xlsx` onto the launch screen; it parses client-side and saves the
-deck to IndexedDB alongside the repo decks.
-- `.xlsx` needs SheetJS from a CDN (~1 file). CSV-only would need zero
-  dependencies — **decide before starting.** Recommend SheetJS, since importing
-  the spreadsheet you already have is the point.
-- Imported decks live in the browser, not the repo. No commit, no redeploy.
-- Done when: a spreadsheet becomes a playable deck on a phone with no laptop.
-
-### PR 13 — Deck health check
-Surface duplicate prompts, answer-leaking hints, and lopsided groups at import
-time, with a preview before the deck is saved.
-- Done when: a broken deck is caught before it is trained on.
-
-## Deliberately not in scope yet
-
-- Cloud sync across devices (roadmap step 3). Revisit only if one browser stops
-  being enough.
+- Cloud sync across devices. Revisit only if one browser stops being enough.
 - Typed answers or fuzzy grading. The yes/no self-rating is the measurement.
-- A build step / framework. Revisit at PR 12 if the import UI justifies Vite.
+- A build step or framework. Revisit at D8 if the import UI justifies Vite.
