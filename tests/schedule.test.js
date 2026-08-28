@@ -3,9 +3,9 @@
 import { test, describe } from "node:test";
 import assert from "node:assert/strict";
 import {
-  INTERVAL, MAX_BOX, FLIGHT_SIZE, NEW_PER_FLIGHT,
+  INTERVAL, MAX_BOX, FLIGHT_SIZE, NEW_PER_FLIGHT, OVERDUE_SLOTS,
   freshCardState, isNew, isDue, dueCards, weakFirst, buildQueue,
-  applyAnswer, ymd, daysBetween, nextStreak,
+  applyAnswer, ymd, daysBetween, nextStreak, overdueBy, mostOverdue,
 } from "../src/engine/schedule.js";
 
 /* ---------------- helpers ---------------- */
@@ -77,7 +77,9 @@ describe("INTERVAL due arithmetic", () => {
   });
 
   test("the interval table is the documented one", () => {
-    assert.deepEqual(INTERVAL, { 1: 1, 2: 1, 3: 2, 4: 4, 5: 8 });
+    // A mastered card comes back roughly every ten sessions. Change this only
+    // deliberately: it is what "mastered" means.
+    assert.deepEqual(INTERVAL, { 1: 1, 2: 1, 3: 2, 4: 4, 5: 10 });
   });
 
   test("an out-of-range box falls back to a one-session interval", () => {
@@ -232,6 +234,80 @@ describe("flight cap", () => {
       for (const id of buildQueue(cards, st, flight, rand)) applyAnswer(st[id], true, flight);
     }
     assert.equal(cards.filter(c => isNew(st[c.id])).length, 0, "every card should have been introduced");
+  });
+});
+
+/* ---------------- rotation: nothing may be starved ---------------- */
+describe("overdue rotation", () => {
+  test("overdueBy counts sessions past the due point", () => {
+    const s = seen(freshCardState(), { box: 5, lastSession: 10 }); // due at 20
+    assert.equal(overdueBy(s, 15), -5);
+    assert.equal(overdueBy(s, 20), 0);
+    assert.equal(overdueBy(s, 33), 13);
+  });
+
+  test("an unseen card is not treated as overdue", () => {
+    assert.equal(overdueBy(freshCardState(), 500), 0);
+    assert.equal(overdueBy(undefined, 500), 0);
+  });
+
+  test("mostOverdue puts the longest-waiting card first", () => {
+    const cards = deck(4);
+    const st = states(cards);
+    seen(st.c0, { box: 1, lastSession: 99 });   // overdue by 0
+    seen(st.c1, { box: 5, lastSession: 40 });   // overdue by 50
+    seen(st.c2, { box: 5, lastSession: 80 });   // overdue by 10
+    seen(st.c3, { box: 2, lastSession: 95 });   // overdue by 4
+    assert.deepEqual(mostOverdue(cards, st, 100, () => 0).map(c => c.id),
+                     ["c1", "c2", "c3", "c0"]);
+  });
+
+  test("a badly overdue mastered card is served even when weak cards fill the flight", () => {
+    const cards = deck(100);
+    const st = states(cards);
+    // 90 box-1 cards, all due: under pure weak-first these would take every seat
+    for (let i = 0; i < 90; i++) seen(st["c" + i], { box: 1, lastSession: 199 });
+    // one mastered card, 40 sessions past due
+    seen(st.c95, { box: 5, lastSession: 150 });
+    const q = buildQueue(cards, st, 200, seeded(4));
+    assert.ok(q.includes("c95"), "the long-overdue mastered card must get a seat");
+  });
+
+  test("no card can be starved indefinitely", () => {
+    // The regression this guards: weak-first alone left the worst card on the
+    // 200-card deck unseen for 55 sessions.
+    const cards = deck(200);
+    const st = states(cards);
+    const last = Object.fromEntries(cards.map(c => [c.id, 0]));
+    const rand = seeded(2024);
+    const FLIGHTS = 300;
+    for (let f = 1; f <= FLIGHTS; f++) {
+      for (const id of buildQueue(cards, st, f, rand)) {
+        last[id] = f;
+        applyAnswer(st[id], rand() < 0.85, f);
+      }
+    }
+    const worst = Math.max(...cards.map(c => FLIGHTS - last[c.id]));
+    assert.ok(worst <= 30, `worst gap was ${worst} sessions, expected <= 30`);
+  });
+
+  test("reserving overdue seats does not cost mastery", () => {
+    const cards = deck(200);
+    const st = states(cards);
+    const rand = seeded(2024);
+    for (let f = 1; f <= 300; f++) {
+      for (const id of buildQueue(cards, st, f, rand)) applyAnswer(st[id], rand() < 0.85, f);
+    }
+    const mastered = cards.filter(c => st[c.id].box === MAX_BOX).length;
+    assert.ok(mastered >= 150, `only ${mastered}/200 reached box 5`);
+  });
+
+  test("the reserved seats never exceed the flight", () => {
+    assert.ok(OVERDUE_SLOTS < FLIGHT_SIZE - NEW_PER_FLIGHT);
+    const cards = deck(8);                      // fewer cards than a flight
+    const q = buildQueue(cards, states(cards), 1, seeded());
+    assert.equal(q.length, 8);
+    assert.equal(new Set(q).size, 8);
   });
 });
 
