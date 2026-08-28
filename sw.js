@@ -4,7 +4,7 @@
 // Bump CACHE when the shell changes. Stale-while-revalidate means a stale
 // version self-heals on the next load even if this is forgotten, but bumping
 // makes the update immediate.
-const CACHE = "lacave-v10";
+const CACHE = "lacave-v11";
 
 // Relative URLs resolve against this script's location, so the app still works
 // when served from a subpath such as /memory-trainer/.
@@ -28,8 +28,18 @@ const FONT_HOSTS = ["fonts.googleapis.com", "fonts.gstatic.com"];
 self.addEventListener("install", e => {
   e.waitUntil((async () => {
     const cache = await caches.open(CACHE);
-    // Individually, so one bad entry cannot fail the whole install.
-    await Promise.all(SHELL.map(u => cache.add(u).catch(err => console.warn("[sw] skip", u, err))));
+    // `cache: "reload"` bypasses the browser's own HTTP cache. Without it,
+    // cache.add() can happily precache a copy that is still inside GitHub
+    // Pages' max-age, so a freshly deployed worker installs stale files and the
+    // app keeps showing the previous version. Individually, so one bad entry
+    // cannot fail the whole install.
+    await Promise.all(SHELL.map(async (u) => {
+      try {
+        const res = await fetch(new Request(u, { cache: "reload" }));
+        if (res && res.ok) await cache.put(u, res);
+        else console.warn("[sw] skip", u, res && res.status);
+      } catch (err) { console.warn("[sw] skip", u, err); }
+    }));
     await self.skipWaiting();
   })());
 });
@@ -45,7 +55,9 @@ self.addEventListener("activate", e => {
 async function staleWhileRevalidate(req) {
   const cache = await caches.open(CACHE);
   const hit = await cache.match(req);
-  const fetching = fetch(req)
+  // Revalidate against the server rather than the HTTP cache, for the same
+  // reason as the install above.
+  const fetching = fetch(new Request(req, { cache: "no-cache" }))
     .then(res => { if (res && res.ok) cache.put(req, res.clone()); return res; })
     .catch(() => null);
   return hit || (await fetching) || new Response("", { status: 504, statusText: "offline" });
@@ -88,6 +100,21 @@ self.addEventListener("fetch", e => {
       } catch {
         return new Response("", { status: 504 });
       }
+    })());
+    return;
+  }
+
+  // The deck itself is network-first: a stale cards.json is the one staleness a
+  // user actually notices ("it still says 200 cards"). Falls back to cache when
+  // offline, so airplane mode is unaffected.
+  if (url.origin === self.location.origin && url.pathname.endsWith("/data/cards.json")) {
+    e.respondWith((async () => {
+      const cache = await caches.open(CACHE);
+      try {
+        const res = await fetch(new Request(req, { cache: "no-cache" }));
+        if (res && res.ok) { cache.put(req, res.clone()); return res; }
+      } catch (err) {}
+      return (await cache.match(req)) || new Response("[]", { headers: { "Content-Type": "application/json" } });
     })());
     return;
   }
