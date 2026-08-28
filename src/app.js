@@ -349,3 +349,13 @@ async function boot() {
   show("home");
 }
 boot();
+
+/* ---------------- service worker ---------------- */
+// Registered after boot so a worker problem can never stop the app loading.
+// No reload on controllerchange: an update mid-flight would drop the run. The
+// new worker takes over on the next launch.
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch(e => console.warn("[sw] registration failed", e));
+  });
+}
