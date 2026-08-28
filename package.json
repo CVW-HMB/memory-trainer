@@ -1,8 +1,8 @@
 {
-  "name": "la-cave-wine-trainer",
+  "name": "la-cave",
   "version": "0.1.0",
   "private": true,
-  "description": "Spaced-repetition flashcard trainer for learning wine: which grapes grow where, and how to decode a bottle. France-focused.",
+  "description": "Spaced-repetition flashcard trainer. Multiple decks, one scheduler; currently wine and Spanish.",
   "type": "module",
   "scripts": {
     "dev": "npx --yes serve -l 8000 .",
@@ -14,10 +14,12 @@
     "setup:py": "uv sync"
   },
   "keywords": [
-    "wine",
     "flashcards",
     "spaced-repetition",
-    "pwa"
+    "pwa",
+    "vocabulary",
+    "spanish",
+    "wine"
   ],
   "license": "MIT"
 }

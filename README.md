@@ -1,13 +1,26 @@
-# La Cave — wine trainer
+# La Cave
 
-A spaced-repetition flashcard app for learning wine the way it actually helps you in a restaurant: which grapes grow where, and how to read a label you have never seen. Content is France-first (about 70%), then Tuscany-led Italy, then the wines you will actually meet on a US list.
+A spaced-repetition flashcard trainer. Pick a deck, take a short daily flight,
+and let the scheduler decide what you see next. One engine, any number of decks:
+the scheduling and the mastery numbers mean the same thing whatever you are
+studying.
+
+Two decks ship today:
+
+- **Wines, Grapes, Regions** — 161 cards. Learning wine the way it helps you in
+  a restaurant: which grapes grow where, and how to read a label you have never
+  seen. France-first, then Tuscany-led Italy, then the wines you will actually
+  meet on a US list.
+- **Spanish – English** — 250 cards. The 15 most common verbs and the 15 most
+  common reflexive verbs across present, past and future, plus the vocabulary
+  for a house, a town and a table.
 
 **Live: https://cvw-hmb.github.io/memory-trainer/** — served by GitHub Pages from
 `main` at the repo root. Every path in the app is relative, so it works under the
 `/memory-trainer/` subpath with no build step. Pushing to `main` redeploys.
 
-> The repo is named `memory-trainer` because wine is the first deck, not the
-> product — see `PLAN.md` Part 2. The app itself is still the wine trainer.
+> The repo is named `memory-trainer` because wine was the first deck, not the
+> product — see `PLAN.md`. The app is called La Cave; each deck names itself.
 
 ## Run it
 

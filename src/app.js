@@ -10,6 +10,7 @@ import { typeFor } from "./decks/registry.js";
 
 // Keys are namespaced by profile and deck, so several people can share a
 // browser and adding decks later needs no further migration.
+const APP_NAME = "La Cave";                   // the app; decks name themselves
 let DECK_ID = "wine";                         // set when a deck is chosen
 let DECK = null;                              // the chosen deck's manifest entry
 let DECKS = [];
@@ -654,6 +655,8 @@ async function chooseDeck(id) {
   writeKey(LAST_DECK_KEY, deck.id);
   $("deckName").textContent = deck.name;
   $("deckTagline").textContent = deck.tagline || "";
+  // The tab is how you find this among a dozen others, so name the deck in it.
+  document.title = APP_NAME + " — " + deck.name;
   $("cardCount").textContent = CARDS.length;
   // Progress is keyed by deck, so this reloads the right saved state.
   await adoptActiveProfile();
@@ -674,6 +677,7 @@ async function deckSummary(deck) {
 }
 
 async function renderDecks() {
+  document.title = APP_NAME;          // no deck loaded yet
   $("deckWho").textContent = (activeProfile() || {}).name || "Me";
   const list = $("deckList");
   list.innerHTML = DECKS.map(d => `

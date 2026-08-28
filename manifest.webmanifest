@@ -1,7 +1,7 @@
 {
-  "name": "La Cave — wine trainer",
+  "name": "La Cave",
   "short_name": "La Cave",
-  "description": "Spaced-repetition wine flashcards: which grapes grow where, and how to read a label.",
+  "description": "A spaced-repetition flashcard trainer. Pick a deck, take a short daily flight, and let the scheduler decide what you see next.",
   "id": "./",
   "start_url": "./",
   "scope": "./",
@@ -9,7 +9,7 @@
   "orientation": "portrait",
   "background_color": "#241016",
   "theme_color": "#241016",
-  "categories": ["education", "food"],
+  "categories": ["education"],
   "icons": [
     { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },

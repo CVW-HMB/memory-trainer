@@ -4,7 +4,13 @@ Guidance for working on this repo with Claude Code. Read this before changing an
 
 ## What this is
 
-A wine flashcard trainer. The learning goal is real-world: walk into a restaurant, see a bottle, and know the grape and where it is from. The deck teaches that in the order a beginner actually needs it: first **what grape grows in what region**, then **how to decode a label**. Content is deliberately weighted: about 70% France, then Tuscany-led Italy, then the internationally popular wines you see on US lists. Obscure bottles are intentionally excluded.
+**La Cave**, a spaced-repetition flashcard trainer. One engine, any number of
+decks: the scheduler and the mastery numbers mean the same thing whatever the
+subject. The app keeps its name and its cellar vocabulary — flights, tasters,
+the cellar book — while each deck names itself in the header, the tab title and
+the footer. Keep app-level copy deck-neutral; wine belongs in the wine deck.
+
+The first deck was wine, and it still sets the tone. The learning goal is real-world: walk into a restaurant, see a bottle, and know the grape and where it is from. The deck teaches that in the order a beginner actually needs it: first **what grape grows in what region**, then **how to decode a label**. Content is deliberately weighted: about 70% France, then Tuscany-led Italy, then the internationally popular wines you see on US lists. Obscure bottles are intentionally excluded.
 
 The current app is a single-page static web app (vanilla JS, no framework, no build step). It is intentionally small so it is easy to extend. Progress persists in `localStorage`.
 
