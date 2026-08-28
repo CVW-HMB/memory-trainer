@@ -58,7 +58,8 @@ cloning the repo runs step 1 and repeats it.
 
 ## What it does
 
-- Three card types (see `CLAUDE.md`): place → grape, bottle decode, and grape → home.
+- Two card types (see `CLAUDE.md`): region → grape, and bottle decode (label →
+  grape, region, notes).
 - Every card runs one way: a place or a label on the front, the grape, its
   region and its notes on the back.
 - Miss a card and it comes back later in the same flight. You do not finish a
@@ -87,7 +88,7 @@ tests/                scheduler tests (node --test)
 sw.js                 service worker (offline precache)
 manifest.webmanifest  PWA manifest
 icons/                app icons (192, 512, maskable, apple-touch, favicon)
-data/cards.json       the 200 cards (source of truth)
+data/cards.json       the 161 cards (source of truth)
 scripts/              card generator + validator
 pyproject.toml        Python project for the generator (uv)
 .python-version       pinned interpreter for uv

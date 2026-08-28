@@ -1,117 +1,5 @@
 [
   {
-    "id": "fr-t3-cabernet-sauvignon",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Cabernet Sauvignon",
-    "home": "Bordeaux, Left Bank (France)",
-    "also": "Napa, Tuscany (Super Tuscans), Chile, Coonawarra"
-  },
-  {
-    "id": "fr-t3-merlot",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Merlot",
-    "home": "Bordeaux, Right Bank (France)",
-    "also": "California, northern Italy, Chile"
-  },
-  {
-    "id": "fr-t3-cabernet-franc",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Cabernet Franc",
-    "home": "Loire and Bordeaux blends (France)",
-    "also": "northeast Italy, small plantings worldwide"
-  },
-  {
-    "id": "fr-t3-pinot-noir",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Pinot Noir",
-    "home": "Burgundy, Cote d'Or (France)",
-    "also": "Oregon, Sonoma, New Zealand, German Spatburgunder"
-  },
-  {
-    "id": "fr-t3-chardonnay",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Chardonnay",
-    "home": "Burgundy and Champagne (France)",
-    "also": "California, Australia, planted almost everywhere"
-  },
-  {
-    "id": "fr-t3-sauvignon-blanc",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Sauvignon Blanc",
-    "home": "Loire and Bordeaux (France)",
-    "also": "New Zealand (Marlborough), California"
-  },
-  {
-    "id": "fr-t3-syrah",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Syrah",
-    "home": "Northern Rhone (France)",
-    "also": "Australia as Shiraz, Washington State"
-  },
-  {
-    "id": "fr-t3-grenache",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Grenache",
-    "home": "Southern Rhone (France)",
-    "also": "Spain as Garnacha, Australia, Sardinia"
-  },
-  {
-    "id": "fr-t3-gamay",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Gamay",
-    "home": "Beaujolais (France)",
-    "also": "rarely taken seriously anywhere else"
-  },
-  {
-    "id": "fr-t3-chenin-blanc",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Chenin Blanc",
-    "home": "Loire (France)",
-    "also": "South Africa, where it is the most-planted grape"
-  },
-  {
-    "id": "fr-t3-viognier",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Viognier",
-    "home": "Northern Rhone, Condrieu (France)",
-    "also": "California, Australia"
-  },
-  {
-    "id": "fr-t3-malbec",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Malbec",
-    "home": "Cahors, Southwest France",
-    "also": "Argentina (Mendoza), its modern home"
-  },
-  {
-    "id": "fr-t3-semillon",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Semillon",
-    "home": "Bordeaux (France)",
-    "also": "Hunter Valley, Australia"
-  },
-  {
-    "id": "fr-t3-mourvedre",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Mourvedre",
-    "home": "Provence (Bandol) and Southern Rhone",
-    "also": "Spain as Monastrell, Australia as Mataro"
-  },
-  {
     "id": "fr-t2-pauillac",
     "group": "France",
     "type": "decode",
@@ -652,38 +540,6 @@
     "notes": "pale rose, strawberry, dry, crisp"
   },
   {
-    "id": "it-t3-sangiovese",
-    "group": "Italy",
-    "type": "grapehome",
-    "grape": "Sangiovese",
-    "home": "Tuscany (Chianti, Brunello)",
-    "also": "also Romagna in central Italy"
-  },
-  {
-    "id": "it-t3-nebbiolo",
-    "group": "Italy",
-    "type": "grapehome",
-    "grape": "Nebbiolo",
-    "home": "Piedmont (Barolo, Barbaresco)",
-    "also": "rarely successful outside Piedmont"
-  },
-  {
-    "id": "it-t3-pinot-grigio",
-    "group": "Italy",
-    "type": "grapehome",
-    "grape": "Pinot Grigio",
-    "home": "Northeast Italy (Friuli, Alto Adige)",
-    "also": "France's Pinot Gris is the same grape"
-  },
-  {
-    "id": "it-t3-barbera",
-    "group": "Italy",
-    "type": "grapehome",
-    "grape": "Barbera",
-    "home": "Piedmont",
-    "also": "small plantings in California and Argentina"
-  },
-  {
     "id": "it-t2-chianti-classico",
     "group": "Italy",
     "type": "decode",
@@ -822,30 +678,6 @@
     "notes": "pear, green apple, light and crisp"
   },
   {
-    "id": "rw-t3-tempranillo",
-    "group": "Rest",
-    "type": "grapehome",
-    "grape": "Tempranillo",
-    "home": "Rioja and Ribera del Duero (Spain)",
-    "also": "Portugal, where it is called Tinta Roriz"
-  },
-  {
-    "id": "rw-t3-riesling",
-    "group": "Rest",
-    "type": "grapehome",
-    "grape": "Riesling",
-    "home": "Germany (Mosel, Rheingau) and Alsace",
-    "also": "Austria, Australia (Clare and Eden), Washington"
-  },
-  {
-    "id": "rw-t3-albarino",
-    "group": "Rest",
-    "type": "grapehome",
-    "grape": "Albarino",
-    "home": "Rias Baixas (Spain, Galicia)",
-    "also": "Portugal as Alvarinho in Vinho Verde"
-  },
-  {
     "id": "rw-t2-rioja",
     "group": "Rest",
     "type": "decode",
@@ -934,62 +766,6 @@
     "country": "Portugal",
     "region": "Douro",
     "notes": "fortified, sweet, dark, spirity"
-  },
-  {
-    "id": "fr-t3-melon-de-bourgogne",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Melon de Bourgogne",
-    "home": "Loire, Pays Nantais (France)",
-    "also": "essentially nowhere else; it is the Muscadet grape"
-  },
-  {
-    "id": "fr-t3-pinot-meunier",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Pinot Meunier",
-    "home": "Champagne (France)",
-    "also": "England, and small German plantings"
-  },
-  {
-    "id": "fr-t3-petit-verdot",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Petit Verdot",
-    "home": "Bordeaux, Left Bank blends (France)",
-    "also": "Napa, Australia and Spain as a varietal"
-  },
-  {
-    "id": "fr-t3-marsanne",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Marsanne",
-    "home": "Northern Rhone (France)",
-    "also": "Victoria in Australia, California"
-  },
-  {
-    "id": "fr-t3-roussanne",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Roussanne",
-    "home": "Northern Rhone (France)",
-    "also": "Southern Rhone white blends, California"
-  },
-  {
-    "id": "fr-t3-aligote",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Aligote",
-    "home": "Burgundy, the other white (France)",
-    "also": "small plantings across Eastern Europe"
-  },
-  {
-    "id": "fr-t3-tannat",
-    "group": "France",
-    "type": "grapehome",
-    "grape": "Tannat",
-    "home": "Madiran, Southwest France",
-    "also": "Uruguay, where it is the national grape"
   },
   {
     "id": "fr-t2-haut-medoc",
@@ -1598,62 +1374,6 @@
     "notes": "grapey, floral, dry despite the perfume"
   },
   {
-    "id": "it-t3-aglianico",
-    "group": "Italy",
-    "type": "grapehome",
-    "grape": "Aglianico",
-    "home": "Campania and Basilicata (southern Italy)",
-    "also": "almost nowhere outside southern Italy"
-  },
-  {
-    "id": "it-t3-montepulciano",
-    "group": "Italy",
-    "type": "grapehome",
-    "grape": "Montepulciano",
-    "home": "Abruzzo, central-east Italy",
-    "also": "the Marche as Rosso Conero; it is a grape, not the Tuscan town"
-  },
-  {
-    "id": "it-t3-verdicchio",
-    "group": "Italy",
-    "type": "grapehome",
-    "grape": "Verdicchio",
-    "home": "The Marche, central-east Italy",
-    "also": "rarely planted outside Italy"
-  },
-  {
-    "id": "it-t3-vermentino",
-    "group": "Italy",
-    "type": "grapehome",
-    "grape": "Vermentino",
-    "home": "Sardinia and the Ligurian coast",
-    "also": "Corsica, and Provence where it is called Rolle"
-  },
-  {
-    "id": "it-t3-garganega",
-    "group": "Italy",
-    "type": "grapehome",
-    "grape": "Garganega",
-    "home": "Soave, Veneto",
-    "also": "little planted anywhere else"
-  },
-  {
-    "id": "it-t3-cortese",
-    "group": "Italy",
-    "type": "grapehome",
-    "grape": "Cortese",
-    "home": "Gavi, Piedmont",
-    "also": "essentially a Piedmont speciality"
-  },
-  {
-    "id": "it-t3-primitivo",
-    "group": "Italy",
-    "type": "grapehome",
-    "grape": "Primitivo",
-    "home": "Puglia, the heel of Italy",
-    "also": "California, where the same grape is Zinfandel"
-  },
-  {
     "id": "it-t2-soave",
     "group": "Italy",
     "type": "decode",
@@ -1759,38 +1479,6 @@
     "country": "Italy",
     "region": "Puglia, the heel",
     "notes": "jammy, ripe, soft, high alcohol"
-  },
-  {
-    "id": "rw-t3-zinfandel",
-    "group": "Rest",
-    "type": "grapehome",
-    "grape": "Zinfandel",
-    "home": "California (USA)",
-    "also": "southern Italy as Primitivo, its genetic twin"
-  },
-  {
-    "id": "rw-t3-gruner-veltliner",
-    "group": "Rest",
-    "type": "grapehome",
-    "grape": "Gruner Veltliner",
-    "home": "Austria (Wachau, Kamptal)",
-    "also": "small plantings in New Zealand and the US"
-  },
-  {
-    "id": "rw-t3-carmenere",
-    "group": "Rest",
-    "type": "grapehome",
-    "grape": "Carmenere",
-    "home": "Chile",
-    "also": "originally a Bordeaux grape, long lost there"
-  },
-  {
-    "id": "rw-t3-touriga-nacional",
-    "group": "Rest",
-    "type": "grapehome",
-    "grape": "Touriga Nacional",
-    "home": "Douro, Portugal",
-    "also": "small amounts in Australia and South Africa"
   },
   {
     "id": "rw-t2-rueda",

@@ -103,10 +103,13 @@ which tasting note went with which. The reverse rendering still exists in
 `facesFor` but is unreachable while `reversible()` returns false.
 `trap: true` marks look-alikes (the two Montepulcianos) and renders a warning-colored label.
 
-### Type 3 — `grapehome` (one direction only)
-Prompt: the grape. Answer: its classic home + where else it grows.
-`{ type, group, grape, home, also }`
-Never reversed: "where does Cabernet grow" has many answers, so it can only be the answer, never the prompt.
+### Type 3 — `grapehome` — **retired**
+`{ type, group, grape, home, also }`. Its prompt was a grape ("where's it
+grown?"), which breaks the rule that a prompt is always a place or a label —
+and it was the ambiguous direction anyway, since the answers themselves listed
+four or five regions. The 39 calls are commented out in
+`scripts/generate_cards.py` and the rendering code still handles the type, so
+restoring it is uncommenting those lines and running `npm run cards`.
 
 **The card model, in one line:** the front is always a **place or a label**; the
 back is always the **grape, its region and its notes**. Nothing flips.
@@ -188,7 +191,9 @@ deploy, session-length cap, touch pass, PWA/offline, IndexedDB, scheduler tests,
 edge cases). Part 2 is the multi-deck generalization, deferred until Part 1 ships.
 Do not keep a competing list here — update `PLAN.md` as work lands.
 
-The deck is at 200 cards (France 140 / Italy 36 / Rest 24 — still 70% France).
+The deck is at 161 cards (France 119 / Italy 25 / Rest 17 — 74% France, a
+little above the 70% target since retiring `grapehome` removed proportionally
+more Italy and Rest cards; rebalance on the next content pass).
 A possible next content step is a "learn" pass that introduces a card as
 `place2grape` before it can appear as a `decode` reverse.
 

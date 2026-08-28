@@ -28,25 +28,30 @@ def decode(group, appellation, grape, country, region, notes, trap=False):
         c["trap"] = True
     cards.append(c)
 
+# The grapehome type is retired. Its front was a grape ("where's it grown?"),
+# which breaks the deck's rule that a prompt is always a place or a label -- and
+# it was the ambiguous direction anyway: the answers themselves listed four or
+# five regions. The calls below are kept commented out so the content is not
+# lost if the type is ever wanted back.
 def home(group, grape, home_, also):
     cards.append({"id": f"{gp(group)}-t3-{slug(grape)}", "group": group, "type": "grapehome",
                   "grape": grape, "home": home_, "also": also})
 
 # ===================== FRANCE - grape home (14) =====================
-home("France", "Cabernet Sauvignon", "Bordeaux, Left Bank (France)", "Napa, Tuscany (Super Tuscans), Chile, Coonawarra")
-home("France", "Merlot", "Bordeaux, Right Bank (France)", "California, northern Italy, Chile")
-home("France", "Cabernet Franc", "Loire and Bordeaux blends (France)", "northeast Italy, small plantings worldwide")
-home("France", "Pinot Noir", "Burgundy, Cote d'Or (France)", "Oregon, Sonoma, New Zealand, German Spatburgunder")
-home("France", "Chardonnay", "Burgundy and Champagne (France)", "California, Australia, planted almost everywhere")
-home("France", "Sauvignon Blanc", "Loire and Bordeaux (France)", "New Zealand (Marlborough), California")
-home("France", "Syrah", "Northern Rhone (France)", "Australia as Shiraz, Washington State")
-home("France", "Grenache", "Southern Rhone (France)", "Spain as Garnacha, Australia, Sardinia")
-home("France", "Gamay", "Beaujolais (France)", "rarely taken seriously anywhere else")
-home("France", "Chenin Blanc", "Loire (France)", "South Africa, where it is the most-planted grape")
-home("France", "Viognier", "Northern Rhone, Condrieu (France)", "California, Australia")
-home("France", "Malbec", "Cahors, Southwest France", "Argentina (Mendoza), its modern home")
-home("France", "Semillon", "Bordeaux (France)", "Hunter Valley, Australia")
-home("France", "Mourvedre", "Provence (Bandol) and Southern Rhone", "Spain as Monastrell, Australia as Mataro")
+# home("France", "Cabernet Sauvignon", "Bordeaux, Left Bank (France)", "Napa, Tuscany (Super Tuscans), Chile, Coonawarra")
+# home("France", "Merlot", "Bordeaux, Right Bank (France)", "California, northern Italy, Chile")
+# home("France", "Cabernet Franc", "Loire and Bordeaux blends (France)", "northeast Italy, small plantings worldwide")
+# home("France", "Pinot Noir", "Burgundy, Cote d'Or (France)", "Oregon, Sonoma, New Zealand, German Spatburgunder")
+# home("France", "Chardonnay", "Burgundy and Champagne (France)", "California, Australia, planted almost everywhere")
+# home("France", "Sauvignon Blanc", "Loire and Bordeaux (France)", "New Zealand (Marlborough), California")
+# home("France", "Syrah", "Northern Rhone (France)", "Australia as Shiraz, Washington State")
+# home("France", "Grenache", "Southern Rhone (France)", "Spain as Garnacha, Australia, Sardinia")
+# home("France", "Gamay", "Beaujolais (France)", "rarely taken seriously anywhere else")
+# home("France", "Chenin Blanc", "Loire (France)", "South Africa, where it is the most-planted grape")
+# home("France", "Viognier", "Northern Rhone, Condrieu (France)", "California, Australia")
+# home("France", "Malbec", "Cahors, Southwest France", "Argentina (Mendoza), its modern home")
+# home("France", "Semillon", "Bordeaux (France)", "Hunter Valley, Australia")
+# home("France", "Mourvedre", "Provence (Bandol) and Southern Rhone", "Spain as Monastrell, Australia as Mataro")
 
 # ===================== FRANCE - decode (36) =====================
 decode("France", "Pauillac", "Cabernet Sauvignon blend", "France", "Bordeaux, Left Bank", "cassis, cedar, graphite, firm tannin")
@@ -109,10 +114,10 @@ p2g("France", "Semillon", "France", "Bordeaux, Sauternes", "honey, apricot, botr
 p2g("France", "Grenache and Cinsault", "France", "Provence", "pale rose, strawberry, dry, crisp")
 
 # ===================== ITALY (18) =====================
-home("Italy", "Sangiovese", "Tuscany (Chianti, Brunello)", "also Romagna in central Italy")
-home("Italy", "Nebbiolo", "Piedmont (Barolo, Barbaresco)", "rarely successful outside Piedmont")
-home("Italy", "Pinot Grigio", "Northeast Italy (Friuli, Alto Adige)", "France's Pinot Gris is the same grape")
-home("Italy", "Barbera", "Piedmont", "small plantings in California and Argentina")
+# home("Italy", "Sangiovese", "Tuscany (Chianti, Brunello)", "also Romagna in central Italy")
+# home("Italy", "Nebbiolo", "Piedmont (Barolo, Barbaresco)", "rarely successful outside Piedmont")
+# home("Italy", "Pinot Grigio", "Northeast Italy (Friuli, Alto Adige)", "France's Pinot Gris is the same grape")
+# home("Italy", "Barbera", "Piedmont", "small plantings in California and Argentina")
 decode("Italy", "Chianti Classico", "Sangiovese", "Italy", "Tuscany", "tart cherry, dried herb, high acid")
 decode("Italy", "Brunello di Montalcino", "Sangiovese", "Italy", "Tuscany", "powerful, leather, plum, age-worthy")
 decode("Italy", "Barolo", "Nebbiolo", "Italy", "Piedmont", "tar, rose, dried cherry, huge tannin")
@@ -129,9 +134,9 @@ p2g("Italy", "Corvina", "Italy", "Veneto (dried-grape Amarone)", "raisin, fig, c
 p2g("Italy", "Pinot Grigio", "Italy", "Friuli / Alto Adige", "pear, green apple, light and crisp")
 
 # ===================== REST OF WORLD (12) =====================
-home("Rest", "Tempranillo", "Rioja and Ribera del Duero (Spain)", "Portugal, where it is called Tinta Roriz")
-home("Rest", "Riesling", "Germany (Mosel, Rheingau) and Alsace", "Austria, Australia (Clare and Eden), Washington")
-home("Rest", "Albarino", "Rias Baixas (Spain, Galicia)", "Portugal as Alvarinho in Vinho Verde")
+# home("Rest", "Tempranillo", "Rioja and Ribera del Duero (Spain)", "Portugal, where it is called Tinta Roriz")
+# home("Rest", "Riesling", "Germany (Mosel, Rheingau) and Alsace", "Austria, Australia (Clare and Eden), Washington")
+# home("Rest", "Albarino", "Rias Baixas (Spain, Galicia)", "Portugal as Alvarinho in Vinho Verde")
 decode("Rest", "Rioja", "Tempranillo", "Spain", "Rioja", "dried strawberry, vanilla, dill oak, leather")
 decode("Rest", "Ribera del Duero", "Tempranillo", "Spain", "Castilla y Leon", "darker, structured, black plum")
 decode("Rest", "Rias Baixas", "Albarino", "Spain", "Galicia", "saline, peach, citrus, crisp")
@@ -149,13 +154,13 @@ decode("Rest", "Port", "Touriga Nacional blend", "Portugal", "Douro", "fortified
 # =====================================================================
 
 # ===================== FRANCE - grape home (+7) =====================
-home("France", "Melon de Bourgogne", "Loire, Pays Nantais (France)", "essentially nowhere else; it is the Muscadet grape")
-home("France", "Pinot Meunier", "Champagne (France)", "England, and small German plantings")
-home("France", "Petit Verdot", "Bordeaux, Left Bank blends (France)", "Napa, Australia and Spain as a varietal")
-home("France", "Marsanne", "Northern Rhone (France)", "Victoria in Australia, California")
-home("France", "Roussanne", "Northern Rhone (France)", "Southern Rhone white blends, California")
-home("France", "Aligote", "Burgundy, the other white (France)", "small plantings across Eastern Europe")
-home("France", "Tannat", "Madiran, Southwest France", "Uruguay, where it is the national grape")
+# home("France", "Melon de Bourgogne", "Loire, Pays Nantais (France)", "essentially nowhere else; it is the Muscadet grape")
+# home("France", "Pinot Meunier", "Champagne (France)", "England, and small German plantings")
+# home("France", "Petit Verdot", "Bordeaux, Left Bank blends (France)", "Napa, Australia and Spain as a varietal")
+# home("France", "Marsanne", "Northern Rhone (France)", "Victoria in Australia, California")
+# home("France", "Roussanne", "Northern Rhone (France)", "Southern Rhone white blends, California")
+# home("France", "Aligote", "Burgundy, the other white (France)", "small plantings across Eastern Europe")
+# home("France", "Tannat", "Madiran, Southwest France", "Uruguay, where it is the national grape")
 
 # ===================== FRANCE - decode (+38) =====================
 # Bordeaux
@@ -233,13 +238,13 @@ p2g("France", "Pinot Blanc", "France", "Alsace (everyday white)", "soft, pear, g
 p2g("France", "Muscat", "France", "Alsace (dry style)", "grapey, floral, dry despite the perfume")
 
 # ===================== ITALY (+18) =====================
-home("Italy", "Aglianico", "Campania and Basilicata (southern Italy)", "almost nowhere outside southern Italy")
-home("Italy", "Montepulciano", "Abruzzo, central-east Italy", "the Marche as Rosso Conero; it is a grape, not the Tuscan town")
-home("Italy", "Verdicchio", "The Marche, central-east Italy", "rarely planted outside Italy")
-home("Italy", "Vermentino", "Sardinia and the Ligurian coast", "Corsica, and Provence where it is called Rolle")
-home("Italy", "Garganega", "Soave, Veneto", "little planted anywhere else")
-home("Italy", "Cortese", "Gavi, Piedmont", "essentially a Piedmont speciality")
-home("Italy", "Primitivo", "Puglia, the heel of Italy", "California, where the same grape is Zinfandel")
+# home("Italy", "Aglianico", "Campania and Basilicata (southern Italy)", "almost nowhere outside southern Italy")
+# home("Italy", "Montepulciano", "Abruzzo, central-east Italy", "the Marche as Rosso Conero; it is a grape, not the Tuscan town")
+# home("Italy", "Verdicchio", "The Marche, central-east Italy", "rarely planted outside Italy")
+# home("Italy", "Vermentino", "Sardinia and the Ligurian coast", "Corsica, and Provence where it is called Rolle")
+# home("Italy", "Garganega", "Soave, Veneto", "little planted anywhere else")
+# home("Italy", "Cortese", "Gavi, Piedmont", "essentially a Piedmont speciality")
+# home("Italy", "Primitivo", "Puglia, the heel of Italy", "California, where the same grape is Zinfandel")
 decode("Italy", "Soave", "Garganega", "Italy", "Veneto", "almond, lemon, light and dry")
 decode("Italy", "Gavi", "Cortese", "Italy", "Piedmont", "crisp, green apple, mineral white")
 decode("Italy", "Valpolicella", "Corvina blend", "Italy", "Veneto (Valpolicella)", "light, sour cherry, easy red")
@@ -253,10 +258,10 @@ p2g("Italy", "Verdicchio", "Italy", "The Marche (Adriatic coast)", "lemon, almon
 p2g("Italy", "Primitivo", "Italy", "Puglia, the heel", "jammy, ripe, soft, high alcohol")
 
 # ===================== REST OF WORLD (+12) =====================
-home("Rest", "Zinfandel", "California (USA)", "southern Italy as Primitivo, its genetic twin")
-home("Rest", "Gruner Veltliner", "Austria (Wachau, Kamptal)", "small plantings in New Zealand and the US")
-home("Rest", "Carmenere", "Chile", "originally a Bordeaux grape, long lost there")
-home("Rest", "Touriga Nacional", "Douro, Portugal", "small amounts in Australia and South Africa")
+# home("Rest", "Zinfandel", "California (USA)", "southern Italy as Primitivo, its genetic twin")
+# home("Rest", "Gruner Veltliner", "Austria (Wachau, Kamptal)", "small plantings in New Zealand and the US")
+# home("Rest", "Carmenere", "Chile", "originally a Bordeaux grape, long lost there")
+# home("Rest", "Touriga Nacional", "Douro, Portugal", "small amounts in Australia and South Africa")
 decode("Rest", "Rueda", "Verdejo", "Spain", "Rueda", "crisp, fennel, grapefruit, dry white")
 decode("Rest", "Priorat", "Garnacha and Carinena", "Spain", "Catalonia (slate terraces)", "concentrated, mineral, powerful")
 decode("Rest", "Cava", "Macabeo, Xarel-lo, Parellada", "Spain", "Penedes, Catalonia", "traditional-method sparkling, apple, value")
