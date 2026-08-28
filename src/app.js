@@ -6,6 +6,7 @@ import {
   FLIGHT_SIZE, MAX_BOX, freshCardState, dueCards as pickDue, buildQueue as pickQueue,
   applyAnswer, redrill, ymd, nextStreak,
 } from "./engine/schedule.js";
+import { typeFor } from "./decks/registry.js";
 
 // Keys are namespaced by profile and deck, so several people can share a
 // browser and adding decks later needs no further migration.
@@ -187,25 +188,15 @@ function show(id) {
 }
 const $ = id => document.getElementById(id);
 
-/* ---------------- card helpers ---------------- */
-// The direction rule lives here, and nothing is currently reversible.
-//
-// A prompt is always a place or a label; the answer is always the grape, its
-// region and its notes. `decode` used to also run backwards -- show the grape,
-// region and notes and ask you to name the wine -- but that has no single
-// answer: plenty of appellations share a grape and a region, so Pauillac,
-// Margaux, Saint-Julien and Saint-Estephe were separable only by remembering
-// which tasting note belonged to which.
-//
-// The reverse rendering is still in facesFor. To bring it back, this function
-// and that branch have to change together.
-function reversible(c) { return false; }
-function cardLabel(c) { return c.type === "decode" ? c.appellation : c.grape; }
-function cardHint(c) {
-  if (c.type === "decode") return c.grape;
-  if (c.type === "grapehome") return c.home;
-  return c.region;
-}
+/* ---------------- card helpers ----------------
+   All four delegate to the card type registered for the card, so deck-specific
+   knowledge lives in src/decks/ rather than here. Reversibility is declared by
+   the card type, never assumed: a card flips only when both directions have
+   exactly one right answer.                                                 */
+const reversible = c => typeFor(c).reversible(c);
+const cardLabel = c => typeFor(c).label(c);
+const cardHint = c => typeFor(c).hint(c);
+const facesFor = (c, dir) => typeFor(c).faces(c, dir);
 
 /* ---------------- home ---------------- */
 function dueCount() { return pickDue(CARDS, state.cards, state.totalSessions + 1).length; }
@@ -275,35 +266,6 @@ function startSession() {
   renderCard();
 }
 
-// content specs: mode "headline" (one big line) or "detail" (lead + context + notes)
-function specHeadline(big, kind, ask, warn) { return { mode: "headline", big, kind, ask: ask || "", warn: !!warn }; }
-function specDetail(lead, context, notes, kind, ask) { return { mode: "detail", lead: lead || "", context: context || "", notes: notes || "", kind, ask: ask || "" }; }
-
-function facesFor(c, dir) {
-  if (c.type === "place2grape") {
-    return {
-      prompt: specDetail(c.region, c.country, c.notes, "Place & taste", "Which grape?"),
-      answer: specHeadline(c.grape, "Grape")
-    };
-  }
-  if (c.type === "grapehome") {
-    return {
-      prompt: specHeadline(c.grape, "Grape", "Where's it grown?"),
-      answer: specDetail(c.home, "", "Also grown: " + c.also, "Its home")
-    };
-  }
-  // decode: label on the front, what is in the bottle on the back
-  const appPrompt = specHeadline(c.appellation, "On the label", "Grape & region?", c.trap);
-  const detAnswer = specDetail(c.grape, c.country + "  \u00b7  " + c.region, c.notes, "What's in it", "");
-  if (dir !== "rev") return { prompt: appPrompt, answer: detAnswer };
-
-  // Unreachable while reversible() returns false. Kept so the direction can be
-  // restored in one place if the "name the wine" prompt is ever wanted again.
-  const appAnswer = specHeadline(c.appellation, "On the label", "", c.trap);
-  const detPrompt = specDetail(c.grape, c.country + "  \u00b7  " + c.region, c.notes, "What's in it", "Name the wine");
-  return { prompt: detPrompt, answer: appAnswer };
-}
-
 function renderCard() {
   revealed = false;
   $("card").classList.remove("flipped");
@@ -329,15 +291,35 @@ function fillFace(p, s) {
   kind.classList.toggle("warn", !!s.warn);
   $(p + "Big").classList.toggle("hidden", s.mode !== "headline");
   $(p + "Detail").classList.toggle("hidden", s.mode !== "detail");
-  if (s.mode === "headline") {
-    $(p + "Big").textContent = s.big;
-  } else {
-    const lead = $(p + "Lead");
-    lead.textContent = s.lead || "";
-    lead.classList.toggle("hidden", !s.lead);
-    $(p + "Context").textContent = s.context || "";
-    $(p + "Notes").textContent = s.notes || "";
+  $(p + "List").classList.toggle("hidden", s.mode !== "list");
+
+  // Every field is written every time. Only filling the active mode's fields
+  // leaves the hidden ones holding the previous card's text -- invisible until
+  // a layout change makes it visible.
+  $(p + "Big").textContent = s.mode === "headline" ? (s.big || "") : "";
+  const lead = $(p + "Lead");
+  lead.textContent = s.mode === "detail" ? (s.lead || "") : "";
+  lead.classList.toggle("hidden", !(s.mode === "detail" && s.lead));
+  $(p + "Context").textContent = s.mode === "detail" ? (s.context || "") : "";
+  $(p + "Notes").textContent = s.mode === "detail" ? (s.notes || "") : "";
+
+  $(p + "LLead").textContent = s.mode === "list" ? (s.lead || "") : "";
+  $(p + "LSub").textContent = s.mode === "list" ? (s.sub || "") : "";
+  const rows = $(p + "LRows");
+  rows.replaceChildren();
+  if (s.mode === "list") {
+    // Deck data is set as text, never markup.
+    for (const [left, right] of (s.rows || [])) {
+      const li = document.createElement("li");
+      const a = document.createElement("span"); a.className = "lk"; a.textContent = left;
+      const b = document.createElement("span"); b.className = "lv"; b.textContent = right;
+      li.append(a, b);
+      rows.appendChild(li);
+    }
+    // Long tables get a smaller row so six forms still fit on a phone.
+    rows.classList.toggle("dense", (s.rows || []).length > 4);
   }
+
   const ask = $(p + "Ask");
   if (ask) ask.textContent = s.ask || "";
 }
