@@ -2,19 +2,16 @@
 // Data lives in /data/cards.json. Progress persists in IndexedDB, mirrored to
 // localStorage as a fallback. Card types and direction rules are in CLAUDE.md.
 
+import {
+  FLIGHT_SIZE, freshCardState, dueCards as pickDue, buildQueue as pickQueue,
+  applyAnswer, ymd, nextStreak,
+} from "./engine/schedule.js";
+
 // Namespaced now, with a single deck, so adding decks later needs no second
 // migration. This is the one forward-looking concession the MVP makes.
 const DECK_ID = "wine";
 const STORE_KEY = "srs_v2:" + DECK_ID;
 const LEGACY_KEY = "wine_srs_v1";      // pre-M5 localStorage key, migrated on first boot
-const INTERVAL = { 1: 1, 2: 1, 3: 2, 4: 4, 5: 8 }; // Leitner box -> sessions until due
-
-// A flight is capped so a session stays a habit rather than a chore. This caps
-// how many of the due cards get served; it does not touch the box arithmetic
-// or INTERVAL above. Undrawn cards stay due and come back next flight.
-const FLIGHT_SIZE = 20;    // cards served per flight
-const NEW_PER_FLIGHT = 5;  // at most this many never-seen cards per flight
-
 let CARDS = [];
 let BY_ID = {};
 
@@ -114,21 +111,17 @@ async function clearState() {
 
 function freshState() {
   const cards = {};
-  for (const c of CARDS) cards[c.id] = { box: 1, correct: 0, wrong: 0, seen: 0, lastSession: 0 };
+  for (const c of CARDS) cards[c.id] = freshCardState();
   return { version: 1, cards, totalSessions: 0, streak: 0, bestStreak: 0, lastPracticed: null };
 }
 function ensureCard(id) {
-  if (!state.cards[id]) state.cards[id] = { box: 1, correct: 0, wrong: 0, seen: 0, lastSession: 0 };
+  if (!state.cards[id]) state.cards[id] = freshCardState();
   return state.cards[id];
 }
 
 let state = null;
 let queue = [], qpos = 0, sessionTotal = 0, sGot = 0, sMiss = 0, revealed = false;
 let runDir = {};
-
-/* ---------------- date helpers ---------------- */
-const ymd = d => d.toISOString().slice(0, 10);
-const daysBetween = (a, b) => Math.round((new Date(b + "T00:00") - new Date(a + "T00:00")) / 86400000);
 
 /* ---------------- views ---------------- */
 function show(id) {
@@ -148,19 +141,8 @@ function cardHint(c) {
   return c.region;
 }
 
-/* ---------------- due ---------------- */
-// A card is due if it has never been seen, or if enough sessions have passed
-// for its box. `cur` is the session number the card would be answered in.
-function isDue(c, cur) {
-  const s = state.cards[c.id];
-  if (!s || s.seen === 0) return true;
-  return (cur - s.lastSession) >= (INTERVAL[s.box] || 1);
-}
-const isNew = c => (state.cards[c.id]?.seen || 0) === 0;
-function dueCards(cur) { return CARDS.filter(c => isDue(c, cur)); }
-
 /* ---------------- home ---------------- */
-function dueCount() { return dueCards(state.totalSessions + 1).length; }
+function dueCount() { return pickDue(CARDS, state.cards, state.totalSessions + 1).length; }
 // How many cards the next flight will actually serve. The top-up in buildQueue
 // means a flight is always as full as the due pool allows.
 function flightSize() { return Math.min(FLIGHT_SIZE, dueCount()) || Math.min(FLIGHT_SIZE, CARDS.length); }
@@ -185,47 +167,18 @@ function renderHome() {
 }
 
 /* ---------------- session ---------------- */
-// Weakest boxes first, jittered so the same run of cards does not repeat in the
-// same order every flight. Unchanged from before the flight cap.
-function weakFirst(cards) {
-  cards.forEach(c => c._k = (state.cards[c.id]?.box || 1) + Math.random() * 1.15);
-  return cards.slice().sort((a, b) => a._k - b._k);
-}
-
-// Selects up to FLIGHT_SIZE cards from everything due. New material is
-// introduced at a trickle (NEW_PER_FLIGHT) in deck order, which is the
-// curriculum order: France before Italy before the rest, grape homes before
-// label decoding. Reviews fill the remainder weak-first; if there are not
-// enough reviews, the flight tops up with more new cards so it is always as
-// full as the due pool allows.
-function buildQueue() {
-  const cur = state.totalSessions; // already incremented at start
-  let due = dueCards(cur);
-  if (due.length === 0) due = CARDS.slice(); // free review: nothing forced today
-
-  const fresh = due.filter(isNew);            // deck order preserved
-  const review = due.filter(c => !isNew(c));
-
-  const picked = fresh.slice(0, NEW_PER_FLIGHT);
-  picked.push(...weakFirst(review).slice(0, FLIGHT_SIZE - picked.length));
-  if (picked.length < FLIGHT_SIZE) {
-    picked.push(...fresh.slice(NEW_PER_FLIGHT, NEW_PER_FLIGHT + FLIGHT_SIZE - picked.length));
-  }
-  return weakFirst(picked).map(c => c.id);
-}
-
 function startSession() {
   const today = ymd(new Date());
   if (state.lastPracticed !== today) {
-    if (state.lastPracticed && daysBetween(state.lastPracticed, today) === 1) state.streak = (state.streak || 0) + 1;
-    else state.streak = 1;
+    state.streak = nextStreak(state.streak, state.lastPracticed, today);
     state.lastPracticed = today;
     state.bestStreak = Math.max(state.bestStreak || 0, state.streak);
   }
   state.totalSessions = (state.totalSessions || 0) + 1;
   saveState(state);
 
-  queue = buildQueue();
+  // totalSessions is already incremented, so it is this flight's number.
+  queue = pickQueue(CARDS, state.cards, state.totalSessions);
   qpos = 0; sessionTotal = queue.length; sGot = 0; sMiss = 0;
   runDir = {};
   for (const id of queue) {
@@ -311,11 +264,8 @@ function flip() {
 function answer(correct) {
   if (!revealed) return;
   const id = queue[qpos];
-  const s = ensureCard(id);
-  s.seen += 1;
-  s.lastSession = state.totalSessions;
-  if (correct) { s.correct += 1; s.box = Math.min(5, s.box + 1); sGot += 1; }
-  else { s.wrong += 1; s.box = 1; sMiss += 1; }
+  applyAnswer(ensureCard(id), correct, state.totalSessions);
+  if (correct) sGot += 1; else sMiss += 1;
   saveState(state);
   qpos += 1;
   if (qpos >= queue.length) endSession();

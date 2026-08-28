@@ -104,11 +104,23 @@ Never reversed: "where does Cabernet grow" has many answers, so it can only be t
 
 ## Scheduling
 
-A 5-level Leitner system in `src/app.js`:
+A 5-level Leitner system in **`src/engine/schedule.js`** — pure functions, no
+DOM, no globals, no storage, and no knowledge of what a card holds beyond its
+`id`. `src/app.js` imports it and keeps the rendering. It is covered by
+`tests/schedule.test.js` (`npm test`, `node --test`, zero dependencies):
 - Correct → box up (max 5), which pushes the next due date out (`INTERVAL` maps box → sessions until due).
 - Miss → back to box 1 (due every session).
 - Each run ("flight") pulls the due cards, orders weak-first with jitter, and shows each **once**. There is deliberately no within-run repeat: a card is never shown twice in one run, and reversible cards get a random direction per run so both directions come up over time.
+- Each flight is capped at `FLIGHT_SIZE` (20) cards, introducing at most
+  `NEW_PER_FLIGHT` (5) never-seen cards in deck order. The cap decides how many
+  due cards a flight *serves*; it does not touch the box arithmetic.
 - Streaks and `bestStreak` update once per calendar day.
+
+**The tests are the guardrail.** They cover box promotion and demotion, the
+`INTERVAL` due arithmetic, streak behaviour across day, month, year, leap-day
+and DST boundaries, no-repeats-within-a-flight, and the flight cap. If they
+fail, behaviour moved — that is a bug, not a new baseline. Run `npm test`
+before and after any change that touches scheduling.
 
 ## Storage
 

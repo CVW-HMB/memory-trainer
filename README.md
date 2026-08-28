@@ -24,6 +24,11 @@ npm start            # or: uv run python -m http.server 8000
 
 Then open http://localhost:8000.
 
+```bash
+npm test            # scheduler tests (node --test, no dependencies)
+npm run validate    # dataset schema, unique ids, spoiler check
+```
+
 ## Python environment
 
 The card generator is Python. It uses only the standard library, so the venv exists
@@ -71,8 +76,10 @@ cloning the repo runs step 1 and repeats it.
 
 ```
 index.html            app shell
-src/app.js            logic: scheduling, rendering, storage
+src/app.js            UI, rendering, storage, wiring
+src/engine/schedule.js  the Leitner scheduler (pure, no DOM)
 src/styles.css        styling
+tests/                scheduler tests (node --test)
 sw.js                 service worker (offline precache)
 manifest.webmanifest  PWA manifest
 icons/                app icons (192, 512, maskable, apple-touch, favicon)
