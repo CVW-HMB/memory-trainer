@@ -3,10 +3,10 @@
 import { test, describe } from "node:test";
 import assert from "node:assert/strict";
 import {
-  INTERVAL, MAX_BOX, FLIGHT_SIZE, NEW_PER_FLIGHT, OVERDUE_SLOTS,
+  INTERVAL, MAX_BOX, FLIGHT_SIZE, NEW_PER_FLIGHT, OVERDUE_SLOTS, BOX_WEIGHT,
   freshCardState, isNew, isDue, dueCards, weakFirst, buildQueue,
   applyAnswer, ymd, daysBetween, nextStreak, overdueBy, mostOverdue,
-  redrill, REDRILL_GAP,
+  redrill, REDRILL_GAP, weightedSample, weightFor,
 } from "../src/engine/schedule.js";
 
 /* ---------------- helpers ---------------- */
@@ -141,7 +141,7 @@ describe("flight cap", () => {
     const cards = deck(100);
     const q = buildQueue(cards, states(cards), 1, seeded());
     assert.equal(q.length, FLIGHT_SIZE);
-    assert.equal(q.length, 20);
+    assert.equal(q.length, 35);
   });
 
   // Selection uniqueness. A missed card is re-shown during the flight by
@@ -161,22 +161,29 @@ describe("flight cap", () => {
     const cards = deck(100);
     const st = states(cards);
     const rand = seeded(11);
+    let freeFlights = 0;
     for (let flight = 1; flight <= 40; flight++) {
-      const expected = Math.min(FLIGHT_SIZE, dueCards(cards, st, flight).length);
+      const due = dueCards(cards, st, flight).length;
+      // With nothing due the flight falls back to a free review of the whole
+      // deck, so the pool is the deck rather than the due list.
+      const pool = due === 0 ? (freeFlights++, cards.length) : due;
       const q = buildQueue(cards, st, flight, rand);
-      assert.equal(q.length, expected, `flight ${flight}`);
+      assert.equal(q.length, Math.min(FLIGHT_SIZE, pool), `flight ${flight}`);
       for (const id of q) applyAnswer(st[id], true, flight);
     }
+    assert.ok(freeFlights > 0, "answering everything correctly should reach a caught-up state");
   });
 
-  test("every card served is actually due", () => {
+  test("every card served is actually due, unless nothing is", () => {
     const cards = deck(60);
     const st = states(cards);
     const rand = seeded(3);
     for (let flight = 1; flight <= 15; flight++) {
-      const due = new Set(dueCards(cards, st, flight).map(c => c.id));
+      const dueList = dueCards(cards, st, flight);
+      const due = new Set(dueList.map(c => c.id));
       for (const id of buildQueue(cards, st, flight, rand)) {
-        assert.ok(due.has(id), `flight ${flight} served ${id}, which was not due`);
+        // A free-review flight is allowed to reach outside the due list.
+        if (dueList.length > 0) assert.ok(due.has(id), `flight ${flight} served ${id}, which was not due`);
         applyAnswer(st[id], true, flight);
       }
     }
@@ -370,6 +377,63 @@ describe("missed cards come back within the flight", () => {
     }
     assert.ok(guard < 200, "flight must terminate");
     assert.deepEqual(seen, { a: 3, b: 1, c: 4, d: 2 });
+  });
+});
+
+/* ---------------- weighted selection ---------------- */
+describe("weighted draw favours the cards you miss", () => {
+  test("the weight table pulls 4:1 from most-missed to most-recognised", () => {
+    assert.deepEqual(BOX_WEIGHT, { 1: 80, 2: 65, 3: 50, 4: 35, 5: 20 });
+    assert.equal(weightFor({ box: 1 }), 80);
+    assert.equal(weightFor({ box: 5 }), 20);
+    assert.equal(weightFor(undefined), 80, "an unknown card counts as unlearned");
+  });
+
+  test("a box-1 card is drawn far more often than a box-5 card", () => {
+    // 50 box-1 and 50 box-5 cards competing for 20 seats, over many draws.
+    const cards = deck(100);
+    const st = states(cards);
+    cards.forEach((c, i) => seen(st[c.id], { box: i < 50 ? 1 : 5 }));
+    const rand = seeded(77);
+    let weakPicks = 0, strongPicks = 0;
+    for (let i = 0; i < 400; i++) {
+      for (const c of weightedSample(cards, st, 20, rand)) {
+        if (st[c.id].box === 1) weakPicks++; else strongPicks++;
+      }
+    }
+    const ratio = weakPicks / strongPicks;
+    assert.ok(ratio > 2.5, `weak:strong draw ratio was ${ratio.toFixed(2)}, expected a strong pull`);
+    assert.ok(strongPicks > 0, "well-known cards must still come up sometimes");
+  });
+
+  test("the draw is different every flight", () => {
+    const cards = deck(120);
+    const st = states(cards);
+    cards.forEach(c => seen(st[c.id], { box: 3 }));
+    const rand = seeded(5);
+    const runs = [];
+    for (let i = 0; i < 8; i++) runs.push(weightedSample(cards, st, 30, rand).map(c => c.id).sort().join(","));
+    assert.equal(new Set(runs).size, 8, "every draw should differ");
+  });
+
+  test("it samples without replacement and respects k", () => {
+    const cards = deck(40);
+    const st = states(cards);
+    const picked = weightedSample(cards, st, 12, seeded(9));
+    assert.equal(picked.length, 12);
+    assert.equal(new Set(picked.map(c => c.id)).size, 12);
+    assert.equal(weightedSample(cards, st, 0, seeded()).length, 0);
+    assert.equal(weightedSample(cards, st, 999, seeded()).length, 40, "k above the pool returns the pool");
+  });
+
+  test("consecutive flights do not serve an identical set", () => {
+    const cards = deck(200);
+    const st = states(cards);
+    cards.forEach((c, i) => seen(st[c.id], { box: (i % 5) + 1, lastSession: 1 }));
+    const rand = seeded(31);
+    const a = buildQueue(cards, st, 50, rand).join(",");
+    const b = buildQueue(cards, st, 50, rand).join(",");
+    assert.notEqual(a, b);
   });
 });
 

@@ -11,7 +11,7 @@ export const MAX_BOX = 5;
 
 // A flight is capped so a session stays a habit rather than a chore. This caps
 // how many of the due cards get served; it does not affect the box arithmetic.
-export const FLIGHT_SIZE = 20;    // cards served per flight
+export const FLIGHT_SIZE = 35;    // cards served per flight
 export const NEW_PER_FLIGHT = 5;  // at most this many never-seen cards per flight
 
 // Review seats reserved for the longest-overdue cards, whatever their box.
@@ -52,9 +52,30 @@ export function mostOverdue(cards, states, cur, rand = Math.random) {
     .map(x => x.c);
 }
 
+// How likely a due card is to be drawn into a flight, by box. A miss sends a
+// card straight back to box 1, so box 1 is "most missed" and box 5 is "most
+// recognised". 80 against 20 is a deliberately strong 4:1 pull toward the cards
+// you keep getting wrong.
+export const BOX_WEIGHT = { 1: 80, 2: 65, 3: 50, 4: 35, 5: 20 };
+export const weightFor = s => BOX_WEIGHT[(s && s.box) || 1] || BOX_WEIGHT[5];
+
+// Weighted sampling without replacement (Efraimidis-Spirakis): each candidate
+// draws a key U^(1/w) and the k largest keys win. Every flight is a fresh draw,
+// so the selection genuinely varies run to run instead of always serving the
+// same weakest cards, while still pulling hard toward them.
+export function weightedSample(cards, states, k, rand = Math.random) {
+  if (k <= 0) return [];
+  return cards
+    .map(c => ({ c, key: Math.pow(rand() || Number.MIN_VALUE, 1 / weightFor(states[c.id])) }))
+    .sort((a, b) => b.key - a.key)
+    .slice(0, k)
+    .map(x => x.c);
+}
+
 // Weakest boxes first, jittered so the same cards do not come up in the same
 // order every flight. The jitter (1.15) is wider than one box, so a box-2 card
-// can occasionally precede a box-1 card.
+// can occasionally precede a box-1 card. This is presentation order only; what
+// gets into the flight is decided by weightedSample.
 export function weakFirst(cards, states, rand = Math.random) {
   return cards
     .map(c => ({ c, k: (states[c.id]?.box || 1) + rand() * 1.15 }))
@@ -66,9 +87,9 @@ export function weakFirst(cards, states, rand = Math.random) {
 // introduced at a trickle (NEW_PER_FLIGHT) in deck order, which is the
 // curriculum order. The review budget is then split: OVERDUE_SLOTS seats go to
 // the longest-overdue cards so nothing can be starved indefinitely, and the
-// rest fill weak-first as before. If there are not enough reviews the flight
-// tops up with more new cards, so it is always as full as the due pool allows.
-// Each card appears at most once.
+// rest are drawn by weighted random sampling, favouring the cards you miss.
+// If there are not enough reviews the flight tops up with more new cards, so it
+// is always as full as the due pool allows. Each card appears at most once.
 export function buildQueue(cards, states, cur, rand = Math.random) {
   let due = dueCards(cards, states, cur);
   if (due.length === 0) due = cards.slice(); // free review: nothing forced today
@@ -81,8 +102,8 @@ export function buildQueue(cards, states, cur, rand = Math.random) {
 
   const reserved = mostOverdue(review, states, cur, rand).slice(0, Math.min(OVERDUE_SLOTS, budget));
   const taken = new Set(reserved.map(c => c.id));
-  const rest = weakFirst(review.filter(c => !taken.has(c.id)), states, rand);
-  picked.push(...reserved, ...rest.slice(0, budget - reserved.length));
+  const pool = review.filter(c => !taken.has(c.id));
+  picked.push(...reserved, ...weightedSample(pool, states, budget - reserved.length, rand));
 
   if (picked.length < FLIGHT_SIZE) {
     picked.push(...fresh.slice(NEW_PER_FLIGHT, NEW_PER_FLIGHT + FLIGHT_SIZE - picked.length));
