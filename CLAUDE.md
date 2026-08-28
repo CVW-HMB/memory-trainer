@@ -112,9 +112,27 @@ A 5-level Leitner system in `src/app.js`:
 
 ## Storage
 
-`localStorage` under key `wine_srs_v1`, shape:
+Shape (unchanged since v1):
 `{ version, cards: { [id]: {box, correct, wrong, seen, lastSession} }, totalSessions, streak, bestStreak, lastPracticed }`.
 Progress is keyed by card id, so **keep ids stable** and add cards additively. Renaming an id resets that one card only.
+
+Where it lives, in order of precedence:
+
+1. **IndexedDB** — database `lacave`, store `progress`, key `srs_v2:wine`. Primary.
+2. **`localStorage` under the same `srs_v2:wine` key** — written on every save as a
+   mirror. It is the fallback where IndexedDB is blocked (Safari private
+   browsing, some webviews), and the app runs entirely from it if so.
+3. In-memory, if both fail, so at least the current session stays coherent.
+
+The key is **deck-namespaced already** (`srs_v2:<deckId>`) even though there is
+one deck. That is the single concession the MVP makes to Part 2; it means
+adding decks later needs no second migration.
+
+`loadState()` migrates on first boot: IndexedDB, then the mirror, then the
+pre-M5 `wine_srs_v1` key. A migrated legacy key is only deleted after the
+IndexedDB write reads back, because losing progress there is unrecoverable.
+`navigator.storage.persist()` is requested at boot; browsers usually grant it
+once the PWA is installed.
 
 ## Editing / adding cards
 

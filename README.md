@@ -57,7 +57,11 @@ cloning the repo runs step 1 and repeats it.
 - Randomized direction per run for the reversible cards, never the same card twice in a run.
 - A 5-level Leitner scheduler: cards you miss come back every session, mastered cards fade to occasional review.
 - Streaks, per-region accuracy, and a "hardest for you" list in the cellar book.
-- Progress is saved in `localStorage`.
+- Progress is saved in IndexedDB, mirrored to `localStorage` as a fallback, under
+  the deck-namespaced key `srs_v2:wine`. Progress from the old `wine_srs_v1`
+  key migrates automatically on first load.
+- Installable as a PWA and fully usable offline: the service worker precaches
+  the shell, the deck and the fonts, so a flight runs in airplane mode.
 
 ## Editing cards
 
@@ -69,6 +73,9 @@ cloning the repo runs step 1 and repeats it.
 index.html            app shell
 src/app.js            logic: scheduling, rendering, storage
 src/styles.css        styling
+sw.js                 service worker (offline precache)
+manifest.webmanifest  PWA manifest
+icons/                app icons (192, 512, maskable, apple-touch, favicon)
 data/cards.json       the 100 cards (source of truth)
 scripts/              card generator + validator
 pyproject.toml        Python project for the generator (uv)

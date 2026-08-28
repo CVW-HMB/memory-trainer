@@ -1,8 +1,12 @@
 // La Cave - wine flashcard trainer
-// Data lives in /data/cards.json. Progress persists in localStorage.
-// Card types and their direction rules are documented in CLAUDE.md.
+// Data lives in /data/cards.json. Progress persists in IndexedDB, mirrored to
+// localStorage as a fallback. Card types and direction rules are in CLAUDE.md.
 
-const STORE_KEY = "wine_srs_v1";
+// Namespaced now, with a single deck, so adding decks later needs no second
+// migration. This is the one forward-looking concession the MVP makes.
+const DECK_ID = "wine";
+const STORE_KEY = "srs_v2:" + DECK_ID;
+const LEGACY_KEY = "wine_srs_v1";      // pre-M5 localStorage key, migrated on first boot
 const INTERVAL = { 1: 1, 2: 1, 3: 2, 4: 4, 5: 8 }; // Leitner box -> sessions until due
 
 // A flight is capped so a session stays a habit rather than a chore. This caps
@@ -14,18 +18,98 @@ const NEW_PER_FLIGHT = 5;  // at most this many never-seen cards per flight
 let CARDS = [];
 let BY_ID = {};
 
-/* ---------------- storage (localStorage + in-memory fallback) ---------------- */
+/* ---------------- storage ----------------
+   IndexedDB is the primary store: unlike localStorage it is not cleared by
+   Safari's 7-day eviction for sites without an installed PWA, and it survives
+   more aggressive storage pressure. Every write is mirrored to localStorage,
+   which costs a few KB and keeps the app working where IndexedDB is blocked
+   (Safari private browsing, some embedded webviews). If both fail, an
+   in-memory copy keeps the current session coherent.                        */
+const DB_NAME = "lacave", DB_STORE = "progress", DB_VERSION = 1;
+let backend = "memory";   // "idb" | "local" | "memory" - what actually persisted
 let memStore = null;
-function loadState() {
-  try {
-    const raw = localStorage.getItem(STORE_KEY);
-    if (raw) return JSON.parse(raw);
-  } catch (e) { return memStore; }
-  return null;
+
+function idbOpen() {
+  return new Promise((resolve, reject) => {
+    if (!self.indexedDB) return reject(new Error("indexedDB unavailable"));
+    const req = indexedDB.open(DB_NAME, DB_VERSION);
+    req.onupgradeneeded = () => {
+      if (!req.result.objectStoreNames.contains(DB_STORE)) req.result.createObjectStore(DB_STORE);
+    };
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+    req.onblocked = () => reject(new Error("indexedDB blocked"));
+  });
 }
+function idbRun(mode, fn) {
+  return idbOpen().then(db => new Promise((resolve, reject) => {
+    const tx = db.transaction(DB_STORE, mode);
+    const req = fn(tx.objectStore(DB_STORE));
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+    tx.oncomplete = () => db.close();
+  }));
+}
+const idbGet = key => idbRun("readonly", s => s.get(key));
+const idbSet = (key, val) => idbRun("readwrite", s => s.put(val, key));
+const idbDel = key => idbRun("readwrite", s => s.delete(key));
+
+const parse = raw => { try { return raw ? JSON.parse(raw) : null; } catch (e) { return null; } };
+const lsGet = key => { try { return localStorage.getItem(key); } catch (e) { return null; } };
+const lsSet = (key, raw) => { try { localStorage.setItem(key, raw); return true; } catch (e) { return false; } };
+const lsDel = key => { try { localStorage.removeItem(key); } catch (e) {} };
+
+// Ask the browser not to evict us. Best effort: it may decline, and an
+// installed PWA is generally granted it automatically.
+async function requestPersistence() {
+  try {
+    if (navigator.storage && navigator.storage.persist) {
+      if (await navigator.storage.persisted()) return "already";
+      return (await navigator.storage.persist()) ? "granted" : "denied";
+    }
+  } catch (e) {}
+  return "unsupported";
+}
+
+// Reads progress and migrates anything found under an older location.
+// Order: IndexedDB, then the mirror, then the pre-M5 key.
+async function loadState() {
+  let raw = null;
+  try { raw = await idbGet(STORE_KEY); backend = "idb"; }
+  catch (e) { console.warn("[store] IndexedDB unavailable, falling back", e); backend = null; }
+
+  if (!raw) {
+    const mirrored = lsGet(STORE_KEY);
+    const legacy = mirrored ? null : lsGet(LEGACY_KEY);
+    raw = mirrored || legacy;
+    if (raw && backend === "idb") {
+      // Promote into IndexedDB, and only drop the old key once the write reads
+      // back -- losing progress to a failed migration is not recoverable.
+      try {
+        await idbSet(STORE_KEY, raw);
+        if (await idbGet(STORE_KEY) === raw && legacy) lsDel(LEGACY_KEY);
+      } catch (e) { console.warn("[store] migration failed, keeping old copy", e); }
+    }
+  }
+  if (backend === null) backend = lsSet(STORE_KEY, lsGet(STORE_KEY) || "") ? "local" : "memory";
+  return parse(raw) || memStore;
+}
+
+// Writes are serialised: a flight saves after every answer, and overlapping
+// IndexedDB transactions would otherwise race. Callers stay synchronous.
+let saveChain = Promise.resolve();
 function saveState(s) {
-  try { localStorage.setItem(STORE_KEY, JSON.stringify(s)); }
-  catch (e) { memStore = s; }
+  const raw = JSON.stringify(s);
+  memStore = s;
+  lsSet(STORE_KEY, raw);                       // mirror, always
+  if (backend !== "idb") return;
+  saveChain = saveChain
+    .then(() => idbSet(STORE_KEY, raw))
+    .catch(e => { console.warn("[store] IndexedDB write failed, mirror still holds it", e); });
+}
+async function clearState() {
+  lsDel(STORE_KEY); lsDel(LEGACY_KEY); memStore = null;
+  if (backend === "idb") { try { await idbDel(STORE_KEY); } catch (e) {} }
 }
 
 function freshState() {
@@ -316,8 +400,9 @@ function wire() {
   $("sumCellar").onclick = () => { renderCellar(); show("cellar"); };
   $("sumHome").onclick = () => { renderHome(); show("home"); };
   $("cellarBack").onclick = () => { renderHome(); show("home"); };
-  $("resetBtn").onclick = () => {
+  $("resetBtn").onclick = async () => {
     if (!confirm("Reset every card, streak, and stat back to zero?")) return;
+    await clearState();
     state = freshState(); saveState(state); renderCellar(); renderHome();
   };
   document.addEventListener("keydown", e => {
@@ -338,11 +423,16 @@ async function boot() {
     return;
   }
   BY_ID = Object.fromEntries(CARDS.map(c => [c.id, c]));
-  const saved = loadState();
+  const persistence = await requestPersistence();
+  const saved = await loadState();
+  console.info("[store] backend=" + backend + " persistence=" + persistence);
   state = freshState();
   if (saved && saved.cards) {
     state = Object.assign(state, saved, { cards: Object.assign(freshState().cards, saved.cards) });
   }
+  // Persist the merged state right away: it populates the localStorage mirror
+  // before the first answer, and gives any newly added cards their entries.
+  saveState(state);
   $("cardCount").textContent = CARDS.length;
   wire();
   renderHome();
