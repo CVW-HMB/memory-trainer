@@ -80,5 +80,39 @@
         "label": "Everyday"
       }
     ]
+  },
+  {
+    "id": "payments",
+    "name": "Payment Cards",
+    "subtitle": "How a swipe actually works: the four-party model, authorization to settlement, interchange, EMV, risk and the rails.",
+    "file": "./data/payments.json",
+    "groupsTitle": "By area",
+    "tagline": "from the tap to the settlement file",
+    "groups": [
+      {
+        "id": "Players",
+        "label": "Who is involved"
+      },
+      {
+        "id": "Flow",
+        "label": "The transaction"
+      },
+      {
+        "id": "Money",
+        "label": "Fees and economics"
+      },
+      {
+        "id": "Cards",
+        "label": "The card itself"
+      },
+      {
+        "id": "Risk",
+        "label": "Risk and compliance"
+      },
+      {
+        "id": "Rails",
+        "label": "Rails and messages"
+      }
+    ]
   }
 ]

@@ -25,6 +25,7 @@ scheduler (`npm test`).
 - `wine` — "Wines, Grapes, Regions", 161 cards, `data/cards.json`.
 - `spanish` — "Mexican Spanish – English", 254 cards, `data/spanish.json`.
 - `french` — "French – English", 254 cards, `data/french.json`.
+- `payments` — "Payment Cards", 148 cards, `data/payments.json`.
 
 The picker is a **dropdown**, not a list: it scales, and a phone gets its native
 picker for free.
@@ -155,6 +156,19 @@ wording ("¿En inglés?" against "En anglais ?").
 - `vocab` — `{ lang, term, gloss, kindTerm, kindGloss }`. One word per side.
 - `conjugation` — `{ lang, verb, english, tense, tenseEn, forms[], formsEn[] }`.
   A whole table for one verb in one tense, rendered identically on both faces.
+
+### Payments deck type (`src/decks/glossary.js`)
+
+`glossary` — `{ term, short, context, definition, kind }`. Term on the front,
+meaning on the back. **Not reversible**: unlike a translation pair, several
+payments definitions are close enough that going definition → term would have
+more than one defensible answer.
+
+Content scope follows *The Anatomy of the Swipe* (four-party model,
+authorization → clearing → settlement, interchange, EMV, risk, rails), but the
+definitions are **written from general industry knowledge, not transcribed from
+that book or any other**. Keep it that way. `short` is capped at 42 characters
+by the generator so it fits the card's big line.
 
 **Mexican Spanish has no `vosotros`** — five rows, not six; `ustedes` covers
 every plural "you". Vocabulary is Mexican (carro, departamento, refrigerador,

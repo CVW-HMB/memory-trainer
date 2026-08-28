@@ -10,6 +10,7 @@
 // directions have exactly one right answer.
 import * as wine from "./wine.js";
 import * as vocab from "./vocab.js";
+import * as glossary from "./glossary.js";
 
 export const CARD_TYPES = {
   place2grape: wine.place2grape,
@@ -17,6 +18,7 @@ export const CARD_TYPES = {
   grapehome: wine.grapehome,
   vocab: vocab.vocab,
   conjugation: vocab.conjugation,
+  glossary: glossary.glossary,
 };
 
 // A card of an unregistered type would otherwise crash the renderer mid-flight.

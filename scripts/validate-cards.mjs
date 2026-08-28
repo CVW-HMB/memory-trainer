@@ -17,6 +17,7 @@ const REQUIRED = {
   grapehome: ["grape", "home", "also"],
   vocab: ["lang", "term", "gloss", "kindTerm", "kindGloss"],
   conjugation: ["lang", "verb", "english", "tense", "tenseEn", "kindTerm", "kindGloss"],
+  glossary: ["term", "short", "definition", "kind"],
 };
 
 // Which faces a card presents, and whether it may be shown in both directions.
@@ -33,6 +34,8 @@ const FACES = {
                                     back: c => `gloss|${c.gloss}` },
   conjugation: { reversible: true,  front: c => `term|${c.verb}|${c.tense}`,
                                     back: c => `gloss|${c.english}|${c.tenseEn}` },
+  glossary:    { reversible: false, front: c => `term|${c.term}`,
+                                    back: c => `def|${c.short}|${c.definition}` },
 };
 
 let failed = false;

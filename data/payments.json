@@ -1,0 +1,1482 @@
+[
+  {
+    "id": "pay-cardholder",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Cardholder",
+    "short": "The person paying",
+    "context": "",
+    "definition": "The consumer or business that holds the card and authorizes the payment.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-merchant",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Merchant",
+    "short": "The business getting paid",
+    "context": "",
+    "definition": "The party selling goods or services and accepting the card as payment.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-issuer",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Issuer",
+    "short": "The cardholder's bank",
+    "context": "Four-party model",
+    "definition": "The bank that issues the card, owns the cardholder relationship, extends the credit or holds the deposits, and approves or declines each authorization.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-acquirer",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Acquirer",
+    "short": "The merchant's bank",
+    "context": "Four-party model",
+    "definition": "The bank licensed by the networks to accept card transactions on a merchant's behalf and deposit the proceeds into the merchant's account.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-card-network",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Card network",
+    "short": "The rails and the rulebook",
+    "context": "Also called the scheme",
+    "definition": "Visa, Mastercard, Amex or Discover: routes messages between acquirer and issuer, sets interchange and the operating rules, and runs settlement.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-four-party-model",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Four-party model",
+    "short": "Cardholder, merchant, issuer, acquirer",
+    "context": "",
+    "definition": "The standard open-loop structure, with the card network in the middle moving messages and money between the issuer and the acquirer.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-three-party-model",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Three-party model",
+    "short": "The network is also the bank",
+    "context": "",
+    "definition": "A closed structure where one company is network, issuer and acquirer at once, so it sets its own pricing. Amex and Discover began this way.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-open-loop",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Open loop",
+    "short": "Works anywhere the network is taken",
+    "context": "",
+    "definition": "A card usable at any merchant that accepts the network, because the network connects many issuers to many acquirers.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-closed-loop",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Closed loop",
+    "short": "Works in one place only",
+    "context": "",
+    "definition": "A card accepted only by the issuing brand or a defined group, such as a store gift card, with no network in the middle.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-payment-processor",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Payment processor",
+    "short": "The plumbing",
+    "context": "",
+    "definition": "The technology company that formats, transmits and reconciles transaction messages between the merchant, the acquirer, the network and the issuer.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-issuer-processor",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Issuer processor",
+    "short": "Decides on the issuer's behalf",
+    "context": "",
+    "definition": "Runs the authorization logic, balance checks and card records for an issuer, often for programs the bank does not build itself.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-acquirer-processor",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Acquirer processor",
+    "short": "Connects merchants to the networks",
+    "context": "",
+    "definition": "Handles authorization routing, capture, settlement files and merchant funding on an acquirer's behalf.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-payment-gateway",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Payment gateway",
+    "short": "The merchant's on-ramp",
+    "context": "",
+    "definition": "Takes card details from a website or app, encrypts them and passes the transaction to the processor. Mostly a card-not-present concept.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-payment-facilitator",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Payment facilitator",
+    "short": "A merchant that resells acceptance",
+    "context": "PayFac",
+    "definition": "A PayFac holds one master merchant account and onboards many sub-merchants underneath it, taking on their underwriting and risk.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-sub-merchant",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Sub-merchant",
+    "short": "A merchant under a PayFac",
+    "context": "",
+    "definition": "A business that accepts cards through a payment facilitator's master account rather than holding its own merchant account.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-independent-sales-organization",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Independent Sales Organization",
+    "short": "Resells acquiring",
+    "context": "ISO; Mastercard calls it an MSP",
+    "definition": "An ISO signs merchants up for card acceptance on behalf of an acquiring bank and is paid out of the merchant's processing fees.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-merchant-of-record",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Merchant of record",
+    "short": "Who is legally on the hook",
+    "context": "",
+    "definition": "The entity that appears on the cardholder's statement and carries the legal and financial responsibility for the transaction, including refunds and chargebacks.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-sponsor-bank",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Sponsor bank",
+    "short": "Rents out network membership",
+    "context": "Also called a BIN sponsor",
+    "definition": "A licensed network member that lets a fintech or program manager issue or acquire under its membership, and stays accountable to the network for it.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-program-manager",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Program manager",
+    "short": "Runs the card program",
+    "context": "",
+    "definition": "Handles the product, customer experience and day-to-day operations of a card program that sits on a sponsor bank's BIN.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-independent-software-vendor",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Independent software vendor",
+    "short": "Software that also takes payments",
+    "context": "",
+    "definition": "An ISV builds business software and embeds payment acceptance into it, often earning a share of the processing revenue.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-point-of-sale",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Point of sale",
+    "short": "Where the card is presented",
+    "context": "",
+    "definition": "The terminal, register or software that captures the card and starts the transaction. Abbreviated POS.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-digital-wallet",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Digital wallet",
+    "short": "The card, on the phone",
+    "context": "",
+    "definition": "Apple Pay, Google Pay and similar: hold a tokenized version of the card and present it over NFC or online.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-token-service-provider",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Token service provider",
+    "short": "Issues and maps network tokens",
+    "context": "TSP",
+    "definition": "The party, usually the network, that swaps a real card number for a token and can map it back for the issuer.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-network-member",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Network member",
+    "short": "A bank licensed by the scheme",
+    "context": "",
+    "definition": "Only licensed members may issue or acquire directly; everyone else reaches the network through one.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-orchestration-layer",
+    "group": "Players",
+    "type": "glossary",
+    "term": "Orchestration layer",
+    "short": "Routes between providers",
+    "context": "",
+    "definition": "Software that lets a merchant send transactions to several processors or gateways and switch or retry between them.",
+    "kind": "Who is involved"
+  },
+  {
+    "id": "pay-authorization",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Authorization",
+    "short": "Ask the issuer: yes or no",
+    "context": "Step 1 of 3",
+    "definition": "A real-time request to the issuer to confirm the card is valid and the funds or credit are available. It reserves the amount but moves no money.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-clearing",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Clearing",
+    "short": "Exchange the records",
+    "context": "Step 2 of 3",
+    "definition": "The acquirer submits the completed transaction and the network passes the record to the issuer, calculating what each side owes. Still no money has moved.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-settlement",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Settlement",
+    "short": "Move the money",
+    "context": "Step 3 of 3",
+    "definition": "The actual transfer of funds between issuer and acquirer through the network's settlement accounts.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-funding",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Funding",
+    "short": "Money reaches the merchant",
+    "context": "",
+    "definition": "The acquirer deposits the settled proceeds, less fees, into the merchant's bank account. Usually a day or two after the sale.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-capture",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Capture",
+    "short": "Claim the authorized amount",
+    "context": "",
+    "definition": "The merchant tells the acquirer to collect a previously authorized amount, normally when the goods actually ship or the tab is closed.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-authorization-hold",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Authorization hold",
+    "short": "Funds reserved, not taken",
+    "context": "",
+    "definition": "The issuer reduces the cardholder's available balance by the authorized amount while waiting for the capture. It expires if never captured.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-batch",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Batch",
+    "short": "A day's transactions together",
+    "context": "",
+    "definition": "Captured transactions grouped and submitted for clearing in one file, traditionally at the end of the merchant's day.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-batch-close",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Batch close",
+    "short": "Send the day in",
+    "context": "",
+    "definition": "The cut-off at which a merchant submits its batch. Miss it and funding slips a day.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-pre-authorization",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Pre-authorization",
+    "short": "Hold now, amount unknown",
+    "context": "",
+    "definition": "An authorization taken before the final amount is known, as at a hotel check-in or a fuel pump.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-incremental-authorization",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Incremental authorization",
+    "short": "Top up the hold",
+    "context": "",
+    "definition": "An additional authorization that raises an existing hold, used when a hotel stay or a bar tab grows.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-partial-authorization",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Partial authorization",
+    "short": "Approve what is there",
+    "context": "",
+    "definition": "The issuer approves less than requested because that is all the balance covers, letting the cardholder settle the rest another way. Common on prepaid.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-reversal",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Reversal",
+    "short": "Undo the authorization",
+    "context": "",
+    "definition": "A message releasing a hold before it is captured, so the cardholder's available balance recovers straight away.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-void",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Void",
+    "short": "Cancel before it settles",
+    "context": "",
+    "definition": "Cancelling a captured transaction while it is still in the open batch, so it never reaches clearing and never shows as a refund.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-refund",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Refund",
+    "short": "Money back after the fact",
+    "context": "",
+    "definition": "A separate transaction returning funds to the cardholder after the original one settled. It does not undo the original.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-chargeback",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Chargeback",
+    "short": "The issuer takes it back",
+    "context": "",
+    "definition": "A forced reversal initiated by the issuer after a cardholder dispute, pulling funds from the merchant and putting the burden of proof on them.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-representment",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Representment",
+    "short": "The merchant pushes back",
+    "context": "",
+    "definition": "The merchant supplies evidence contesting a chargeback and re-presents the transaction to the issuer.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-arbitration",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Arbitration",
+    "short": "The network decides",
+    "context": "",
+    "definition": "When issuer and merchant cannot resolve a dispute, the network rules on it and charges the loser a fee.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-pre-arbitration",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Pre-arbitration",
+    "short": "One more round first",
+    "context": "",
+    "definition": "An attempt to settle a dispute between issuer and acquirer before it goes to the network for a binding decision.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-stand-in-processing",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Stand-in processing",
+    "short": "The network answers for the issuer",
+    "context": "STIP",
+    "definition": "When the issuer cannot be reached, the network approves or declines on its behalf within limits the issuer set in advance.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-card-present",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Card-present",
+    "short": "The card is physically there",
+    "context": "",
+    "definition": "A transaction where the card is dipped, tapped or swiped, so the terminal reads the chip or stripe. Lower risk, lower interchange.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-card-not-present",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Card-not-present",
+    "short": "No card at the terminal",
+    "context": "CNP",
+    "definition": "Online, in-app, phone or mail transactions where the card cannot be read. Higher fraud risk and higher interchange.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-moto",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "MOTO",
+    "short": "Mail order, telephone order",
+    "context": "",
+    "definition": "A card-not-present transaction taken by post or over the phone, with the details keyed in by the merchant.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-card-on-file",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Card on file",
+    "short": "Stored for next time",
+    "context": "",
+    "definition": "A card the merchant has saved with the cardholder's agreement, used for repeat or one-click purchases.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-recurring-transaction",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Recurring transaction",
+    "short": "Charged on a schedule",
+    "context": "",
+    "definition": "A repeating charge on a stored card, such as a subscription, flagged so the issuer treats it differently from a fresh purchase.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-authorization-code",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Authorization code",
+    "short": "Proof it was approved",
+    "context": "",
+    "definition": "The short code the issuer returns on approval, quoted later to tie a settled transaction back to its authorization.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-force-post",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Force post",
+    "short": "Push it through anyway",
+    "context": "",
+    "definition": "Submitting a transaction for clearing without a matching online authorization, using a code obtained another way. Carries extra liability.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-good-funds-model",
+    "group": "Flow",
+    "type": "glossary",
+    "term": "Good funds model",
+    "short": "Do not spend what has not arrived",
+    "context": "",
+    "definition": "Settling only once money is actually in hand, rather than advancing it and taking the risk.",
+    "kind": "The transaction"
+  },
+  {
+    "id": "pay-interchange",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Interchange",
+    "short": "Acquirer pays issuer",
+    "context": "The biggest slice",
+    "definition": "The fee, set by the network, that the acquirer pays the issuer on each transaction. It is the largest part of what a merchant pays and it funds rewards and issuer risk.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-assessments",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Assessments",
+    "short": "The network's cut",
+    "context": "",
+    "definition": "A fee the network charges on processed volume for use of its rails and brand. Small next to interchange, and paid by the acquirer.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-merchant-discount-rate",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Merchant discount rate",
+    "short": "All-in cost per sale",
+    "context": "MDR",
+    "definition": "The total a merchant pays per transaction: interchange, plus assessments, plus the processor's markup.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-interchange-plus-pricing",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Interchange-plus pricing",
+    "short": "Cost, then a stated markup",
+    "context": "",
+    "definition": "Pricing that passes interchange and assessments straight through and adds a disclosed margin. The most transparent model.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-flat-rate-pricing",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Flat-rate pricing",
+    "short": "One headline number",
+    "context": "",
+    "definition": "A single blended rate on every transaction regardless of card type. Simple, predictable, usually more expensive on average.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-tiered-pricing",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Tiered pricing",
+    "short": "Qualified, mid, non-qualified",
+    "context": "",
+    "definition": "Pricing that sorts transactions into a few buckets whose definitions the processor controls. Opaque, and easy to downgrade into the expensive tier.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-downgrade",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Downgrade",
+    "short": "Missed the cheaper rate",
+    "context": "",
+    "definition": "A transaction that fails to meet the conditions for the interchange category it could have qualified for, and costs more as a result.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-basis-point",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Basis point",
+    "short": "One hundredth of a percent",
+    "context": "bps",
+    "definition": "The unit card pricing is quoted in. 100 bps is 1%.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-level-2-data",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Level 2 data",
+    "short": "Extra fields, cheaper rate",
+    "context": "",
+    "definition": "Tax and customer reference data supplied on commercial card transactions to qualify for lower interchange.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-level-3-data",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Level 3 data",
+    "short": "Line-item detail",
+    "context": "",
+    "definition": "Full line-item data on a commercial card transaction, which unlocks the lowest interchange for business and government spend.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-durbin-amendment",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Durbin Amendment",
+    "short": "Caps debit interchange",
+    "context": "",
+    "definition": "A US rule capping debit interchange for large issuers and requiring that merchants have a choice of at least two unaffiliated debit networks.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-regulated-debit",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Regulated debit",
+    "short": "Debit from a large issuer",
+    "context": "",
+    "definition": "Debit cards from issuers over the Durbin asset threshold, whose interchange is capped. Unregulated debit, from small issuers, is not.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-least-cost-routing",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Least-cost routing",
+    "short": "Send it the cheaper way",
+    "context": "",
+    "definition": "Choosing between the debit networks available on a card to minimize the merchant's cost.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-surcharge",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Surcharge",
+    "short": "A fee for paying by card",
+    "context": "",
+    "definition": "An extra amount added to the price for card payment. Permitted only within network rules and where local law allows.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-convenience-fee",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Convenience fee",
+    "short": "Charge for the channel",
+    "context": "",
+    "definition": "A fee for using a particular payment channel rather than for using a card as such, allowed in narrower circumstances than a surcharge.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-cash-discount",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Cash discount",
+    "short": "Lower price for cash",
+    "context": "",
+    "definition": "Advertising a card price and discounting for cash, which achieves a similar result to surcharging under different rules.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-reserve",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Reserve",
+    "short": "Money held back",
+    "context": "",
+    "definition": "Funds the acquirer withholds from a merchant against future chargebacks or failure to deliver.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-rolling-reserve",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Rolling reserve",
+    "short": "A moving holdback",
+    "context": "",
+    "definition": "A reserve that keeps a set percentage of recent volume, releasing each tranche after an agreed period.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-chargeback-fee",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Chargeback fee",
+    "short": "Charged win or lose",
+    "context": "",
+    "definition": "A fixed fee the acquirer charges the merchant for handling a dispute, usually payable whatever the outcome.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-gross-settlement",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Gross settlement",
+    "short": "Fees billed separately",
+    "context": "",
+    "definition": "Funding the merchant the full transaction amount and invoicing fees separately, rather than netting them off.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-net-settlement",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Net settlement",
+    "short": "Fees taken off the top",
+    "context": "",
+    "definition": "Funding the merchant the transaction amount less fees, so the deposit is already net.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-float",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Float",
+    "short": "Value of the gap",
+    "context": "",
+    "definition": "The economic benefit of holding funds between the moment they are collected and the moment they are paid out.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-revenue-share",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Revenue share",
+    "short": "Splitting the take",
+    "context": "",
+    "definition": "An arrangement where a partner such as an ISV or ISO receives an agreed portion of the processing revenue it introduces.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-interchange-optimization",
+    "group": "Money",
+    "type": "glossary",
+    "term": "Interchange optimization",
+    "short": "Qualify for cheaper rates",
+    "context": "",
+    "definition": "Supplying the data and settling within the windows that let each transaction reach the lowest interchange category available to it.",
+    "kind": "Fees and economics"
+  },
+  {
+    "id": "pay-pan",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "PAN",
+    "short": "The card number",
+    "context": "",
+    "definition": "The Primary Account Number embossed or printed on the card, 13 to 19 digits, which identifies the issuer and the account.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-bin",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "BIN",
+    "short": "First six to eight digits",
+    "context": "Also called IIN",
+    "definition": "The Bank Identification Number at the start of the PAN, identifying the issuer, the network, the country and the product type. Now formally the IIN.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-luhn-check",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Luhn check",
+    "short": "Catches typos, not fraud",
+    "context": "",
+    "definition": "A checksum over the card number that detects most mistyped digits. It proves nothing about whether the account exists.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-expiration-date",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Expiration date",
+    "short": "When the plastic dies",
+    "context": "",
+    "definition": "The month and year the card stops working, after which the issuer reissues. Used as a light verification field online.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-cvv2",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "CVV2",
+    "short": "The printed three digits",
+    "context": "CVC2 on Mastercard",
+    "definition": "The code printed on the card, not stored on the chip or stripe, used to suggest the card was in hand for a card-not-present sale.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-icvv",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "iCVV",
+    "short": "The chip's own code",
+    "context": "",
+    "definition": "A separate verification value carried on the chip, different from the one on the magnetic stripe, so stripe data copied from a chip will not work.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-track-data",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Track data",
+    "short": "What the stripe holds",
+    "context": "",
+    "definition": "The magnetic stripe's encoded fields: the PAN, expiry, service code and a verification value. Copying it is how counterfeit cards were made.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-magnetic-stripe",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Magnetic stripe",
+    "short": "Static, copyable data",
+    "context": "",
+    "definition": "The magnetic band on the back. It presents the same data every time, which is exactly why skimming worked.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-emv-chip",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "EMV chip",
+    "short": "Different answer every time",
+    "context": "",
+    "definition": "The chip that computes a unique cryptogram per transaction, so intercepted data cannot be replayed. Named for Europay, Mastercard and Visa.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-cryptogram",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Cryptogram",
+    "short": "Proof the real chip was there",
+    "context": "ARQC",
+    "definition": "A one-time value the chip generates from transaction data and a secret key, which the issuer verifies. An ARQC is the authorization request cryptogram.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-application-identifier",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Application Identifier",
+    "short": "Which application to run",
+    "context": "",
+    "definition": "The AID that tells the terminal which payment application on the chip to use, for example debit or credit on the same card.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-cardholder-verification-method",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Cardholder verification method",
+    "short": "How the person is checked",
+    "context": "",
+    "definition": "The CVM: PIN, signature, on-device biometric or nothing at all. The chip and terminal negotiate which to use from a priority list.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-contactless",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Contactless",
+    "short": "Tap to pay",
+    "context": "",
+    "definition": "Presenting the card or phone over NFC. Uses the same chip cryptography as a dip, so it is not the security step back that swiping was.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-service-code",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Service code",
+    "short": "What the card may do",
+    "context": "",
+    "definition": "Three digits in the track data saying where the card is valid, whether a chip must be used, and what verification is required.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-network-token",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Network token",
+    "short": "A card number that is not the card number",
+    "context": "",
+    "definition": "A network-issued substitute PAN, restricted to a merchant or device, which keeps working when the underlying card is reissued.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-payment-account-reference",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Payment Account Reference",
+    "short": "One id across all tokens",
+    "context": "",
+    "definition": "PAR: a non-sensitive value linking every token and the real PAN for the same account, so a merchant can recognize a returning customer without holding card data.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-account-updater",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Account updater",
+    "short": "Card details refresh themselves",
+    "context": "",
+    "definition": "A network service that pushes new card numbers and expiry dates to merchants holding cards on file, so subscriptions survive reissues.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-virtual-card",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Virtual card",
+    "short": "A number with no plastic",
+    "context": "",
+    "definition": "A card number generated for online or in-app use, often with limits on amount, merchant or lifetime.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-single-use-card",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Single-use card",
+    "short": "One number, one purchase",
+    "context": "",
+    "definition": "A virtual card that expires after a single transaction, so a leak from the merchant is worthless.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-prepaid-card",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Prepaid card",
+    "short": "Spends a loaded balance",
+    "context": "",
+    "definition": "A card drawing on funds loaded in advance rather than a deposit account or a credit line.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-debit-card",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Debit card",
+    "short": "Pulls from a deposit account",
+    "context": "",
+    "definition": "A card that draws directly on the cardholder's own bank balance, usually with lower interchange than credit.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-credit-card",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Credit card",
+    "short": "Borrows from the issuer",
+    "context": "",
+    "definition": "A card drawing on a revolving credit line, where the issuer takes the credit risk and earns interest as well as interchange.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-charge-card",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Charge card",
+    "short": "Borrow, but pay in full",
+    "context": "",
+    "definition": "A card with no revolving balance: the whole amount falls due each cycle.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-commercial-card",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Commercial card",
+    "short": "A business's card",
+    "context": "",
+    "definition": "Corporate, purchasing and fleet cards, which carry richer data requirements and their own interchange categories.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-card-personalization",
+    "group": "Cards",
+    "type": "glossary",
+    "term": "Card personalization",
+    "short": "Turning stock into a card",
+    "context": "",
+    "definition": "Encoding the chip, printing the number and loading the keys that make a blank card belong to one account.",
+    "kind": "The card itself"
+  },
+  {
+    "id": "pay-pci-dss",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "PCI DSS",
+    "short": "The rules for handling card data",
+    "context": "",
+    "definition": "The Payment Card Industry Data Security Standard: the controls anyone storing, processing or transmitting card data must meet, set by the networks jointly.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-pci-scope",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "PCI scope",
+    "short": "What the audit covers",
+    "context": "",
+    "definition": "Every system that touches card data. Shrinking it, by never letting raw card data into your systems, is the cheapest way to reduce compliance burden.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-self-assessment-questionnaire",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "Self-Assessment Questionnaire",
+    "short": "Prove it yourself",
+    "context": "",
+    "definition": "The SAQ: the form smaller merchants complete to attest to PCI compliance, instead of a full on-site assessment.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-qualified-security-assessor",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "Qualified Security Assessor",
+    "short": "The auditor",
+    "context": "",
+    "definition": "A QSA is certified by the PCI Council to assess and attest to a company's compliance.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-tokenization",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "Tokenization",
+    "short": "Swap the number for a stand-in",
+    "context": "",
+    "definition": "Replacing card data with a token that is useless if stolen, and can only be mapped back by the token service. The main tool for cutting PCI scope.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-point-to-point-encryption",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "Point-to-point encryption",
+    "short": "Encrypted at the reader",
+    "context": "",
+    "definition": "P2PE encrypts card data inside the terminal before it reaches the merchant's systems, so those systems never hold readable card data.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-hardware-security-module",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "Hardware Security Module",
+    "short": "Where the keys live",
+    "context": "",
+    "definition": "An HSM is tamper-resistant hardware that stores cryptographic keys and performs PIN and cryptogram operations without ever exposing the keys.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-dukpt",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "DUKPT",
+    "short": "A fresh key every time",
+    "context": "",
+    "definition": "Derived Unique Key Per Transaction: each transaction is encrypted with its own key derived from a base key, so compromising one reveals nothing about the others.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-3-d-secure",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "3-D Secure",
+    "short": "Ask the issuer to vouch",
+    "context": "",
+    "definition": "3DS adds an issuer authentication step to a card-not-present payment, and in return usually shifts fraud liability from the merchant to the issuer.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-liability-shift",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "Liability shift",
+    "short": "Who eats the fraud",
+    "context": "",
+    "definition": "The rules deciding whether the merchant or the issuer bears a fraudulent transaction. It moves with technology: EMV for card-present, 3DS for online.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-emv-liability-shift",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "EMV liability shift",
+    "short": "Whoever is least secure pays",
+    "context": "",
+    "definition": "From the 2015 US milestone, the party that failed to support chip, merchant or issuer, bears counterfeit fraud losses.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-address-verification-service",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "Address Verification Service",
+    "short": "Check the billing address",
+    "context": "",
+    "definition": "AVS compares the numeric parts of the billing address against the issuer's record. A weak signal on its own, useful combined with others.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-velocity-check",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "Velocity check",
+    "short": "Too much, too fast",
+    "context": "",
+    "definition": "A control that flags or blocks unusual bursts of activity on a card, device or account.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-card-testing",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "Card testing",
+    "short": "Probing stolen numbers",
+    "context": "",
+    "definition": "Attackers running small or zero-value authorizations to find which stolen card numbers still work, often against a merchant's own checkout.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-bin-attack",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "BIN attack",
+    "short": "Guessing the rest of the number",
+    "context": "",
+    "definition": "Generating candidate card numbers from a known BIN and testing them until some authorize.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-skimming",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "Skimming",
+    "short": "Copying the stripe",
+    "context": "",
+    "definition": "A device on a terminal or ATM that reads and stores magnetic stripe data for later counterfeiting.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-shimming",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "Shimming",
+    "short": "Skimming, for chips",
+    "context": "",
+    "definition": "A thin device between chip and reader that captures chip data. Far less useful to an attacker, because the cryptogram cannot be replayed.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-friendly-fraud",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "Friendly fraud",
+    "short": "The customer did buy it",
+    "context": "",
+    "definition": "A cardholder disputing a transaction they actually made, whether by mistake or deliberately. Often indistinguishable from real fraud at first.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-account-takeover",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "Account takeover",
+    "short": "The real account, the wrong person",
+    "context": "",
+    "definition": "An attacker gaining control of a legitimate account and transacting as the cardholder.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-know-your-customer",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "Know Your Customer",
+    "short": "Prove who they are",
+    "context": "",
+    "definition": "KYC: verifying the identity of a person before opening an account, required by anti-money-laundering rules.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-know-your-business",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "Know Your Business",
+    "short": "Prove the business is real",
+    "context": "",
+    "definition": "KYB: the equivalent checks on a business, its ownership and its beneficial owners, done when onboarding a merchant.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-anti-money-laundering",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "Anti-Money Laundering",
+    "short": "Stopping dirty money",
+    "context": "",
+    "definition": "AML: the programme of monitoring, screening and reporting that regulated firms must run.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-ofac-screening",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "OFAC screening",
+    "short": "Checking the sanctions list",
+    "context": "",
+    "definition": "Screening parties against US sanctions lists before doing business with them.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-underwriting",
+    "group": "Risk",
+    "type": "glossary",
+    "term": "Underwriting",
+    "short": "Deciding whether to take the risk",
+    "context": "",
+    "definition": "Assessing a merchant's business model, financials and chargeback exposure before granting acceptance, and setting reserves accordingly.",
+    "kind": "Risk and compliance"
+  },
+  {
+    "id": "pay-iso-8583",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "ISO 8583",
+    "short": "The language of card messages",
+    "context": "",
+    "definition": "The long-standing message format for card authorizations, with numbered fields and a message type indicator. Still what most card traffic speaks.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-iso-20022",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "ISO 20022",
+    "short": "The richer, newer format",
+    "context": "",
+    "definition": "An XML-based messaging standard with far more structured data, replacing older formats across wires and real-time payments.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-message-type-indicator",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Message Type Indicator",
+    "short": "What kind of message",
+    "context": "",
+    "definition": "The MTI: four digits at the head of an ISO 8583 message saying what it is. 0100 is an authorization request, 0110 its response.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-dual-message",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Dual message",
+    "short": "Authorize now, clear later",
+    "context": "",
+    "definition": "Authorization and clearing sent as separate messages, which is what allows tips, partial captures and delayed shipping. The credit card norm.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-single-message",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Single message",
+    "short": "Authorize and clear at once",
+    "context": "",
+    "definition": "One message that both authorizes and clears, typical of PIN debit, where the amount is final at the moment of sale.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-pin-debit",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "PIN debit",
+    "short": "Debit over a debit network",
+    "context": "",
+    "definition": "A debit transaction authenticated by PIN and routed over a debit network, usually cheaper for the merchant than signature debit.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-acquirer-reference-number",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Acquirer Reference Number",
+    "short": "The transaction's tracking number",
+    "context": "",
+    "definition": "The ARN assigned during clearing, used to trace a specific transaction between acquirer, network and issuer, especially in disputes.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-retrieval-reference-number",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Retrieval Reference Number",
+    "short": "Another transaction identifier",
+    "context": "",
+    "definition": "The RRN carried in the authorization message, used to match an authorization to its later clearing record.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-settlement-file",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Settlement file",
+    "short": "The day's ledger",
+    "context": "",
+    "definition": "The file the network produces telling each member what it owes or is owed once the day's transactions are netted.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-reconciliation",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Reconciliation",
+    "short": "Making the numbers agree",
+    "context": "",
+    "definition": "Matching authorizations, captures, settlement files and bank deposits against each other to find what is missing or wrong.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-pending-transaction",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Pending transaction",
+    "short": "Authorized, not yet posted",
+    "context": "",
+    "definition": "A hold visible to the cardholder that has reduced available balance but has not yet hit the statement.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-memo-post",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Memo post",
+    "short": "A provisional ledger entry",
+    "context": "",
+    "definition": "A temporary entry the issuer makes on authorization, replaced by the real posting when clearing arrives.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-ach",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "ACH",
+    "short": "Bank-to-bank batch transfer",
+    "context": "",
+    "definition": "The Automated Clearing House: low-cost batched bank transfers used for payroll, bills and merchant funding. Days, not seconds, and reversible.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-same-day-ach",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Same-day ACH",
+    "short": "ACH, but faster",
+    "context": "",
+    "definition": "ACH processed in same-day windows rather than overnight, at a higher fee and within a value cap.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-wire-transfer",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Wire transfer",
+    "short": "Fast, final, expensive",
+    "context": "",
+    "definition": "A real-time, individually processed bank transfer that is effectively irrevocable once sent.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-real-time-payments",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Real-Time Payments",
+    "short": "Instant and final",
+    "context": "",
+    "definition": "The RTP network: bank-to-bank transfers that clear and settle in seconds, around the clock, and cannot be reversed.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-fednow",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "FedNow",
+    "short": "The Fed's instant rail",
+    "context": "",
+    "definition": "The US Federal Reserve's real-time payment service, launched in 2023 as an alternative to RTP.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-original-credit-transaction",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Original Credit Transaction",
+    "short": "Pushing money to a card",
+    "context": "Push payment",
+    "definition": "An OCT sends funds to a card rather than pulling them, which is how payouts and instant transfers to a debit card work.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-account-funding-transaction",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Account Funding Transaction",
+    "short": "Pulling money to fund",
+    "context": "",
+    "definition": "An AFT pulls money from a card to fund an account or wallet, and is flagged so the issuer knows it is not a purchase.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-push-payment",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Push payment",
+    "short": "Sender starts it",
+    "context": "",
+    "definition": "A payment the payer initiates, like a wire or an OCT. Hard to reverse, so a favourite of scammers.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-pull-payment",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Pull payment",
+    "short": "Recipient starts it",
+    "context": "",
+    "definition": "A payment the payee initiates against permission given earlier, like a card charge or an ACH debit. Reversible, which is why disputes exist.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-scheme-rules",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Scheme rules",
+    "short": "The network's rulebook",
+    "context": "",
+    "definition": "The binding operating regulations every member agrees to, covering acceptance, disputes, branding, data and fees.",
+    "kind": "Rails and messages"
+  },
+  {
+    "id": "pay-open-banking",
+    "group": "Rails",
+    "type": "glossary",
+    "term": "Open banking",
+    "short": "Bank data by permission",
+    "context": "",
+    "definition": "Sharing bank account data and initiating payments through APIs with the account holder's consent, rather than by screen scraping.",
+    "kind": "Rails and messages"
+  }
+]

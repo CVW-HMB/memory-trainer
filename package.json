@@ -11,6 +11,7 @@
     "cards": "uv run python scripts/generate_cards.py",
     "cards:es": "uv run python scripts/generate_spanish.py",
     "cards:fr": "uv run python scripts/generate_french.py",
+    "cards:pay": "uv run python scripts/generate_payments.py",
     "validate": "node scripts/validate-cards.mjs",
     "setup:py": "uv sync"
   },

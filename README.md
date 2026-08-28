@@ -5,7 +5,7 @@ and let the scheduler decide what you see next. One engine, any number of decks:
 the scheduling and the mastery numbers mean the same thing whatever you are
 studying.
 
-Three decks ship today:
+Four decks ship today:
 
 - **Wines, Grapes, Regions** — 161 cards. Learning wine the way it helps you in
   a restaurant: which grapes grow where, and how to read a label you have never
@@ -18,6 +18,9 @@ Three decks ship today:
   words.
 - **French – English** — 254 cards. The same shape, with the passé composé as
   the past tense.
+- **Payment Cards** — 148 cards. How a swipe actually works: who is involved,
+  authorization through settlement, interchange and the economics, card data
+  and EMV, risk and compliance, and the rails underneath.
 
 **Live: https://cvw-hmb.github.io/memory-trainer/** — served by GitHub Pages from
 `main` at the repo root. Every path in the app is relative, so it works under the
@@ -44,6 +47,7 @@ Then open http://localhost:8000.
 ```bash
 npm run cards:es    # regenerate the Mexican Spanish deck
 npm run cards:fr    # regenerate the French deck
+npm run cards:pay   # regenerate the Payment Cards deck
 npm test            # scheduler tests (node --test, no dependencies)
 npm run validate    # dataset schema, unique ids, spoiler check
 ```
@@ -109,6 +113,7 @@ index.html            app shell
 data/decks.json       deck index (the "choose a deck" screen)
 data/spanish.json     the Mexican Spanish deck
 data/french.json      the French deck
+data/payments.json    the Payment Cards deck
 src/decks/            card types: registry, render specs, wine, vocab
 src/app.js            UI, rendering, storage, wiring
 src/engine/schedule.js  the Leitner scheduler (pure, no DOM)
