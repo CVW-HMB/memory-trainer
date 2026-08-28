@@ -7,11 +7,14 @@ import {
   applyAnswer, ymd, nextStreak,
 } from "./engine/schedule.js";
 
-// Namespaced now, with a single deck, so adding decks later needs no second
-// migration. This is the one forward-looking concession the MVP makes.
+// Keys are namespaced by profile and deck, so several people can share a
+// browser and adding decks later needs no further migration.
 const DECK_ID = "wine";
-const STORE_KEY = "srs_v2:" + DECK_ID;
-const LEGACY_KEY = "wine_srs_v1";      // pre-M5 localStorage key, migrated on first boot
+const PROFILES_KEY = "srs_v2:profiles";       // [{ id, name, created }]
+const ACTIVE_KEY = "srs_v2:active";           // id of the profile in use
+const SHARED_KEY = "srs_v2:" + DECK_ID;       // pre-profile key, adopted by the first profile
+const LEGACY_KEY = "wine_srs_v1";             // pre-M5 key, migrated on first boot
+const progressKey = (pid) => "srs_v2:" + pid + ":" + DECK_ID;
 let CARDS = [];
 let BY_ID = {};
 
@@ -68,46 +71,86 @@ async function requestPersistence() {
   return "unsupported";
 }
 
-// Reads progress and migrates anything found under an older location.
-// Order: IndexedDB, then the mirror, then the pre-M5 key.
-async function loadState() {
-  let raw = null;
-  try { raw = await idbGet(STORE_KEY); backend = "idb"; }
-  catch (e) { console.warn("[store] IndexedDB unavailable, falling back", e); backend = null; }
-
-  if (!raw) {
-    const mirrored = lsGet(STORE_KEY);
-    const legacy = mirrored ? null : lsGet(LEGACY_KEY);
-    raw = mirrored || legacy;
-    if (raw && backend === "idb") {
-      // Promote into IndexedDB, and only drop the old key once the write reads
-      // back -- losing progress to a failed migration is not recoverable.
-      try {
-        await idbSet(STORE_KEY, raw);
-        if (await idbGet(STORE_KEY) === raw && legacy) lsDel(LEGACY_KEY);
-      } catch (e) { console.warn("[store] migration failed, keeping old copy", e); }
-    }
+// Decides once, at boot, whether IndexedDB is usable.
+async function probeBackend() {
+  try { await idbGet(PROFILES_KEY); backend = "idb"; }
+  catch (e) {
+    console.warn("[store] IndexedDB unavailable, using localStorage", e);
+    backend = lsSet("srs_v2:probe", "1") ? "local" : "memory";
+    lsDel("srs_v2:probe");
   }
-  if (backend === null) backend = lsSet(STORE_KEY, lsGet(STORE_KEY) || "") ? "local" : "memory";
-  return parse(raw) || memStore;
+  return backend;
+}
+
+// Reads a key: IndexedDB first, the localStorage mirror second. Anything found
+// only in the mirror is promoted back into IndexedDB.
+async function readKey(key) {
+  let raw = null;
+  if (backend === "idb") { try { raw = await idbGet(key); } catch (e) {} }
+  if (!raw) {
+    raw = lsGet(key);
+    if (raw && backend === "idb") { try { await idbSet(key, raw); } catch (e) {} }
+  }
+  if (!raw && memCache[key]) raw = memCache[key];
+  return raw;
 }
 
 // Writes are serialised: a flight saves after every answer, and overlapping
 // IndexedDB transactions would otherwise race. Callers stay synchronous.
 let saveChain = Promise.resolve();
-function saveState(s) {
-  const raw = JSON.stringify(s);
-  memStore = s;
-  lsSet(STORE_KEY, raw);                       // mirror, always
+const memCache = {};
+function writeKey(key, raw) {
+  memCache[key] = raw;
+  lsSet(key, raw);                              // mirror, always
   if (backend !== "idb") return;
   saveChain = saveChain
-    .then(() => idbSet(STORE_KEY, raw))
+    .then(() => idbSet(key, raw))
     .catch(e => { console.warn("[store] IndexedDB write failed, mirror still holds it", e); });
 }
-async function clearState() {
-  lsDel(STORE_KEY); lsDel(LEGACY_KEY); memStore = null;
-  if (backend === "idb") { try { await idbDel(STORE_KEY); } catch (e) {} }
+async function removeKey(key) {
+  delete memCache[key];
+  lsDel(key);
+  if (backend === "idb") { try { await idbDel(key); } catch (e) {} }
 }
+
+/* ---------------- profiles ----------------
+   Several people can share one browser. Each profile owns its own progress,
+   streak and stats under srs_v2:<profileId>:<deck>. Nothing is shared.      */
+let profiles = [], activeId = null;
+
+const newProfileId = () => "p" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+const activeProfile = () => profiles.find(p => p.id === activeId) || profiles[0];
+
+async function loadProfiles() {
+  profiles = parse(await readKey(PROFILES_KEY)) || [];
+  if (!Array.isArray(profiles)) profiles = [];
+
+  if (profiles.length === 0) {
+    // First run under profiles. Any pre-profile progress becomes this person's,
+    // so nobody loses a streak to the upgrade.
+    const inherited = (await readKey(SHARED_KEY)) || lsGet(LEGACY_KEY);
+    const first = { id: newProfileId(), name: "Me", created: Date.now() };
+    profiles = [first];
+    writeKey(PROFILES_KEY, JSON.stringify(profiles));
+    if (inherited) {
+      writeKey(progressKey(first.id), inherited);
+      // Only drop the old copies once the new one reads back.
+      if (await readKey(progressKey(first.id)) === inherited) {
+        await removeKey(SHARED_KEY); lsDel(LEGACY_KEY);
+      }
+    }
+  }
+  activeId = (await readKey(ACTIVE_KEY)) || profiles[0].id;
+  if (!profiles.some(p => p.id === activeId)) activeId = profiles[0].id;
+  writeKey(ACTIVE_KEY, activeId);
+  return profiles;
+}
+
+const saveProfiles = () => writeKey(PROFILES_KEY, JSON.stringify(profiles));
+
+async function loadState() { return parse(await readKey(progressKey(activeId))); }
+function saveState(s) { writeKey(progressKey(activeId), JSON.stringify(s)); }
+async function clearState() { await removeKey(progressKey(activeId)); }
 
 function freshState() {
   const cards = {};
@@ -357,6 +400,83 @@ function barRow(label, value, max, right) {
   return "<div class='bar-row'><div class='bar-label'>" + label + "</div><div class='bar-track'><div class='bar-fill' style='width:" + pct + "%'></div></div><div class='bar-pct'>" + right + "</div></div>";
 }
 
+/* ---------------- profiles view ---------------- */
+// A per-profile summary needs that profile's saved progress, not the active
+// state, so each row is read from storage.
+async function profileSummary(pid) {
+  const s = parse(await readKey(progressKey(pid)));
+  if (!s || !s.cards) return { flights: 0, mastered: 0, streak: 0 };
+  const mastered = CARDS.filter(c => (s.cards[c.id]?.box || 1) >= 5).length;
+  return { flights: s.totalSessions || 0, mastered, streak: s.streak || 0 };
+}
+
+async function renderProfiles() {
+  const list = $("profileList");
+  list.innerHTML = profiles.map(p => `
+    <li class="prow${p.id === activeId ? " current" : ""}" data-id="${p.id}">
+      <button class="pname" data-act="switch" data-id="${p.id}">
+        <span class="nm"></span>
+        <span class="sub" id="sum-${p.id}">&hellip;</span>
+      </button>
+      <span class="pacts">
+        <button class="link tiny" data-act="rename" data-id="${p.id}">Rename</button>
+        <button class="link tiny danger" data-act="delete" data-id="${p.id}">Delete</button>
+      </span>
+    </li>`).join("");
+  // Names are user input: set them as text, never as markup.
+  for (const p of profiles) {
+    const row = list.querySelector(`.prow[data-id="${p.id}"] .nm`);
+    if (row) row.textContent = p.name + (p.id === activeId ? "  \u2022  in use" : "");
+  }
+  for (const p of profiles) {
+    const s = await profileSummary(p.id);
+    const el = $("sum-" + p.id);
+    if (el) el.textContent = s.flights === 0
+      ? "no flights yet"
+      : `${s.flights} flight${s.flights === 1 ? "" : "s"} \u00b7 ${s.mastered}/${CARDS.length} mastered \u00b7 ${s.streak} day streak`;
+  }
+  list.onclick = async (e) => {
+    const b = e.target.closest("button[data-act]");
+    if (!b) return;
+    const id = b.dataset.id, who = profiles.find(x => x.id === id);
+    if (!who) return;
+    if (b.dataset.act === "switch") return switchProfile(id);
+    if (b.dataset.act === "rename") {
+      const name = (prompt("Name for this taster:", who.name) || "").trim();
+      if (!name) return;
+      who.name = name.slice(0, 32);
+      saveProfiles(); renderProfileChip(); renderProfiles();
+    }
+    if (b.dataset.act === "delete") {
+      if (profiles.length === 1) return alert("This is the only taster. Add another before deleting this one.");
+      if (!confirm(`Delete ${who.name} and all of their progress? This cannot be undone.`)) return;
+      await removeKey(progressKey(id));
+      profiles = profiles.filter(x => x.id !== id);
+      saveProfiles();
+      if (activeId === id) { activeId = profiles[0].id; writeKey(ACTIVE_KEY, activeId); await adoptActiveProfile(); }
+      renderProfiles(); renderHome();
+    }
+  };
+}
+
+async function switchProfile(id) {
+  if (id === activeId) { renderHome(); show("home"); return; }
+  activeId = id;
+  writeKey(ACTIVE_KEY, activeId);
+  await adoptActiveProfile();
+  renderHome();
+  show("home");
+}
+
+async function addProfile() {
+  const name = (prompt("Name for the new taster:", "") || "").trim();
+  if (!name) return;
+  const who = { id: newProfileId(), name: name.slice(0, 32), created: Date.now() };
+  profiles.push(who);
+  saveProfiles();
+  await switchProfile(who.id);   // a new taster starts their own fresh deck
+}
+
 /* ---------------- wiring ---------------- */
 function wire() {
   $("startBtn").onclick = startSession;
@@ -372,10 +492,14 @@ function wire() {
   $("sumHome").onclick = () => { renderHome(); show("home"); };
   $("cellarBack").onclick = () => { renderHome(); show("home"); };
   $("resetBtn").onclick = async () => {
-    if (!confirm("Reset every card, streak, and stat back to zero?")) return;
+    const who = activeProfile();
+    if (!confirm("Reset every card, streak and stat for " + (who ? who.name : "this taster") + "?")) return;
     await clearState();
     state = freshState(); saveState(state); renderCellar(); renderHome();
   };
+  $("toProfiles").onclick = () => { renderProfiles(); show("profiles"); };
+  $("profilesBack").onclick = () => { renderHome(); show("home"); };
+  $("addProfileBtn").onclick = addProfile;
   document.addEventListener("keydown", e => {
     if (!$("session").classList.contains("active")) return;
     if (e.key === " " || e.key === "Enter") { e.preventDefault(); if (!revealed) flip(); }
@@ -395,8 +519,21 @@ async function boot() {
   }
   BY_ID = Object.fromEntries(CARDS.map(c => [c.id, c]));
   const persistence = await requestPersistence();
+  await probeBackend();
+  await loadProfiles();
+  await adoptActiveProfile();
+  console.info("[store] backend=" + backend + " persistence=" + persistence +
+               " profiles=" + profiles.length);
+  $("cardCount").textContent = CARDS.length;
+  wire();
+  renderHome();
+  show("home");
+}
+
+// Loads the active profile's progress into `state`. Called at boot and on every
+// profile switch, so switching is just a reload of this one object.
+async function adoptActiveProfile() {
   const saved = await loadState();
-  console.info("[store] backend=" + backend + " persistence=" + persistence);
   state = freshState();
   if (saved && saved.cards) {
     state = Object.assign(state, saved, { cards: Object.assign(freshState().cards, saved.cards) });
@@ -404,10 +541,14 @@ async function boot() {
   // Persist the merged state right away: it populates the localStorage mirror
   // before the first answer, and gives any newly added cards their entries.
   saveState(state);
-  $("cardCount").textContent = CARDS.length;
-  wire();
-  renderHome();
-  show("home");
+  renderProfileChip();
+}
+
+function renderProfileChip() {
+  const who = activeProfile();
+  const label = who ? who.name : "Me";
+  $("whoName").textContent = label;
+  $("profileWho").textContent = label;
 }
 boot();
 

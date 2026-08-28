@@ -40,7 +40,10 @@
       <div class="stat"><b id="hSeen">0</b><span>Learned</span></div>
     </div>
     <button class="btn-primary" id="startBtn">Begin today&rsquo;s flight</button>
-    <div class="home-foot"><button class="link" id="toCellar">Open cellar book</button></div>
+    <div class="home-foot">
+      <button class="link" id="toCellar">Open cellar book</button>
+      <button class="link" id="toProfiles">Tasting as <b id="whoName">Me</b></button>
+    </div>
   </section>
 
   <!-- SESSION -->
@@ -122,6 +125,16 @@
     <div class="block"><h3>By region</h3><div id="regionBars"></div></div>
     <div class="block"><h3>Hardest for you</h3><ul class="struggle" id="struggleList"></ul></div>
     <button class="reset" id="resetBtn">Reset all progress</button>
+  </section>
+
+  <!-- PROFILES -->
+  <section class="view" id="profiles" aria-label="Tasters">
+    <button class="back-link" id="profilesBack">&larr; Back</button>
+    <h2 class="cellar-title">Tasters</h2>
+    <p class="pnote">Everyone gets their own cards, streak and stats in this browser.
+      Currently tasting as <b id="profileWho">Me</b>.</p>
+    <ul class="plist" id="profileList"></ul>
+    <button class="btn-primary" id="addProfileBtn">Add a taster</button>
   </section>
 
   <div class="foot"><span id="cardCount">0</span> cards &middot; French focus, then Tuscany, then the world</div>
