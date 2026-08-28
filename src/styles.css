@@ -10,15 +10,31 @@
   --shadow:0 24px 60px -20px rgba(0,0,0,.7);
 }
 *{box-sizing:border-box}
-html,body{margin:0;height:100%}
+html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
+html,body{margin:0}
 body{
   background:radial-gradient(120% 80% at 50% -10%, #3a1922 0%, var(--bg) 55%, #1a0b0f 100%);
+  background-attachment:fixed;
   color:var(--cream); font-family:"Inter",system-ui,sans-serif;
   -webkit-font-smoothing:antialiased; min-height:100dvh; display:flex; flex-direction:column;
+  /* a pull-to-refresh mid-flight would reload the app and drop the run */
+  overscroll-behavior-y:contain;
+  -webkit-tap-highlight-color:transparent;
 }
-.wrap{width:100%; max-width:640px; margin:0 auto; padding:22px 20px 30px; flex:1; display:flex; flex-direction:column}
-button{font-family:inherit; cursor:pointer; border:none; background:none; color:inherit}
+/* Safe areas: the notch and the home indicator. index.html sets viewport-fit=cover. */
+.wrap{
+  width:100%; max-width:640px; margin:0 auto; flex:1; display:flex; flex-direction:column;
+  padding:calc(22px + env(safe-area-inset-top)) calc(20px + env(safe-area-inset-right))
+          calc(30px + env(safe-area-inset-bottom)) calc(20px + env(safe-area-inset-left));
+}
+button{
+  font-family:inherit; cursor:pointer; border:none; background:none; color:inherit;
+  touch-action:manipulation;               /* no double-tap zoom on controls */
+  -webkit-user-select:none; user-select:none;
+}
 button:focus-visible,a:focus-visible{outline:2px solid var(--brass); outline-offset:3px; border-radius:6px}
+/* Every interactive control clears the 44px minimum tap target. */
+.link,.exit,.back-link,.reset{min-height:44px; display:inline-flex; align-items:center; justify-content:center}
 
 /* header */
 header{display:flex; align-items:baseline; justify-content:space-between; gap:14px}
@@ -41,7 +57,7 @@ header{display:flex; align-items:baseline; justify-content:space-between; gap:14
 .stat span{display:block; margin-top:6px; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
 .home-lead{font-family:"Cormorant Garamond",serif; font-size:23px; line-height:1.35; color:var(--cream); font-weight:500}
 .home-lead em{font-style:italic; color:var(--brass)}
-.btn-primary{background:linear-gradient(180deg,#d7ab5b,#b9873a); color:#241016; font-weight:600; padding:16px 22px; border-radius:13px; font-size:16px; width:100%; box-shadow:0 10px 26px -10px rgba(199,154,75,.7); transition:transform .12s ease, filter .12s}
+.btn-primary{background:linear-gradient(180deg,#d7ab5b,#b9873a); color:#241016; font-weight:600; padding:16px 22px; min-height:56px; border-radius:13px; font-size:16px; width:100%; box-shadow:0 10px 26px -10px rgba(199,154,75,.7); transition:transform .12s ease, filter .12s}
 .btn-primary:hover{filter:brightness(1.05)} .btn-primary:active{transform:translateY(1px)}
 .link{background:none; color:var(--muted); font-size:13px; text-decoration:underline; text-underline-offset:3px; text-decoration-color:var(--line); padding:8px}
 .link:hover{color:var(--cream)}
@@ -53,10 +69,13 @@ header{display:flex; align-items:baseline; justify-content:space-between; gap:14
 .prog-track{flex:1; height:3px; background:rgba(255,255,255,.08); border-radius:2px; overflow:hidden}
 .prog-fill{height:100%; width:0; background:linear-gradient(90deg,var(--brass-dim),var(--brass)); transition:width .3s ease}
 .prog-num{font-size:12px; color:var(--muted); font-variant-numeric:tabular-nums; letter-spacing:.05em; min-width:52px; text-align:right}
-.exit{font-size:12px; color:var(--muted)} .exit:hover{color:var(--rose)}
+.exit{font-size:12px; color:var(--muted); padding-right:4px; flex-shrink:0} .exit:hover{color:var(--rose)}
 
-.stage{flex:1; display:flex; align-items:center; perspective:1600px; min-height:300px}
-.card{position:relative; width:100%; aspect-ratio:5/4; max-height:56vh; transform-style:preserve-3d; transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.stage{flex:1; display:flex; align-items:center; perspective:1600px; min-height:min(300px,40dvh)}
+/* dvh, not vh: iOS vh assumes the URL bar is hidden and clips the card when it is not. */
+.card{position:relative; width:100%; aspect-ratio:5/4; max-height:56dvh; transform-style:preserve-3d;
+  transition:transform .55s cubic-bezier(.2,.7,.2,1); touch-action:manipulation;
+  -webkit-user-select:none; user-select:none; cursor:pointer}
 .card.flipped{transform:rotateY(180deg)}
 .face{position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; border-radius:16px; padding:30px; display:flex; flex-direction:column;
   background:radial-gradient(130% 120% at 50% 0%, var(--paper) 0%, var(--paper2) 100%); color:var(--ink); box-shadow:var(--shadow); border:1px solid var(--paper-edge)}
@@ -79,10 +98,10 @@ header{display:flex; align-items:baseline; justify-content:space-between; gap:14
 .d-notes{font-size:14.5px; color:var(--ink-soft); line-height:1.45; max-width:34ch; font-style:italic}
 
 .controls{min-height:60px; display:flex; gap:12px}
-.btn-flip{width:100%; background:linear-gradient(180deg,#40202a,#331620); border:1px solid var(--line); color:var(--cream); padding:17px; border-radius:13px; font-size:15px; letter-spacing:.06em; font-weight:500; transition:border-color .15s, transform .1s}
+.btn-flip{width:100%; min-height:60px; background:linear-gradient(180deg,#40202a,#331620); border:1px solid var(--line); color:var(--cream); padding:17px; border-radius:13px; font-size:15px; letter-spacing:.06em; font-weight:500; transition:border-color .15s, transform .1s}
 .btn-flip:hover{border-color:var(--brass)} .btn-flip:active{transform:translateY(1px)}
 .btn-flip .hint{color:var(--faint); font-size:12px; margin-left:8px}
-.rate{flex:1; padding:17px; border-radius:13px; font-size:15px; font-weight:600; border:1px solid transparent; transition:transform .1s, filter .12s}
+.rate{flex:1; min-height:60px; padding:17px; border-radius:13px; font-size:15px; font-weight:600; border:1px solid transparent; transition:transform .1s, filter .12s}
 .rate:active{transform:translateY(1px)}
 .rate .k{display:block; font-size:10px; font-weight:500; letter-spacing:.12em; opacity:.6; margin-top:3px}
 .miss{background:rgba(207,116,136,.14); border-color:var(--rose-deep); color:var(--rose)} .miss:hover{filter:brightness(1.15)}
@@ -124,5 +143,33 @@ header{display:flex; align-items:baseline; justify-content:space-between; gap:14
 .reset:hover{color:var(--rose)}
 
 .foot{margin-top:22px; text-align:center; color:var(--faint); font-size:11px; letter-spacing:.05em}
-@media (max-width:420px){ .metrics{grid-template-columns:repeat(2,1fr)} .brand h1{font-size:26px} }
+/* On a phone the 5:4 ratio is width-driven and leaves the card small in a tall
+   stage. Let it fill the stage instead, so the type is readable without zoom. */
+@media (max-width:520px){
+  /* align-self, not height:100% -- the stage is flex-sized, so a percentage
+     height has no definite parent to resolve against and collapses to 0. */
+  .card{aspect-ratio:auto; align-self:stretch}
+}
+@media (max-width:420px){
+  .metrics{grid-template-columns:repeat(2,1fr)}
+  .brand h1{font-size:26px}
+  .face{padding:22px}
+  .face::before{inset:9px}
+  .stat{padding:14px 8px}
+  .stat b{font-size:26px}
+  .stat span{font-size:9px; letter-spacing:.1em}
+  .home-lead{font-size:21px}
+  .controls{gap:10px}
+}
+/* Short viewports (landscape phones): let the card shrink rather than push the
+   rating buttons off-screen. */
+@media (max-height:560px){
+  .stage{min-height:0}
+  .card{max-height:42dvh}
+  .face{padding:18px}
+  #home{gap:18px}
+  #session{gap:10px}
+  .prog{margin-top:0}
+  .foot{display:none}   /* decorative; the rating buttons matter more here */
+}
 @media (prefers-reduced-motion:reduce){ .card{transition:none} .prog-fill,.btn-primary,.rate{transition:none} }
