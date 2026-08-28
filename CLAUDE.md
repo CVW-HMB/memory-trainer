@@ -8,6 +8,17 @@ A wine flashcard trainer. The learning goal is real-world: walk into a restauran
 
 The current app is a single-page static web app (vanilla JS, no framework, no build step). It is intentionally small so it is easy to extend. Progress persists in `localStorage`.
 
+**Where this is going:** wine is the first deck, not the product. The destination is a
+general multi-deck trainer — decks live in `data/decks/`, you launch the app and pick
+one, and the app presents itself as that deck (Spanish vocabulary, physics, wine). The
+scheduling and mastery measurement stay identical across decks so progress means the
+same thing whatever the subject. Creating a deck should mean writing a spreadsheet and
+dropping it in. **`PLAN.md` is the roadmap and holds the PR-by-PR breakdown — read it
+before starting feature work, and keep it updated as PRs land.**
+
+The wine-specific rules below (one determinate answer per prompt, declared
+reversibility, stable ids) are not wine-specific in spirit. They apply to every deck.
+
 ## Run
 
 Needs a static server because the app `fetch`es `data/cards.json`:
@@ -16,6 +27,22 @@ Needs a static server because the app `fetch`es `data/cards.json`:
 - `npm run validate` checks the dataset (Node). `npm run cards` regenerates `data/cards.json` from `scripts/generate_cards.py`.
 
 The Python side is managed by **uv** with a local `./.venv`: `npm run setup:py` (= `uv sync`) creates it from `pyproject.toml` + `.python-version` (3.14, the current stable line). The generator is stdlib-only, so the venv pins the interpreter rather than installing packages. Every Python entry point goes through `uv run`, so no manual activation is needed — do not add `python3 ...` calls back into `package.json`. `.venv/` is gitignored; commit `pyproject.toml`, `.python-version`, and `uv.lock`.
+
+## Branching and PRs
+
+- `main` is the only long-lived branch. There is no `develop`.
+- **Large or multi-file feature work happens on a branch off `main`**, named for
+  the work (`deck-adapter`, `per-deck-storage`, `pwa-offline`). Small doc or
+  config edits may go straight to `main`.
+- **Squash-merge to `main` when the work is code complete** — one commit per PR,
+  so `main` reads as one commit per shipped unit. Delete the branch after.
+- Code complete means: the app still runs, `npm run validate` passes, and the
+  PR's "done when" in `PLAN.md` is actually true. Do not merge a branch that
+  needs a later PR to be runnable.
+- Keep PRs bite-size and shippable on their own. If a branch grows past roughly
+  one `PLAN.md` PR, split it.
+- Never rewrite the scheduler as a side effect of another change. If mastery or
+  streak numbers move unexpectedly, treat it as a bug, not a new baseline.
 
 ## Local notes (`local-files/`)
 
@@ -88,18 +115,23 @@ Progress is keyed by card id, so **keep ids stable** and add cards additively. R
 
 When expanding the deck, keep the France-first weighting and the "popular in a US restaurant" bar. One determinate answer per card is the hard rule.
 
-## Roadmap (what to build next)
+## Roadmap
 
-This repo is the seed. The intended destination is a phone app the owner can send to someone and have it track progress. Suggested order:
+**`PLAN.md` is the roadmap.** It holds the target architecture and the PR-by-PR
+breakdown (Pages deploy, deck adapter, deck picker, per-deck storage, generic card
+types, spreadsheet import, PWA/offline, IndexedDB). Do not keep a competing list
+here — update `PLAN.md` as PRs land.
 
-1. **PWA**: add `manifest.webmanifest` (name, icons, `display: standalone`, theme color `#241016`) and a service worker that precaches the shell + `cards.json` for offline use. Installed home-screen PWAs are exempt from Safari's 7-day storage eviction, so this also protects saved progress on iOS. Provide app icons (a wine/label mark).
-2. **Storage hardening**: move from `localStorage` to IndexedDB, and call `navigator.storage.persist()`. This matters specifically for iOS home-screen persistence.
-3. **Optional cloud sync**: only if cross-device or bulletproof persistence is wanted. A tiny backend (Supabase / Cloudflare KV / a serverless function) keyed by a user id, syncing the same progress object. This also unlocks pushing new cards without a redeploy.
-4. **Build tooling**: if the app grows, introduce Vite. Keep `cards.json` as data, not code.
-5. **Content**: expand toward ~200 cards, still France-first. Add a "learn" pass that introduces a card in `place2grape` before it can appear as a `decode` reverse.
+Content work continues alongside it: expand toward ~200 wine cards, still
+France-first, and add a "learn" pass that introduces a card as `place2grape`
+before it can appear as a `decode` reverse.
 
 ### Guardrails
 - Do not make `place2grape` or `grapehome` reversible. It produces ambiguous prompts.
-- Do not embed the grape name in a card's tasting notes.
-- Keep card ids stable across updates.
+  More generally: a card flips only if the deck declares that direction determinate.
+- Do not embed the answer in a card's hint fields (for wine: the grape name in the
+  tasting notes).
+- Keep card ids stable across updates. Progress is keyed by id.
 - Keep the dependency footprint light; this should stay easy to run and reason about.
+- Do not rewrite the scheduler while doing something else. It is already
+  deck-agnostic and its numbers are the product.
