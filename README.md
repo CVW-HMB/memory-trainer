@@ -25,6 +25,7 @@ npm start            # or: uv run python -m http.server 8000
 Then open http://localhost:8000.
 
 ```bash
+npm run cards:es    # regenerate the Spanish deck
 npm test            # scheduler tests (node --test, no dependencies)
 npm run validate    # dataset schema, unique ids, spoiler check
 ```
@@ -58,7 +59,10 @@ cloning the repo runs step 1 and repeats it.
 
 ## What it does
 
-- Opens on a deck chooser. One deck today: Wines, Grapes, Regions.
+- Opens on a deck chooser. Two decks: **Wines, Grapes, Regions** (161 cards)
+  and **Spanish – English** (250 cards — the 15 most common verbs and 15 most
+  common reflexive verbs across present, past and future, plus vocabulary for
+  the house, the town and the table).
 - Two card types (see `CLAUDE.md`): region → grape, and bottle decode (label →
   grape, region, notes).
 - A flight is 35 cards, drawn at random each time and weighted 4:1 toward the
@@ -78,13 +82,15 @@ cloning the repo runs step 1 and repeats it.
 
 ## Editing cards
 
-`data/cards.json` is the source of truth. Either edit it directly or edit the definitions in `scripts/generate_cards.py` and run `npm run cards` (Python 3.14, run through the local uv venv). Validate with `npm run validate`. Keep ids stable and only add cards additively so saved progress survives.
+`data/cards.json` (wine) and `data/spanish.json` (Spanish) are the sources of truth. Either edit it directly or edit the definitions in `scripts/generate_cards.py` and run `npm run cards` (Python 3.14, run through the local uv venv). Validate with `npm run validate`. Keep ids stable and only add cards additively so saved progress survives.
 
 ## Project layout
 
 ```
 index.html            app shell
 data/decks.json       deck index (the "choose a deck" screen)
+data/spanish.json     the Spanish deck
+src/decks/            card types: registry, render specs, wine, vocab
 src/app.js            UI, rendering, storage, wiring
 src/engine/schedule.js  the Leitner scheduler (pure, no DOM)
 src/styles.css        styling

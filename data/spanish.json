@@ -1,0 +1,6932 @@
+[
+  {
+    "id": "es-v-ser",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "ser",
+    "en": "to be (permanent, identity)",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-ser-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "ser",
+    "english": "to be (permanent, identity)",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "soy"
+      ],
+      [
+        "tú",
+        "eres"
+      ],
+      [
+        "él / ella / Ud.",
+        "es"
+      ],
+      [
+        "nosotros",
+        "somos"
+      ],
+      [
+        "vosotros",
+        "sois"
+      ],
+      [
+        "ellos / Uds.",
+        "son"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "am"
+      ],
+      [
+        "you",
+        "are"
+      ],
+      [
+        "he / she / you",
+        "is"
+      ],
+      [
+        "we",
+        "are"
+      ],
+      [
+        "you all",
+        "are"
+      ],
+      [
+        "they",
+        "are"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-ser-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "ser",
+    "english": "to be (permanent, identity)",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "fui"
+      ],
+      [
+        "tú",
+        "fuiste"
+      ],
+      [
+        "él / ella / Ud.",
+        "fue"
+      ],
+      [
+        "nosotros",
+        "fuimos"
+      ],
+      [
+        "vosotros",
+        "fuisteis"
+      ],
+      [
+        "ellos / Uds.",
+        "fueron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "was"
+      ],
+      [
+        "you",
+        "were"
+      ],
+      [
+        "he / she / you",
+        "was"
+      ],
+      [
+        "we",
+        "were"
+      ],
+      [
+        "you all",
+        "were"
+      ],
+      [
+        "they",
+        "were"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-ser-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "ser",
+    "english": "to be (permanent, identity)",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "seré"
+      ],
+      [
+        "tú",
+        "serás"
+      ],
+      [
+        "él / ella / Ud.",
+        "será"
+      ],
+      [
+        "nosotros",
+        "seremos"
+      ],
+      [
+        "vosotros",
+        "seréis"
+      ],
+      [
+        "ellos / Uds.",
+        "serán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will be"
+      ],
+      [
+        "you",
+        "will be"
+      ],
+      [
+        "he / she / you",
+        "will be"
+      ],
+      [
+        "we",
+        "will be"
+      ],
+      [
+        "you all",
+        "will be"
+      ],
+      [
+        "they",
+        "will be"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-casa",
+    "group": "House",
+    "type": "vocab",
+    "es": "la casa",
+    "en": "the house",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-el-piso",
+    "group": "House",
+    "type": "vocab",
+    "es": "el piso",
+    "en": "the apartment",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-la-puerta",
+    "group": "House",
+    "type": "vocab",
+    "es": "la puerta",
+    "en": "the door",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-la-ventana",
+    "group": "House",
+    "type": "vocab",
+    "es": "la ventana",
+    "en": "the window",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-estar",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "estar",
+    "en": "to be (state, location)",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-estar-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "estar",
+    "english": "to be (state, location)",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "estoy"
+      ],
+      [
+        "tú",
+        "estás"
+      ],
+      [
+        "él / ella / Ud.",
+        "está"
+      ],
+      [
+        "nosotros",
+        "estamos"
+      ],
+      [
+        "vosotros",
+        "estáis"
+      ],
+      [
+        "ellos / Uds.",
+        "están"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "am"
+      ],
+      [
+        "you",
+        "are"
+      ],
+      [
+        "he / she / you",
+        "is"
+      ],
+      [
+        "we",
+        "are"
+      ],
+      [
+        "you all",
+        "are"
+      ],
+      [
+        "they",
+        "are"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-estar-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "estar",
+    "english": "to be (state, location)",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "estuve"
+      ],
+      [
+        "tú",
+        "estuviste"
+      ],
+      [
+        "él / ella / Ud.",
+        "estuvo"
+      ],
+      [
+        "nosotros",
+        "estuvimos"
+      ],
+      [
+        "vosotros",
+        "estuvisteis"
+      ],
+      [
+        "ellos / Uds.",
+        "estuvieron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "was"
+      ],
+      [
+        "you",
+        "were"
+      ],
+      [
+        "he / she / you",
+        "was"
+      ],
+      [
+        "we",
+        "were"
+      ],
+      [
+        "you all",
+        "were"
+      ],
+      [
+        "they",
+        "were"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-estar-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "estar",
+    "english": "to be (state, location)",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "estaré"
+      ],
+      [
+        "tú",
+        "estarás"
+      ],
+      [
+        "él / ella / Ud.",
+        "estará"
+      ],
+      [
+        "nosotros",
+        "estaremos"
+      ],
+      [
+        "vosotros",
+        "estaréis"
+      ],
+      [
+        "ellos / Uds.",
+        "estarán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will be"
+      ],
+      [
+        "you",
+        "will be"
+      ],
+      [
+        "he / she / you",
+        "will be"
+      ],
+      [
+        "we",
+        "will be"
+      ],
+      [
+        "you all",
+        "will be"
+      ],
+      [
+        "they",
+        "will be"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-llave",
+    "group": "House",
+    "type": "vocab",
+    "es": "la llave",
+    "en": "the key",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-la-cocina",
+    "group": "House",
+    "type": "vocab",
+    "es": "la cocina",
+    "en": "the kitchen",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-el-dormitorio",
+    "group": "House",
+    "type": "vocab",
+    "es": "el dormitorio",
+    "en": "the bedroom",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-el-bano",
+    "group": "House",
+    "type": "vocab",
+    "es": "el baño",
+    "en": "the bathroom",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-tener",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "tener",
+    "en": "to have",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-tener-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "tener",
+    "english": "to have",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "tengo"
+      ],
+      [
+        "tú",
+        "tienes"
+      ],
+      [
+        "él / ella / Ud.",
+        "tiene"
+      ],
+      [
+        "nosotros",
+        "tenemos"
+      ],
+      [
+        "vosotros",
+        "tenéis"
+      ],
+      [
+        "ellos / Uds.",
+        "tienen"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "have"
+      ],
+      [
+        "you",
+        "have"
+      ],
+      [
+        "he / she / you",
+        "has"
+      ],
+      [
+        "we",
+        "have"
+      ],
+      [
+        "you all",
+        "have"
+      ],
+      [
+        "they",
+        "have"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-tener-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "tener",
+    "english": "to have",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "tuve"
+      ],
+      [
+        "tú",
+        "tuviste"
+      ],
+      [
+        "él / ella / Ud.",
+        "tuvo"
+      ],
+      [
+        "nosotros",
+        "tuvimos"
+      ],
+      [
+        "vosotros",
+        "tuvisteis"
+      ],
+      [
+        "ellos / Uds.",
+        "tuvieron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "had"
+      ],
+      [
+        "you",
+        "had"
+      ],
+      [
+        "he / she / you",
+        "had"
+      ],
+      [
+        "we",
+        "had"
+      ],
+      [
+        "you all",
+        "had"
+      ],
+      [
+        "they",
+        "had"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-tener-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "tener",
+    "english": "to have",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "tendré"
+      ],
+      [
+        "tú",
+        "tendrás"
+      ],
+      [
+        "él / ella / Ud.",
+        "tendrá"
+      ],
+      [
+        "nosotros",
+        "tendremos"
+      ],
+      [
+        "vosotros",
+        "tendréis"
+      ],
+      [
+        "ellos / Uds.",
+        "tendrán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will have"
+      ],
+      [
+        "you",
+        "will have"
+      ],
+      [
+        "he / she / you",
+        "will have"
+      ],
+      [
+        "we",
+        "will have"
+      ],
+      [
+        "you all",
+        "will have"
+      ],
+      [
+        "they",
+        "will have"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-sala",
+    "group": "House",
+    "type": "vocab",
+    "es": "la sala",
+    "en": "the living room",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-la-cama",
+    "group": "House",
+    "type": "vocab",
+    "es": "la cama",
+    "en": "the bed",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-la-almohada",
+    "group": "House",
+    "type": "vocab",
+    "es": "la almohada",
+    "en": "the pillow",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-la-manta",
+    "group": "House",
+    "type": "vocab",
+    "es": "la manta",
+    "en": "the blanket",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-hacer",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "hacer",
+    "en": "to do, to make",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-hacer-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "hacer",
+    "english": "to do, to make",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "hago"
+      ],
+      [
+        "tú",
+        "haces"
+      ],
+      [
+        "él / ella / Ud.",
+        "hace"
+      ],
+      [
+        "nosotros",
+        "hacemos"
+      ],
+      [
+        "vosotros",
+        "hacéis"
+      ],
+      [
+        "ellos / Uds.",
+        "hacen"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "do"
+      ],
+      [
+        "you",
+        "do"
+      ],
+      [
+        "he / she / you",
+        "does"
+      ],
+      [
+        "we",
+        "do"
+      ],
+      [
+        "you all",
+        "do"
+      ],
+      [
+        "they",
+        "do"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-hacer-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "hacer",
+    "english": "to do, to make",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "hice"
+      ],
+      [
+        "tú",
+        "hiciste"
+      ],
+      [
+        "él / ella / Ud.",
+        "hizo"
+      ],
+      [
+        "nosotros",
+        "hicimos"
+      ],
+      [
+        "vosotros",
+        "hicisteis"
+      ],
+      [
+        "ellos / Uds.",
+        "hicieron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "did"
+      ],
+      [
+        "you",
+        "did"
+      ],
+      [
+        "he / she / you",
+        "did"
+      ],
+      [
+        "we",
+        "did"
+      ],
+      [
+        "you all",
+        "did"
+      ],
+      [
+        "they",
+        "did"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-hacer-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "hacer",
+    "english": "to do, to make",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "haré"
+      ],
+      [
+        "tú",
+        "harás"
+      ],
+      [
+        "él / ella / Ud.",
+        "hará"
+      ],
+      [
+        "nosotros",
+        "haremos"
+      ],
+      [
+        "vosotros",
+        "haréis"
+      ],
+      [
+        "ellos / Uds.",
+        "harán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will do"
+      ],
+      [
+        "you",
+        "will do"
+      ],
+      [
+        "he / she / you",
+        "will do"
+      ],
+      [
+        "we",
+        "will do"
+      ],
+      [
+        "you all",
+        "will do"
+      ],
+      [
+        "they",
+        "will do"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-silla",
+    "group": "House",
+    "type": "vocab",
+    "es": "la silla",
+    "en": "the chair",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-la-mesa",
+    "group": "House",
+    "type": "vocab",
+    "es": "la mesa",
+    "en": "the table",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-el-sofa",
+    "group": "House",
+    "type": "vocab",
+    "es": "el sofá",
+    "en": "the couch",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-la-lampara",
+    "group": "House",
+    "type": "vocab",
+    "es": "la lámpara",
+    "en": "the lamp",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-poder",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "poder",
+    "en": "to be able to, can",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-poder-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "poder",
+    "english": "to be able to, can",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "puedo"
+      ],
+      [
+        "tú",
+        "puedes"
+      ],
+      [
+        "él / ella / Ud.",
+        "puede"
+      ],
+      [
+        "nosotros",
+        "podemos"
+      ],
+      [
+        "vosotros",
+        "podéis"
+      ],
+      [
+        "ellos / Uds.",
+        "pueden"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "can"
+      ],
+      [
+        "you",
+        "can"
+      ],
+      [
+        "he / she / you",
+        "can"
+      ],
+      [
+        "we",
+        "can"
+      ],
+      [
+        "you all",
+        "can"
+      ],
+      [
+        "they",
+        "can"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-poder-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "poder",
+    "english": "to be able to, can",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "pude"
+      ],
+      [
+        "tú",
+        "pudiste"
+      ],
+      [
+        "él / ella / Ud.",
+        "pudo"
+      ],
+      [
+        "nosotros",
+        "pudimos"
+      ],
+      [
+        "vosotros",
+        "pudisteis"
+      ],
+      [
+        "ellos / Uds.",
+        "pudieron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "could"
+      ],
+      [
+        "you",
+        "could"
+      ],
+      [
+        "he / she / you",
+        "could"
+      ],
+      [
+        "we",
+        "could"
+      ],
+      [
+        "you all",
+        "could"
+      ],
+      [
+        "they",
+        "could"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-poder-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "poder",
+    "english": "to be able to, can",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "podré"
+      ],
+      [
+        "tú",
+        "podrás"
+      ],
+      [
+        "él / ella / Ud.",
+        "podrá"
+      ],
+      [
+        "nosotros",
+        "podremos"
+      ],
+      [
+        "vosotros",
+        "podréis"
+      ],
+      [
+        "ellos / Uds.",
+        "podrán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will be able to"
+      ],
+      [
+        "you",
+        "will be able to"
+      ],
+      [
+        "he / she / you",
+        "will be able to"
+      ],
+      [
+        "we",
+        "will be able to"
+      ],
+      [
+        "you all",
+        "will be able to"
+      ],
+      [
+        "they",
+        "will be able to"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-el-espejo",
+    "group": "House",
+    "type": "vocab",
+    "es": "el espejo",
+    "en": "the mirror",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-la-ducha",
+    "group": "House",
+    "type": "vocab",
+    "es": "la ducha",
+    "en": "the shower",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-el-fregadero",
+    "group": "House",
+    "type": "vocab",
+    "es": "el fregadero",
+    "en": "the kitchen sink",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-la-nevera",
+    "group": "House",
+    "type": "vocab",
+    "es": "la nevera",
+    "en": "the fridge",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-decir",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "decir",
+    "en": "to say",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-decir-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "decir",
+    "english": "to say",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "digo"
+      ],
+      [
+        "tú",
+        "dices"
+      ],
+      [
+        "él / ella / Ud.",
+        "dice"
+      ],
+      [
+        "nosotros",
+        "decimos"
+      ],
+      [
+        "vosotros",
+        "decís"
+      ],
+      [
+        "ellos / Uds.",
+        "dicen"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "say"
+      ],
+      [
+        "you",
+        "say"
+      ],
+      [
+        "he / she / you",
+        "says"
+      ],
+      [
+        "we",
+        "say"
+      ],
+      [
+        "you all",
+        "say"
+      ],
+      [
+        "they",
+        "say"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-decir-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "decir",
+    "english": "to say",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "dije"
+      ],
+      [
+        "tú",
+        "dijiste"
+      ],
+      [
+        "él / ella / Ud.",
+        "dijo"
+      ],
+      [
+        "nosotros",
+        "dijimos"
+      ],
+      [
+        "vosotros",
+        "dijisteis"
+      ],
+      [
+        "ellos / Uds.",
+        "dijeron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "said"
+      ],
+      [
+        "you",
+        "said"
+      ],
+      [
+        "he / she / you",
+        "said"
+      ],
+      [
+        "we",
+        "said"
+      ],
+      [
+        "you all",
+        "said"
+      ],
+      [
+        "they",
+        "said"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-decir-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "decir",
+    "english": "to say",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "diré"
+      ],
+      [
+        "tú",
+        "dirás"
+      ],
+      [
+        "él / ella / Ud.",
+        "dirá"
+      ],
+      [
+        "nosotros",
+        "diremos"
+      ],
+      [
+        "vosotros",
+        "diréis"
+      ],
+      [
+        "ellos / Uds.",
+        "dirán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will say"
+      ],
+      [
+        "you",
+        "will say"
+      ],
+      [
+        "he / she / you",
+        "will say"
+      ],
+      [
+        "we",
+        "will say"
+      ],
+      [
+        "you all",
+        "will say"
+      ],
+      [
+        "they",
+        "will say"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-el-horno",
+    "group": "House",
+    "type": "vocab",
+    "es": "el horno",
+    "en": "the oven",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-la-estufa",
+    "group": "House",
+    "type": "vocab",
+    "es": "la estufa",
+    "en": "the stove",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-el-armario",
+    "group": "House",
+    "type": "vocab",
+    "es": "el armario",
+    "en": "the closet",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-el-cajon",
+    "group": "House",
+    "type": "vocab",
+    "es": "el cajón",
+    "en": "the drawer",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-ir",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "ir",
+    "en": "to go",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-ir-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "ir",
+    "english": "to go",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "voy"
+      ],
+      [
+        "tú",
+        "vas"
+      ],
+      [
+        "él / ella / Ud.",
+        "va"
+      ],
+      [
+        "nosotros",
+        "vamos"
+      ],
+      [
+        "vosotros",
+        "vais"
+      ],
+      [
+        "ellos / Uds.",
+        "van"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "go"
+      ],
+      [
+        "you",
+        "go"
+      ],
+      [
+        "he / she / you",
+        "goes"
+      ],
+      [
+        "we",
+        "go"
+      ],
+      [
+        "you all",
+        "go"
+      ],
+      [
+        "they",
+        "go"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-ir-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "ir",
+    "english": "to go",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "fui"
+      ],
+      [
+        "tú",
+        "fuiste"
+      ],
+      [
+        "él / ella / Ud.",
+        "fue"
+      ],
+      [
+        "nosotros",
+        "fuimos"
+      ],
+      [
+        "vosotros",
+        "fuisteis"
+      ],
+      [
+        "ellos / Uds.",
+        "fueron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "went"
+      ],
+      [
+        "you",
+        "went"
+      ],
+      [
+        "he / she / you",
+        "went"
+      ],
+      [
+        "we",
+        "went"
+      ],
+      [
+        "you all",
+        "went"
+      ],
+      [
+        "they",
+        "went"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-ir-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "ir",
+    "english": "to go",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "iré"
+      ],
+      [
+        "tú",
+        "irás"
+      ],
+      [
+        "él / ella / Ud.",
+        "irá"
+      ],
+      [
+        "nosotros",
+        "iremos"
+      ],
+      [
+        "vosotros",
+        "iréis"
+      ],
+      [
+        "ellos / Uds.",
+        "irán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will go"
+      ],
+      [
+        "you",
+        "will go"
+      ],
+      [
+        "he / she / you",
+        "will go"
+      ],
+      [
+        "we",
+        "will go"
+      ],
+      [
+        "you all",
+        "will go"
+      ],
+      [
+        "they",
+        "will go"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-escalera",
+    "group": "House",
+    "type": "vocab",
+    "es": "la escalera",
+    "en": "the stairs",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-el-techo",
+    "group": "House",
+    "type": "vocab",
+    "es": "el techo",
+    "en": "the ceiling",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-el-suelo",
+    "group": "House",
+    "type": "vocab",
+    "es": "el suelo",
+    "en": "the floor",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-la-pared",
+    "group": "House",
+    "type": "vocab",
+    "es": "la pared",
+    "en": "the wall",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-ver",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "ver",
+    "en": "to see",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-ver-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "ver",
+    "english": "to see",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "veo"
+      ],
+      [
+        "tú",
+        "ves"
+      ],
+      [
+        "él / ella / Ud.",
+        "ve"
+      ],
+      [
+        "nosotros",
+        "vemos"
+      ],
+      [
+        "vosotros",
+        "veis"
+      ],
+      [
+        "ellos / Uds.",
+        "ven"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "see"
+      ],
+      [
+        "you",
+        "see"
+      ],
+      [
+        "he / she / you",
+        "sees"
+      ],
+      [
+        "we",
+        "see"
+      ],
+      [
+        "you all",
+        "see"
+      ],
+      [
+        "they",
+        "see"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-ver-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "ver",
+    "english": "to see",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "vi"
+      ],
+      [
+        "tú",
+        "viste"
+      ],
+      [
+        "él / ella / Ud.",
+        "vio"
+      ],
+      [
+        "nosotros",
+        "vimos"
+      ],
+      [
+        "vosotros",
+        "visteis"
+      ],
+      [
+        "ellos / Uds.",
+        "vieron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "saw"
+      ],
+      [
+        "you",
+        "saw"
+      ],
+      [
+        "he / she / you",
+        "saw"
+      ],
+      [
+        "we",
+        "saw"
+      ],
+      [
+        "you all",
+        "saw"
+      ],
+      [
+        "they",
+        "saw"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-ver-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "ver",
+    "english": "to see",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "veré"
+      ],
+      [
+        "tú",
+        "verás"
+      ],
+      [
+        "él / ella / Ud.",
+        "verá"
+      ],
+      [
+        "nosotros",
+        "veremos"
+      ],
+      [
+        "vosotros",
+        "veréis"
+      ],
+      [
+        "ellos / Uds.",
+        "verán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will see"
+      ],
+      [
+        "you",
+        "will see"
+      ],
+      [
+        "he / she / you",
+        "will see"
+      ],
+      [
+        "we",
+        "will see"
+      ],
+      [
+        "you all",
+        "will see"
+      ],
+      [
+        "they",
+        "will see"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-basura",
+    "group": "House",
+    "type": "vocab",
+    "es": "la basura",
+    "en": "the rubbish",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-la-toalla",
+    "group": "House",
+    "type": "vocab",
+    "es": "la toalla",
+    "en": "the towel",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-el-jabon",
+    "group": "House",
+    "type": "vocab",
+    "es": "el jabón",
+    "en": "the soap",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-la-ropa",
+    "group": "House",
+    "type": "vocab",
+    "es": "la ropa",
+    "en": "the clothes",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-dar",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "dar",
+    "en": "to give",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-dar-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "dar",
+    "english": "to give",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "doy"
+      ],
+      [
+        "tú",
+        "das"
+      ],
+      [
+        "él / ella / Ud.",
+        "da"
+      ],
+      [
+        "nosotros",
+        "damos"
+      ],
+      [
+        "vosotros",
+        "dais"
+      ],
+      [
+        "ellos / Uds.",
+        "dan"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "give"
+      ],
+      [
+        "you",
+        "give"
+      ],
+      [
+        "he / she / you",
+        "gives"
+      ],
+      [
+        "we",
+        "give"
+      ],
+      [
+        "you all",
+        "give"
+      ],
+      [
+        "they",
+        "give"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-dar-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "dar",
+    "english": "to give",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "di"
+      ],
+      [
+        "tú",
+        "diste"
+      ],
+      [
+        "él / ella / Ud.",
+        "dio"
+      ],
+      [
+        "nosotros",
+        "dimos"
+      ],
+      [
+        "vosotros",
+        "disteis"
+      ],
+      [
+        "ellos / Uds.",
+        "dieron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "gave"
+      ],
+      [
+        "you",
+        "gave"
+      ],
+      [
+        "he / she / you",
+        "gave"
+      ],
+      [
+        "we",
+        "gave"
+      ],
+      [
+        "you all",
+        "gave"
+      ],
+      [
+        "they",
+        "gave"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-dar-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "dar",
+    "english": "to give",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "daré"
+      ],
+      [
+        "tú",
+        "darás"
+      ],
+      [
+        "él / ella / Ud.",
+        "dará"
+      ],
+      [
+        "nosotros",
+        "daremos"
+      ],
+      [
+        "vosotros",
+        "daréis"
+      ],
+      [
+        "ellos / Uds.",
+        "darán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will give"
+      ],
+      [
+        "you",
+        "will give"
+      ],
+      [
+        "he / she / you",
+        "will give"
+      ],
+      [
+        "we",
+        "will give"
+      ],
+      [
+        "you all",
+        "will give"
+      ],
+      [
+        "they",
+        "will give"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-lavadora",
+    "group": "House",
+    "type": "vocab",
+    "es": "la lavadora",
+    "en": "the washing machine",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-el-enchufe",
+    "group": "House",
+    "type": "vocab",
+    "es": "el enchufe",
+    "en": "the electrical outlet",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-la-bombilla",
+    "group": "House",
+    "type": "vocab",
+    "es": "la bombilla",
+    "en": "the light bulb",
+    "kindEs": "En casa",
+    "kindEn": "Around the house"
+  },
+  {
+    "id": "es-v-la-ciudad",
+    "group": "Town",
+    "type": "vocab",
+    "es": "la ciudad",
+    "en": "the city",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-saber",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "saber",
+    "en": "to know (a fact)",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-saber-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "saber",
+    "english": "to know (a fact)",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "sé"
+      ],
+      [
+        "tú",
+        "sabes"
+      ],
+      [
+        "él / ella / Ud.",
+        "sabe"
+      ],
+      [
+        "nosotros",
+        "sabemos"
+      ],
+      [
+        "vosotros",
+        "sabéis"
+      ],
+      [
+        "ellos / Uds.",
+        "saben"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "know"
+      ],
+      [
+        "you",
+        "know"
+      ],
+      [
+        "he / she / you",
+        "knows"
+      ],
+      [
+        "we",
+        "know"
+      ],
+      [
+        "you all",
+        "know"
+      ],
+      [
+        "they",
+        "know"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-saber-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "saber",
+    "english": "to know (a fact)",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "supe"
+      ],
+      [
+        "tú",
+        "supiste"
+      ],
+      [
+        "él / ella / Ud.",
+        "supo"
+      ],
+      [
+        "nosotros",
+        "supimos"
+      ],
+      [
+        "vosotros",
+        "supisteis"
+      ],
+      [
+        "ellos / Uds.",
+        "supieron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "knew"
+      ],
+      [
+        "you",
+        "knew"
+      ],
+      [
+        "he / she / you",
+        "knew"
+      ],
+      [
+        "we",
+        "knew"
+      ],
+      [
+        "you all",
+        "knew"
+      ],
+      [
+        "they",
+        "knew"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-saber-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "saber",
+    "english": "to know (a fact)",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "sabré"
+      ],
+      [
+        "tú",
+        "sabrás"
+      ],
+      [
+        "él / ella / Ud.",
+        "sabrá"
+      ],
+      [
+        "nosotros",
+        "sabremos"
+      ],
+      [
+        "vosotros",
+        "sabréis"
+      ],
+      [
+        "ellos / Uds.",
+        "sabrán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will know"
+      ],
+      [
+        "you",
+        "will know"
+      ],
+      [
+        "he / she / you",
+        "will know"
+      ],
+      [
+        "we",
+        "will know"
+      ],
+      [
+        "you all",
+        "will know"
+      ],
+      [
+        "they",
+        "will know"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-calle",
+    "group": "Town",
+    "type": "vocab",
+    "es": "la calle",
+    "en": "the street",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-la-esquina",
+    "group": "Town",
+    "type": "vocab",
+    "es": "la esquina",
+    "en": "the corner",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-la-plaza",
+    "group": "Town",
+    "type": "vocab",
+    "es": "la plaza",
+    "en": "the square",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-el-barrio",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el barrio",
+    "en": "the neighbourhood",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-querer",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "querer",
+    "en": "to want",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-querer-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "querer",
+    "english": "to want",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "quiero"
+      ],
+      [
+        "tú",
+        "quieres"
+      ],
+      [
+        "él / ella / Ud.",
+        "quiere"
+      ],
+      [
+        "nosotros",
+        "queremos"
+      ],
+      [
+        "vosotros",
+        "queréis"
+      ],
+      [
+        "ellos / Uds.",
+        "quieren"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "want"
+      ],
+      [
+        "you",
+        "want"
+      ],
+      [
+        "he / she / you",
+        "wants"
+      ],
+      [
+        "we",
+        "want"
+      ],
+      [
+        "you all",
+        "want"
+      ],
+      [
+        "they",
+        "want"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-querer-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "querer",
+    "english": "to want",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "quise"
+      ],
+      [
+        "tú",
+        "quisiste"
+      ],
+      [
+        "él / ella / Ud.",
+        "quiso"
+      ],
+      [
+        "nosotros",
+        "quisimos"
+      ],
+      [
+        "vosotros",
+        "quisisteis"
+      ],
+      [
+        "ellos / Uds.",
+        "quisieron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "wanted"
+      ],
+      [
+        "you",
+        "wanted"
+      ],
+      [
+        "he / she / you",
+        "wanted"
+      ],
+      [
+        "we",
+        "wanted"
+      ],
+      [
+        "you all",
+        "wanted"
+      ],
+      [
+        "they",
+        "wanted"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-querer-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "querer",
+    "english": "to want",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "querré"
+      ],
+      [
+        "tú",
+        "querrás"
+      ],
+      [
+        "él / ella / Ud.",
+        "querrá"
+      ],
+      [
+        "nosotros",
+        "querremos"
+      ],
+      [
+        "vosotros",
+        "querréis"
+      ],
+      [
+        "ellos / Uds.",
+        "querrán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will want"
+      ],
+      [
+        "you",
+        "will want"
+      ],
+      [
+        "he / she / you",
+        "will want"
+      ],
+      [
+        "we",
+        "will want"
+      ],
+      [
+        "you all",
+        "will want"
+      ],
+      [
+        "they",
+        "will want"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-tienda",
+    "group": "Town",
+    "type": "vocab",
+    "es": "la tienda",
+    "en": "the shop",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-el-mercado",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el mercado",
+    "en": "the market",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-la-panaderia",
+    "group": "Town",
+    "type": "vocab",
+    "es": "la panadería",
+    "en": "the bakery",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-la-farmacia",
+    "group": "Town",
+    "type": "vocab",
+    "es": "la farmacia",
+    "en": "the pharmacy",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-venir",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "venir",
+    "en": "to come",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-venir-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "venir",
+    "english": "to come",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "vengo"
+      ],
+      [
+        "tú",
+        "vienes"
+      ],
+      [
+        "él / ella / Ud.",
+        "viene"
+      ],
+      [
+        "nosotros",
+        "venimos"
+      ],
+      [
+        "vosotros",
+        "venís"
+      ],
+      [
+        "ellos / Uds.",
+        "vienen"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "come"
+      ],
+      [
+        "you",
+        "come"
+      ],
+      [
+        "he / she / you",
+        "comes"
+      ],
+      [
+        "we",
+        "come"
+      ],
+      [
+        "you all",
+        "come"
+      ],
+      [
+        "they",
+        "come"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-venir-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "venir",
+    "english": "to come",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "vine"
+      ],
+      [
+        "tú",
+        "viniste"
+      ],
+      [
+        "él / ella / Ud.",
+        "vino"
+      ],
+      [
+        "nosotros",
+        "vinimos"
+      ],
+      [
+        "vosotros",
+        "vinisteis"
+      ],
+      [
+        "ellos / Uds.",
+        "vinieron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "came"
+      ],
+      [
+        "you",
+        "came"
+      ],
+      [
+        "he / she / you",
+        "came"
+      ],
+      [
+        "we",
+        "came"
+      ],
+      [
+        "you all",
+        "came"
+      ],
+      [
+        "they",
+        "came"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-venir-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "venir",
+    "english": "to come",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "vendré"
+      ],
+      [
+        "tú",
+        "vendrás"
+      ],
+      [
+        "él / ella / Ud.",
+        "vendrá"
+      ],
+      [
+        "nosotros",
+        "vendremos"
+      ],
+      [
+        "vosotros",
+        "vendréis"
+      ],
+      [
+        "ellos / Uds.",
+        "vendrán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will come"
+      ],
+      [
+        "you",
+        "will come"
+      ],
+      [
+        "he / she / you",
+        "will come"
+      ],
+      [
+        "we",
+        "will come"
+      ],
+      [
+        "you all",
+        "will come"
+      ],
+      [
+        "they",
+        "will come"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-el-banco",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el banco",
+    "en": "the bank",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-la-parada",
+    "group": "Town",
+    "type": "vocab",
+    "es": "la parada",
+    "en": "the bus stop",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-el-autobus",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el autobús",
+    "en": "the bus",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-el-metro",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el metro",
+    "en": "the underground",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-poner",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "poner",
+    "en": "to put, to place",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-poner-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "poner",
+    "english": "to put, to place",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "pongo"
+      ],
+      [
+        "tú",
+        "pones"
+      ],
+      [
+        "él / ella / Ud.",
+        "pone"
+      ],
+      [
+        "nosotros",
+        "ponemos"
+      ],
+      [
+        "vosotros",
+        "ponéis"
+      ],
+      [
+        "ellos / Uds.",
+        "ponen"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "put"
+      ],
+      [
+        "you",
+        "put"
+      ],
+      [
+        "he / she / you",
+        "puts"
+      ],
+      [
+        "we",
+        "put"
+      ],
+      [
+        "you all",
+        "put"
+      ],
+      [
+        "they",
+        "put"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-poner-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "poner",
+    "english": "to put, to place",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "puse"
+      ],
+      [
+        "tú",
+        "pusiste"
+      ],
+      [
+        "él / ella / Ud.",
+        "puso"
+      ],
+      [
+        "nosotros",
+        "pusimos"
+      ],
+      [
+        "vosotros",
+        "pusisteis"
+      ],
+      [
+        "ellos / Uds.",
+        "pusieron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "put"
+      ],
+      [
+        "you",
+        "put"
+      ],
+      [
+        "he / she / you",
+        "put"
+      ],
+      [
+        "we",
+        "put"
+      ],
+      [
+        "you all",
+        "put"
+      ],
+      [
+        "they",
+        "put"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-poner-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "poner",
+    "english": "to put, to place",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "pondré"
+      ],
+      [
+        "tú",
+        "pondrás"
+      ],
+      [
+        "él / ella / Ud.",
+        "pondrá"
+      ],
+      [
+        "nosotros",
+        "pondremos"
+      ],
+      [
+        "vosotros",
+        "pondréis"
+      ],
+      [
+        "ellos / Uds.",
+        "pondrán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will put"
+      ],
+      [
+        "you",
+        "will put"
+      ],
+      [
+        "he / she / you",
+        "will put"
+      ],
+      [
+        "we",
+        "will put"
+      ],
+      [
+        "you all",
+        "will put"
+      ],
+      [
+        "they",
+        "will put"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-el-tren",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el tren",
+    "en": "the train",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-la-estacion",
+    "group": "Town",
+    "type": "vocab",
+    "es": "la estación",
+    "en": "the station",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-el-aeropuerto",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el aeropuerto",
+    "en": "the airport",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-el-coche",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el coche",
+    "en": "the car",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-salir",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "salir",
+    "en": "to go out",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-salir-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "salir",
+    "english": "to go out",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "salgo"
+      ],
+      [
+        "tú",
+        "sales"
+      ],
+      [
+        "él / ella / Ud.",
+        "sale"
+      ],
+      [
+        "nosotros",
+        "salimos"
+      ],
+      [
+        "vosotros",
+        "salís"
+      ],
+      [
+        "ellos / Uds.",
+        "salen"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "go out"
+      ],
+      [
+        "you",
+        "go out"
+      ],
+      [
+        "he / she / you",
+        "goes out"
+      ],
+      [
+        "we",
+        "go out"
+      ],
+      [
+        "you all",
+        "go out"
+      ],
+      [
+        "they",
+        "go out"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-salir-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "salir",
+    "english": "to go out",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "salí"
+      ],
+      [
+        "tú",
+        "saliste"
+      ],
+      [
+        "él / ella / Ud.",
+        "salió"
+      ],
+      [
+        "nosotros",
+        "salimos"
+      ],
+      [
+        "vosotros",
+        "salisteis"
+      ],
+      [
+        "ellos / Uds.",
+        "salieron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "went out"
+      ],
+      [
+        "you",
+        "went out"
+      ],
+      [
+        "he / she / you",
+        "went out"
+      ],
+      [
+        "we",
+        "went out"
+      ],
+      [
+        "you all",
+        "went out"
+      ],
+      [
+        "they",
+        "went out"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-salir-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "salir",
+    "english": "to go out",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "saldré"
+      ],
+      [
+        "tú",
+        "saldrás"
+      ],
+      [
+        "él / ella / Ud.",
+        "saldrá"
+      ],
+      [
+        "nosotros",
+        "saldremos"
+      ],
+      [
+        "vosotros",
+        "saldréis"
+      ],
+      [
+        "ellos / Uds.",
+        "saldrán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will go out"
+      ],
+      [
+        "you",
+        "will go out"
+      ],
+      [
+        "he / she / you",
+        "will go out"
+      ],
+      [
+        "we",
+        "will go out"
+      ],
+      [
+        "you all",
+        "will go out"
+      ],
+      [
+        "they",
+        "will go out"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-bicicleta",
+    "group": "Town",
+    "type": "vocab",
+    "es": "la bicicleta",
+    "en": "the bicycle",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-el-semaforo",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el semáforo",
+    "en": "the traffic light",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-el-puente",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el puente",
+    "en": "the bridge",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-la-iglesia",
+    "group": "Town",
+    "type": "vocab",
+    "es": "la iglesia",
+    "en": "the church",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-hablar",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "hablar",
+    "en": "to speak",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-hablar-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "hablar",
+    "english": "to speak",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "hablo"
+      ],
+      [
+        "tú",
+        "hablas"
+      ],
+      [
+        "él / ella / Ud.",
+        "habla"
+      ],
+      [
+        "nosotros",
+        "hablamos"
+      ],
+      [
+        "vosotros",
+        "habláis"
+      ],
+      [
+        "ellos / Uds.",
+        "hablan"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "speak"
+      ],
+      [
+        "you",
+        "speak"
+      ],
+      [
+        "he / she / you",
+        "speaks"
+      ],
+      [
+        "we",
+        "speak"
+      ],
+      [
+        "you all",
+        "speak"
+      ],
+      [
+        "they",
+        "speak"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-hablar-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "hablar",
+    "english": "to speak",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "hablé"
+      ],
+      [
+        "tú",
+        "hablaste"
+      ],
+      [
+        "él / ella / Ud.",
+        "habló"
+      ],
+      [
+        "nosotros",
+        "hablamos"
+      ],
+      [
+        "vosotros",
+        "hablasteis"
+      ],
+      [
+        "ellos / Uds.",
+        "hablaron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "spoke"
+      ],
+      [
+        "you",
+        "spoke"
+      ],
+      [
+        "he / she / you",
+        "spoke"
+      ],
+      [
+        "we",
+        "spoke"
+      ],
+      [
+        "you all",
+        "spoke"
+      ],
+      [
+        "they",
+        "spoke"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-hablar-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "hablar",
+    "english": "to speak",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "hablaré"
+      ],
+      [
+        "tú",
+        "hablarás"
+      ],
+      [
+        "él / ella / Ud.",
+        "hablará"
+      ],
+      [
+        "nosotros",
+        "hablaremos"
+      ],
+      [
+        "vosotros",
+        "hablaréis"
+      ],
+      [
+        "ellos / Uds.",
+        "hablarán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will speak"
+      ],
+      [
+        "you",
+        "will speak"
+      ],
+      [
+        "he / she / you",
+        "will speak"
+      ],
+      [
+        "we",
+        "will speak"
+      ],
+      [
+        "you all",
+        "will speak"
+      ],
+      [
+        "they",
+        "will speak"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-el-museo",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el museo",
+    "en": "the museum",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-el-parque",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el parque",
+    "en": "the park",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-la-playa",
+    "group": "Town",
+    "type": "vocab",
+    "es": "la playa",
+    "en": "the beach",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-el-hospital",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el hospital",
+    "en": "the hospital",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-llamarse",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "llamarse",
+    "en": "to be called",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-llamarse-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "llamarse",
+    "english": "to be called",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "me llamo"
+      ],
+      [
+        "tú",
+        "te llamas"
+      ],
+      [
+        "él / ella / Ud.",
+        "se llama"
+      ],
+      [
+        "nosotros",
+        "nos llamamos"
+      ],
+      [
+        "vosotros",
+        "os llamáis"
+      ],
+      [
+        "ellos / Uds.",
+        "se llaman"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "am called"
+      ],
+      [
+        "you",
+        "are called"
+      ],
+      [
+        "he / she / you",
+        "is called"
+      ],
+      [
+        "we",
+        "are called"
+      ],
+      [
+        "you all",
+        "are called"
+      ],
+      [
+        "they",
+        "are called"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-llamarse-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "llamarse",
+    "english": "to be called",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "me llamé"
+      ],
+      [
+        "tú",
+        "te llamaste"
+      ],
+      [
+        "él / ella / Ud.",
+        "se llamó"
+      ],
+      [
+        "nosotros",
+        "nos llamamos"
+      ],
+      [
+        "vosotros",
+        "os llamasteis"
+      ],
+      [
+        "ellos / Uds.",
+        "se llamaron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "was called"
+      ],
+      [
+        "you",
+        "were called"
+      ],
+      [
+        "he / she / you",
+        "was called"
+      ],
+      [
+        "we",
+        "were called"
+      ],
+      [
+        "you all",
+        "were called"
+      ],
+      [
+        "they",
+        "were called"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-llamarse-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "llamarse",
+    "english": "to be called",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "me llamaré"
+      ],
+      [
+        "tú",
+        "te llamarás"
+      ],
+      [
+        "él / ella / Ud.",
+        "se llamará"
+      ],
+      [
+        "nosotros",
+        "nos llamaremos"
+      ],
+      [
+        "vosotros",
+        "os llamaréis"
+      ],
+      [
+        "ellos / Uds.",
+        "se llamarán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will be called"
+      ],
+      [
+        "you",
+        "will be called"
+      ],
+      [
+        "he / she / you",
+        "will be called"
+      ],
+      [
+        "we",
+        "will be called"
+      ],
+      [
+        "you all",
+        "will be called"
+      ],
+      [
+        "they",
+        "will be called"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-comisaria",
+    "group": "Town",
+    "type": "vocab",
+    "es": "la comisaría",
+    "en": "the police station",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-el-correo",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el correo",
+    "en": "the post office",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-la-biblioteca",
+    "group": "Town",
+    "type": "vocab",
+    "es": "la biblioteca",
+    "en": "the library",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-el-hotel",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el hotel",
+    "en": "the hotel",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-levantarse",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "levantarse",
+    "en": "to get up",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-levantarse-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "levantarse",
+    "english": "to get up",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "me levanto"
+      ],
+      [
+        "tú",
+        "te levantas"
+      ],
+      [
+        "él / ella / Ud.",
+        "se levanta"
+      ],
+      [
+        "nosotros",
+        "nos levantamos"
+      ],
+      [
+        "vosotros",
+        "os levantáis"
+      ],
+      [
+        "ellos / Uds.",
+        "se levantan"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "get up"
+      ],
+      [
+        "you",
+        "get up"
+      ],
+      [
+        "he / she / you",
+        "gets up"
+      ],
+      [
+        "we",
+        "get up"
+      ],
+      [
+        "you all",
+        "get up"
+      ],
+      [
+        "they",
+        "get up"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-levantarse-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "levantarse",
+    "english": "to get up",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "me levanté"
+      ],
+      [
+        "tú",
+        "te levantaste"
+      ],
+      [
+        "él / ella / Ud.",
+        "se levantó"
+      ],
+      [
+        "nosotros",
+        "nos levantamos"
+      ],
+      [
+        "vosotros",
+        "os levantasteis"
+      ],
+      [
+        "ellos / Uds.",
+        "se levantaron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "got up"
+      ],
+      [
+        "you",
+        "got up"
+      ],
+      [
+        "he / she / you",
+        "got up"
+      ],
+      [
+        "we",
+        "got up"
+      ],
+      [
+        "you all",
+        "got up"
+      ],
+      [
+        "they",
+        "got up"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-levantarse-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "levantarse",
+    "english": "to get up",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "me levantaré"
+      ],
+      [
+        "tú",
+        "te levantarás"
+      ],
+      [
+        "él / ella / Ud.",
+        "se levantará"
+      ],
+      [
+        "nosotros",
+        "nos levantaremos"
+      ],
+      [
+        "vosotros",
+        "os levantaréis"
+      ],
+      [
+        "ellos / Uds.",
+        "se levantarán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will get up"
+      ],
+      [
+        "you",
+        "will get up"
+      ],
+      [
+        "he / she / you",
+        "will get up"
+      ],
+      [
+        "we",
+        "will get up"
+      ],
+      [
+        "you all",
+        "will get up"
+      ],
+      [
+        "they",
+        "will get up"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-entrada",
+    "group": "Town",
+    "type": "vocab",
+    "es": "la entrada",
+    "en": "the entrance",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-la-salida",
+    "group": "Town",
+    "type": "vocab",
+    "es": "la salida",
+    "en": "the exit",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-el-ascensor",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el ascensor",
+    "en": "the lift",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-el-edificio",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el edificio",
+    "en": "the building",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-despertarse",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "despertarse",
+    "en": "to wake up",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-despertarse-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "despertarse",
+    "english": "to wake up",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "me despierto"
+      ],
+      [
+        "tú",
+        "te despiertas"
+      ],
+      [
+        "él / ella / Ud.",
+        "se despierta"
+      ],
+      [
+        "nosotros",
+        "nos despertamos"
+      ],
+      [
+        "vosotros",
+        "os despertáis"
+      ],
+      [
+        "ellos / Uds.",
+        "se despiertan"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "wake up"
+      ],
+      [
+        "you",
+        "wake up"
+      ],
+      [
+        "he / she / you",
+        "wakes up"
+      ],
+      [
+        "we",
+        "wake up"
+      ],
+      [
+        "you all",
+        "wake up"
+      ],
+      [
+        "they",
+        "wake up"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-despertarse-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "despertarse",
+    "english": "to wake up",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "me desperté"
+      ],
+      [
+        "tú",
+        "te despertaste"
+      ],
+      [
+        "él / ella / Ud.",
+        "se despertó"
+      ],
+      [
+        "nosotros",
+        "nos despertamos"
+      ],
+      [
+        "vosotros",
+        "os despertasteis"
+      ],
+      [
+        "ellos / Uds.",
+        "se despertaron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "woke up"
+      ],
+      [
+        "you",
+        "woke up"
+      ],
+      [
+        "he / she / you",
+        "woke up"
+      ],
+      [
+        "we",
+        "woke up"
+      ],
+      [
+        "you all",
+        "woke up"
+      ],
+      [
+        "they",
+        "woke up"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-despertarse-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "despertarse",
+    "english": "to wake up",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "me despertaré"
+      ],
+      [
+        "tú",
+        "te despertarás"
+      ],
+      [
+        "él / ella / Ud.",
+        "se despertará"
+      ],
+      [
+        "nosotros",
+        "nos despertaremos"
+      ],
+      [
+        "vosotros",
+        "os despertaréis"
+      ],
+      [
+        "ellos / Uds.",
+        "se despertarán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will wake up"
+      ],
+      [
+        "you",
+        "will wake up"
+      ],
+      [
+        "he / she / you",
+        "will wake up"
+      ],
+      [
+        "we",
+        "will wake up"
+      ],
+      [
+        "you all",
+        "will wake up"
+      ],
+      [
+        "they",
+        "will wake up"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-acera",
+    "group": "Town",
+    "type": "vocab",
+    "es": "la acera",
+    "en": "the pavement",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-el-mapa",
+    "group": "Town",
+    "type": "vocab",
+    "es": "el mapa",
+    "en": "the map",
+    "kindEs": "En la ciudad",
+    "kindEn": "Around town"
+  },
+  {
+    "id": "es-v-el-restaurante",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el restaurante",
+    "en": "the restaurant",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-el-bar",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el bar",
+    "en": "the bar",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-acostarse",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "acostarse",
+    "en": "to go to bed",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-acostarse-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "acostarse",
+    "english": "to go to bed",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "me acuesto"
+      ],
+      [
+        "tú",
+        "te acuestas"
+      ],
+      [
+        "él / ella / Ud.",
+        "se acuesta"
+      ],
+      [
+        "nosotros",
+        "nos acostamos"
+      ],
+      [
+        "vosotros",
+        "os acostáis"
+      ],
+      [
+        "ellos / Uds.",
+        "se acuestan"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "go to bed"
+      ],
+      [
+        "you",
+        "go to bed"
+      ],
+      [
+        "he / she / you",
+        "goes to bed"
+      ],
+      [
+        "we",
+        "go to bed"
+      ],
+      [
+        "you all",
+        "go to bed"
+      ],
+      [
+        "they",
+        "go to bed"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-acostarse-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "acostarse",
+    "english": "to go to bed",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "me acosté"
+      ],
+      [
+        "tú",
+        "te acostaste"
+      ],
+      [
+        "él / ella / Ud.",
+        "se acostó"
+      ],
+      [
+        "nosotros",
+        "nos acostamos"
+      ],
+      [
+        "vosotros",
+        "os acostasteis"
+      ],
+      [
+        "ellos / Uds.",
+        "se acostaron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "went to bed"
+      ],
+      [
+        "you",
+        "went to bed"
+      ],
+      [
+        "he / she / you",
+        "went to bed"
+      ],
+      [
+        "we",
+        "went to bed"
+      ],
+      [
+        "you all",
+        "went to bed"
+      ],
+      [
+        "they",
+        "went to bed"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-acostarse-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "acostarse",
+    "english": "to go to bed",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "me acostaré"
+      ],
+      [
+        "tú",
+        "te acostarás"
+      ],
+      [
+        "él / ella / Ud.",
+        "se acostará"
+      ],
+      [
+        "nosotros",
+        "nos acostaremos"
+      ],
+      [
+        "vosotros",
+        "os acostaréis"
+      ],
+      [
+        "ellos / Uds.",
+        "se acostarán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will go to bed"
+      ],
+      [
+        "you",
+        "will go to bed"
+      ],
+      [
+        "he / she / you",
+        "will go to bed"
+      ],
+      [
+        "we",
+        "will go to bed"
+      ],
+      [
+        "you all",
+        "will go to bed"
+      ],
+      [
+        "they",
+        "will go to bed"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-carta",
+    "group": "Table",
+    "type": "vocab",
+    "es": "la carta",
+    "en": "the menu",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-la-cuenta",
+    "group": "Table",
+    "type": "vocab",
+    "es": "la cuenta",
+    "en": "the bill",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-el-camarero",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el camarero",
+    "en": "the waiter",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-la-propina",
+    "group": "Table",
+    "type": "vocab",
+    "es": "la propina",
+    "en": "the tip",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-ducharse",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "ducharse",
+    "en": "to take a shower",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-ducharse-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "ducharse",
+    "english": "to take a shower",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "me ducho"
+      ],
+      [
+        "tú",
+        "te duchas"
+      ],
+      [
+        "él / ella / Ud.",
+        "se ducha"
+      ],
+      [
+        "nosotros",
+        "nos duchamos"
+      ],
+      [
+        "vosotros",
+        "os ducháis"
+      ],
+      [
+        "ellos / Uds.",
+        "se duchan"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "take a shower"
+      ],
+      [
+        "you",
+        "take a shower"
+      ],
+      [
+        "he / she / you",
+        "takes a shower"
+      ],
+      [
+        "we",
+        "take a shower"
+      ],
+      [
+        "you all",
+        "take a shower"
+      ],
+      [
+        "they",
+        "take a shower"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-ducharse-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "ducharse",
+    "english": "to take a shower",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "me duché"
+      ],
+      [
+        "tú",
+        "te duchaste"
+      ],
+      [
+        "él / ella / Ud.",
+        "se duchó"
+      ],
+      [
+        "nosotros",
+        "nos duchamos"
+      ],
+      [
+        "vosotros",
+        "os duchasteis"
+      ],
+      [
+        "ellos / Uds.",
+        "se ducharon"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "took a shower"
+      ],
+      [
+        "you",
+        "took a shower"
+      ],
+      [
+        "he / she / you",
+        "took a shower"
+      ],
+      [
+        "we",
+        "took a shower"
+      ],
+      [
+        "you all",
+        "took a shower"
+      ],
+      [
+        "they",
+        "took a shower"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-ducharse-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "ducharse",
+    "english": "to take a shower",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "me ducharé"
+      ],
+      [
+        "tú",
+        "te ducharás"
+      ],
+      [
+        "él / ella / Ud.",
+        "se duchará"
+      ],
+      [
+        "nosotros",
+        "nos ducharemos"
+      ],
+      [
+        "vosotros",
+        "os ducharéis"
+      ],
+      [
+        "ellos / Uds.",
+        "se ducharán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will take a shower"
+      ],
+      [
+        "you",
+        "will take a shower"
+      ],
+      [
+        "he / she / you",
+        "will take a shower"
+      ],
+      [
+        "we",
+        "will take a shower"
+      ],
+      [
+        "you all",
+        "will take a shower"
+      ],
+      [
+        "they",
+        "will take a shower"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-el-plato",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el plato",
+    "en": "the plate",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-el-vaso",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el vaso",
+    "en": "the glass (tumbler)",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-la-copa",
+    "group": "Table",
+    "type": "vocab",
+    "es": "la copa",
+    "en": "the wine glass",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-la-taza",
+    "group": "Table",
+    "type": "vocab",
+    "es": "la taza",
+    "en": "the cup",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-vestirse",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "vestirse",
+    "en": "to get dressed",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-vestirse-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "vestirse",
+    "english": "to get dressed",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "me visto"
+      ],
+      [
+        "tú",
+        "te vistes"
+      ],
+      [
+        "él / ella / Ud.",
+        "se viste"
+      ],
+      [
+        "nosotros",
+        "nos vestimos"
+      ],
+      [
+        "vosotros",
+        "os vestís"
+      ],
+      [
+        "ellos / Uds.",
+        "se visten"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "get dressed"
+      ],
+      [
+        "you",
+        "get dressed"
+      ],
+      [
+        "he / she / you",
+        "gets dressed"
+      ],
+      [
+        "we",
+        "get dressed"
+      ],
+      [
+        "you all",
+        "get dressed"
+      ],
+      [
+        "they",
+        "get dressed"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-vestirse-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "vestirse",
+    "english": "to get dressed",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "me vestí"
+      ],
+      [
+        "tú",
+        "te vestiste"
+      ],
+      [
+        "él / ella / Ud.",
+        "se vistió"
+      ],
+      [
+        "nosotros",
+        "nos vestimos"
+      ],
+      [
+        "vosotros",
+        "os vestisteis"
+      ],
+      [
+        "ellos / Uds.",
+        "se vistieron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "got dressed"
+      ],
+      [
+        "you",
+        "got dressed"
+      ],
+      [
+        "he / she / you",
+        "got dressed"
+      ],
+      [
+        "we",
+        "got dressed"
+      ],
+      [
+        "you all",
+        "got dressed"
+      ],
+      [
+        "they",
+        "got dressed"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-vestirse-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "vestirse",
+    "english": "to get dressed",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "me vestiré"
+      ],
+      [
+        "tú",
+        "te vestirás"
+      ],
+      [
+        "él / ella / Ud.",
+        "se vestirá"
+      ],
+      [
+        "nosotros",
+        "nos vestiremos"
+      ],
+      [
+        "vosotros",
+        "os vestiréis"
+      ],
+      [
+        "ellos / Uds.",
+        "se vestirán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will get dressed"
+      ],
+      [
+        "you",
+        "will get dressed"
+      ],
+      [
+        "he / she / you",
+        "will get dressed"
+      ],
+      [
+        "we",
+        "will get dressed"
+      ],
+      [
+        "you all",
+        "will get dressed"
+      ],
+      [
+        "they",
+        "will get dressed"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-botella",
+    "group": "Table",
+    "type": "vocab",
+    "es": "la botella",
+    "en": "the bottle",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-el-tenedor",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el tenedor",
+    "en": "the fork",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-el-cuchillo",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el cuchillo",
+    "en": "the knife",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-la-cuchara",
+    "group": "Table",
+    "type": "vocab",
+    "es": "la cuchara",
+    "en": "the spoon",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-sentarse",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "sentarse",
+    "en": "to sit down",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-sentarse-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "sentarse",
+    "english": "to sit down",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "me siento"
+      ],
+      [
+        "tú",
+        "te sientas"
+      ],
+      [
+        "él / ella / Ud.",
+        "se sienta"
+      ],
+      [
+        "nosotros",
+        "nos sentamos"
+      ],
+      [
+        "vosotros",
+        "os sentáis"
+      ],
+      [
+        "ellos / Uds.",
+        "se sientan"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "sit down"
+      ],
+      [
+        "you",
+        "sit down"
+      ],
+      [
+        "he / she / you",
+        "sits down"
+      ],
+      [
+        "we",
+        "sit down"
+      ],
+      [
+        "you all",
+        "sit down"
+      ],
+      [
+        "they",
+        "sit down"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-sentarse-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "sentarse",
+    "english": "to sit down",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "me senté"
+      ],
+      [
+        "tú",
+        "te sentaste"
+      ],
+      [
+        "él / ella / Ud.",
+        "se sentó"
+      ],
+      [
+        "nosotros",
+        "nos sentamos"
+      ],
+      [
+        "vosotros",
+        "os sentasteis"
+      ],
+      [
+        "ellos / Uds.",
+        "se sentaron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "sat down"
+      ],
+      [
+        "you",
+        "sat down"
+      ],
+      [
+        "he / she / you",
+        "sat down"
+      ],
+      [
+        "we",
+        "sat down"
+      ],
+      [
+        "you all",
+        "sat down"
+      ],
+      [
+        "they",
+        "sat down"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-sentarse-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "sentarse",
+    "english": "to sit down",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "me sentaré"
+      ],
+      [
+        "tú",
+        "te sentarás"
+      ],
+      [
+        "él / ella / Ud.",
+        "se sentará"
+      ],
+      [
+        "nosotros",
+        "nos sentaremos"
+      ],
+      [
+        "vosotros",
+        "os sentaréis"
+      ],
+      [
+        "ellos / Uds.",
+        "se sentarán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will sit down"
+      ],
+      [
+        "you",
+        "will sit down"
+      ],
+      [
+        "he / she / you",
+        "will sit down"
+      ],
+      [
+        "we",
+        "will sit down"
+      ],
+      [
+        "you all",
+        "will sit down"
+      ],
+      [
+        "they",
+        "will sit down"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-servilleta",
+    "group": "Table",
+    "type": "vocab",
+    "es": "la servilleta",
+    "en": "the napkin",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-el-desayuno",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el desayuno",
+    "en": "breakfast",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-la-comida",
+    "group": "Table",
+    "type": "vocab",
+    "es": "la comida",
+    "en": "lunch",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-la-cena",
+    "group": "Table",
+    "type": "vocab",
+    "es": "la cena",
+    "en": "dinner",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-sentirse",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "sentirse",
+    "en": "to feel",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-sentirse-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "sentirse",
+    "english": "to feel",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "me siento"
+      ],
+      [
+        "tú",
+        "te sientes"
+      ],
+      [
+        "él / ella / Ud.",
+        "se siente"
+      ],
+      [
+        "nosotros",
+        "nos sentimos"
+      ],
+      [
+        "vosotros",
+        "os sentís"
+      ],
+      [
+        "ellos / Uds.",
+        "se sienten"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "feel"
+      ],
+      [
+        "you",
+        "feel"
+      ],
+      [
+        "he / she / you",
+        "feels"
+      ],
+      [
+        "we",
+        "feel"
+      ],
+      [
+        "you all",
+        "feel"
+      ],
+      [
+        "they",
+        "feel"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-sentirse-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "sentirse",
+    "english": "to feel",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "me sentí"
+      ],
+      [
+        "tú",
+        "te sentiste"
+      ],
+      [
+        "él / ella / Ud.",
+        "se sintió"
+      ],
+      [
+        "nosotros",
+        "nos sentimos"
+      ],
+      [
+        "vosotros",
+        "os sentisteis"
+      ],
+      [
+        "ellos / Uds.",
+        "se sintieron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "felt"
+      ],
+      [
+        "you",
+        "felt"
+      ],
+      [
+        "he / she / you",
+        "felt"
+      ],
+      [
+        "we",
+        "felt"
+      ],
+      [
+        "you all",
+        "felt"
+      ],
+      [
+        "they",
+        "felt"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-sentirse-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "sentirse",
+    "english": "to feel",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "me sentiré"
+      ],
+      [
+        "tú",
+        "te sentirás"
+      ],
+      [
+        "él / ella / Ud.",
+        "se sentirá"
+      ],
+      [
+        "nosotros",
+        "nos sentiremos"
+      ],
+      [
+        "vosotros",
+        "os sentiréis"
+      ],
+      [
+        "ellos / Uds.",
+        "se sentirán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will feel"
+      ],
+      [
+        "you",
+        "will feel"
+      ],
+      [
+        "he / she / you",
+        "will feel"
+      ],
+      [
+        "we",
+        "will feel"
+      ],
+      [
+        "you all",
+        "will feel"
+      ],
+      [
+        "they",
+        "will feel"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-el-pan",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el pan",
+    "en": "the bread",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-el-queso",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el queso",
+    "en": "the cheese",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-el-jamon",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el jamón",
+    "en": "the ham",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-el-pollo",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el pollo",
+    "en": "the chicken",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-irse",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "irse",
+    "en": "to leave, to go away",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-irse-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "irse",
+    "english": "to leave, to go away",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "me voy"
+      ],
+      [
+        "tú",
+        "te vas"
+      ],
+      [
+        "él / ella / Ud.",
+        "se va"
+      ],
+      [
+        "nosotros",
+        "nos vamos"
+      ],
+      [
+        "vosotros",
+        "os vais"
+      ],
+      [
+        "ellos / Uds.",
+        "se van"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "leave"
+      ],
+      [
+        "you",
+        "leave"
+      ],
+      [
+        "he / she / you",
+        "leaves"
+      ],
+      [
+        "we",
+        "leave"
+      ],
+      [
+        "you all",
+        "leave"
+      ],
+      [
+        "they",
+        "leave"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-irse-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "irse",
+    "english": "to leave, to go away",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "me fui"
+      ],
+      [
+        "tú",
+        "te fuiste"
+      ],
+      [
+        "él / ella / Ud.",
+        "se fue"
+      ],
+      [
+        "nosotros",
+        "nos fuimos"
+      ],
+      [
+        "vosotros",
+        "os fuisteis"
+      ],
+      [
+        "ellos / Uds.",
+        "se fueron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "left"
+      ],
+      [
+        "you",
+        "left"
+      ],
+      [
+        "he / she / you",
+        "left"
+      ],
+      [
+        "we",
+        "left"
+      ],
+      [
+        "you all",
+        "left"
+      ],
+      [
+        "they",
+        "left"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-irse-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "irse",
+    "english": "to leave, to go away",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "me iré"
+      ],
+      [
+        "tú",
+        "te irás"
+      ],
+      [
+        "él / ella / Ud.",
+        "se irá"
+      ],
+      [
+        "nosotros",
+        "nos iremos"
+      ],
+      [
+        "vosotros",
+        "os iréis"
+      ],
+      [
+        "ellos / Uds.",
+        "se irán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will leave"
+      ],
+      [
+        "you",
+        "will leave"
+      ],
+      [
+        "he / she / you",
+        "will leave"
+      ],
+      [
+        "we",
+        "will leave"
+      ],
+      [
+        "you all",
+        "will leave"
+      ],
+      [
+        "they",
+        "will leave"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-carne",
+    "group": "Table",
+    "type": "vocab",
+    "es": "la carne",
+    "en": "the meat",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-el-pescado",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el pescado",
+    "en": "the fish",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-las-verduras",
+    "group": "Table",
+    "type": "vocab",
+    "es": "las verduras",
+    "en": "the vegetables",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-la-ensalada",
+    "group": "Table",
+    "type": "vocab",
+    "es": "la ensalada",
+    "en": "the salad",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-quedarse",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "quedarse",
+    "en": "to stay",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-quedarse-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "quedarse",
+    "english": "to stay",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "me quedo"
+      ],
+      [
+        "tú",
+        "te quedas"
+      ],
+      [
+        "él / ella / Ud.",
+        "se queda"
+      ],
+      [
+        "nosotros",
+        "nos quedamos"
+      ],
+      [
+        "vosotros",
+        "os quedáis"
+      ],
+      [
+        "ellos / Uds.",
+        "se quedan"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "stay"
+      ],
+      [
+        "you",
+        "stay"
+      ],
+      [
+        "he / she / you",
+        "stays"
+      ],
+      [
+        "we",
+        "stay"
+      ],
+      [
+        "you all",
+        "stay"
+      ],
+      [
+        "they",
+        "stay"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-quedarse-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "quedarse",
+    "english": "to stay",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "me quedé"
+      ],
+      [
+        "tú",
+        "te quedaste"
+      ],
+      [
+        "él / ella / Ud.",
+        "se quedó"
+      ],
+      [
+        "nosotros",
+        "nos quedamos"
+      ],
+      [
+        "vosotros",
+        "os quedasteis"
+      ],
+      [
+        "ellos / Uds.",
+        "se quedaron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "stayed"
+      ],
+      [
+        "you",
+        "stayed"
+      ],
+      [
+        "he / she / you",
+        "stayed"
+      ],
+      [
+        "we",
+        "stayed"
+      ],
+      [
+        "you all",
+        "stayed"
+      ],
+      [
+        "they",
+        "stayed"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-quedarse-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "quedarse",
+    "english": "to stay",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "me quedaré"
+      ],
+      [
+        "tú",
+        "te quedarás"
+      ],
+      [
+        "él / ella / Ud.",
+        "se quedará"
+      ],
+      [
+        "nosotros",
+        "nos quedaremos"
+      ],
+      [
+        "vosotros",
+        "os quedaréis"
+      ],
+      [
+        "ellos / Uds.",
+        "se quedarán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will stay"
+      ],
+      [
+        "you",
+        "will stay"
+      ],
+      [
+        "he / she / you",
+        "will stay"
+      ],
+      [
+        "we",
+        "will stay"
+      ],
+      [
+        "you all",
+        "will stay"
+      ],
+      [
+        "they",
+        "will stay"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-la-sopa",
+    "group": "Table",
+    "type": "vocab",
+    "es": "la sopa",
+    "en": "the soup",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-el-arroz",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el arroz",
+    "en": "the rice",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-los-huevos",
+    "group": "Table",
+    "type": "vocab",
+    "es": "los huevos",
+    "en": "the eggs",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-la-fruta",
+    "group": "Table",
+    "type": "vocab",
+    "es": "la fruta",
+    "en": "the fruit",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-ponerse",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "ponerse",
+    "en": "to put on (clothing)",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-ponerse-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "ponerse",
+    "english": "to put on (clothing)",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "me pongo"
+      ],
+      [
+        "tú",
+        "te pones"
+      ],
+      [
+        "él / ella / Ud.",
+        "se pone"
+      ],
+      [
+        "nosotros",
+        "nos ponemos"
+      ],
+      [
+        "vosotros",
+        "os ponéis"
+      ],
+      [
+        "ellos / Uds.",
+        "se ponen"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "put on"
+      ],
+      [
+        "you",
+        "put on"
+      ],
+      [
+        "he / she / you",
+        "puts on"
+      ],
+      [
+        "we",
+        "put on"
+      ],
+      [
+        "you all",
+        "put on"
+      ],
+      [
+        "they",
+        "put on"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-ponerse-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "ponerse",
+    "english": "to put on (clothing)",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "me puse"
+      ],
+      [
+        "tú",
+        "te pusiste"
+      ],
+      [
+        "él / ella / Ud.",
+        "se puso"
+      ],
+      [
+        "nosotros",
+        "nos pusimos"
+      ],
+      [
+        "vosotros",
+        "os pusisteis"
+      ],
+      [
+        "ellos / Uds.",
+        "se pusieron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "put on"
+      ],
+      [
+        "you",
+        "put on"
+      ],
+      [
+        "he / she / you",
+        "put on"
+      ],
+      [
+        "we",
+        "put on"
+      ],
+      [
+        "you all",
+        "put on"
+      ],
+      [
+        "they",
+        "put on"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-ponerse-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "ponerse",
+    "english": "to put on (clothing)",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "me pondré"
+      ],
+      [
+        "tú",
+        "te pondrás"
+      ],
+      [
+        "él / ella / Ud.",
+        "se pondrá"
+      ],
+      [
+        "nosotros",
+        "nos pondremos"
+      ],
+      [
+        "vosotros",
+        "os pondréis"
+      ],
+      [
+        "ellos / Uds.",
+        "se pondrán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will put on"
+      ],
+      [
+        "you",
+        "will put on"
+      ],
+      [
+        "he / she / you",
+        "will put on"
+      ],
+      [
+        "we",
+        "will put on"
+      ],
+      [
+        "you all",
+        "will put on"
+      ],
+      [
+        "they",
+        "will put on"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-el-postre",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el postre",
+    "en": "the dessert",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-el-azucar",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el azúcar",
+    "en": "the sugar",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-la-sal",
+    "group": "Table",
+    "type": "vocab",
+    "es": "la sal",
+    "en": "the salt",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-la-pimienta",
+    "group": "Table",
+    "type": "vocab",
+    "es": "la pimienta",
+    "en": "the pepper",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-acordarse",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "acordarse",
+    "en": "to remember",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-acordarse-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "acordarse",
+    "english": "to remember",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "me acuerdo"
+      ],
+      [
+        "tú",
+        "te acuerdas"
+      ],
+      [
+        "él / ella / Ud.",
+        "se acuerda"
+      ],
+      [
+        "nosotros",
+        "nos acordamos"
+      ],
+      [
+        "vosotros",
+        "os acordáis"
+      ],
+      [
+        "ellos / Uds.",
+        "se acuerdan"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "remember"
+      ],
+      [
+        "you",
+        "remember"
+      ],
+      [
+        "he / she / you",
+        "remembers"
+      ],
+      [
+        "we",
+        "remember"
+      ],
+      [
+        "you all",
+        "remember"
+      ],
+      [
+        "they",
+        "remember"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-acordarse-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "acordarse",
+    "english": "to remember",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "me acordé"
+      ],
+      [
+        "tú",
+        "te acordaste"
+      ],
+      [
+        "él / ella / Ud.",
+        "se acordó"
+      ],
+      [
+        "nosotros",
+        "nos acordamos"
+      ],
+      [
+        "vosotros",
+        "os acordasteis"
+      ],
+      [
+        "ellos / Uds.",
+        "se acordaron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "remembered"
+      ],
+      [
+        "you",
+        "remembered"
+      ],
+      [
+        "he / she / you",
+        "remembered"
+      ],
+      [
+        "we",
+        "remembered"
+      ],
+      [
+        "you all",
+        "remembered"
+      ],
+      [
+        "they",
+        "remembered"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-acordarse-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "acordarse",
+    "english": "to remember",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "me acordaré"
+      ],
+      [
+        "tú",
+        "te acordarás"
+      ],
+      [
+        "él / ella / Ud.",
+        "se acordará"
+      ],
+      [
+        "nosotros",
+        "nos acordaremos"
+      ],
+      [
+        "vosotros",
+        "os acordaréis"
+      ],
+      [
+        "ellos / Uds.",
+        "se acordarán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will remember"
+      ],
+      [
+        "you",
+        "will remember"
+      ],
+      [
+        "he / she / you",
+        "will remember"
+      ],
+      [
+        "we",
+        "will remember"
+      ],
+      [
+        "you all",
+        "will remember"
+      ],
+      [
+        "they",
+        "will remember"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-el-aceite",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el aceite",
+    "en": "the oil",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-el-agua",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el agua",
+    "en": "the water",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-el-vino",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el vino",
+    "en": "the wine",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-la-cerveza",
+    "group": "Table",
+    "type": "vocab",
+    "es": "la cerveza",
+    "en": "the beer",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-olvidarse",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "olvidarse",
+    "en": "to forget",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-olvidarse-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "olvidarse",
+    "english": "to forget",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "me olvido"
+      ],
+      [
+        "tú",
+        "te olvidas"
+      ],
+      [
+        "él / ella / Ud.",
+        "se olvida"
+      ],
+      [
+        "nosotros",
+        "nos olvidamos"
+      ],
+      [
+        "vosotros",
+        "os olvidáis"
+      ],
+      [
+        "ellos / Uds.",
+        "se olvidan"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "forget"
+      ],
+      [
+        "you",
+        "forget"
+      ],
+      [
+        "he / she / you",
+        "forgets"
+      ],
+      [
+        "we",
+        "forget"
+      ],
+      [
+        "you all",
+        "forget"
+      ],
+      [
+        "they",
+        "forget"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-olvidarse-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "olvidarse",
+    "english": "to forget",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "me olvidé"
+      ],
+      [
+        "tú",
+        "te olvidaste"
+      ],
+      [
+        "él / ella / Ud.",
+        "se olvidó"
+      ],
+      [
+        "nosotros",
+        "nos olvidamos"
+      ],
+      [
+        "vosotros",
+        "os olvidasteis"
+      ],
+      [
+        "ellos / Uds.",
+        "se olvidaron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "forgot"
+      ],
+      [
+        "you",
+        "forgot"
+      ],
+      [
+        "he / she / you",
+        "forgot"
+      ],
+      [
+        "we",
+        "forgot"
+      ],
+      [
+        "you all",
+        "forgot"
+      ],
+      [
+        "they",
+        "forgot"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-olvidarse-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "olvidarse",
+    "english": "to forget",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "me olvidaré"
+      ],
+      [
+        "tú",
+        "te olvidarás"
+      ],
+      [
+        "él / ella / Ud.",
+        "se olvidará"
+      ],
+      [
+        "nosotros",
+        "nos olvidaremos"
+      ],
+      [
+        "vosotros",
+        "os olvidaréis"
+      ],
+      [
+        "ellos / Uds.",
+        "se olvidarán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will forget"
+      ],
+      [
+        "you",
+        "will forget"
+      ],
+      [
+        "he / she / you",
+        "will forget"
+      ],
+      [
+        "we",
+        "will forget"
+      ],
+      [
+        "you all",
+        "will forget"
+      ],
+      [
+        "they",
+        "will forget"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-el-cafe",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el café",
+    "en": "the coffee",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-el-te",
+    "group": "Table",
+    "type": "vocab",
+    "es": "el té",
+    "en": "the tea",
+    "kindEs": "Comer y beber",
+    "kindEn": "Eating and drinking"
+  },
+  {
+    "id": "es-v-rojo",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "rojo",
+    "en": "red",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-azul",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "azul",
+    "en": "blue",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-divertirse",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "divertirse",
+    "en": "to have fun",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-divertirse-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "divertirse",
+    "english": "to have fun",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "me divierto"
+      ],
+      [
+        "tú",
+        "te diviertes"
+      ],
+      [
+        "él / ella / Ud.",
+        "se divierte"
+      ],
+      [
+        "nosotros",
+        "nos divertimos"
+      ],
+      [
+        "vosotros",
+        "os divertís"
+      ],
+      [
+        "ellos / Uds.",
+        "se divierten"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "have fun"
+      ],
+      [
+        "you",
+        "have fun"
+      ],
+      [
+        "he / she / you",
+        "has fun"
+      ],
+      [
+        "we",
+        "have fun"
+      ],
+      [
+        "you all",
+        "have fun"
+      ],
+      [
+        "they",
+        "have fun"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-divertirse-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "divertirse",
+    "english": "to have fun",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "me divertí"
+      ],
+      [
+        "tú",
+        "te divertiste"
+      ],
+      [
+        "él / ella / Ud.",
+        "se divirtió"
+      ],
+      [
+        "nosotros",
+        "nos divertimos"
+      ],
+      [
+        "vosotros",
+        "os divertisteis"
+      ],
+      [
+        "ellos / Uds.",
+        "se divirtieron"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "had fun"
+      ],
+      [
+        "you",
+        "had fun"
+      ],
+      [
+        "he / she / you",
+        "had fun"
+      ],
+      [
+        "we",
+        "had fun"
+      ],
+      [
+        "you all",
+        "had fun"
+      ],
+      [
+        "they",
+        "had fun"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-divertirse-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "divertirse",
+    "english": "to have fun",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "me divertiré"
+      ],
+      [
+        "tú",
+        "te divertirás"
+      ],
+      [
+        "él / ella / Ud.",
+        "se divertirá"
+      ],
+      [
+        "nosotros",
+        "nos divertiremos"
+      ],
+      [
+        "vosotros",
+        "os divertiréis"
+      ],
+      [
+        "ellos / Uds.",
+        "se divertirán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will have fun"
+      ],
+      [
+        "you",
+        "will have fun"
+      ],
+      [
+        "he / she / you",
+        "will have fun"
+      ],
+      [
+        "we",
+        "will have fun"
+      ],
+      [
+        "you all",
+        "will have fun"
+      ],
+      [
+        "they",
+        "will have fun"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-verde",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "verde",
+    "en": "green",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-amarillo",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "amarillo",
+    "en": "yellow",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-negro",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "negro",
+    "en": "black",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-blanco",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "blanco",
+    "en": "white",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-preocuparse",
+    "group": "Verbs",
+    "type": "vocab",
+    "es": "preocuparse",
+    "en": "to worry",
+    "kindEs": "Verbos",
+    "kindEn": "Verbs"
+  },
+  {
+    "id": "es-c-preocuparse-presente",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "preocuparse",
+    "english": "to worry",
+    "tenseEs": "Presente",
+    "tenseEn": "Present",
+    "es": [
+      [
+        "yo",
+        "me preocupo"
+      ],
+      [
+        "tú",
+        "te preocupas"
+      ],
+      [
+        "él / ella / Ud.",
+        "se preocupa"
+      ],
+      [
+        "nosotros",
+        "nos preocupamos"
+      ],
+      [
+        "vosotros",
+        "os preocupáis"
+      ],
+      [
+        "ellos / Uds.",
+        "se preocupan"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "worry"
+      ],
+      [
+        "you",
+        "worry"
+      ],
+      [
+        "he / she / you",
+        "worries"
+      ],
+      [
+        "we",
+        "worry"
+      ],
+      [
+        "you all",
+        "worry"
+      ],
+      [
+        "they",
+        "worry"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-preocuparse-preterito",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "preocuparse",
+    "english": "to worry",
+    "tenseEs": "Pretérito",
+    "tenseEn": "Simple past",
+    "es": [
+      [
+        "yo",
+        "me preocupé"
+      ],
+      [
+        "tú",
+        "te preocupaste"
+      ],
+      [
+        "él / ella / Ud.",
+        "se preocupó"
+      ],
+      [
+        "nosotros",
+        "nos preocupamos"
+      ],
+      [
+        "vosotros",
+        "os preocupasteis"
+      ],
+      [
+        "ellos / Uds.",
+        "se preocuparon"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "worried"
+      ],
+      [
+        "you",
+        "worried"
+      ],
+      [
+        "he / she / you",
+        "worried"
+      ],
+      [
+        "we",
+        "worried"
+      ],
+      [
+        "you all",
+        "worried"
+      ],
+      [
+        "they",
+        "worried"
+      ]
+    ]
+  },
+  {
+    "id": "es-c-preocuparse-futuro",
+    "group": "Verbs",
+    "type": "conjugation",
+    "verb": "preocuparse",
+    "english": "to worry",
+    "tenseEs": "Futuro",
+    "tenseEn": "Future",
+    "es": [
+      [
+        "yo",
+        "me preocuparé"
+      ],
+      [
+        "tú",
+        "te preocuparás"
+      ],
+      [
+        "él / ella / Ud.",
+        "se preocupará"
+      ],
+      [
+        "nosotros",
+        "nos preocuparemos"
+      ],
+      [
+        "vosotros",
+        "os preocuparéis"
+      ],
+      [
+        "ellos / Uds.",
+        "se preocuparán"
+      ]
+    ],
+    "en": [
+      [
+        "I",
+        "will worry"
+      ],
+      [
+        "you",
+        "will worry"
+      ],
+      [
+        "he / she / you",
+        "will worry"
+      ],
+      [
+        "we",
+        "will worry"
+      ],
+      [
+        "you all",
+        "will worry"
+      ],
+      [
+        "they",
+        "will worry"
+      ]
+    ]
+  },
+  {
+    "id": "es-v-hoy",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "hoy",
+    "en": "today",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-manana",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "mañana",
+    "en": "tomorrow",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-ayer",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "ayer",
+    "en": "yesterday",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-ahora",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "ahora",
+    "en": "now",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-siempre",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "siempre",
+    "en": "always",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-nunca",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "nunca",
+    "en": "never",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-tal-vez",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "tal vez",
+    "en": "maybe",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-claro",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "claro",
+    "en": "of course",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-lo-siento",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "lo siento",
+    "en": "I am sorry",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-por-favor",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "por favor",
+    "en": "please",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-gracias",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "gracias",
+    "en": "thank you",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-de-nada",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "de nada",
+    "en": "you are welcome",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-cuanto-cuesta",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "¿cuánto cuesta?",
+    "en": "how much does it cost?",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  },
+  {
+    "id": "es-v-otra-vez",
+    "group": "Everyday",
+    "type": "vocab",
+    "es": "otra vez",
+    "en": "again",
+    "kindEs": "Cada día",
+    "kindEn": "Everyday"
+  }
+]

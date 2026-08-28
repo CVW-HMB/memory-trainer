@@ -396,14 +396,16 @@ function renderCellar() {
   }
   $("statusBars").innerHTML = Object.entries(buckets).map(([k, v]) => barRow(k, v, CARDS.length, v)).join("");
 
-  const groups = ["France", "Italy", "Rest"];
+  // Groups and their labels come from the deck, so this works for any deck.
+  const groups = (DECK && DECK.groups) || [];
+  $("groupsTitle").textContent = (DECK && DECK.groupsTitle) || "By group";
   $("regionBars").innerHTML = groups.map(g => {
-    const cs = CARDS.filter(c => c.group === g);
+    const cs = CARDS.filter(c => c.group === g.id);
     let cor = 0, wr = 0;
-    cs.forEach(c => { const s = state.cards[c.id]; cor += s.correct; wr += s.wrong; });
+    cs.forEach(c => { const s = state.cards[c.id]; if (s) { cor += s.correct; wr += s.wrong; } });
     const tot = cor + wr;
     const pct = tot ? Math.round(cor / tot * 100) : 0;
-    return barRow(g === "Rest" ? "Rest of world" : g, pct, 100, tot ? pct + "%" : "--");
+    return barRow(g.label || g.id, pct, 100, tot ? pct + "%" : "--");
   }).join("");
 
   const hard = CARDS.map(c => ({ c, s: state.cards[c.id] }))
@@ -651,6 +653,7 @@ async function chooseDeck(id) {
   BY_ID = Object.fromEntries(CARDS.map(c => [c.id, c]));
   writeKey(LAST_DECK_KEY, deck.id);
   $("deckName").textContent = deck.name;
+  $("deckTagline").textContent = deck.tagline || "";
   $("cardCount").textContent = CARDS.length;
   // Progress is keyed by deck, so this reloads the right saved state.
   await adoptActiveProfile();

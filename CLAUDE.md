@@ -13,13 +13,25 @@ The current app is a single-page static web app (vanilla JS, no framework, no bu
 caps a flight at 20 cards, keeps progress in IndexedDB, and has a tested
 scheduler. The deck is 200 cards.
 
-**Deck chooser landed early (owner request).** `data/decks.json` is the deck
-index and the app opens on a "choose a deck" screen. There is one deck today
-(`wine`, shown as "Wines, Grapes, Regions"). Adding an entry plus its card file
-is enough for a deck of the *same shape*; a differently shaped deck (Spanish
-vocabulary, say) still needs the card-type work in D1/D5, because `facesFor`
-only knows the wine card types. Progress is already keyed
-`srs_v2:<profile>:<deck>`, so decks do not collide.
+**Two decks now.** `data/decks.json` is the index and the app opens on a
+"choose a deck" screen:
+
+- `wine` — "Wines, Grapes, Regions", 161 cards, `data/cards.json`.
+- `spanish` — "Spanish – English", 250 cards, `data/spanish.json`.
+
+Progress is keyed `srs_v2:<profile>:<deck>`, so decks never collide. Each deck
+declares its own `groups` (with labels), `groupsTitle` and footer `tagline`, so
+the cellar book and chrome follow the deck rather than hardcoding wine.
+
+**Card types live in `src/decks/`** behind a registry (`registry.js`). A card
+type is a small compiler: it turns a row of deck data into render specs and
+declares whether the card may flip. `src/app.js` knows nothing deck-specific.
+Adding a deck of an existing shape is an entry in `decks.json` plus a card
+file; a genuinely new shape means a new card type in `src/decks/`.
+
+**Open question, not decided:** the app is still branded "La Cave", which reads
+oddly over a Spanish deck. The deck name shows as the header subtitle. Ask
+before renaming the app.
 
 **Current focus — Part 2:** wine is the first deck, not the product. The
 destination is a general multi-deck trainer — decks in `data/decks/`, pick one at
@@ -119,8 +131,27 @@ four or five regions. The 39 calls are commented out in
 `scripts/generate_cards.py` and the rendering code still handles the type, so
 restoring it is uncommenting those lines and running `npm run cards`.
 
-**The card model, in one line:** the front is always a **place or a label**; the
-back is always the **grape, its region and its notes**. Nothing flips.
+**The wine card model, in one line:** the front is always a **place or a label**;
+the back is always the **grape, its region and its notes**. Nothing flips in the
+wine deck.
+
+### Spanish deck types (`src/decks/vocab.js`)
+
+Both **are** reversible — safe here in a way it is not for wine, because a
+translation pair is one-to-one by construction and the validator enforces that
+no two cards share either face.
+
+- `vocab` — `{ es, en, kindEs, kindEn }`. One word or phrase per side.
+- `conjugation` — `{ verb, english, tenseEs, tenseEn, es[], en[] }`. A whole
+  table for one verb in one tense, rendered identically on both faces so they
+  read the same way.
+
+Two rules that deck lives by:
+- **Each face is entirely in one language** — the prompt line, the pronouns and
+  the little category label included. A side never mixes the two.
+- **A conjugation card always carries the whole table**, never a single form.
+  The validator enforces that `es` and `en` are equal-length lists of
+  `[pronoun, form]` pairs.
 
 **Direction rule lives in one place:** `reversible(c)` in `src/app.js`, which
 currently returns `false` for everything. If you add a type, update

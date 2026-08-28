@@ -3,6 +3,52 @@
     "id": "wine",
     "name": "Wines, Grapes, Regions",
     "subtitle": "Read a label, know the grape and where it is from. France-first.",
-    "file": "./data/cards.json"
+    "file": "./data/cards.json",
+    "groupsTitle": "By region",
+    "groups": [
+      {
+        "id": "France",
+        "label": "France"
+      },
+      {
+        "id": "Italy",
+        "label": "Italy"
+      },
+      {
+        "id": "Rest",
+        "label": "Rest of world"
+      }
+    ],
+    "tagline": "French focus, then Tuscany, then the world"
+  },
+  {
+    "id": "spanish",
+    "name": "Spanish – English",
+    "subtitle": "The most-used verbs across three tenses, plus enough words to hold a conversation.",
+    "file": "./data/spanish.json",
+    "groupsTitle": "By theme",
+    "groups": [
+      {
+        "id": "Verbs",
+        "label": "Verbs"
+      },
+      {
+        "id": "House",
+        "label": "Around the house"
+      },
+      {
+        "id": "Town",
+        "label": "Around town"
+      },
+      {
+        "id": "Table",
+        "label": "Eating & drinking"
+      },
+      {
+        "id": "Everyday",
+        "label": "Everyday"
+      }
+    ],
+    "tagline": "verbs first, then enough to hold a conversation"
   }
 ]
