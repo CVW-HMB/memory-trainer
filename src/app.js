@@ -4,7 +4,7 @@
 
 import {
   FLIGHT_SIZE, MAX_BOX, freshCardState, dueCards as pickDue, buildQueue as pickQueue,
-  applyAnswer, ymd, nextStreak,
+  applyAnswer, redrill, ymd, nextStreak,
 } from "./engine/schedule.js";
 
 // Keys are namespaced by profile and deck, so several people can share a
@@ -163,8 +163,11 @@ function ensureCard(id) {
 }
 
 let state = null;
-let queue = [], qpos = 0, sessionTotal = 0, sGot = 0, sMiss = 0, revealed = false;
-let runDir = {};
+// `queue` grows as missed cards are re-inserted, so it is not the flight size.
+// `flightTotal` is the number of distinct cards; `cleared` is those answered
+// correctly. The flight ends when every card has been cleared.
+let queue = [], qpos = 0, flightTotal = 0, sGot = 0, sMiss = 0, revealed = false;
+let runDir = {}, firstPass = {}, cleared = new Set();
 
 /* ---------------- views ---------------- */
 function show(id) {
@@ -241,8 +244,8 @@ function startSession() {
 
   // totalSessions is already incremented, so it is this flight's number.
   queue = pickQueue(CARDS, state.cards, state.totalSessions);
-  qpos = 0; sessionTotal = queue.length; sGot = 0; sMiss = 0;
-  runDir = {};
+  qpos = 0; flightTotal = queue.length; sGot = 0; sMiss = 0;
+  runDir = {}; firstPass = {}; cleared = new Set();
   for (const id of queue) {
     const c = BY_ID[id];
     runDir[id] = reversible(c) ? (Math.random() < 0.5 ? "rev" : "fwd") : "fwd";
@@ -286,10 +289,13 @@ function renderCard() {
   const { prompt, answer } = facesFor(c, runDir[c.id] || "fwd");
   fillFace("f", prompt);
   fillFace("b", answer);
+  // Flag a card you are seeing again this flight, so a repeat does not read as
+  // the deck glitching.
+  if (c.id in firstPass) $("fKind").textContent += " \u00b7 again";
 
-  const done = qpos;
-  $("progNum").textContent = done + " / " + sessionTotal;
-  $("progFill").style.width = (sessionTotal ? (done / sessionTotal * 100) : 0) + "%";
+  // Progress is cards cleared, not cards shown: repeats must not inflate it.
+  $("progNum").textContent = cleared.size + " / " + flightTotal;
+  $("progFill").style.width = (flightTotal ? (cleared.size / flightTotal * 100) : 0) + "%";
   $("flipBtn").classList.remove("hidden");
   $("missBtn").classList.add("hidden");
   $("gotBtn").classList.add("hidden");
@@ -326,16 +332,25 @@ function flip() {
 function answer(correct) {
   if (!revealed) return;
   const id = queue[qpos];
-  applyAnswer(ensureCard(id), correct, state.totalSessions);
-  if (correct) sGot += 1; else sMiss += 1;
-  saveState(state);
+  if (!(id in firstPass)) {
+    // Only the first attempt in a flight moves the box or the stats. The
+    // repeats are drilling, not new evidence -- otherwise missing a card and
+    // then getting it right would cost nothing, and a bad night would swamp
+    // the "hardest for you" list.
+    firstPass[id] = correct;
+    applyAnswer(ensureCard(id), correct, state.totalSessions);
+    if (correct) sGot += 1; else sMiss += 1;
+    saveState(state);
+  }
+  if (correct) cleared.add(id);
+  else queue = redrill(queue, qpos);   // seen again later this flight
   qpos += 1;
   if (qpos >= queue.length) endSession();
   else renderCard();
 }
 
 function endSession() {
-  $("progNum").textContent = sessionTotal + " / " + sessionTotal;
+  $("progNum").textContent = flightTotal + " / " + flightTotal;
   $("progFill").style.width = "100%";
   $("sGot").textContent = sGot;
   $("sMiss").textContent = sMiss;

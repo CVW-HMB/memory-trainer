@@ -90,6 +90,19 @@ export function buildQueue(cards, states, cur, rand = Math.random) {
   return weakFirst(picked, states, rand).map(c => c.id);
 }
 
+// Within a flight, a missed card comes back until it is answered correctly. It
+// is re-inserted a few cards later rather than immediately, so it is a genuine
+// re-test; if fewer than `gap` cards remain it lands at the end. The flight is
+// not finished until every card in it has been cleared.
+export const REDRILL_GAP = 5;
+
+export function redrill(queue, pos, gap = REDRILL_GAP) {
+  const next = queue.slice();
+  const at = Math.min(pos + 1 + gap, next.length);
+  next.splice(at, 0, next[pos]);
+  return next;
+}
+
 // Correct promotes one box (capped); a miss drops straight back to box 1.
 // Mutates and returns the card's state.
 export function applyAnswer(s, correct, sessionNo) {

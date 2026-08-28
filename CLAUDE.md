@@ -116,7 +116,21 @@ DOM, no globals, no storage, and no knowledge of what a card holds beyond its
 `tests/schedule.test.js` (`npm test`, `node --test`, zero dependencies):
 - Correct → box up (max 5), which pushes the next due date out (`INTERVAL` maps box → sessions until due).
 - Miss → back to box 1 (due every session).
-- Each run ("flight") pulls the due cards, orders weak-first with jitter, and shows each **once**. There is deliberately no within-run repeat: a card is never shown twice in one run, and reversible cards get a random direction per run so both directions come up over time.
+- Each run ("flight") pulls the due cards and orders them weak-first with jitter.
+- **A missed card comes back within the same flight.** You do not finish a
+  flight until every card in it has been answered correctly. A miss re-queues
+  the card `REDRILL_GAP` (5) cards later, or at the end if fewer remain; once a
+  card is correct it is done for that flight.
+- **Only the first attempt at a card in a flight counts.** It is what moves the
+  box and what lands in `correct`/`wrong`/`seen`. The repeats are drilling, not
+  new evidence — otherwise missing a card and then getting it right would cost
+  nothing, and one bad night would swamp the "hardest for you" list. So a card
+  you missed stays in box 1 and is due again next session even though you
+  cleared it before the flight ended.
+- Progress and the summary are counted in **cards cleared**, not cards shown, so
+  repeats never inflate them. The summary's accuracy is first-pass accuracy.
+- `buildQueue` still never selects the same card twice; the repetition is purely
+  the flight loop.
 - Each flight is capped at `FLIGHT_SIZE` (20) cards, introducing at most
   `NEW_PER_FLIGHT` (5) never-seen cards in deck order. The cap decides how many
   due cards a flight *serves*; it does not touch the box arithmetic.

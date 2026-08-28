@@ -6,6 +6,7 @@ import {
   INTERVAL, MAX_BOX, FLIGHT_SIZE, NEW_PER_FLIGHT, OVERDUE_SLOTS,
   freshCardState, isNew, isDue, dueCards, weakFirst, buildQueue,
   applyAnswer, ymd, daysBetween, nextStreak, overdueBy, mostOverdue,
+  redrill, REDRILL_GAP,
 } from "../src/engine/schedule.js";
 
 /* ---------------- helpers ---------------- */
@@ -143,7 +144,9 @@ describe("flight cap", () => {
     assert.equal(q.length, 20);
   });
 
-  test("a flight never repeats a card", () => {
+  // Selection uniqueness. A missed card is re-shown during the flight by
+  // redrill, but buildQueue must never hand out the same card twice.
+  test("buildQueue never selects a card twice", () => {
     const cards = deck(100);
     const st = states(cards);
     const rand = seeded(7);
@@ -308,6 +311,65 @@ describe("overdue rotation", () => {
     const q = buildQueue(cards, states(cards), 1, seeded());
     assert.equal(q.length, 8);
     assert.equal(new Set(q).size, 8);
+  });
+});
+
+/* ---------------- in-flight re-drilling ---------------- */
+describe("missed cards come back within the flight", () => {
+  const q = () => ["a", "b", "c", "d", "e", "f", "g", "h"];
+
+  test("a missed card is re-inserted REDRILL_GAP cards later", () => {
+    assert.equal(REDRILL_GAP, 5);
+    assert.deepEqual(redrill(q(), 0), ["a", "b", "c", "d", "e", "f", "a", "g", "h"]);
+  });
+
+  test("it lands at the end when fewer than the gap remain", () => {
+    assert.deepEqual(redrill(q(), 6), ["a", "b", "c", "d", "e", "f", "g", "h", "g"]);
+    assert.deepEqual(redrill(q(), 7), ["a", "b", "c", "d", "e", "f", "g", "h", "h"]);
+  });
+
+  test("it never drops or reorders the cards already queued", () => {
+    const before = q();
+    const after = redrill(before, 2);
+    assert.deepEqual(before, q(), "must not mutate the queue it is given");
+    assert.equal(after.length, before.length + 1);
+    // removing the one re-inserted copy gives back the original order
+    const copy = after.slice();
+    copy.splice(copy.indexOf("c", 3), 1);
+    assert.deepEqual(copy, before);
+  });
+
+  test("repeated misses keep re-queueing the same card", () => {
+    let queue = ["a", "b", "c"];
+    let pos = 0, guard = 0;
+    const cleared = new Set();
+    // miss "a" twice, then clear everything
+    const answers = { a: [false, false, true], b: [true], c: [true] };
+    const taken = {};
+    while (pos < queue.length && guard++ < 50) {
+      const id = queue[pos];
+      taken[id] = (taken[id] || 0);
+      const ok = answers[id][taken[id]++];
+      if (ok) cleared.add(id); else queue = redrill(queue, pos);
+      pos++;
+    }
+    assert.equal(taken.a, 3, "a should have been asked three times");
+    assert.deepEqual([...cleared].sort(), ["a", "b", "c"]);
+  });
+
+  test("a flight terminates once every card is answered correctly", () => {
+    let queue = ["a", "b", "c", "d"];
+    let pos = 0, guard = 0;
+    const misses = { a: 2, b: 0, c: 3, d: 1 };
+    const seen = {};
+    while (pos < queue.length && guard++ < 200) {
+      const id = queue[pos];
+      seen[id] = (seen[id] || 0) + 1;
+      if (seen[id] > misses[id]) { /* cleared */ } else queue = redrill(queue, pos);
+      pos++;
+    }
+    assert.ok(guard < 200, "flight must terminate");
+    assert.deepEqual(seen, { a: 3, b: 1, c: 4, d: 2 });
   });
 });
 
