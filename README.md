@@ -2,6 +2,13 @@
 
 A spaced-repetition flashcard app for learning wine the way it actually helps you in a restaurant: which grapes grow where, and how to read a label you have never seen. Content is France-first (about 70%), then Tuscany-led Italy, then the wines you will actually meet on a US list.
 
+**Live: https://cvw-hmb.github.io/memory-trainer/** — served by GitHub Pages from
+`main` at the repo root. Every path in the app is relative, so it works under the
+`/memory-trainer/` subpath with no build step. Pushing to `main` redeploys.
+
+> The repo is named `memory-trainer` because wine is the first deck, not the
+> product — see `PLAN.md` Part 2. The app itself is still the wine trainer.
+
 ## Run it
 
 The app loads `data/cards.json` over `fetch`, so it needs a local web server (opening `index.html` directly from the file system will not work in most browsers).
