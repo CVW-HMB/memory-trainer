@@ -35,9 +35,11 @@ declares whether the card may flip. `src/app.js` knows nothing deck-specific.
 Adding a deck of an existing shape is an entry in `decks.json` plus a card
 file; a genuinely new shape means a new card type in `src/decks/`.
 
-**Open question, not decided:** the app is still branded "La Cave", which reads
-oddly over a Spanish deck. The deck name shows as the header subtitle. Ask
-before renaming the app.
+**The app is called La Cave. Settled — do not rename it.** It is the app's name,
+not the wine deck's; each deck names itself in the header subtitle, the tab
+title and the footer. The cellar vocabulary that goes with it (flights, tasters,
+the cellar book) is deliberate and stays. Keep app-level *descriptions*
+deck-neutral, though — see "What this is".
 
 **Current focus — Part 2:** wine is the first deck, not the product. The
 destination is a general multi-deck trainer — decks in `data/decks/`, pick one at
