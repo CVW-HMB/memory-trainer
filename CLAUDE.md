@@ -13,6 +13,14 @@ The current app is a single-page static web app (vanilla JS, no framework, no bu
 caps a flight at 20 cards, keeps progress in IndexedDB, and has a tested
 scheduler. The deck is 200 cards.
 
+**Deck chooser landed early (owner request).** `data/decks.json` is the deck
+index and the app opens on a "choose a deck" screen. There is one deck today
+(`wine`, shown as "Wines, Grapes, Regions"). Adding an entry plus its card file
+is enough for a deck of the *same shape*; a differently shaped deck (Spanish
+vocabulary, say) still needs the card-type work in D1/D5, because `facesFor`
+only knows the wine card types. Progress is already keyed
+`srs_v2:<profile>:<deck>`, so decks do not collide.
+
 **Current focus — Part 2:** wine is the first deck, not the product. The
 destination is a general multi-deck trainer — decks in `data/decks/`, pick one at
 launch, and the app presents itself as that deck (Spanish vocabulary, physics,

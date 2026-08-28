@@ -4,7 +4,7 @@
 // Bump CACHE when the shell changes. Stale-while-revalidate means a stale
 // version self-heals on the next load even if this is forgotten, but bumping
 // makes the update immediate.
-const CACHE = "lacave-v12";
+const CACHE = "lacave-v15";
 
 // Relative URLs resolve against this script's location, so the app still works
 // when served from a subpath such as /memory-trainer/.
@@ -14,6 +14,7 @@ const SHELL = [
   "./src/app.js",
   "./src/engine/schedule.js",
   "./src/styles.css",
+  "./data/decks.json",
   "./data/cards.json",
   "./manifest.webmanifest",
   "./icons/icon-192.png",
@@ -104,10 +105,10 @@ self.addEventListener("fetch", e => {
     return;
   }
 
-  // The deck itself is network-first: a stale cards.json is the one staleness a
-  // user actually notices ("it still says 200 cards"). Falls back to cache when
+  // Deck data is network-first: a stale deck is the one staleness a user
+  // actually notices ("it still says 200 cards"). Falls back to cache when
   // offline, so airplane mode is unaffected.
-  if (url.origin === self.location.origin && url.pathname.endsWith("/data/cards.json")) {
+  if (url.origin === self.location.origin && /\/data\/[^/]+\.json$/.test(url.pathname)) {
     e.respondWith((async () => {
       const cache = await caches.open(CACHE);
       try {

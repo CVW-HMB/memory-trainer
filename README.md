@@ -58,8 +58,11 @@ cloning the repo runs step 1 and repeats it.
 
 ## What it does
 
+- Opens on a deck chooser. One deck today: Wines, Grapes, Regions.
 - Two card types (see `CLAUDE.md`): region → grape, and bottle decode (label →
   grape, region, notes).
+- A flight is 35 cards, drawn at random each time and weighted 4:1 toward the
+  cards you keep missing.
 - Every card runs one way: a place or a label on the front, the grape, its
   region and its notes on the back.
 - Miss a card and it comes back later in the same flight. You do not finish a
@@ -81,6 +84,7 @@ cloning the repo runs step 1 and repeats it.
 
 ```
 index.html            app shell
+data/decks.json       deck index (the "choose a deck" screen)
 src/app.js            UI, rendering, storage, wiring
 src/engine/schedule.js  the Leitner scheduler (pure, no DOM)
 src/styles.css        styling

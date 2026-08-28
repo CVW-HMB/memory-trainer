@@ -24,12 +24,22 @@
   <header>
     <div class="brand">
       <h1>La Cave</h1>
-      <small>Wine study, one appellation at a time</small>
+      <small id="deckName">Wine study, one appellation at a time</small>
     </div>
     <div class="streak" id="hdrStreak" role="status" aria-live="polite">
       <b id="streakNum">0</b><span>day streak</span>
     </div>
   </header>
+
+  <!-- DECK CHOOSER (front page) -->
+  <section class="view" id="decks" aria-label="Choose a deck">
+    <p class="home-lead" id="deckLead">Choose a deck.</p>
+    <ul class="decklist" id="deckList"></ul>
+    <p class="pnote">More decks will appear here as they are added.</p>
+    <div class="home-foot">
+      <button class="link" id="deckWhoBtn">Tasting as <b id="deckWho">Me</b></button>
+    </div>
+  </section>
 
   <!-- HOME -->
   <section class="view" id="home" aria-label="Home">
@@ -43,6 +53,7 @@
     <div class="home-foot">
       <button class="link" id="toCellar">Open cellar book</button>
       <button class="link" id="toProfiles">Tasting as <b id="whoName">Me</b></button>
+      <button class="link" id="toDecks">Change deck</button>
     </div>
   </section>
 

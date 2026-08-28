@@ -1,0 +1,8 @@
+[
+  {
+    "id": "wine",
+    "name": "Wines, Grapes, Regions",
+    "subtitle": "Read a label, know the grape and where it is from. France-first.",
+    "file": "./data/cards.json"
+  }
+]

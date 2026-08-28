@@ -44,6 +44,10 @@ counting; every card runs one way (place or label in front, grape/region/notes
 behind) and `grapehome` is retired, taking the deck to 161; per-person profiles;
 and backup/restore to a file. See `local-files/worklog.md`.
 
+**D3 (deck picker) landed early**, on request: `data/decks.json` plus a "choose
+a deck" front page. D1/D2/D5 are still outstanding — a deck of a different
+*shape* needs the card-type registry before it can render.
+
 Part 2 below is now the live roadmap. D1 (extract the deck adapter) is the
 natural first move — and M6 already did half the groundwork by moving the
 scheduler into `src/engine/schedule.js`, so what is left in `src/app.js` is

@@ -9,10 +9,13 @@ import {
 
 // Keys are namespaced by profile and deck, so several people can share a
 // browser and adding decks later needs no further migration.
-const DECK_ID = "wine";
+let DECK_ID = "wine";                         // set when a deck is chosen
+let DECK = null;                              // the chosen deck's manifest entry
+let DECKS = [];
 const PROFILES_KEY = "srs_v2:profiles";       // [{ id, name, created }]
 const ACTIVE_KEY = "srs_v2:active";           // id of the profile in use
-const SHARED_KEY = "srs_v2:" + DECK_ID;       // pre-profile key, adopted by the first profile
+const LAST_DECK_KEY = "srs_v2:lastDeck";
+const SHARED_KEY = "srs_v2:wine";             // pre-profile key, adopted by the first profile
 const LEGACY_KEY = "wine_srs_v1";             // pre-M5 key, migrated on first boot
 const progressKey = (pid) => "srs_v2:" + pid + ":" + DECK_ID;
 let CARDS = [];
@@ -82,16 +85,19 @@ async function probeBackend() {
   return backend;
 }
 
-// Reads a key: IndexedDB first, the localStorage mirror second. Anything found
-// only in the mirror is promoted back into IndexedDB.
+// Reads a key. The in-memory copy comes first because writeKey fills it
+// synchronously while the IndexedDB write is still queued behind the chain: a
+// flight leaves 35 writes draining, so reading IndexedDB straight after one
+// could hand back the previous value. Then IndexedDB, then the localStorage
+// mirror, and anything found only in the mirror is promoted back.
 async function readKey(key) {
+  if (memCache[key] !== undefined) return memCache[key];
   let raw = null;
   if (backend === "idb") { try { raw = await idbGet(key); } catch (e) {} }
   if (!raw) {
     raw = lsGet(key);
     if (raw && backend === "idb") { try { await idbSet(key, raw); } catch (e) {} }
   }
-  if (!raw && memCache[key]) raw = memCache[key];
   return raw;
 }
 
@@ -172,6 +178,11 @@ let runDir = {}, firstPass = {}, cleared = new Set();
 /* ---------------- views ---------------- */
 function show(id) {
   document.querySelectorAll(".view").forEach(v => v.classList.toggle("active", v.id === id));
+  // No deck is loaded on the chooser, so the card count and streak would both
+  // read 0 and mean nothing. Hide them until a deck is picked.
+  const onChooser = id === "decks";
+  document.querySelector(".foot").classList.toggle("hidden", onChooser);
+  $("hdrStreak").classList.toggle("hidden", onChooser);
   window.scrollTo(0, 0);
 }
 const $ = id => document.getElementById(id);
@@ -486,12 +497,19 @@ async function renderProfiles() {
 }
 
 async function switchProfile(id) {
-  if (id === activeId) { renderHome(); show("home"); return; }
+  if (id === activeId) { backFromProfiles(); return; }
   activeId = id;
   writeKey(ACTIVE_KEY, activeId);
-  await adoptActiveProfile();
-  renderHome();
-  show("home");
+  if (CARDS.length) await adoptActiveProfile();
+  else renderProfileChip();
+  backFromProfiles();
+}
+
+// Profiles can be reached from the deck chooser as well as from home, so go
+// back to wherever makes sense rather than always to home.
+function backFromProfiles() {
+  if (CARDS.length) { renderHome(); show("home"); }
+  else { renderDecks(); show("decks"); }
 }
 
 async function addProfile() {
@@ -601,6 +619,8 @@ function wire() {
   $("sumCellar").onclick = () => { renderCellar(); show("cellar"); };
   $("sumHome").onclick = () => { renderHome(); show("home"); };
   $("cellarBack").onclick = () => { renderHome(); show("home"); };
+  $("toDecks").onclick = async () => { await renderDecks(); show("decks"); };
+  $("deckWhoBtn").onclick = () => { renderProfiles(); show("profiles"); };
   $("resetBtn").onclick = async () => {
     const who = activeProfile();
     if (!confirm("Reset every card, streak and stat for " + (who ? who.name : "this taster") + "?")) return;
@@ -608,7 +628,7 @@ function wire() {
     state = freshState(); saveState(state); renderCellar(); renderHome();
   };
   $("toProfiles").onclick = () => { renderProfiles(); show("profiles"); };
-  $("profilesBack").onclick = () => { renderHome(); show("home"); };
+  $("profilesBack").onclick = backFromProfiles;
   $("addProfileBtn").onclick = addProfile;
   $("exportBtn").onclick = exportBackup;
   $("importBtn").onclick = () => $("importFile").click();
@@ -625,26 +645,97 @@ function wire() {
   });
 }
 
+/* ---------------- decks ----------------
+   data/decks.json is the index. Adding a deck is adding an entry plus its card
+   file. Note that only wine-shaped cards render today: a deck of a different
+   shape also needs card-type work (PLAN.md Part 2, D1/D5).               */
+async function loadDecks() {
+  const res = await fetch("./data/decks.json");
+  const list = await res.json();
+  if (!Array.isArray(list) || list.length === 0) throw new Error("decks.json is empty");
+  return list;
+}
+
+async function chooseDeck(id) {
+  const deck = DECKS.find(d => d.id === id) || DECKS[0];
+  try {
+    CARDS = await (await fetch(deck.file)).json();
+  } catch (e) {
+    alert("Could not load that deck.");
+    return;
+  }
+  DECK = deck;
+  DECK_ID = deck.id;
+  BY_ID = Object.fromEntries(CARDS.map(c => [c.id, c]));
+  writeKey(LAST_DECK_KEY, deck.id);
+  $("deckName").textContent = deck.name;
+  $("cardCount").textContent = CARDS.length;
+  // Progress is keyed by deck, so this reloads the right saved state.
+  await adoptActiveProfile();
+  renderHome();
+  show("home");
+}
+
+// Per-deck summary for the chooser, read from storage rather than from the
+// active state, since the point is to show decks you are not currently in.
+async function deckSummary(deck) {
+  const s = parse(await readKey("srs_v2:" + activeId + ":" + deck.id));
+  if (!s || !s.cards) return "not started";
+  const cards = Object.values(s.cards);
+  const mastered = cards.filter(c => c.box >= 5).length;
+  const seen = cards.filter(c => c.seen > 0).length;
+  if (!s.totalSessions) return "not started";
+  return `${s.totalSessions} flight${s.totalSessions === 1 ? "" : "s"} \u00b7 ${mastered} mastered \u00b7 ${seen} seen`;
+}
+
+async function renderDecks() {
+  $("deckWho").textContent = (activeProfile() || {}).name || "Me";
+  const list = $("deckList");
+  list.innerHTML = DECKS.map(d => `
+    <li><button class="deckrow" data-id="${d.id}">
+      <span class="dname"></span><span class="dsub"></span>
+      <span class="dprog" id="dp-${d.id}">&hellip;</span>
+    </button></li>`).join("");
+  // Deck names come from a data file; set them as text, not markup.
+  for (const d of DECKS) {
+    const row = list.querySelector(`.deckrow[data-id="${d.id}"]`);
+    if (!row) continue;
+    row.querySelector(".dname").textContent = d.name;
+    row.querySelector(".dsub").textContent = d.subtitle || "";
+  }
+  for (const d of DECKS) {
+    const el = $("dp-" + d.id);
+    if (el) el.textContent = await deckSummary(d);
+  }
+  list.onclick = (e) => {
+    const b = e.target.closest(".deckrow");
+    if (b) chooseDeck(b.dataset.id);
+  };
+}
+
 /* ---------------- boot ---------------- */
 async function boot() {
   try {
-    const res = await fetch("./data/cards.json");
-    CARDS = await res.json();
+    DECKS = await loadDecks();
   } catch (e) {
-    document.getElementById("homeLead").textContent = "Could not load cards.json. Run this through a local server (see README).";
+    document.getElementById("deckLead").textContent =
+      "Could not load decks.json. Run this through a local server (see README).";
+    show("decks");
     return;
   }
-  BY_ID = Object.fromEntries(CARDS.map(c => [c.id, c]));
   const persistence = await requestPersistence();
   await probeBackend();
   await loadProfiles();
-  await adoptActiveProfile();
   console.info("[store] backend=" + backend + " persistence=" + persistence +
-               " profiles=" + profiles.length);
-  $("cardCount").textContent = CARDS.length;
+               " profiles=" + profiles.length + " decks=" + DECKS.length);
   wire();
-  renderHome();
-  show("home");
+  renderProfileChip();
+  // The deck chooser is the front page. The last deck used is only remembered
+  // so its row can be highlighted, not to skip the screen.
+  const last = await readKey(LAST_DECK_KEY);
+  if (last && DECKS.some(d => d.id === last)) DECK_ID = last;
+  await renderDecks();
+  show("decks");
 }
 
 // Loads the active profile's progress into `state`. Called at boot and on every
