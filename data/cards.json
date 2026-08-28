@@ -1,0 +1,938 @@
+[
+  {
+    "id": "fr-t3-cabernet-sauvignon",
+    "group": "France",
+    "type": "grapehome",
+    "grape": "Cabernet Sauvignon",
+    "home": "Bordeaux, Left Bank (France)",
+    "also": "Napa, Tuscany (Super Tuscans), Chile, Coonawarra"
+  },
+  {
+    "id": "fr-t3-merlot",
+    "group": "France",
+    "type": "grapehome",
+    "grape": "Merlot",
+    "home": "Bordeaux, Right Bank (France)",
+    "also": "California, northern Italy, Chile"
+  },
+  {
+    "id": "fr-t3-cabernet-franc",
+    "group": "France",
+    "type": "grapehome",
+    "grape": "Cabernet Franc",
+    "home": "Loire and Bordeaux blends (France)",
+    "also": "northeast Italy, small plantings worldwide"
+  },
+  {
+    "id": "fr-t3-pinot-noir",
+    "group": "France",
+    "type": "grapehome",
+    "grape": "Pinot Noir",
+    "home": "Burgundy, Cote d'Or (France)",
+    "also": "Oregon, Sonoma, New Zealand, German Spatburgunder"
+  },
+  {
+    "id": "fr-t3-chardonnay",
+    "group": "France",
+    "type": "grapehome",
+    "grape": "Chardonnay",
+    "home": "Burgundy and Champagne (France)",
+    "also": "California, Australia, planted almost everywhere"
+  },
+  {
+    "id": "fr-t3-sauvignon-blanc",
+    "group": "France",
+    "type": "grapehome",
+    "grape": "Sauvignon Blanc",
+    "home": "Loire and Bordeaux (France)",
+    "also": "New Zealand (Marlborough), California"
+  },
+  {
+    "id": "fr-t3-syrah",
+    "group": "France",
+    "type": "grapehome",
+    "grape": "Syrah",
+    "home": "Northern Rhone (France)",
+    "also": "Australia as Shiraz, Washington State"
+  },
+  {
+    "id": "fr-t3-grenache",
+    "group": "France",
+    "type": "grapehome",
+    "grape": "Grenache",
+    "home": "Southern Rhone (France)",
+    "also": "Spain as Garnacha, Australia, Sardinia"
+  },
+  {
+    "id": "fr-t3-gamay",
+    "group": "France",
+    "type": "grapehome",
+    "grape": "Gamay",
+    "home": "Beaujolais (France)",
+    "also": "rarely taken seriously anywhere else"
+  },
+  {
+    "id": "fr-t3-chenin-blanc",
+    "group": "France",
+    "type": "grapehome",
+    "grape": "Chenin Blanc",
+    "home": "Loire (France)",
+    "also": "South Africa, where it is the most-planted grape"
+  },
+  {
+    "id": "fr-t3-viognier",
+    "group": "France",
+    "type": "grapehome",
+    "grape": "Viognier",
+    "home": "Northern Rhone, Condrieu (France)",
+    "also": "California, Australia"
+  },
+  {
+    "id": "fr-t3-malbec",
+    "group": "France",
+    "type": "grapehome",
+    "grape": "Malbec",
+    "home": "Cahors, Southwest France",
+    "also": "Argentina (Mendoza), its modern home"
+  },
+  {
+    "id": "fr-t3-semillon",
+    "group": "France",
+    "type": "grapehome",
+    "grape": "Semillon",
+    "home": "Bordeaux (France)",
+    "also": "Hunter Valley, Australia"
+  },
+  {
+    "id": "fr-t3-mourvedre",
+    "group": "France",
+    "type": "grapehome",
+    "grape": "Mourvedre",
+    "home": "Provence (Bandol) and Southern Rhone",
+    "also": "Spain as Monastrell, Australia as Mataro"
+  },
+  {
+    "id": "fr-t2-pauillac",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Pauillac",
+    "grape": "Cabernet Sauvignon blend",
+    "country": "France",
+    "region": "Bordeaux, Left Bank",
+    "notes": "cassis, cedar, graphite, firm tannin"
+  },
+  {
+    "id": "fr-t2-margaux",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Margaux",
+    "grape": "Cabernet Sauvignon blend",
+    "country": "France",
+    "region": "Bordeaux, Left Bank",
+    "notes": "perfumed, violet, silky and elegant"
+  },
+  {
+    "id": "fr-t2-saint-julien",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Saint-Julien",
+    "grape": "Cabernet Sauvignon blend",
+    "country": "France",
+    "region": "Bordeaux, Left Bank",
+    "notes": "balanced, cedar, cassis, polished"
+  },
+  {
+    "id": "fr-t2-saint-estephe",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Saint-Estephe",
+    "grape": "Cabernet Sauvignon blend",
+    "country": "France",
+    "region": "Bordeaux, Left Bank",
+    "notes": "firm, earthy, sturdy, tannic"
+  },
+  {
+    "id": "fr-t2-saint-emilion",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Saint-Emilion",
+    "grape": "Merlot with Cabernet Franc",
+    "country": "France",
+    "region": "Bordeaux, Right Bank",
+    "notes": "plush plum, supple, warm"
+  },
+  {
+    "id": "fr-t2-pomerol",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Pomerol",
+    "grape": "Merlot",
+    "country": "France",
+    "region": "Bordeaux, Right Bank",
+    "notes": "rich, velvety, iron, dark fruit"
+  },
+  {
+    "id": "fr-t2-pessac-leognan",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Pessac-Leognan",
+    "grape": "Cabernet/Merlot; Sauvignon/Semillon",
+    "country": "France",
+    "region": "Bordeaux, Graves",
+    "notes": "gravelly smoky reds, oaked whites"
+  },
+  {
+    "id": "fr-t2-sauternes",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Sauternes",
+    "grape": "Semillon, botrytis",
+    "country": "France",
+    "region": "Bordeaux",
+    "notes": "honey, apricot, saffron, lusciously sweet"
+  },
+  {
+    "id": "fr-t2-chablis",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Chablis",
+    "grape": "Chardonnay",
+    "country": "France",
+    "region": "Burgundy, far north",
+    "notes": "lean, unoaked, oyster shell, citrus"
+  },
+  {
+    "id": "fr-t2-meursault",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Meursault",
+    "grape": "Chardonnay",
+    "country": "France",
+    "region": "Burgundy, Cote de Beaune",
+    "notes": "hazelnut, butter, oatmeal, oak"
+  },
+  {
+    "id": "fr-t2-puligny-montrachet",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Puligny-Montrachet",
+    "grape": "Chardonnay",
+    "country": "France",
+    "region": "Burgundy, Cote de Beaune",
+    "notes": "precise, white flower, mineral"
+  },
+  {
+    "id": "fr-t2-pouilly-fuisse",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Pouilly-Fuisse",
+    "grape": "Chardonnay",
+    "country": "France",
+    "region": "Burgundy, Maconnais",
+    "notes": "ripe, rounded, gentle oak"
+  },
+  {
+    "id": "fr-t2-gevrey-chambertin",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Gevrey-Chambertin",
+    "grape": "Pinot Noir",
+    "country": "France",
+    "region": "Burgundy, Cote de Nuits",
+    "notes": "dark cherry, muscular, structured"
+  },
+  {
+    "id": "fr-t2-vosne-romanee",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Vosne-Romanee",
+    "grape": "Pinot Noir",
+    "country": "France",
+    "region": "Burgundy, Cote de Nuits",
+    "notes": "spice, silk, exalted perfume"
+  },
+  {
+    "id": "fr-t2-pommard",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Pommard",
+    "grape": "Pinot Noir",
+    "country": "France",
+    "region": "Burgundy, Cote de Beaune",
+    "notes": "firm, sturdy, red plum, earthy"
+  },
+  {
+    "id": "fr-t2-morgon",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Morgon",
+    "grape": "Gamay",
+    "country": "France",
+    "region": "Beaujolais (cru)",
+    "notes": "cherry, earthy, ages surprisingly well"
+  },
+  {
+    "id": "fr-t2-champagne",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Champagne",
+    "grape": "Chardonnay, Pinot Noir, Meunier",
+    "country": "France",
+    "region": "Champagne",
+    "notes": "brioche, green apple, chalk, fine mousse"
+  },
+  {
+    "id": "fr-t2-cremant",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Cremant",
+    "grape": "traditional-method blend",
+    "country": "France",
+    "region": "Alsace, Loire or Burgundy",
+    "notes": "apple, biscuit, value sparkling"
+  },
+  {
+    "id": "fr-t2-sancerre",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Sancerre",
+    "grape": "Sauvignon Blanc",
+    "country": "France",
+    "region": "Loire, upper river",
+    "notes": "flint, gooseberry, nettle, high acid"
+  },
+  {
+    "id": "fr-t2-pouilly-fume",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Pouilly-Fume",
+    "grape": "Sauvignon Blanc",
+    "country": "France",
+    "region": "Loire, upper river",
+    "notes": "smoky, mineral, citrus"
+  },
+  {
+    "id": "fr-t2-vouvray",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Vouvray",
+    "grape": "Chenin Blanc",
+    "country": "France",
+    "region": "Loire, Touraine",
+    "notes": "quince, honey, dry through sweet"
+  },
+  {
+    "id": "fr-t2-chinon",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Chinon",
+    "grape": "Cabernet Franc",
+    "country": "France",
+    "region": "Loire, Touraine",
+    "notes": "red currant, graphite, leafy"
+  },
+  {
+    "id": "fr-t2-muscadet",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Muscadet",
+    "grape": "Melon de Bourgogne",
+    "country": "France",
+    "region": "Loire, Atlantic coast",
+    "notes": "saline, lean, lees, seashell"
+  },
+  {
+    "id": "fr-t2-cote-rotie",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Cote-Rotie",
+    "grape": "Syrah with a little Viognier",
+    "country": "France",
+    "region": "Northern Rhone",
+    "notes": "olive, black pepper, perfumed"
+  },
+  {
+    "id": "fr-t2-hermitage",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Hermitage",
+    "grape": "Syrah",
+    "country": "France",
+    "region": "Northern Rhone",
+    "notes": "powerful, tar, smoked meat, age-worthy"
+  },
+  {
+    "id": "fr-t2-crozes-hermitage",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Crozes-Hermitage",
+    "grape": "Syrah",
+    "country": "France",
+    "region": "Northern Rhone",
+    "notes": "peppery, red fruit, everyday value"
+  },
+  {
+    "id": "fr-t2-condrieu",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Condrieu",
+    "grape": "Viognier",
+    "country": "France",
+    "region": "Northern Rhone",
+    "notes": "apricot, honeysuckle, full and floral"
+  },
+  {
+    "id": "fr-t2-chateauneuf-du-pape",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Chateauneuf-du-Pape",
+    "grape": "Grenache-based GSM",
+    "country": "France",
+    "region": "Southern Rhone",
+    "notes": "kirsch, garrigue, warm spice"
+  },
+  {
+    "id": "fr-t2-gigondas",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Gigondas",
+    "grape": "Grenache-based GSM",
+    "country": "France",
+    "region": "Southern Rhone",
+    "notes": "robust, peppery, dark berry"
+  },
+  {
+    "id": "fr-t2-alsace-riesling",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Alsace Riesling",
+    "grape": "Riesling",
+    "country": "France",
+    "region": "Alsace",
+    "notes": "dry, lime, petrol, racy acid"
+  },
+  {
+    "id": "fr-t2-alsace-gewurztraminer",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Alsace Gewurztraminer",
+    "grape": "Gewurztraminer",
+    "country": "France",
+    "region": "Alsace",
+    "notes": "lychee, rose, exotic spice"
+  },
+  {
+    "id": "fr-t2-alsace-pinot-gris",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Alsace Pinot Gris",
+    "grape": "Pinot Gris",
+    "country": "France",
+    "region": "Alsace",
+    "notes": "smoky, honeyed, rich texture"
+  },
+  {
+    "id": "fr-t2-cotes-de-provence-rose",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Cotes de Provence Rose",
+    "grape": "Grenache and Cinsault",
+    "country": "France",
+    "region": "Provence",
+    "notes": "pale, dry, strawberry, crisp"
+  },
+  {
+    "id": "fr-t2-bandol",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Bandol",
+    "grape": "Mourvedre",
+    "country": "France",
+    "region": "Provence",
+    "notes": "leather, blackberry, game, tannic"
+  },
+  {
+    "id": "fr-t2-picpoul-de-pinet",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Picpoul de Pinet",
+    "grape": "Picpoul",
+    "country": "France",
+    "region": "Languedoc",
+    "notes": "zesty, lemon, seaside white"
+  },
+  {
+    "id": "fr-t2-cahors",
+    "group": "France",
+    "type": "decode",
+    "appellation": "Cahors",
+    "grape": "Malbec",
+    "country": "France",
+    "region": "Southwest France",
+    "notes": "inky, black plum, rustic tannin"
+  },
+  {
+    "id": "fr-t1-cabernet-sauvignon-bordeaux-left-bank-gravel-soils",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Cabernet Sauvignon",
+    "country": "France",
+    "region": "Bordeaux, Left Bank (gravel soils)",
+    "notes": "cassis, cedar, graphite, firm tannin"
+  },
+  {
+    "id": "fr-t1-merlot-bordeaux-right-bank-clay-soils",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Merlot",
+    "country": "France",
+    "region": "Bordeaux, Right Bank (clay soils)",
+    "notes": "plush plum, cocoa, supple"
+  },
+  {
+    "id": "fr-t1-sauvignon-blanc-loire-upper-river",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Sauvignon Blanc",
+    "country": "France",
+    "region": "Loire, upper river",
+    "notes": "flint, gooseberry, nettle, high acid"
+  },
+  {
+    "id": "fr-t1-chenin-blanc-loire-touraine",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Chenin Blanc",
+    "country": "France",
+    "region": "Loire, Touraine",
+    "notes": "quince, wet wool, honey, high acid"
+  },
+  {
+    "id": "fr-t1-cabernet-franc-loire-touraine-reds",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Cabernet Franc",
+    "country": "France",
+    "region": "Loire, Touraine (reds)",
+    "notes": "red currant, pencil shaving, leaf"
+  },
+  {
+    "id": "fr-t1-melon-de-bourgogne-loire-atlantic-coast",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Melon de Bourgogne",
+    "country": "France",
+    "region": "Loire, Atlantic coast",
+    "notes": "saline, green apple, lees"
+  },
+  {
+    "id": "fr-t1-chardonnay-burgundy-far-north-chablis",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Chardonnay",
+    "country": "France",
+    "region": "Burgundy, far north (Chablis)",
+    "notes": "lean, oyster shell, lemon, no oak"
+  },
+  {
+    "id": "fr-t1-chardonnay-burgundy-cote-de-beaune",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Chardonnay",
+    "country": "France",
+    "region": "Burgundy, Cote de Beaune",
+    "notes": "hazelnut, butter, toast, oak"
+  },
+  {
+    "id": "fr-t1-pinot-noir-burgundy-cote-d-or",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Pinot Noir",
+    "country": "France",
+    "region": "Burgundy, Cote d'Or",
+    "notes": "red cherry, rose, forest floor, silky"
+  },
+  {
+    "id": "fr-t1-gamay-beaujolais",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Gamay",
+    "country": "France",
+    "region": "Beaujolais",
+    "notes": "cherry, banana, violet, light tannin"
+  },
+  {
+    "id": "fr-t1-syrah-northern-rhone",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Syrah",
+    "country": "France",
+    "region": "Northern Rhone",
+    "notes": "black pepper, smoked meat, violet"
+  },
+  {
+    "id": "fr-t1-viognier-northern-rhone",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Viognier",
+    "country": "France",
+    "region": "Northern Rhone",
+    "notes": "apricot, peach, honeysuckle, full"
+  },
+  {
+    "id": "fr-t1-grenache-southern-rhone",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Grenache",
+    "country": "France",
+    "region": "Southern Rhone",
+    "notes": "kirsch, dried herb, warm spice"
+  },
+  {
+    "id": "fr-t1-riesling-alsace",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Riesling",
+    "country": "France",
+    "region": "Alsace",
+    "notes": "lime, petrol, racy, bone dry"
+  },
+  {
+    "id": "fr-t1-gewurztraminer-alsace",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Gewurztraminer",
+    "country": "France",
+    "region": "Alsace",
+    "notes": "lychee, rose petal, exotic spice"
+  },
+  {
+    "id": "fr-t1-pinot-gris-alsace",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Pinot Gris",
+    "country": "France",
+    "region": "Alsace",
+    "notes": "smoky, honeyed, rich texture"
+  },
+  {
+    "id": "fr-t1-mourvedre-provence-bandol",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Mourvedre",
+    "country": "France",
+    "region": "Provence, Bandol",
+    "notes": "leather, blackberry, game, tannic"
+  },
+  {
+    "id": "fr-t1-malbec-southwest-cahors",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Malbec",
+    "country": "France",
+    "region": "Southwest, Cahors",
+    "notes": "inky, black plum, rustic"
+  },
+  {
+    "id": "fr-t1-semillon-bordeaux-sauternes",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Semillon",
+    "country": "France",
+    "region": "Bordeaux, Sauternes",
+    "notes": "honey, apricot, botrytis, sweet"
+  },
+  {
+    "id": "fr-t1-grenache-and-cinsault-provence",
+    "group": "France",
+    "type": "place2grape",
+    "grape": "Grenache and Cinsault",
+    "country": "France",
+    "region": "Provence",
+    "notes": "pale rose, strawberry, dry, crisp"
+  },
+  {
+    "id": "it-t3-sangiovese",
+    "group": "Italy",
+    "type": "grapehome",
+    "grape": "Sangiovese",
+    "home": "Tuscany (Chianti, Brunello)",
+    "also": "also Romagna in central Italy"
+  },
+  {
+    "id": "it-t3-nebbiolo",
+    "group": "Italy",
+    "type": "grapehome",
+    "grape": "Nebbiolo",
+    "home": "Piedmont (Barolo, Barbaresco)",
+    "also": "rarely successful outside Piedmont"
+  },
+  {
+    "id": "it-t3-pinot-grigio",
+    "group": "Italy",
+    "type": "grapehome",
+    "grape": "Pinot Grigio",
+    "home": "Northeast Italy (Friuli, Alto Adige)",
+    "also": "France's Pinot Gris is the same grape"
+  },
+  {
+    "id": "it-t3-barbera",
+    "group": "Italy",
+    "type": "grapehome",
+    "grape": "Barbera",
+    "home": "Piedmont",
+    "also": "small plantings in California and Argentina"
+  },
+  {
+    "id": "it-t2-chianti-classico",
+    "group": "Italy",
+    "type": "decode",
+    "appellation": "Chianti Classico",
+    "grape": "Sangiovese",
+    "country": "Italy",
+    "region": "Tuscany",
+    "notes": "tart cherry, dried herb, high acid"
+  },
+  {
+    "id": "it-t2-brunello-di-montalcino",
+    "group": "Italy",
+    "type": "decode",
+    "appellation": "Brunello di Montalcino",
+    "grape": "Sangiovese",
+    "country": "Italy",
+    "region": "Tuscany",
+    "notes": "powerful, leather, plum, age-worthy"
+  },
+  {
+    "id": "it-t2-barolo",
+    "group": "Italy",
+    "type": "decode",
+    "appellation": "Barolo",
+    "grape": "Nebbiolo",
+    "country": "Italy",
+    "region": "Piedmont",
+    "notes": "tar, rose, dried cherry, huge tannin"
+  },
+  {
+    "id": "it-t2-barbaresco",
+    "group": "Italy",
+    "type": "decode",
+    "appellation": "Barbaresco",
+    "grape": "Nebbiolo",
+    "country": "Italy",
+    "region": "Piedmont",
+    "notes": "perfumed, elegant, firm tannin"
+  },
+  {
+    "id": "it-t2-barbera-d-alba",
+    "group": "Italy",
+    "type": "decode",
+    "appellation": "Barbera d'Alba",
+    "grape": "Barbera",
+    "country": "Italy",
+    "region": "Piedmont",
+    "notes": "juicy, sour cherry, high acid, low tannin"
+  },
+  {
+    "id": "it-t2-amarone-della-valpolicella",
+    "group": "Italy",
+    "type": "decode",
+    "appellation": "Amarone della Valpolicella",
+    "grape": "Corvina, dried grapes",
+    "country": "Italy",
+    "region": "Veneto",
+    "notes": "raisin, fig, cherry, high alcohol"
+  },
+  {
+    "id": "it-t2-prosecco",
+    "group": "Italy",
+    "type": "decode",
+    "appellation": "Prosecco",
+    "grape": "Glera",
+    "country": "Italy",
+    "region": "Veneto",
+    "notes": "pear, white flower, frothy, off-dry"
+  },
+  {
+    "id": "it-t2-moscato-d-asti",
+    "group": "Italy",
+    "type": "decode",
+    "appellation": "Moscato d'Asti",
+    "grape": "Moscato",
+    "country": "Italy",
+    "region": "Piedmont",
+    "notes": "sweet, grapey, low alcohol, gently fizzy"
+  },
+  {
+    "id": "it-t2-montepulciano-d-abruzzo",
+    "group": "Italy",
+    "type": "decode",
+    "appellation": "Montepulciano d'Abruzzo",
+    "grape": "Montepulciano (the grape)",
+    "country": "Italy",
+    "region": "Abruzzo",
+    "notes": "juicy, black cherry, soft; NOT the Tuscan town",
+    "trap": true
+  },
+  {
+    "id": "it-t2-vino-nobile-di-montepulciano",
+    "group": "Italy",
+    "type": "decode",
+    "appellation": "Vino Nobile di Montepulciano",
+    "grape": "Sangiovese",
+    "country": "Italy",
+    "region": "Tuscany",
+    "notes": "a town in Tuscany, NOT the Montepulciano grape",
+    "trap": true
+  },
+  {
+    "id": "it-t1-sangiovese-tuscany",
+    "group": "Italy",
+    "type": "place2grape",
+    "grape": "Sangiovese",
+    "country": "Italy",
+    "region": "Tuscany",
+    "notes": "tart cherry, dried herb, tomato leaf, high acid"
+  },
+  {
+    "id": "it-t1-nebbiolo-piedmont",
+    "group": "Italy",
+    "type": "place2grape",
+    "grape": "Nebbiolo",
+    "country": "Italy",
+    "region": "Piedmont",
+    "notes": "tar, rose, dried cherry, huge tannin and acid"
+  },
+  {
+    "id": "it-t1-corvina-veneto-dried-grape-amarone",
+    "group": "Italy",
+    "type": "place2grape",
+    "grape": "Corvina",
+    "country": "Italy",
+    "region": "Veneto (dried-grape Amarone)",
+    "notes": "raisin, fig, cherry, high alcohol"
+  },
+  {
+    "id": "it-t1-pinot-grigio-friuli-alto-adige",
+    "group": "Italy",
+    "type": "place2grape",
+    "grape": "Pinot Grigio",
+    "country": "Italy",
+    "region": "Friuli / Alto Adige",
+    "notes": "pear, green apple, light and crisp"
+  },
+  {
+    "id": "rw-t3-tempranillo",
+    "group": "Rest",
+    "type": "grapehome",
+    "grape": "Tempranillo",
+    "home": "Rioja and Ribera del Duero (Spain)",
+    "also": "Portugal, where it is called Tinta Roriz"
+  },
+  {
+    "id": "rw-t3-riesling",
+    "group": "Rest",
+    "type": "grapehome",
+    "grape": "Riesling",
+    "home": "Germany (Mosel, Rheingau) and Alsace",
+    "also": "Austria, Australia (Clare and Eden), Washington"
+  },
+  {
+    "id": "rw-t3-albarino",
+    "group": "Rest",
+    "type": "grapehome",
+    "grape": "Albarino",
+    "home": "Rias Baixas (Spain, Galicia)",
+    "also": "Portugal as Alvarinho in Vinho Verde"
+  },
+  {
+    "id": "rw-t2-rioja",
+    "group": "Rest",
+    "type": "decode",
+    "appellation": "Rioja",
+    "grape": "Tempranillo",
+    "country": "Spain",
+    "region": "Rioja",
+    "notes": "dried strawberry, vanilla, dill oak, leather"
+  },
+  {
+    "id": "rw-t2-ribera-del-duero",
+    "group": "Rest",
+    "type": "decode",
+    "appellation": "Ribera del Duero",
+    "grape": "Tempranillo",
+    "country": "Spain",
+    "region": "Castilla y Leon",
+    "notes": "darker, structured, black plum"
+  },
+  {
+    "id": "rw-t2-rias-baixas",
+    "group": "Rest",
+    "type": "decode",
+    "appellation": "Rias Baixas",
+    "grape": "Albarino",
+    "country": "Spain",
+    "region": "Galicia",
+    "notes": "saline, peach, citrus, crisp"
+  },
+  {
+    "id": "rw-t2-mosel-riesling",
+    "group": "Rest",
+    "type": "decode",
+    "appellation": "Mosel Riesling",
+    "grape": "Riesling",
+    "country": "Germany",
+    "region": "Mosel",
+    "notes": "off-dry, lime, green apple, slate, low alcohol"
+  },
+  {
+    "id": "rw-t2-napa-valley-cabernet",
+    "group": "Rest",
+    "type": "decode",
+    "appellation": "Napa Valley Cabernet",
+    "grape": "Cabernet Sauvignon",
+    "country": "USA",
+    "region": "Napa, California",
+    "notes": "ripe, bold cassis, sweet oak"
+  },
+  {
+    "id": "rw-t2-marlborough-sauvignon-blanc",
+    "group": "Rest",
+    "type": "decode",
+    "appellation": "Marlborough Sauvignon Blanc",
+    "grape": "Sauvignon Blanc",
+    "country": "New Zealand",
+    "region": "Marlborough",
+    "notes": "passionfruit, grass, zesty and pungent"
+  },
+  {
+    "id": "rw-t2-mendoza-malbec",
+    "group": "Rest",
+    "type": "decode",
+    "appellation": "Mendoza Malbec",
+    "grape": "Malbec",
+    "country": "Argentina",
+    "region": "Mendoza",
+    "notes": "plush blackberry, violet, soft"
+  },
+  {
+    "id": "rw-t2-barossa-shiraz",
+    "group": "Rest",
+    "type": "decode",
+    "appellation": "Barossa Shiraz",
+    "grape": "Shiraz (Syrah)",
+    "country": "Australia",
+    "region": "Barossa Valley",
+    "notes": "jammy, bold, sweet spice, full"
+  },
+  {
+    "id": "rw-t2-port",
+    "group": "Rest",
+    "type": "decode",
+    "appellation": "Port",
+    "grape": "Touriga Nacional blend",
+    "country": "Portugal",
+    "region": "Douro",
+    "notes": "fortified, sweet, dark, spirity"
+  }
+]

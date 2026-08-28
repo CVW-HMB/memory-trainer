@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Cave - wine trainer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <h1>La Cave</h1>
+      <small>Wine study, one appellation at a time</small>
+    </div>
+    <div class="streak" id="hdrStreak" role="status" aria-live="polite">
+      <b id="streakNum">0</b><span>day streak</span>
+    </div>
+  </header>
+
+  <!-- HOME -->
+  <section class="view" id="home" aria-label="Home">
+    <p class="home-lead" id="homeLead">Loading&hellip;</p>
+    <div class="stat-row">
+      <div class="stat"><b id="hDue">0</b><span>Due today</span></div>
+      <div class="stat"><b id="hMastered">0</b><span>Mastered</span></div>
+      <div class="stat"><b id="hSeen">0</b><span>Learned</span></div>
+    </div>
+    <button class="btn-primary" id="startBtn">Begin today&rsquo;s flight</button>
+    <div class="home-foot"><button class="link" id="toCellar">Open cellar book</button></div>
+  </section>
+
+  <!-- SESSION -->
+  <section class="view" id="session" aria-label="Practice">
+    <div class="prog">
+      <button class="exit" id="exitBtn" aria-label="End flight">End flight</button>
+      <div class="prog-track"><div class="prog-fill" id="progFill"></div></div>
+      <div class="prog-num" id="progNum">0 / 0</div>
+    </div>
+    <div class="stage">
+      <div class="card" id="card" role="button" tabindex="0" aria-label="Flash card, activate to reveal answer">
+        <div class="face front">
+          <span class="corner c-tl"></span><span class="corner c-tr"></span>
+          <span class="corner c-bl"></span><span class="corner c-br"></span>
+          <div class="kind" id="fKind"></div>
+          <div class="face-body">
+            <div class="name hidden" id="fBig"></div>
+            <div class="detail hidden" id="fDetail">
+              <div class="d-lead" id="fLead"></div>
+              <div class="d-context" id="fContext"></div>
+              <div class="d-notes" id="fNotes"></div>
+            </div>
+            <div class="ask" id="fAsk"></div>
+          </div>
+        </div>
+        <div class="face back">
+          <span class="corner c-tl"></span><span class="corner c-tr"></span>
+          <span class="corner c-bl"></span><span class="corner c-br"></span>
+          <div class="kind" id="bKind"></div>
+          <div class="face-body">
+            <div class="name hidden" id="bBig"></div>
+            <div class="detail hidden" id="bDetail">
+              <div class="d-lead" id="bLead"></div>
+              <div class="d-context" id="bContext"></div>
+              <div class="d-notes" id="bNotes"></div>
+            </div>
+            <div class="ask" id="bAsk"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="btn-flip" id="flipBtn">Reveal<span class="hint">space</span></button>
+      <button class="rate miss hidden" id="missBtn">Missed it<span class="k">1 &nbsp;/&nbsp; &larr;</span></button>
+      <button class="rate got hidden" id="gotBtn">Got it<span class="k">2 &nbsp;/&nbsp; &rarr;</span></button>
+    </div>
+  </section>
+
+  <!-- SUMMARY -->
+  <section class="view" id="summary" aria-label="Flight summary">
+    <div class="big" id="sumHead">Flight complete</div>
+    <div class="sum-stats">
+      <div class="stat"><b id="sGot">0</b><span>Got it</span></div>
+      <div class="stat"><b id="sMiss">0</b><span>Missed</span></div>
+      <div class="stat"><b id="sAcc">0%</b><span>Accuracy</span></div>
+    </div>
+    <div class="revisit" id="revisitBox">
+      <h4>Revisit soon</h4>
+      <ul id="revisitList"></ul>
+    </div>
+    <div class="sum-actions">
+      <button class="btn-primary" id="againBtn">Another flight</button>
+      <button class="link" id="sumCellar">Cellar book</button>
+      <button class="link" id="sumHome">Back to start</button>
+    </div>
+  </section>
+
+  <!-- CELLAR -->
+  <section class="view" id="cellar" aria-label="Cellar book">
+    <button class="back-link" id="cellarBack">&larr; Back</button>
+    <h2 class="cellar-title">Cellar book</h2>
+    <div class="metrics">
+      <div class="metric"><b id="mStreak">0</b><span>Streak</span></div>
+      <div class="metric"><b id="mBest">0</b><span>Best</span></div>
+      <div class="metric"><b id="mFlights">0</b><span>Flights</span></div>
+      <div class="metric"><b id="mMastery">0%</b><span>Mastery</span></div>
+    </div>
+    <div class="block"><h3>Where you stand</h3><div id="statusBars"></div></div>
+    <div class="block"><h3>By region</h3><div id="regionBars"></div></div>
+    <div class="block"><h3>Hardest for you</h3><ul class="struggle" id="struggleList"></ul></div>
+    <button class="reset" id="resetBtn">Reset all progress</button>
+  </section>
+
+  <div class="foot"><span id="cardCount">0</span> cards &middot; French focus, then Tuscany, then the world</div>
+</div>
+<script type="module" src="./src/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+[project]
+name = "wine-trainer-cards"
+version = "0.1.0"
+description = "Card-content generator for the wine trainer. Builds data/cards.json."
+requires-python = ">=3.14"
+dependencies = []
+
+[dependency-groups]
+dev = []
+
+[tool.uv]
+# Nothing here is importable as a library; scripts/ is run directly.
+package = false
