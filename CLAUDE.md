@@ -8,20 +8,26 @@ A wine flashcard trainer. The learning goal is real-world: walk into a restauran
 
 The current app is a single-page static web app (vanilla JS, no framework, no build step). It is intentionally small so it is easy to extend. Progress persists in `localStorage`.
 
-**Current focus — MVP:** finish the wine app. One deck, done properly: deployed,
-phone-ready, offline, durable progress. `PLAN.md` **Part 1** is the only work in
-scope right now. Do not build deck abstraction, a deck picker, generic card types,
-or an importer until Part 1 ships.
+**The MVP has shipped.** `PLAN.md` Part 1 (M1–M7) is complete: the app is live at
+<https://cvw-hmb.github.io/memory-trainer/>, installs as a PWA, runs offline,
+caps a flight at 20 cards, keeps progress in IndexedDB, and has a tested
+scheduler. The deck is 200 cards.
 
-**Where this eventually goes:** wine is the first deck, not the product. The
+**Current focus — Part 2:** wine is the first deck, not the product. The
 destination is a general multi-deck trainer — decks in `data/decks/`, pick one at
 launch, and the app presents itself as that deck (Spanish vocabulary, physics,
-wine), with identical scheduling and mastery measurement across decks. That is
-`PLAN.md` **Part 2**, deliberately deferred.
+wine), with identical scheduling and mastery measurement across decks. Start with
+**D1**, extracting the deck adapter; M6 already moved the scheduler into
+`src/engine/schedule.js`, so what remains wine-coupled in `src/app.js` is just
+`reversible`, `cardLabel`, `cardHint` and `facesFor`.
 
 **`PLAN.md` is the roadmap — read it before starting feature work and keep it
-updated as work lands.** The one concession Part 1 makes to Part 2 is namespacing
-the storage key (M5); otherwise build for one deck.
+updated as work lands.** Storage is already deck-namespaced (`srs_v2:wine`), so
+D4 does not need a second migration.
+
+**Note on the repo name:** the repo is `memory-trainer` (public, so GitHub Pages
+serves it on the free plan). The app is still "La Cave", the wine trainer. Do not
+rename the app as part of Part 2 unless asked.
 
 The wine-specific rules below (one determinate answer per prompt, declared
 reversibility, stable ids) are not wine-specific in spirit. They apply to every deck.

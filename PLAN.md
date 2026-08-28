@@ -24,11 +24,23 @@ Part 2 is written down so the MVP does not paint itself into a corner, but it is
 
 ---
 
-# Part 1 — MVP: the finished wine app
+# Part 1 — MVP: the finished wine app — **SHIPPED**
 
 Goal: open it on your phone, train daily, offline, with progress that survives.
 One deck. Done when you would actually use it every day without wishing for
 anything.
+
+**All of M1–M7 have landed.** Live at <https://cvw-hmb.github.io/memory-trainer/>.
+The repo was renamed `memory-trainer` and made public so Pages could serve it on
+the free plan; the app is still the wine trainer. The deck is 200 cards
+(France 140 / Italy 36 / Rest 24), a flight is 20 cards, progress lives in
+IndexedDB under `srs_v2:wine`, the app installs and runs offline, and the
+scheduler is covered by 29 tests (`npm test`).
+
+Part 2 below is now the live roadmap. D1 (extract the deck adapter) is the
+natural first move — and M6 already did half the groundwork by moving the
+scheduler into `src/engine/schedule.js`, so what is left in `src/app.js` is
+genuinely just the wine rendering.
 
 ## What is already good
 
@@ -37,11 +49,11 @@ Do not rebuild these. The engine is sound:
 - The Leitner scheduler (`buildQueue`, `answer`) — boxes, intervals, weak-first
   ordering with jitter, no within-run repeats, random direction per run.
 - Streaks and per-region stats, the cellar book, the end-of-session summary.
-- 100 cards, validated, correctly weighted (France 70 / Italy 18 / Rest 12).
+- 200 cards, validated, correctly weighted (France 140 / Italy 36 / Rest 24).
 - `index.html` already sets `viewport-fit=cover`, so safe-area work has a base.
 - `freshState` pre-populates every card, so no missing-state crashes.
 
-## M1 — Deploy to GitHub Pages
+## M1 — Deploy to GitHub Pages ✅
 Do this **first**. Every other MVP item needs to be tested on a real phone, and
 that is painful until there is a URL.
 
@@ -53,7 +65,7 @@ that is painful until there is a URL.
   `local-files/` is ignored, so going public is low-risk.
 - Done when: the live URL loads on a phone and a session can be completed.
 
-## M2 — Cap the session length
+## M2 — Cap the session length ✅
 **This is the biggest gap in the app today.** `buildQueue` returns every due
 card, and every unseen card counts as due — so **the first flight is all 100
 cards**, and flights stay long afterward because box-1 cards are due every
@@ -70,14 +82,14 @@ most likely to stop you using it.
 - Done when: a first-run session is ~20 cards, and the deck is still fully
   learnable over repeated days.
 
-## M3 — Touch and small-screen pass
+## M3 — Touch and small-screen pass ✅
 - Thumb-reachable rating buttons; large tap targets.
 - Safe-area insets (notch, home indicator); no accidental zoom on double-tap.
 - Handle iOS dynamic viewport height properly (`dvh`, not `100vh`).
 - Keep the keyboard shortcuts for laptop use.
 - Done when: a full session on a phone needs no pinching or precision taps.
 
-## M4 — PWA: installable and offline
+## M4 — PWA: installable and offline ✅
 - `manifest.webmanifest`: name, `display: standalone`, theme `#241016`.
 - **App icons** — real image files at the required sizes, plus
   `apple-touch-icon`. This is a genuine task, not a line of config.
@@ -87,7 +99,7 @@ most likely to stop you using it.
   eviction.
 - Done when: it installs to an iPhone home screen and runs in airplane mode.
 
-## M5 — Storage hardening
+## M5 — Storage hardening ✅
 - Move progress from `localStorage` to IndexedDB; call
   `navigator.storage.persist()`; migrate existing `wine_srs_v1` data.
 - **Namespace the key now** — store under a deck-scoped key (`srs_v2:wine`)
@@ -96,7 +108,7 @@ most likely to stop you using it.
   plan, and it is worth it.
 - Done when: progress survives reload, reinstall, and a week of not opening it.
 
-## M6 — Lock the scheduler with tests
+## M6 — Lock the scheduler with tests ✅
 There are no tests. The scheduler *is* the product — "if mastery numbers move,
 that's a bug" is unenforceable without something to catch it.
 
@@ -106,8 +118,10 @@ that's a bug" is unenforceable without something to catch it.
 - Add `npm test`; keep it fast.
 - Done when: refactoring the scheduler without changing behavior is safe.
 
-## M7 — Finish the edges
-- A "reset progress" path (currently impossible without devtools).
+## M7 — Finish the edges ✅
+- ~~A "reset progress" path (currently impossible without devtools).~~ This was
+  wrong: the cellar book has had a working reset button all along. It now also
+  clears IndexedDB and the legacy key.
 - Empty and edge states: nothing due, everything mastered, first ever run.
 - Content pass toward ~200 cards, still France-first.
 - Optional, only if it still feels unfinished: a "learn" pass that introduces a
