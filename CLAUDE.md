@@ -12,12 +12,12 @@ the footer. Keep app-level copy deck-neutral; wine belongs in the wine deck.
 
 The first deck was wine, and it still sets the tone. The learning goal is real-world: walk into a restaurant, see a bottle, and know the grape and where it is from. The deck teaches that in the order a beginner actually needs it: first **what grape grows in what region**, then **how to decode a label**. Content is deliberately weighted: about 70% France, then Tuscany-led Italy, then the internationally popular wines you see on US lists. Obscure bottles are intentionally excluded.
 
-The current app is a single-page static web app (vanilla JS, no framework, no build step). It is intentionally small so it is easy to extend. Progress persists in `localStorage`.
+The app is a single-page static web app (vanilla JS, no framework, no build step). It is intentionally small so it is easy to extend. Progress persists in IndexedDB — see **Storage** below.
 
 **The MVP has shipped.** `PLAN.md` Part 1 (M1–M7) is complete: the app is live at
 <https://cvw-hmb.github.io/memory-trainer/>, installs as a PWA, runs offline,
-caps a flight at 20 cards, keeps progress in IndexedDB, and has a tested
-scheduler. The deck is 200 cards.
+caps a flight at 35 cards, keeps progress in IndexedDB, and has a tested
+scheduler (`npm test`).
 
 **Two decks now.** `data/decks.json` is the index and the app opens on a
 "choose a deck" screen:
@@ -41,31 +41,26 @@ title and the footer. The cellar vocabulary that goes with it (flights, tasters,
 the cellar book) is deliberate and stays. Keep app-level *descriptions*
 deck-neutral, though — see "What this is".
 
-**Current focus — Part 2:** wine is the first deck, not the product. The
-destination is a general multi-deck trainer — decks in `data/decks/`, pick one at
-launch, and the app presents itself as that deck (Spanish vocabulary, physics,
-wine), with identical scheduling and mastery measurement across decks. Start with
-**D1**, extracting the deck adapter; M6 already moved the scheduler into
-`src/engine/schedule.js`, so what remains wine-coupled in `src/app.js` is just
-`reversible`, `cardLabel`, `cardHint` and `facesFor`.
+**Current state of Part 2:** D1 (card-type registry), D3 (deck picker), D5
+(generic card types) and D6 (per-deck validator) have landed. What remains is D2
+(move both decks under `data/decks/`) and D7–D9 (spreadsheet import).
 
 **`PLAN.md` is the roadmap — read it before starting feature work and keep it
-updated as work lands.** Storage is already deck-namespaced (`srs_v2:wine`), so
-D4 does not need a second migration.
+updated as work lands.**
 
 **Note on the repo name:** the repo is `memory-trainer` (public, so GitHub Pages
-serves it on the free plan). The app is still "La Cave", the wine trainer. Do not
-rename the app as part of Part 2 unless asked.
+serves it on the free plan). The app is La Cave.
 
-The wine-specific rules below (one determinate answer per prompt, declared
-reversibility, stable ids) are not wine-specific in spirit. They apply to every deck.
+The rules below (one determinate answer per prompt, declared reversibility,
+stable ids) apply to every deck, not just wine.
 
 ## Run
 
-Needs a static server because the app `fetch`es `data/cards.json`:
+Needs a static server because the app `fetch`es `data/decks.json` and the deck files:
 
 - `npm run dev` (Node, serves on :8000) or `npm start` (Python).
-- `npm run validate` checks the dataset (Node). `npm run cards` regenerates `data/cards.json` from `scripts/generate_cards.py`.
+- `npm test` runs the scheduler tests. `npm run validate` checks **every** deck in `data/decks.json`.
+- `npm run cards` regenerates `data/cards.json`; `npm run cards:es` regenerates `data/spanish.json`.
 
 The Python side is managed by **uv** with a local `./.venv`: `npm run setup:py` (= `uv sync`) creates it from `pyproject.toml` + `.python-version` (3.14, the current stable line). The generator is stdlib-only, so the venv pins the interpreter rather than installing packages. Every Python entry point goes through `uv run`, so no manual activation is needed — do not add `python3 ...` calls back into `package.json`. `.venv/` is gitignored; commit `pyproject.toml`, `.python-version`, and `uv.lock`.
 
@@ -113,7 +108,7 @@ The relationship between grape and region is many-to-many, which breaks card sym
 - A **region grows many grapes** (Bordeaux: Cabernet, Merlot, Cab Franc, Sémillon, Sauvignon Blanc).
 - A **grape grows in many regions** (Cabernet: Bordeaux, Napa, Tuscany, Chile).
 
-So a card only works if the prompt side maps to exactly **one** correct answer. That is why there are three types, and why only one of them may be shown in both directions.
+So a card only works if the prompt side maps to exactly **one** correct answer. That is why the wine deck has the types it does, and why none of them may be flipped.
 
 ### Type 1 — `place2grape` (one direction only)
 Prompt: country + region + tasting notes. Answer: the grape.
@@ -161,11 +156,15 @@ Two rules that deck lives by:
   The validator enforces that `es` and `en` are equal-length lists of
   `[pronoun, form]` pairs.
 
-**Direction rule lives in one place:** `reversible(c)` in `src/app.js`, which
-currently returns `false` for everything. If you add a type, update
-`reversible`, `facesFor`, `cardLabel`, and `cardHint`.
+**Direction rule lives with the card type**, in `src/decks/`. Each type exports
+`reversible`, `label`, `hint` and `faces`; `src/app.js` only delegates via
+`typeFor()`. To add a type, write it and register it in `src/decks/registry.js`.
+Reversibility is **declared, never assumed** — a card flips only when both
+directions have exactly one right answer.
 
-`group` is one of `France` | `Italy` | `Rest` and drives the per-region stats.
+`group` values are declared per deck in `data/decks.json` (with labels) and
+drive the cellar book's per-group stats. Wine uses `France` | `Italy` | `Rest`;
+Spanish uses `Verbs` | `House` | `Town` | `Table` | `Everyday`.
 
 ## Scheduling
 
@@ -209,27 +208,49 @@ Progress is keyed by card id, so **keep ids stable** and add cards additively. R
 
 Where it lives, in order of precedence:
 
-1. **IndexedDB** — database `lacave`, store `progress`, key `srs_v2:wine`. Primary.
-2. **`localStorage` under the same `srs_v2:wine` key** — written on every save as a
-   mirror. It is the fallback where IndexedDB is blocked (Safari private
-   browsing, some webviews), and the app runs entirely from it if so.
-3. In-memory, if both fail, so at least the current session stays coherent.
+1. **In-memory**, written synchronously on every save. Read first, because the
+   IndexedDB write queues behind the save chain and a flight leaves dozens of
+   writes draining.
+2. **IndexedDB** — database `lacave`, store `progress`. Primary durable store.
+3. **`localStorage` under the same keys** — a mirror written on every save. It
+   is the fallback where IndexedDB is blocked (Safari private browsing, some
+   webviews), and the app runs entirely from it if so.
 
-The key is **deck-namespaced already** (`srs_v2:<deckId>`) even though there is
-one deck. That is the single concession the MVP makes to Part 2; it means
-adding decks later needs no second migration.
+Keys, all under the `srs_v2:` prefix:
 
-`loadState()` migrates on first boot: IndexedDB, then the mirror, then the
-pre-M5 `wine_srs_v1` key. A migrated legacy key is only deleted after the
-IndexedDB write reads back, because losing progress there is unrecoverable.
+- `srs_v2:profiles` — `[{ id, name, created }]`, the tasters sharing this browser.
+- `srs_v2:active` — id of the profile in use.
+- `srs_v2:lastDeck` — the deck to highlight on the chooser.
+- `srs_v2:<profileId>:<deckId>` — one person's progress in one deck.
+
+Progress is namespaced by **profile and deck**, so neither collides.
+
+`loadProfiles()` migrates on first boot: any pre-profile `srs_v2:wine`, or the
+pre-M5 `wine_srs_v1`, is adopted by a first profile named "Me". An old key is
+only deleted after the new one reads back, because losing progress there is
+unrecoverable.
 `navigator.storage.persist()` is requested at boot; browsers usually grant it
 once the PWA is installed.
 
 ## Editing / adding cards
 
-`data/cards.json` is the source of truth. Prefer editing `scripts/generate_cards.py` (readable, grouped by region) and running `npm run cards`, then `npm run validate`. The validator checks the per-type schema, unique ids, and that tasting notes do not leak the grape name.
+The deck JSON files are the source of truth, but prefer editing the generator
+and regenerating:
 
-When expanding the deck, keep the France-first weighting and the "popular in a US restaurant" bar. One determinate answer per card is the hard rule.
+- Wine: `scripts/generate_cards.py` → `npm run cards` → `data/cards.json`.
+- Spanish: `scripts/generate_spanish.py` → `npm run cards:es` → `data/spanish.json`.
+
+Then `npm run validate`, which walks **every** deck in `data/decks.json` and
+checks each card against its own type's schema, its deck's declared groups,
+unique ids, that wine tasting notes do not leak the grape name, and that no two
+cards share a prompt. A duplicate *answer* face is an error only for reversible
+types; for wine it is a warning, because several `place2grape` cards
+legitimately share a grape and that face is never a prompt.
+
+When expanding wine, keep the France-first weighting and the "popular in a US
+restaurant" bar. When expanding Spanish, keep each face monolingual and keep
+conjugation tables whole. **One determinate answer per prompt is the hard rule
+for every deck.**
 
 ## Roadmap
 
