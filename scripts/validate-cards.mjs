@@ -34,6 +34,24 @@ for (const c of cards) {
   }
 }
 
+// One determinate answer per prompt is the hard content rule, so no two cards
+// may present the same prompt. Checked per direction, since only `decode`
+// flips. See CLAUDE.md.
+const prompts = new Map();
+const claim = (key, card, dir) => {
+  const prev = prompts.get(key);
+  if (prev) errors.push(`duplicate ${dir} prompt: ${prev} and ${card.id}`);
+  else prompts.set(key, card.id);
+};
+for (const c of cards) {
+  if (c.type === "grapehome") claim(`t3|${c.grape}`, c, "grape");
+  if (c.type === "place2grape") claim(`t1|${c.country}|${c.region}|${c.notes}`, c, "place+notes");
+  if (c.type === "decode") {
+    claim(`t2f|${c.appellation}`, c, "appellation");
+    claim(`t2r|${c.grape}|${c.country}|${c.region}|${c.notes}`, c, "reverse decode");
+  }
+}
+
 const by = k => cards.reduce((m, c) => (m[c[k]] = (m[c[k]] || 0) + 1, m), {});
 console.log("cards:", cards.length);
 console.log("group:", by("group"));

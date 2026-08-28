@@ -83,7 +83,7 @@ tests/                scheduler tests (node --test)
 sw.js                 service worker (offline precache)
 manifest.webmanifest  PWA manifest
 icons/                app icons (192, 512, maskable, apple-touch, favicon)
-data/cards.json       the 100 cards (source of truth)
+data/cards.json       the 200 cards (source of truth)
 scripts/              card generator + validator
 pyproject.toml        Python project for the generator (uv)
 .python-version       pinned interpreter for uv

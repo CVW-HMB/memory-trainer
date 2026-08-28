@@ -159,15 +159,34 @@ function renderHome() {
   $("hMastered").textContent = masteredCount() + "/" + CARDS.length;
   $("hSeen").textContent = seenCount() + "/" + CARDS.length;
   const lead = $("homeLead");
+  const btn = $("startBtn");
   const today = ymd(new Date());
-  if (state.lastPracticed === today && due === 0) lead.innerHTML = "All caught up for today. <em>Pour another</em> if you like.";
+  const everything = masteredCount() === CARDS.length;
+  const firstEver = (state.totalSessions || 0) === 0;
+
+  if (CARDS.length === 0) {
+    // Nothing to train on. Say so rather than starting an empty flight.
+    lead.innerHTML = "This deck is empty.";
+    btn.disabled = true;
+    btn.textContent = "Nothing to pour";
+    return;
+  }
+  btn.disabled = false;
+
+  if (everything && due === 0) lead.innerHTML = "Every card mastered. A <em>free flight</em> keeps it there.";
+  else if (state.lastPracticed === today && due === 0) lead.innerHTML = "All caught up for today. <em>Pour another</em> if you like.";
   else if (due === 0) lead.innerHTML = "Nothing forced today. A <em>free flight</em> keeps it sharp.";
+  else if (firstEver) lead.innerHTML = "<em>" + CARDS.length + "</em> cards in the cellar. We&rsquo;ll start with <em>" + flight + "</em>.";
   else if (due > flight) lead.innerHTML = "<em>" + due + "</em> cards are ready. Tonight&rsquo;s flight pours <em>" + flight + "</em>.";
   else lead.innerHTML = "You have <em>" + due + "</em> card" + (due === 1 ? "" : "s") + " ready to taste.";
+
+  // The button should promise what the flight actually is.
+  btn.textContent = due === 0 ? "Pour a free flight" : firstEver ? "Begin your first flight" : "Begin today\u2019s flight";
 }
 
 /* ---------------- session ---------------- */
 function startSession() {
+  if (CARDS.length === 0) return;
   const today = ymd(new Date());
   if (state.lastPracticed !== today) {
     state.streak = nextStreak(state.streak, state.lastPracticed, today);
@@ -300,7 +319,9 @@ function renderCellar() {
   $("mStreak").textContent = state.streak || 0;
   $("mBest").textContent = state.bestStreak || 0;
   $("mFlights").textContent = state.totalSessions || 0;
-  const mastery = Math.round(CARDS.reduce((a, c) => a + ((state.cards[c.id]?.box || 1) - 1) / 4, 0) / CARDS.length * 100);
+  const mastery = CARDS.length
+    ? Math.round(CARDS.reduce((a, c) => a + ((state.cards[c.id]?.box || 1) - 1) / 4, 0) / CARDS.length * 100)
+    : 0;
   $("mMastery").textContent = mastery + "%";
 
   const buckets = { New: 0, Learning: 0, Familiar: 0, Mastered: 0 };

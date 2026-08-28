@@ -142,6 +142,130 @@ decode("Rest", "Mendoza Malbec", "Malbec", "Argentina", "Mendoza", "plush blackb
 decode("Rest", "Barossa Shiraz", "Shiraz (Syrah)", "Australia", "Barossa Valley", "jammy, bold, sweet spice, full")
 decode("Rest", "Port", "Touriga Nacional blend", "Portugal", "Douro", "fortified, sweet, dark, spirity")
 
+
+# =====================================================================
+# Expansion pass toward ~200 cards. Same bar as above: France first, and
+# nothing you would not plausibly meet on a US restaurant list.
+# =====================================================================
+
+# ===================== FRANCE - grape home (+7) =====================
+home("France", "Melon de Bourgogne", "Loire, Pays Nantais (France)", "essentially nowhere else; it is the Muscadet grape")
+home("France", "Pinot Meunier", "Champagne (France)", "England, and small German plantings")
+home("France", "Petit Verdot", "Bordeaux, Left Bank blends (France)", "Napa, Australia and Spain as a varietal")
+home("France", "Marsanne", "Northern Rhone (France)", "Victoria in Australia, California")
+home("France", "Roussanne", "Northern Rhone (France)", "Southern Rhone white blends, California")
+home("France", "Aligote", "Burgundy, the other white (France)", "small plantings across Eastern Europe")
+home("France", "Tannat", "Madiran, Southwest France", "Uruguay, where it is the national grape")
+
+# ===================== FRANCE - decode (+38) =====================
+# Bordeaux
+decode("France", "Haut-Medoc", "Cabernet Sauvignon blend", "France", "Bordeaux, Haut-Medoc", "everyday claret, blackcurrant, cedar, firm")
+decode("France", "Medoc", "Cabernet Sauvignon blend", "France", "Bordeaux, Medoc (northern tip)", "leaner, earthy, brisk, less polished")
+decode("France", "Graves", "red blend; also dry white blend", "France", "Bordeaux, Graves (wider appellation)", "gravelly, smoky reds and dry whites")
+decode("France", "Entre-Deux-Mers", "Sauvignon Blanc blend", "France", "Bordeaux, between the rivers", "crisp, dry, grapefruit, inexpensive")
+decode("France", "Barsac", "Semillon, botrytis", "France", "Bordeaux, Barsac", "sweet, honeyed, a touch fresher than its neighbour")
+# Burgundy
+decode("France", "Bourgogne Rouge", "Pinot Noir", "France", "Burgundy, regional", "light cherry, everyday red, no oak to speak of")
+decode("France", "Chassagne-Montrachet", "Chardonnay", "France", "Burgundy, Cote de Beaune", "citrus, hazelnut, saline finish")
+decode("France", "Volnay", "Pinot Noir", "France", "Burgundy, Cote de Beaune", "delicate, violet, red berry, silky")
+decode("France", "Nuits-Saint-Georges", "Pinot Noir", "France", "Burgundy, Cote de Nuits", "earthy, dark berry, sturdy")
+decode("France", "Chambolle-Musigny", "Pinot Noir", "France", "Burgundy, Cote de Nuits", "perfumed, lacy, delicate red fruit")
+decode("France", "Corton-Charlemagne", "Chardonnay", "France", "Burgundy, Cote de Beaune (grand cru)", "powerful, mineral, long-lived white")
+decode("France", "Saint-Veran", "Chardonnay", "France", "Burgundy, Maconnais", "bright orchard fruit, gentle, good value")
+decode("France", "Macon-Villages", "Chardonnay", "France", "Burgundy, Maconnais (villages)", "easy, apple, unoaked, inexpensive")
+# Beaujolais
+decode("France", "Fleurie", "Gamay", "France", "Beaujolais (cru)", "floral, silky, light red berry")
+decode("France", "Moulin-a-Vent", "Gamay", "France", "Beaujolais (cru)", "structured, dark fruit, the firmest of the crus")
+decode("France", "Brouilly", "Gamay", "France", "Beaujolais (cru, largest)", "juicy, bright, easy drinking")
+# Loire
+decode("France", "Savennieres", "Chenin Blanc", "France", "Loire, Anjou (schist)", "dry, austere, waxy, quince")
+decode("France", "Bourgueil", "Cabernet Franc", "France", "Loire, Touraine (Bourgueil)", "raspberry, gravel, brisk")
+decode("France", "Saumur-Champigny", "Cabernet Franc", "France", "Loire, Anjou-Saumur", "crunchy red fruit, light, worth chilling")
+decode("France", "Coteaux du Layon", "Chenin Blanc, botrytis", "France", "Loire, Anjou (Layon valley)", "sweet, honeyed, quince, bracing acid")
+decode("France", "Montlouis-sur-Loire", "Chenin Blanc", "France", "Loire, Touraine (Montlouis)", "dry to sparkling, orchard fruit, chalk")
+# Rhone
+decode("France", "Saint-Joseph", "Syrah", "France", "Northern Rhone (Saint-Joseph)", "peppery, red fruit, medium-bodied")
+decode("France", "Cornas", "Syrah", "France", "Northern Rhone (Cornas, granite)", "dark, savoury, brooding, tannic")
+decode("France", "Vacqueyras", "Grenache-based GSM", "France", "Southern Rhone (Vacqueyras)", "spicy, warm, dark berry")
+decode("France", "Cotes du Rhone", "Grenache-based blend", "France", "Southern Rhone (regional)", "everyday red, red fruit, dried herb")
+decode("France", "Tavel", "Grenache-based rose", "France", "Southern Rhone (Tavel)", "deep-coloured dry rose, structured, food wine")
+decode("France", "Saint-Peray", "Marsanne and Roussanne", "France", "Northern Rhone (Saint-Peray)", "still and sparkling white, nutty, full")
+decode("France", "Muscat de Beaumes-de-Venise", "Muscat", "France", "Southern Rhone (Beaumes-de-Venise)", "fortified sweet, orange blossom, grapey")
+# Alsace and Champagne
+decode("France", "Cremant d'Alsace", "Pinot Blanc-led blend", "France", "Alsace (sparkling)", "dry sparkling, apple, fine bubble, value")
+decode("France", "Alsace Pinot Blanc", "Pinot Blanc", "France", "Alsace (everyday white)", "soft, pear, gentle, unshowy")
+decode("France", "Blanc de Blancs Champagne", "Chardonnay only", "France", "Champagne (white grapes only)", "chalk, citrus, taut and fine")
+decode("France", "Rose Champagne", "Pinot Noir and Chardonnay", "France", "Champagne (rose)", "red-berry tinged, dry, fine mousse")
+# Languedoc and Roussillon
+decode("France", "Corbieres", "Carignan-based blend", "France", "Languedoc (Corbieres)", "rustic, garrigue, dark berry, warm")
+decode("France", "Minervois", "Syrah and Grenache blend", "France", "Languedoc (Minervois)", "warm, peppery, herbal")
+decode("France", "Blanquette de Limoux", "Mauzac", "France", "Languedoc (Limoux)", "apple, sparkling, made before Champagne was")
+decode("France", "Banyuls", "Grenache, fortified", "France", "Roussillon (Banyuls)", "sweet fortified red, cocoa, dried fig")
+# Provence and Southwest
+decode("France", "Cassis", "Marsanne and Clairette blend", "France", "Provence (Cassis)", "a saline seaside white; NOT the blackcurrant note", trap=True)
+decode("France", "Madiran", "Tannat", "France", "Southwest France (Madiran)", "dense, dark, gripping, built to age")
+
+# ===================== FRANCE - place to grape (+25) =====================
+p2g("France", "Petit Verdot", "France", "Bordeaux, Left Bank (blending grape)", "inky, violet, late-ripening, used in small doses")
+p2g("France", "Sauvignon Blanc", "France", "Bordeaux, Entre-Deux-Mers", "crisp, dry, grapefruit, inexpensive")
+p2g("France", "Semillon", "France", "Bordeaux, dry white blends (Graves)", "waxy, lanolin, rounds out a blend")
+p2g("France", "Chardonnay", "France", "Burgundy, Maconnais", "ripe apple, soft, gently rounded")
+p2g("France", "Chardonnay", "France", "Burgundy, Cote Chalonnaise", "brisk, lemon, lighter and cheaper")
+p2g("France", "Pinot Noir", "France", "Burgundy, Cote Chalonnaise", "light red fruit, earthy, good value")
+p2g("France", "Aligote", "France", "Burgundy, the other white", "sharp, lemon, lean, traditionally mixed with cassis")
+p2g("France", "Chardonnay", "France", "Champagne (chalk soils)", "green apple, chalk, high acid, picked for sparkling")
+p2g("France", "Pinot Noir", "France", "Champagne (for the blend)", "red apple, gives body and structure to sparkling")
+p2g("France", "Pinot Meunier", "France", "Champagne, Marne Valley", "soft, fruity, the early-drinking third of the blend")
+p2g("France", "Gamay", "France", "Beaujolais crus (granite soils)", "firmer, darker, ages a decade")
+p2g("France", "Chenin Blanc", "France", "Loire, Anjou (schist)", "dry, austere, waxy, quince")
+p2g("France", "Chenin Blanc", "France", "Loire, Vouvray (sweet styles)", "honey, quince, botrytis, sweet")
+p2g("France", "Cabernet Franc", "France", "Loire, Anjou-Saumur", "crunchy raspberry, light, worth chilling")
+p2g("France", "Syrah", "France", "Northern Rhone, Cornas (granite)", "dark, savoury, brooding, tannic")
+p2g("France", "Marsanne", "France", "Northern Rhone (white blends)", "waxy, almond, low acid, full-bodied")
+p2g("France", "Grenache", "France", "Southern Rhone, Chateauneuf-du-Pape (galets)", "kirsch, garrigue, warm, high alcohol")
+p2g("France", "Grenache", "France", "Roussillon (fortified sweet reds)", "sweet fortified, cocoa, dried fig")
+p2g("France", "Cinsault", "France", "Provence and Languedoc (for rose)", "pale, light, soft, a rose backbone")
+p2g("France", "Carignan", "France", "Languedoc (old vines)", "rustic, dark, brambly, high acid")
+p2g("France", "Picpoul", "France", "Languedoc, Pinet (coastal)", "zesty lemon, saline, a seafood white")
+p2g("France", "Mauzac", "France", "Languedoc, Limoux", "apple skin, sparkling, an old tradition")
+p2g("France", "Tannat", "France", "Southwest, Madiran", "dense, dark, gripping, built to age")
+p2g("France", "Pinot Blanc", "France", "Alsace (everyday white)", "soft, pear, gentle, unshowy")
+p2g("France", "Muscat", "France", "Alsace (dry style)", "grapey, floral, dry despite the perfume")
+
+# ===================== ITALY (+18) =====================
+home("Italy", "Aglianico", "Campania and Basilicata (southern Italy)", "almost nowhere outside southern Italy")
+home("Italy", "Montepulciano", "Abruzzo, central-east Italy", "the Marche as Rosso Conero; it is a grape, not the Tuscan town")
+home("Italy", "Verdicchio", "The Marche, central-east Italy", "rarely planted outside Italy")
+home("Italy", "Vermentino", "Sardinia and the Ligurian coast", "Corsica, and Provence where it is called Rolle")
+home("Italy", "Garganega", "Soave, Veneto", "little planted anywhere else")
+home("Italy", "Cortese", "Gavi, Piedmont", "essentially a Piedmont speciality")
+home("Italy", "Primitivo", "Puglia, the heel of Italy", "California, where the same grape is Zinfandel")
+decode("Italy", "Soave", "Garganega", "Italy", "Veneto", "almond, lemon, light and dry")
+decode("Italy", "Gavi", "Cortese", "Italy", "Piedmont", "crisp, green apple, mineral white")
+decode("Italy", "Valpolicella", "Corvina blend", "Italy", "Veneto (Valpolicella)", "light, sour cherry, easy red")
+decode("Italy", "Valpolicella Ripasso", "Corvina re-passed on Amarone skins", "Italy", "Veneto (Ripasso)", "richer, raisined edge, mid-weight")
+decode("Italy", "Dolcetto d'Alba", "Dolcetto", "Italy", "Piedmont (Alba)", "soft, dark plum, low acid, almond finish")
+decode("Italy", "Etna Rosso", "Nerello Mascalese", "Italy", "Sicily (volcanic slopes)", "pale, red cherry, ash, high acid")
+decode("Italy", "Vernaccia di San Gimignano", "Vernaccia", "Italy", "Tuscany (San Gimignano)", "dry white, almond, brisk")
+decode("Italy", "Bolgheri", "Cabernet and Merlot, a Super Tuscan", "Italy", "Tuscany, coastal", "polished, dark fruit, Bordeaux transplanted")
+p2g("Italy", "Aglianico", "Italy", "Campania and Basilicata (volcanic south)", "dark, tannic, smoky, high acid")
+p2g("Italy", "Verdicchio", "Italy", "The Marche (Adriatic coast)", "lemon, almond, saline finish")
+p2g("Italy", "Primitivo", "Italy", "Puglia, the heel", "jammy, ripe, soft, high alcohol")
+
+# ===================== REST OF WORLD (+12) =====================
+home("Rest", "Zinfandel", "California (USA)", "southern Italy as Primitivo, its genetic twin")
+home("Rest", "Gruner Veltliner", "Austria (Wachau, Kamptal)", "small plantings in New Zealand and the US")
+home("Rest", "Carmenere", "Chile", "originally a Bordeaux grape, long lost there")
+home("Rest", "Touriga Nacional", "Douro, Portugal", "small amounts in Australia and South Africa")
+decode("Rest", "Rueda", "Verdejo", "Spain", "Rueda", "crisp, fennel, grapefruit, dry white")
+decode("Rest", "Priorat", "Garnacha and Carinena", "Spain", "Catalonia (slate terraces)", "concentrated, mineral, powerful")
+decode("Rest", "Cava", "Macabeo, Xarel-lo, Parellada", "Spain", "Penedes, Catalonia", "traditional-method sparkling, apple, value")
+decode("Rest", "Vinho Verde", "Loureiro and Alvarinho", "Portugal", "Minho", "light, spritzy, low alcohol, tart")
+decode("Rest", "Willamette Valley Pinot Noir", "Pinot Noir", "USA", "Oregon", "red cherry, earth, cool-climate elegance")
+decode("Rest", "Fino Sherry", "Palomino", "Spain", "Jerez", "bone dry, saline, aged under flor, fortified")
+p2g("Rest", "Gruner Veltliner", "Austria", "Wachau (Danube terraces)", "white pepper, lentil, citrus, dry")
+p2g("Rest", "Carmenere", "Chile", "Central Valley", "green peppercorn, dark plum, herbal")
+
 # ---- validate + write ----
 ids = [c["id"] for c in cards]
 dupes = [i for i in ids if ids.count(i) > 1]

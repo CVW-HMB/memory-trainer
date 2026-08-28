@@ -159,9 +159,9 @@ deploy, session-length cap, touch pass, PWA/offline, IndexedDB, scheduler tests,
 edge cases). Part 2 is the multi-deck generalization, deferred until Part 1 ships.
 Do not keep a competing list here — update `PLAN.md` as work lands.
 
-Content work continues alongside it: expand toward ~200 wine cards, still
-France-first, and add a "learn" pass that introduces a card as `place2grape`
-before it can appear as a `decode` reverse.
+The deck is at 200 cards (France 140 / Italy 36 / Rest 24 — still 70% France).
+A possible next content step is a "learn" pass that introduces a card as
+`place2grape` before it can appear as a `decode` reverse.
 
 ### Guardrails
 - Do not make `place2grape` or `grapehome` reversible. It produces ambiguous prompts.
