@@ -19,20 +19,25 @@ The app is a single-page static web app (vanilla JS, no framework, no build step
 caps a flight at 35 cards, keeps progress in IndexedDB, and has a tested
 scheduler (`npm test`).
 
-**Two decks now.** `data/decks.json` is the index and the app opens on a
+**Five decks now.** `data/decks.json` is the index and the app opens on a
 "choose a deck" screen:
 
 - `wine` — "Wines, Grapes, Regions", 161 cards, `data/cards.json`.
 - `spanish` — "Mexican Spanish – English", 254 cards, `data/spanish.json`.
 - `french` — "French – English", 254 cards, `data/french.json`.
 - `payments` — "Payment Cards", 148 cards, `data/payments.json`.
+- `botany` — "California Plant Families", 149 cards, `data/botany.json`.
 
 The picker is a **dropdown**, not a list: it scales, and a phone gets its native
 picker for free.
 
 Progress is keyed `srs_v2:<profile>:<deck>`, so decks never collide. Each deck
 declares its own `groups` (with labels), `groupsTitle` and footer `tagline`, so
-the cellar book and chrome follow the deck rather than hardcoding wine.
+the cellar book and chrome follow the deck rather than hardcoding wine. A deck
+may also set `flightSize` to ask for a shorter flight than the default 35 — the
+botany deck sets 20, because a card carrying a diagram takes longer to work
+through than a vocabulary card. It caps how many due cards a flight serves and
+nothing else; the boxes, the intervals and what mastery means are unchanged.
 
 **Card types live in `src/decks/`** behind a registry (`registry.js`). A card
 type is a small compiler: it turns a row of deck data into render specs and
@@ -48,7 +53,7 @@ deck-neutral, though — see "What this is".
 
 **Current state of Part 2:** D1 (card-type registry), D3 (deck picker), D5
 (generic card types) and D6 (per-deck validator) have landed. What remains is D2
-(move both decks under `data/decks/`) and D7–D9 (spreadsheet import).
+(move the decks under `data/decks/`) and D7–D9 (spreadsheet import).
 
 **`PLAN.md` is the roadmap — read it before starting feature work and keep it
 updated as work lands.**
@@ -183,6 +188,64 @@ Two rules that deck lives by:
   The validator enforces that `es` and `en` are equal-length lists of
   `[pronoun, form]` pairs.
 
+### Botany deck types (`src/decks/botany.js`)
+
+The ten families that account for most of the California flora, with the
+diagrams that go with them. Four types, **none of them reversible**:
+
+- `floral` — `{ family, common, form, formula, diagram, note }`. Prompt is the
+  named flower ("Asteraceae — disc floret"); answer is its **floral diagram**
+  and formula. Not reversed: a bare radial 5-merous diagram fits Polemoniaceae,
+  Boraginaceae and a dozen families outside the deck. The diagram summarises a
+  family you have already named; it is not a key to one.
+- `feature` — `{ term, kind, description, shape?, where, note? }`. The
+  description (with a drawing, where there is one) is the prompt and the term is
+  the answer, because naming what you are looking at is the direction that does
+  the work outdoors. Not reversed: achene, cypsela and nutlet are close enough
+  that term → description would have more than one defensible answer.
+- `idclue` — `{ family, common, clues: [[aspect, observation]…], example }`.
+  The deck's real skill, and the analogue of wine's `place2grape`: read the
+  plant, land on the family. Not reversed — one family answers to many
+  different clue sets.
+- `checklist` — `{ family, common, place, rows, genera }`. A family, and the
+  characters that give it away.
+
+**Drawings, not images (`src/decks/figures.js`).** Every diagram is SVG
+generated at render time from numbers in the card. Nothing is fetched, so the
+deck works offline like everything else, weighs nothing, and stays sharp at any
+size. Two kinds:
+
+- `floralDiagram(spec)` — a real floral diagram: concentric whorls seen from
+  above, axis at the top, subtending bract at the bottom, fused whorls joined by
+  a connecting line, successive whorls alternating with the one outside them.
+  Driven entirely by `{ symmetry, ovary, whorls: [{part, n, fused, as}], gynoecium }`.
+- `shapeFigure(id)` — one of ~40 named schematics (a spikelet, a silique, a
+  scorpioid cyme, a perigynium). The drawing lives in code; the deck only names
+  it, and the validator rejects a name the library does not have.
+
+Deck JSON therefore describes a plant and never carries markup. The renderer
+gets a `draw` function on the spec and calls it, so `src/app.js` still knows
+nothing deck-specific.
+
+**How the diagrams are checked.** The floral formula printed on a card is
+*derived from that card's diagram* by `scripts/generate_botany.py`, and
+`scripts/validate-cards.mjs` derives it again independently in JavaScript and
+fails if the two strings differ. A card cannot print `C(5)` over a drawing with
+four petals. Where the conventional formula does not simply count whorls — the
+legumes' `A(9)+1` over a drawn 5+5 — the diagram declares the token and the
+validator checks its numbers still add up to the stamens actually drawn.
+
+**Where the content comes from.** Family characters are written from standard
+descriptive sources — Lena Struwe's *Field identification of the 50 most common
+plant families in temperate regions*, Wikipedia's family treatments, and
+teaching floral formulas — not transcribed from any one of them. The ranking is
+by share of the California flora, with modern (APG) family limits, which is why
+most of the old Scrophulariaceae appears here as Plantaginaceae and Phacelia
+appears inside Boraginaceae. Ranks 8–10 shuffle between sources; the deck picks
+an order and says so. An eleventh group, **Lookalikes**, holds the cards that
+separate confusable families — Lamiaceae and Apiaceae appear there, as contrasts,
+not as members of the top ten.
+
 **Direction rule lives with the card type**, in `src/decks/`. Each type exports
 `reversible`, `label`, `hint` and `faces`; `src/app.js` only delegates via
 `typeFor()`. To add a type, write it and register it in `src/decks/registry.js`.
@@ -216,9 +279,11 @@ DOM, no globals, no storage, and no knowledge of what a card holds beyond its
   repeats never inflate them. The summary's accuracy is first-pass accuracy.
 - `buildQueue` still never selects the same card twice; the repetition is purely
   the flight loop.
-- Each flight is capped at `FLIGHT_SIZE` (20) cards, introducing at most
+- Each flight is capped at `FLIGHT_SIZE` (35) cards, introducing at most
   `NEW_PER_FLIGHT` (5) never-seen cards in deck order. The cap decides how many
-  due cards a flight *serves*; it does not touch the box arithmetic.
+  due cards a flight *serves*; it does not touch the box arithmetic. A deck may
+  pass a smaller size via `flightSize` in `data/decks.json` (`buildQueue`'s
+  fifth argument); everything else about the flight is identical.
 - Streaks and `bestStreak` update once per calendar day.
 
 **The tests are the guardrail.** They cover box promotion and demotion, the
@@ -266,6 +331,9 @@ and regenerating:
 
 - Wine: `scripts/generate_cards.py` → `npm run cards` → `data/cards.json`.
 - Spanish: `scripts/generate_spanish.py` → `npm run cards:es` → `data/spanish.json`.
+- French: `scripts/generate_french.py` → `npm run cards:fr` → `data/french.json`.
+- Payments: `scripts/generate_payments.py` → `npm run cards:pay` → `data/payments.json`.
+- Botany: `scripts/generate_botany.py` → `npm run cards:bot` → `data/botany.json`.
 
 Then `npm run validate`, which walks **every** deck in `data/decks.json` and
 checks each card against its own type's schema, its deck's declared groups,
@@ -299,5 +367,10 @@ A possible next content step is a "learn" pass that introduces a card as
   tasting notes).
 - Keep card ids stable across updates. Progress is keyed by id.
 - Keep the dependency footprint light; this should stay easy to run and reason about.
+- Do not put SVG or any other markup into deck JSON. A card describes a plant;
+  the drawing code lives in `src/decks/figures.js` and the renderer only ever
+  sets text or calls a `draw` function.
+- Do not hand-write a floral formula. Derive it from the diagram, or the two
+  will drift and the validator will be right to stop you.
 - Do not rewrite the scheduler while doing something else. It is already
   deck-agnostic and its numbers are the product.

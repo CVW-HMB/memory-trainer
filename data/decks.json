@@ -114,5 +114,60 @@
         "label": "Rails and messages"
       }
     ]
+  },
+  {
+    "id": "botany",
+    "name": "California Plant Families",
+    "subtitle": "The ten families that make up most of the California flora: the floral diagram of each, the characters that give it away, and the field clues that key it out.",
+    "file": "./data/botany.json",
+    "groupsTitle": "By family",
+    "tagline": "read the flower, name the family",
+    "flightSize": 20,
+    "groups": [
+      {
+        "id": "Asteraceae",
+        "label": "Asteraceae — sunflowers"
+      },
+      {
+        "id": "Poaceae",
+        "label": "Poaceae — grasses"
+      },
+      {
+        "id": "Fabaceae",
+        "label": "Fabaceae — legumes"
+      },
+      {
+        "id": "Brassicaceae",
+        "label": "Brassicaceae — mustards"
+      },
+      {
+        "id": "Polygonaceae",
+        "label": "Polygonaceae — buckwheats"
+      },
+      {
+        "id": "Boraginaceae",
+        "label": "Boraginaceae — borages & phacelias"
+      },
+      {
+        "id": "Cyperaceae",
+        "label": "Cyperaceae — sedges"
+      },
+      {
+        "id": "Plantaginaceae",
+        "label": "Plantaginaceae — penstemons & kin"
+      },
+      {
+        "id": "Polemoniaceae",
+        "label": "Polemoniaceae — phloxes"
+      },
+      {
+        "id": "Onagraceae",
+        "label": "Onagraceae — evening primroses"
+      },
+      {
+        "id": "Lookalikes",
+        "label": "Lookalikes — telling them apart"
+      }
+    ]
   }
 ]

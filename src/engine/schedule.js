@@ -90,23 +90,30 @@ export function weakFirst(cards, states, rand = Math.random) {
 // rest are drawn by weighted random sampling, favouring the cards you miss.
 // If there are not enough reviews the flight tops up with more new cards, so it
 // is always as full as the due pool allows. Each card appears at most once.
-export function buildQueue(cards, states, cur, rand = Math.random) {
+// `size` lets a deck ask for a shorter flight than the default -- a deck whose
+// cards each carry a diagram is slower to work through than a vocabulary deck,
+// so 35 of them is not the same session. It caps how many due cards a flight
+// serves and nothing else: the box arithmetic, the intervals and what mastery
+// means are identical whatever the size.
+export function buildQueue(cards, states, cur, rand = Math.random, size = FLIGHT_SIZE) {
+  const cap = Math.max(1, size | 0);
   let due = dueCards(cards, states, cur);
   if (due.length === 0) due = cards.slice(); // free review: nothing forced today
 
   const fresh = due.filter(c => isNew(states[c.id]));   // deck order preserved
   const review = due.filter(c => !isNew(states[c.id]));
 
-  const picked = fresh.slice(0, NEW_PER_FLIGHT);
-  const budget = FLIGHT_SIZE - picked.length;
+  const newCap = Math.min(NEW_PER_FLIGHT, cap);
+  const picked = fresh.slice(0, newCap);
+  const budget = cap - picked.length;
 
   const reserved = mostOverdue(review, states, cur, rand).slice(0, Math.min(OVERDUE_SLOTS, budget));
   const taken = new Set(reserved.map(c => c.id));
   const pool = review.filter(c => !taken.has(c.id));
   picked.push(...reserved, ...weightedSample(pool, states, budget - reserved.length, rand));
 
-  if (picked.length < FLIGHT_SIZE) {
-    picked.push(...fresh.slice(NEW_PER_FLIGHT, NEW_PER_FLIGHT + FLIGHT_SIZE - picked.length));
+  if (picked.length < cap) {
+    picked.push(...fresh.slice(newCap, newCap + cap - picked.length));
   }
   return weakFirst(picked, states, rand).map(c => c.id);
 }

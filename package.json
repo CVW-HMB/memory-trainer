@@ -2,7 +2,7 @@
   "name": "la-cave",
   "version": "0.1.0",
   "private": true,
-  "description": "Spaced-repetition flashcard trainer. Multiple decks, one scheduler; currently wine and Spanish.",
+  "description": "Spaced-repetition flashcard trainer. One scheduler, many decks: wine, Spanish, French, payment cards and California plant families.",
   "type": "module",
   "scripts": {
     "dev": "npx --yes serve -l 8000 .",
@@ -12,6 +12,7 @@
     "cards:es": "uv run python scripts/generate_spanish.py",
     "cards:fr": "uv run python scripts/generate_french.py",
     "cards:pay": "uv run python scripts/generate_payments.py",
+    "cards:bot": "uv run python scripts/generate_botany.py",
     "validate": "node scripts/validate-cards.mjs",
     "setup:py": "uv sync"
   },

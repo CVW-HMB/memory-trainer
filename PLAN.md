@@ -214,6 +214,28 @@ Minimum spreadsheet: `type | group | front | back | notes | reversible`.
 - **D9 — Deck health check.** Surface duplicate prompts, answer-leaking hints,
   and lopsided groups at import time, with a preview before saving.
 
+## Shipped outside the D-list
+
+- **Botany deck + drawn figures** *(botany-deck branch)*. Five decks now. The
+  California Plant Families deck (149 cards) added three things worth naming:
+
+  1. A **`figure` render mode** in `src/decks/specs.js`. The spec carries a
+     `draw` function, not markup, so the renderer stays deck-agnostic and no
+     deck can inject HTML. `src/decks/figures.js` holds a parametric floral
+     diagram plus ~40 named schematics; deck JSON only names one.
+  2. **Per-deck flight size.** `buildQueue` takes an optional fifth argument and
+     `data/decks.json` may set `flightSize`; botany asks for 20 against the
+     default 35. It caps how many due cards a flight serves and touches nothing
+     else — covered by four new tests, including one asserting the default path
+     is byte-identical to before.
+  3. **A derived-and-cross-checked floral formula.** The Python generator
+     derives each formula from that card's diagram; the JS validator derives it
+     again and fails on any disagreement. Worth copying wherever a deck prints a
+     claim about a picture.
+
+  Also fixed on the way past: `src/decks/glossary.js` was missing from the
+  service worker's precache list, so the payments deck was not actually offline.
+
 ## Rules that generalize to every deck
 
 - **One determinate answer per prompt.** A prompt with several correct answers

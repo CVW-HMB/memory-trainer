@@ -1,0 +1,2963 @@
+[
+ {
+  "id": "bot-ast-ck",
+  "type": "checklist",
+  "group": "Asteraceae",
+  "family": "Asteraceae",
+  "common": "sunflower family",
+  "place": "The largest family in California, and in the world.",
+  "rows": [
+   [
+    "Inflorescence",
+    "a head, ringed by involucral bracts"
+   ],
+   [
+    "Calyx",
+    "none — a pappus of bristles or scales"
+   ],
+   [
+    "Corolla",
+    "5 petals fused into a tube or a strap"
+   ],
+   [
+    "Stamens",
+    "5, anthers fused into a tube round the style"
+   ],
+   [
+    "Ovary",
+    "inferior, one ovule, one seed"
+   ],
+   [
+    "Fruit",
+    "a cypsela, usually with the pappus still on"
+   ]
+  ],
+  "genera": "Eriophyllum, Lasthenia, Artemisia, Baccharis, Cirsium"
+ },
+ {
+  "id": "bot-ast-fl-1",
+  "type": "floral",
+  "group": "Asteraceae",
+  "family": "Asteraceae",
+  "common": "sunflower family",
+  "form": "disc floret",
+  "formula": "* K pappus · C(5) · A(5) · G(2) inferior",
+  "diagram": {
+   "symmetry": "radial",
+   "ovary": "inferior",
+   "bract": true,
+   "axis": false,
+   "whorls": [
+    {
+     "part": "calyx",
+     "n": 0,
+     "fused": false,
+     "as": "pappus"
+    },
+    {
+     "part": "corolla",
+     "n": 5,
+     "fused": true
+    },
+    {
+     "part": "androecium",
+     "n": 5,
+     "fused": true
+    }
+   ],
+   "gynoecium": {
+    "carpels": 2,
+    "locules": 1,
+    "ovules": 1,
+    "fused": true
+   }
+  },
+  "note": "What looks like one flower is a crowd of them on a shared receptacle."
+ },
+ {
+  "id": "bot-ast-fl-2",
+  "type": "floral",
+  "group": "Asteraceae",
+  "family": "Asteraceae",
+  "common": "sunflower family",
+  "form": "ray floret",
+  "formula": "↓ K pappus · C(5) · A0 · G(2) inferior",
+  "diagram": {
+   "symmetry": "bilateral",
+   "ovary": "inferior",
+   "bract": true,
+   "axis": false,
+   "whorls": [
+    {
+     "part": "calyx",
+     "n": 0,
+     "fused": false,
+     "as": "pappus"
+    },
+    {
+     "part": "corolla",
+     "n": 5,
+     "fused": true
+    },
+    {
+     "part": "androecium",
+     "n": 0,
+     "fused": false
+    }
+   ],
+   "gynoecium": {
+    "carpels": 2,
+    "locules": 1,
+    "ovules": 1,
+    "fused": true
+   }
+  },
+  "note": "Three teeth on the strap, not three petals: five are fused, two of them tiny."
+ },
+ {
+  "id": "bot-ast-fl-3",
+  "type": "floral",
+  "group": "Asteraceae",
+  "family": "Asteraceae",
+  "common": "sunflower family",
+  "form": "ligulate floret",
+  "formula": "↓ K pappus · C(5) · A(5) · G(2) inferior",
+  "diagram": {
+   "symmetry": "bilateral",
+   "ovary": "inferior",
+   "bract": true,
+   "axis": false,
+   "whorls": [
+    {
+     "part": "calyx",
+     "n": 0,
+     "fused": false,
+     "as": "pappus"
+    },
+    {
+     "part": "corolla",
+     "n": 5,
+     "fused": true
+    },
+    {
+     "part": "androecium",
+     "n": 5,
+     "fused": true
+    }
+   ],
+   "gynoecium": {
+    "carpels": 2,
+    "locules": 1,
+    "ovules": 1,
+    "fused": true
+   }
+  },
+  "note": "All five petals in the strap, so five teeth — the dandelion sort, and it has stamens."
+ },
+ {
+  "id": "bot-ast-ft-1",
+  "type": "feature",
+  "group": "Asteraceae",
+  "term": "Head (capitulum)",
+  "kind": "Inflorescence",
+  "description": "Many small flowers packed side by side on one shared, flattened stem tip, the whole thing ringed by green bracts and read by the eye as a single flower.",
+  "where": "Asteraceae — every one of them.",
+  "shape": "head",
+  "note": "It is why the family used to be called Compositae: each 'flower' is a composite."
+ },
+ {
+  "id": "bot-ast-ft-2",
+  "type": "feature",
+  "group": "Asteraceae",
+  "term": "Involucre",
+  "kind": "Inflorescence",
+  "description": "The collar of green bracts wrapped round the base of a head, doing the job sepals do elsewhere.",
+  "where": "Asteraceae. The individual bracts are phyllaries.",
+  "note": "Their shape and rank count carry a lot of the genus-level identification."
+ },
+ {
+  "id": "bot-ast-ft-3",
+  "type": "feature",
+  "group": "Asteraceae",
+  "term": "Pappus",
+  "kind": "Flower",
+  "description": "The calyx, reduced to a tuft of bristles, scales or teeth sitting on top of the ovary, and still there on the ripe fruit.",
+  "where": "Asteraceae.",
+  "note": "The dandelion's parachute is a pappus."
+ },
+ {
+  "id": "bot-ast-ft-4",
+  "type": "feature",
+  "group": "Asteraceae",
+  "term": "Cypsela",
+  "kind": "Fruit",
+  "description": "A dry one-seeded fruit that never opens, developed from an inferior ovary and usually still crowned by its bristles.",
+  "where": "Asteraceae.",
+  "note": "Loosely called an achene; strictly a cypsela, because the ovary was inferior."
+ },
+ {
+  "id": "bot-ast-ft-5",
+  "type": "feature",
+  "group": "Asteraceae",
+  "term": "Disc floret",
+  "kind": "Flower",
+  "description": "One small flower with a radial tube of five fused lobes, standing in the middle of a head.",
+  "where": "Asteraceae.",
+  "shape": "discFloret",
+  "note": "Count the lobes at the rim of the tube: there are five."
+ },
+ {
+  "id": "bot-ast-ft-6",
+  "type": "feature",
+  "group": "Asteraceae",
+  "term": "Ray floret",
+  "kind": "Flower",
+  "description": "A flower at the edge of a head whose corolla is pulled out into a one-sided strap with three teeth, and which has no stamens.",
+  "where": "Asteraceae, in the sunflower subfamily.",
+  "shape": "rayFloret",
+  "note": "Three teeth, because three of the five fused petals make the strap."
+ },
+ {
+  "id": "bot-ast-ft-7",
+  "type": "feature",
+  "group": "Asteraceae",
+  "term": "Ligulate floret",
+  "kind": "Flower",
+  "description": "A strap-shaped flower with five teeth at its tip and working stamens, filling a head that has no tubular flowers in it at all.",
+  "where": "Asteraceae, in the chicory subfamily — dandelions and their kin.",
+  "shape": "ligulateFloret",
+  "note": "Five teeth means all five petals went into the strap."
+ },
+ {
+  "id": "bot-ast-ft-8",
+  "type": "feature",
+  "group": "Asteraceae",
+  "term": "Syngenesious anthers",
+  "kind": "Flower",
+  "description": "Five anthers joined edge to edge into a hollow tube, through which the style grows to push the pollen out ahead of itself.",
+  "where": "Asteraceae — the character the family is named for in older books.",
+  "shape": "syngenesious",
+  "note": "The filaments stay free; only the anthers are fused."
+ },
+ {
+  "id": "bot-ast-ft-9",
+  "type": "feature",
+  "group": "Asteraceae",
+  "term": "Discoid head",
+  "kind": "Inflorescence",
+  "description": "A head made only of tubular flowers, with no straps round the edge, so it reads as a brush or a thistle rather than a daisy.",
+  "where": "Asteraceae — thistles, sagebrush, coyote brush."
+ },
+ {
+  "id": "bot-ast-ft-10",
+  "type": "feature",
+  "group": "Asteraceae",
+  "term": "Radiate head",
+  "kind": "Inflorescence",
+  "description": "A head with tubular flowers in the middle and a single ring of strap-shaped ones round the outside.",
+  "where": "Asteraceae — the shape everyone thinks of as a daisy."
+ },
+ {
+  "id": "bot-ast-cl-1",
+  "type": "idclue",
+  "group": "Asteraceae",
+  "family": "Asteraceae",
+  "common": "sunflower family",
+  "clues": [
+   [
+    "Inflorescence",
+    "many small flowers on one shared receptacle"
+   ],
+   [
+    "Below them",
+    "a collar of green bracts"
+   ],
+   [
+    "Stamens",
+    "5, anthers fused into a tube"
+   ],
+   [
+    "Ovary",
+    "inferior, a single ovule"
+   ]
+  ],
+  "example": "Eriophyllum, Lasthenia"
+ },
+ {
+  "id": "bot-ast-cl-2",
+  "type": "idclue",
+  "group": "Asteraceae",
+  "family": "Asteraceae",
+  "common": "sunflower family",
+  "clues": [
+   [
+    "Looks like",
+    "one yellow flower with broad petals"
+   ],
+   [
+    "Each petal",
+    "a strap with 3 small teeth at the tip"
+   ],
+   [
+    "On the fruit",
+    "a crown of bristles, no sepals"
+   ]
+  ],
+  "example": "Helianthus, Encelia",
+  "note": "Each strap is a whole flower — a ray floret."
+ },
+ {
+  "id": "bot-ast-cl-3",
+  "type": "idclue",
+  "group": "Asteraceae",
+  "family": "Asteraceae",
+  "common": "sunflower family",
+  "clues": [
+   [
+    "Sap",
+    "milky"
+   ],
+   [
+    "Head",
+    "strap-shaped flowers only, each with 5 teeth"
+   ],
+   [
+    "Fruit",
+    "one seed, with a parachute of hairs"
+   ]
+  ],
+  "example": "Malacothrix, Stephanomeria",
+  "note": "The chicory side of the family: ligulate florets all through."
+ },
+ {
+  "id": "bot-ast-cl-4",
+  "type": "idclue",
+  "group": "Asteraceae",
+  "family": "Asteraceae",
+  "common": "sunflower family",
+  "clues": [
+   [
+    "Bracts",
+    "spine-tipped, in many overlapping ranks"
+   ],
+   [
+    "Head",
+    "tubular flowers only, no straps at the rim"
+   ],
+   [
+    "Style",
+    "with 2 branches, pushed through an anther tube"
+   ]
+  ],
+  "example": "Cirsium, Centaurea"
+ },
+ {
+  "id": "bot-ast-cl-5",
+  "type": "idclue",
+  "group": "Asteraceae",
+  "family": "Asteraceae",
+  "common": "sunflower family",
+  "clues": [
+   [
+    "Shrub",
+    "of coastal scrub, resinous"
+   ],
+   [
+    "Heads",
+    "small, crowded, of tubular flowers only"
+   ],
+   [
+    "Fruit",
+    "dry, one-seeded, never opening, pappus attached"
+   ]
+  ],
+  "example": "Baccharis, Artemisia"
+ },
+ {
+  "id": "bot-poa-ck",
+  "type": "checklist",
+  "group": "Poaceae",
+  "family": "Poaceae",
+  "common": "grass family",
+  "place": "Second only to the sunflowers, and the matrix of every California grassland.",
+  "rows": [
+   [
+    "Stem",
+    "round, hollow, solid and swollen at the nodes"
+   ],
+   [
+    "Leaves",
+    "2-ranked, parallel-veined, sheath split open"
+   ],
+   [
+    "Junction",
+    "a ligule where blade meets sheath"
+   ],
+   [
+    "Flowers",
+    "in spikelets, behind a lemma and a palea"
+   ],
+   [
+    "Stamens",
+    "3, hanging out; stigmas 2 and feathery"
+   ],
+   [
+    "Fruit",
+    "a caryopsis — seed coat fused to the fruit wall"
+   ]
+  ],
+  "genera": "Stipa, Bromus, Festuca, Poa, Muhlenbergia"
+ },
+ {
+  "id": "bot-poa-fl-1",
+  "type": "floral",
+  "group": "Poaceae",
+  "family": "Poaceae",
+  "common": "grass family",
+  "form": "floret",
+  "formula": "↓ P 2 lodicules · A3 · G(2)",
+  "diagram": {
+   "symmetry": "bilateral",
+   "ovary": "superior",
+   "bract": true,
+   "axis": true,
+   "whorls": [
+    {
+     "part": "calyx",
+     "n": 0,
+     "fused": false,
+     "as": "absent"
+    },
+    {
+     "part": "corolla",
+     "n": 2,
+     "fused": false,
+     "as": "lodicules",
+     "p": true
+    },
+    {
+     "part": "androecium",
+     "n": 3,
+     "fused": false
+    }
+   ],
+   "gynoecium": {
+    "carpels": 2,
+    "locules": 1,
+    "ovules": 1,
+    "fused": true
+   }
+  },
+  "note": "No sepals, no petals: two lodicules swell and shove the bracts apart."
+ },
+ {
+  "id": "bot-poa-ft-1",
+  "type": "feature",
+  "group": "Poaceae",
+  "term": "Spikelet",
+  "kind": "Inflorescence",
+  "description": "The unit a grass inflorescence is built from: a short axis carrying two empty bracts at the bottom and one or more flowers stacked above them.",
+  "where": "Poaceae.",
+  "shape": "spikelet",
+  "note": "Almost all grass identification is spikelet dissection."
+ },
+ {
+  "id": "bot-poa-ft-2",
+  "type": "feature",
+  "group": "Poaceae",
+  "term": "Glume",
+  "kind": "Flower",
+  "description": "Either of the two empty bracts at the very base of a grass spikelet, below any flower.",
+  "where": "Poaceae.",
+  "note": "Empty is the point: no flower sits in a glume's axil."
+ },
+ {
+  "id": "bot-poa-ft-3",
+  "type": "feature",
+  "group": "Poaceae",
+  "term": "Lemma",
+  "kind": "Flower",
+  "description": "The outer, lower bract of the pair that encloses a single grass flower, and the one that usually carries the bristle.",
+  "where": "Poaceae.",
+  "note": "Lemma outside, palea inside."
+ },
+ {
+  "id": "bot-poa-ft-4",
+  "type": "feature",
+  "group": "Poaceae",
+  "term": "Palea",
+  "kind": "Flower",
+  "description": "The inner, upper bract of the pair enclosing a single grass flower, usually thinner and two-keeled.",
+  "where": "Poaceae."
+ },
+ {
+  "id": "bot-poa-ft-5",
+  "type": "feature",
+  "group": "Poaceae",
+  "term": "Lodicule",
+  "kind": "Flower",
+  "description": "Either of the two minute scales at the base of a grass flower that swell with water and force its bracts apart so the anthers can hang out.",
+  "where": "Poaceae.",
+  "shape": "grassFloret",
+  "note": "They are what is left of the perianth."
+ },
+ {
+  "id": "bot-poa-ft-6",
+  "type": "feature",
+  "group": "Poaceae",
+  "term": "Awn",
+  "kind": "Flower",
+  "description": "A stiff bristle running out from the tip or back of a bract in a grass spikelet.",
+  "where": "Poaceae, and named parts of other families.",
+  "note": "Whether it is straight, bent or twisted separates a lot of California grasses."
+ },
+ {
+  "id": "bot-poa-ft-7",
+  "type": "feature",
+  "group": "Poaceae",
+  "term": "Ligule",
+  "kind": "Stem & leaf",
+  "description": "A small membrane or fringe of hairs standing up at the join where a grass leaf blade leaves the sheath that wraps the stem.",
+  "where": "Poaceae.",
+  "shape": "liguleGrass",
+  "note": "Its shape is a routine identification character."
+ },
+ {
+  "id": "bot-poa-ft-8",
+  "type": "feature",
+  "group": "Poaceae",
+  "term": "Culm",
+  "kind": "Stem & leaf",
+  "description": "The flowering stem of a grass: round in section, hollow between the joints and solid at them.",
+  "where": "Poaceae.",
+  "shape": "culmHollow",
+  "note": "Roll it between finger and thumb — a grass rolls, a sedge will not."
+ },
+ {
+  "id": "bot-poa-ft-9",
+  "type": "feature",
+  "group": "Poaceae",
+  "term": "Caryopsis",
+  "kind": "Fruit",
+  "description": "A dry one-seeded fruit in which the seed coat is fused to the fruit wall, so the two cannot be separated.",
+  "where": "Poaceae.",
+  "note": "Every grain — wheat, rice, corn — is one."
+ },
+ {
+  "id": "bot-poa-ft-10",
+  "type": "feature",
+  "group": "Poaceae",
+  "term": "Distichous",
+  "kind": "Stem & leaf",
+  "description": "Leaves borne in two vertical ranks, so the whole shoot lies flat in a single plane.",
+  "where": "Poaceae, and irises.",
+  "shape": "ranks2",
+  "note": "Two ranks, grass; three ranks, sedge."
+ },
+ {
+  "id": "bot-poa-ft-11",
+  "type": "feature",
+  "group": "Poaceae",
+  "term": "Plumose stigma",
+  "kind": "Flower",
+  "description": "A stigma drawn out into a feathery brush, built to comb pollen out of moving air.",
+  "where": "Poaceae, and other wind-pollinated families."
+ },
+ {
+  "id": "bot-poa-cl-1",
+  "type": "idclue",
+  "group": "Poaceae",
+  "family": "Poaceae",
+  "common": "grass family",
+  "clues": [
+   [
+    "Stem",
+    "round, hollow, solid at the joints"
+   ],
+   [
+    "Leaves",
+    "in 2 ranks, sheath split open down one side"
+   ],
+   [
+    "At the join",
+    "a membrane standing up against the stem"
+   ]
+  ],
+  "example": "Bromus, Festuca",
+  "note": "Roll the stem: a grass rolls between finger and thumb."
+ },
+ {
+  "id": "bot-poa-cl-2",
+  "type": "idclue",
+  "group": "Poaceae",
+  "family": "Poaceae",
+  "common": "grass family",
+  "clues": [
+   [
+    "Flowers",
+    "no sepals, no petals, tucked between two bracts"
+   ],
+   [
+    "Stamens",
+    "3, dangling on long filaments"
+   ],
+   [
+    "Stigmas",
+    "2, feathery"
+   ]
+  ],
+  "example": "Poa, Agrostis"
+ },
+ {
+  "id": "bot-poa-cl-3",
+  "type": "idclue",
+  "group": "Poaceae",
+  "family": "Poaceae",
+  "common": "grass family",
+  "clues": [
+   [
+    "Unit",
+    "a short axis with 2 empty bracts at its base"
+   ],
+   [
+    "Above them",
+    "one or more flowers, each in its own pair of bracts"
+   ],
+   [
+    "Often",
+    "a stiff bristle from the outer bract"
+   ]
+  ],
+  "example": "Stipa, Elymus",
+  "note": "That unit is a spikelet, and grass identification lives in it."
+ },
+ {
+  "id": "bot-poa-cl-4",
+  "type": "idclue",
+  "group": "Poaceae",
+  "family": "Poaceae",
+  "common": "grass family",
+  "clues": [
+   [
+    "Fruit",
+    "dry, one-seeded, seed coat fused to the fruit wall"
+   ],
+   [
+    "Habit",
+    "annual or tufted perennial of open ground"
+   ],
+   [
+    "Perianth",
+    "two tiny scales that swell to open the bracts"
+   ]
+  ],
+  "example": "Avena, Hordeum"
+ },
+ {
+  "id": "bot-poa-cl-5",
+  "type": "idclue",
+  "group": "Poaceae",
+  "family": "Poaceae",
+  "common": "grass family",
+  "clues": [
+   [
+    "Where",
+    "dry hills, whole slopes of it, gold by June"
+   ],
+   [
+    "Stem",
+    "jointed, hollow between the joints"
+   ],
+   [
+    "Leaves",
+    "flat, parallel-veined, alternate in one plane"
+   ]
+  ],
+  "example": "Bromus, Avena",
+  "note": "Most of California's golden hills are introduced annual grasses."
+ },
+ {
+  "id": "bot-fab-ck",
+  "type": "checklist",
+  "group": "Fabaceae",
+  "family": "Fabaceae",
+  "common": "legume family",
+  "place": "Third largest in California; Astragalus and Lupinus are both enormous here.",
+  "rows": [
+   [
+    "Corolla",
+    "bilateral: banner, 2 wings, a keel"
+   ],
+   [
+    "Stamens",
+    "10 — nine fused into a sheath, one free"
+   ],
+   [
+    "Ovary",
+    "superior, one carpel, one chamber"
+   ],
+   [
+    "Fruit",
+    "a legume, splitting down both seams"
+   ],
+   [
+    "Leaves",
+    "alternate, compound, with stipules"
+   ],
+   [
+    "Roots",
+    "often with nitrogen-fixing nodules"
+   ]
+  ],
+  "genera": "Lupinus, Astragalus, Acmispon, Trifolium, Acacia"
+ },
+ {
+  "id": "bot-fab-fl-1",
+  "type": "floral",
+  "group": "Fabaceae",
+  "family": "Fabaceae",
+  "common": "legume family",
+  "form": "papilionoid flower",
+  "formula": "↓ K(5) · C5 · A(9)+1 · G1",
+  "diagram": {
+   "symmetry": "bilateral",
+   "ovary": "superior",
+   "bract": true,
+   "axis": true,
+   "whorls": [
+    {
+     "part": "calyx",
+     "n": 5,
+     "fused": true
+    },
+    {
+     "part": "corolla",
+     "n": 5,
+     "fused": false
+    },
+    {
+     "part": "androecium",
+     "n": 5,
+     "fused": false
+    },
+    {
+     "part": "androecium",
+     "n": 5,
+     "fused": false
+    }
+   ],
+   "gynoecium": {
+    "carpels": 1,
+    "locules": 1,
+    "ovules": 4,
+    "fused": true
+   },
+   "andro": "(9)+1"
+  },
+  "note": "Banner, two wings and a keel; the keel hides nine fused stamens and one free."
+ },
+ {
+  "id": "bot-fab-fl-2",
+  "type": "floral",
+  "group": "Fabaceae",
+  "family": "Fabaceae",
+  "common": "legume family",
+  "form": "mimosoid flower",
+  "formula": "* K(5) · C(5) · A12 · G1",
+  "diagram": {
+   "symmetry": "radial",
+   "ovary": "superior",
+   "bract": true,
+   "axis": true,
+   "whorls": [
+    {
+     "part": "calyx",
+     "n": 5,
+     "fused": true
+    },
+    {
+     "part": "corolla",
+     "n": 5,
+     "fused": true
+    },
+    {
+     "part": "androecium",
+     "n": 12,
+     "fused": false
+    }
+   ],
+   "gynoecium": {
+    "carpels": 1,
+    "locules": 1,
+    "ovules": 4,
+    "fused": true
+   }
+  },
+  "note": "Radial and tiny, with long stamens doing the show — the acacia puffball."
+ },
+ {
+  "id": "bot-fab-fl-3",
+  "type": "floral",
+  "group": "Fabaceae",
+  "family": "Fabaceae",
+  "common": "legume family",
+  "form": "caesalpinioid flower",
+  "formula": "↓ K5 · C5 · A10 · G1",
+  "diagram": {
+   "symmetry": "bilateral",
+   "ovary": "superior",
+   "bract": true,
+   "axis": true,
+   "whorls": [
+    {
+     "part": "calyx",
+     "n": 5,
+     "fused": false
+    },
+    {
+     "part": "corolla",
+     "n": 5,
+     "fused": false
+    },
+    {
+     "part": "androecium",
+     "n": 10,
+     "fused": false
+    }
+   ],
+   "gynoecium": {
+    "carpels": 1,
+    "locules": 1,
+    "ovules": 4,
+    "fused": true
+   }
+  },
+  "note": "Bilateral but not butterfly-shaped, and the upper petal sits innermost."
+ },
+ {
+  "id": "bot-fab-ft-1",
+  "type": "feature",
+  "group": "Fabaceae",
+  "term": "Papilionaceous corolla",
+  "kind": "Flower",
+  "description": "A bilateral corolla of five unequal petals: a broad one standing up at the back, two spreading sideways, and two joined along their lower edge into a boat.",
+  "where": "Fabaceae, in the subfamily Faboideae.",
+  "shape": "papilionaceous",
+  "note": "Butterfly-shaped, hence the name."
+ },
+ {
+  "id": "bot-fab-ft-2",
+  "type": "feature",
+  "group": "Fabaceae",
+  "term": "Banner (standard)",
+  "kind": "Flower",
+  "description": "The single large upper petal of a pea flower, the one that wraps all the others while the flower is still in bud.",
+  "where": "Fabaceae."
+ },
+ {
+  "id": "bot-fab-ft-3",
+  "type": "feature",
+  "group": "Fabaceae",
+  "term": "Wings",
+  "kind": "Flower",
+  "description": "The two lateral petals of a pea flower, which flank the boat-shaped structure and take a bee's weight.",
+  "where": "Fabaceae."
+ },
+ {
+  "id": "bot-fab-ft-4",
+  "type": "feature",
+  "group": "Fabaceae",
+  "term": "Keel",
+  "kind": "Flower",
+  "description": "The two lowest petals of a pea flower, joined along their upper edge into a boat that hides the stamens and style.",
+  "where": "Fabaceae.",
+  "note": "Press it down and the stamens spring out onto the bee."
+ },
+ {
+  "id": "bot-fab-ft-5",
+  "type": "feature",
+  "group": "Fabaceae",
+  "term": "Diadelphous stamens",
+  "kind": "Flower",
+  "description": "Ten stamens with nine of their filaments fused into an open sheath and the tenth standing free above it.",
+  "where": "Fabaceae, in the subfamily Faboideae.",
+  "shape": "diadelphous",
+  "note": "Written (9)+1 in a floral formula."
+ },
+ {
+  "id": "bot-fab-ft-6",
+  "type": "feature",
+  "group": "Fabaceae",
+  "term": "Legume",
+  "kind": "Fruit",
+  "description": "A dry fruit from one carpel that splits along both of its seams into two halves, with the seeds attached in a single row.",
+  "where": "Fabaceae — the fruit the family is named for.",
+  "shape": "legume",
+  "note": "One carpel is the giveaway; nothing divides the inside."
+ },
+ {
+  "id": "bot-fab-ft-7",
+  "type": "feature",
+  "group": "Fabaceae",
+  "term": "Stipule",
+  "kind": "Stem & leaf",
+  "description": "Either of a pair of small appendages at the point where a leaf stalk meets the stem.",
+  "where": "Fabaceae reliably; many other families.",
+  "note": "In peas they can be leafy; in some legumes they are spines."
+ },
+ {
+  "id": "bot-fab-cl-1",
+  "type": "idclue",
+  "group": "Fabaceae",
+  "family": "Fabaceae",
+  "common": "legume family",
+  "clues": [
+   [
+    "Corolla",
+    "bilateral: a broad upper petal, 2 side petals, a boat"
+   ],
+   [
+    "Stamens",
+    "10 — nine fused into a sheath, one free"
+   ],
+   [
+    "Ovary",
+    "superior, one carpel"
+   ]
+  ],
+  "example": "Lupinus, Acmispon"
+ },
+ {
+  "id": "bot-fab-cl-2",
+  "type": "idclue",
+  "group": "Fabaceae",
+  "family": "Fabaceae",
+  "common": "legume family",
+  "clues": [
+   [
+    "Leaves",
+    "alternate, compound, with stipules at the base"
+   ],
+   [
+    "Fruit",
+    "dry, splitting down both seams"
+   ],
+   [
+    "Seeds",
+    "in a single row along one side"
+   ]
+  ],
+  "example": "Vicia, Lathyrus"
+ },
+ {
+  "id": "bot-fab-cl-3",
+  "type": "idclue",
+  "group": "Fabaceae",
+  "family": "Fabaceae",
+  "common": "legume family",
+  "clues": [
+   [
+    "Roots",
+    "carrying small nodules"
+   ],
+   [
+    "Leaves",
+    "palmately compound, in a hand of leaflets"
+   ],
+   [
+    "Flowers",
+    "in a raceme, each with a keel hiding the stamens"
+   ]
+  ],
+  "example": "Lupinus",
+  "note": "The nodules house nitrogen-fixing bacteria."
+ },
+ {
+  "id": "bot-fab-cl-4",
+  "type": "idclue",
+  "group": "Fabaceae",
+  "family": "Fabaceae",
+  "common": "legume family",
+  "clues": [
+   [
+    "Flowers",
+    "radial, tiny, packed into a fluffy ball"
+   ],
+   [
+    "Stamens",
+    "many, long-filamented, doing all the display"
+   ],
+   [
+    "Fruit",
+    "a dry pod splitting down both seams"
+   ]
+  ],
+  "example": "Acacia, Prosopis",
+  "note": "The mimosoid side of the family: radial, not butterfly-shaped."
+ },
+ {
+  "id": "bot-fab-cl-5",
+  "type": "idclue",
+  "group": "Fabaceae",
+  "family": "Fabaceae",
+  "common": "legume family",
+  "clues": [
+   [
+    "Pod",
+    "papery and inflated over the seeds"
+   ],
+   [
+    "Leaves",
+    "pinnate, alternate"
+   ],
+   [
+    "Corolla",
+    "banner, wings and keel"
+   ]
+  ],
+  "example": "Astragalus",
+  "note": "Astragalus is one of the largest genera in the state."
+ },
+ {
+  "id": "bot-bra-ck",
+  "type": "checklist",
+  "group": "Brassicaceae",
+  "family": "Brassicaceae",
+  "common": "mustard family",
+  "place": "Fourth largest, and the family behind most of California's weedy spring yellow.",
+  "rows": [
+   [
+    "Corolla",
+    "4 free petals set in a cross"
+   ],
+   [
+    "Stamens",
+    "6, tetradynamous: 4 long, 2 short"
+   ],
+   [
+    "Ovary",
+    "superior, 2 carpels, a false septum between"
+   ],
+   [
+    "Fruit",
+    "a silique, or a silicle if under 3× as long"
+   ],
+   [
+    "Leaves",
+    "alternate or in a basal rosette"
+   ],
+   [
+    "Smell",
+    "peppery — glucosinolates (mustard oils)"
+   ]
+  ],
+  "genera": "Streptanthus, Caulanthus, Boechera, Brassica, Lepidium"
+ },
+ {
+  "id": "bot-bra-fl-1",
+  "type": "floral",
+  "group": "Brassicaceae",
+  "family": "Brassicaceae",
+  "common": "mustard family",
+  "form": "flower",
+  "formula": "* K4 · C4 · A2+4 · G(2)",
+  "diagram": {
+   "symmetry": "radial",
+   "ovary": "superior",
+   "bract": false,
+   "axis": true,
+   "whorls": [
+    {
+     "part": "calyx",
+     "n": 4,
+     "fused": false
+    },
+    {
+     "part": "corolla",
+     "n": 4,
+     "fused": false
+    },
+    {
+     "part": "androecium",
+     "n": 2,
+     "fused": false,
+     "offset": 90
+    },
+    {
+     "part": "androecium",
+     "n": 4,
+     "fused": false
+    }
+   ],
+   "gynoecium": {
+    "carpels": 2,
+    "locules": 2,
+    "ovules": 4,
+    "fused": true
+   }
+  },
+  "note": "Four petals in a cross, six stamens — four tall, two short."
+ },
+ {
+  "id": "bot-bra-ft-1",
+  "type": "feature",
+  "group": "Brassicaceae",
+  "term": "Cruciform corolla",
+  "kind": "Flower",
+  "description": "Four free petals set at right angles so the flower reads as a cross from directly above.",
+  "where": "Brassicaceae — the character behind the old name Cruciferae.",
+  "shape": "cruciform"
+ },
+ {
+  "id": "bot-bra-ft-2",
+  "type": "feature",
+  "group": "Brassicaceae",
+  "term": "Tetradynamous stamens",
+  "kind": "Flower",
+  "description": "Six stamens of two lengths in one flower: four long ones and two short ones.",
+  "where": "Brassicaceae.",
+  "shape": "tetradynamous",
+  "note": "The two short ones are the outer, lateral pair."
+ },
+ {
+  "id": "bot-bra-ft-3",
+  "type": "feature",
+  "group": "Brassicaceae",
+  "term": "Silique",
+  "kind": "Fruit",
+  "description": "A dry two-valved fruit at least three times longer than wide, whose valves fall away from a papery partition left standing in a rim.",
+  "where": "Brassicaceae.",
+  "shape": "silique"
+ },
+ {
+  "id": "bot-bra-ft-4",
+  "type": "feature",
+  "group": "Brassicaceae",
+  "term": "Silicle",
+  "kind": "Fruit",
+  "description": "The same two-valved fruit with the standing partition, but less than three times as long as it is wide.",
+  "where": "Brassicaceae — peppergrass, shepherd's purse.",
+  "shape": "silicle",
+  "note": "Only the proportion differs; the construction is identical."
+ },
+ {
+  "id": "bot-bra-ft-5",
+  "type": "feature",
+  "group": "Brassicaceae",
+  "term": "Replum",
+  "kind": "Fruit",
+  "description": "The persistent rim left standing when both valves of a mustard fruit fall away, still carrying the partition and the seeds.",
+  "where": "Brassicaceae."
+ },
+ {
+  "id": "bot-bra-ft-6",
+  "type": "feature",
+  "group": "Brassicaceae",
+  "term": "Glucosinolate",
+  "kind": "Term",
+  "description": "The class of sulphur compound that turns pungent when the tissue is crushed, giving a crushed leaf its peppery bite.",
+  "where": "Brassicaceae, and its relatives in the order Brassicales.",
+  "note": "Mustard, horseradish and wasabi heat is all the same chemistry."
+ },
+ {
+  "id": "bot-bra-cl-1",
+  "type": "idclue",
+  "group": "Brassicaceae",
+  "family": "Brassicaceae",
+  "common": "mustard family",
+  "clues": [
+   [
+    "Petals",
+    "4, free, set in a cross"
+   ],
+   [
+    "Stamens",
+    "6 — four long, two short"
+   ],
+   [
+    "Ovary",
+    "superior, 2 carpels with a partition between"
+   ]
+  ],
+  "example": "Streptanthus, Boechera"
+ },
+ {
+  "id": "bot-bra-cl-2",
+  "type": "idclue",
+  "group": "Brassicaceae",
+  "family": "Brassicaceae",
+  "common": "mustard family",
+  "clues": [
+   [
+    "Crushed leaf",
+    "peppery"
+   ],
+   [
+    "Inflorescence",
+    "a raceme still lengthening at the tip"
+   ],
+   [
+    "On one stem",
+    "buds above, flowers below, fruit below that"
+   ]
+  ],
+  "example": "Brassica, Hirschfeldia"
+ },
+ {
+  "id": "bot-bra-cl-3",
+  "type": "idclue",
+  "group": "Brassicaceae",
+  "family": "Brassicaceae",
+  "common": "mustard family",
+  "clues": [
+   [
+    "Fruit",
+    "long and flat, splitting into 2 valves"
+   ],
+   [
+    "Left behind",
+    "a rim with a translucent papery partition"
+   ],
+   [
+    "Seeds",
+    "attached to that rim"
+   ]
+  ],
+  "example": "Caulanthus, Arabis"
+ },
+ {
+  "id": "bot-bra-cl-4",
+  "type": "idclue",
+  "group": "Brassicaceae",
+  "family": "Brassicaceae",
+  "common": "mustard family",
+  "clues": [
+   [
+    "Fruit",
+    "flat and round, under 3 times as long as wide"
+   ],
+   [
+    "Petals",
+    "4, small, white"
+   ],
+   [
+    "Leaves",
+    "alternate, often in a basal rosette"
+   ]
+  ],
+  "example": "Lepidium, Capsella"
+ },
+ {
+  "id": "bot-bra-cl-5",
+  "type": "idclue",
+  "group": "Brassicaceae",
+  "family": "Brassicaceae",
+  "common": "mustard family",
+  "clues": [
+   [
+    "Flower",
+    "radial, 4 sepals and 4 petals alternating"
+   ],
+   [
+    "Stamens",
+    "6 in two whorls of unequal length"
+   ],
+   [
+    "Fruit",
+    "a dry capsule with a false septum"
+   ]
+  ],
+  "example": "Draba, Thysanocarpus"
+ },
+ {
+  "id": "bot-pol-ck",
+  "type": "checklist",
+  "group": "Polygonaceae",
+  "family": "Polygonaceae",
+  "common": "buckwheat family",
+  "place": "The wild buckwheats (Eriogonum) are one of California's largest genera.",
+  "rows": [
+   [
+    "Nodes",
+    "swollen, usually sheathed by an ocrea"
+   ],
+   [
+    "Perianth",
+    "tepals, all alike, no true petals"
+   ],
+   [
+    "Stamens",
+    "3–9"
+   ],
+   [
+    "Ovary",
+    "superior, 3 carpels but one chamber, one ovule"
+   ],
+   [
+    "Fruit",
+    "a 3-sided achene"
+   ],
+   [
+    "Exception",
+    "Eriogonum has no ocrea — it has involucres"
+   ]
+  ],
+  "genera": "Eriogonum, Chorizanthe, Rumex, Persicaria"
+ },
+ {
+  "id": "bot-pol-fl-1",
+  "type": "floral",
+  "group": "Polygonaceae",
+  "family": "Polygonaceae",
+  "common": "buckwheat family",
+  "form": "flower",
+  "formula": "* P(6) · A6+3 · G(3)",
+  "diagram": {
+   "symmetry": "radial",
+   "ovary": "superior",
+   "bract": true,
+   "axis": true,
+   "whorls": [
+    {
+     "part": "calyx",
+     "n": 6,
+     "fused": true,
+     "p": true
+    },
+    {
+     "part": "corolla",
+     "n": 0,
+     "fused": false,
+     "as": "absent"
+    },
+    {
+     "part": "androecium",
+     "n": 6,
+     "fused": false
+    },
+    {
+     "part": "androecium",
+     "n": 3,
+     "fused": false
+    }
+   ],
+   "gynoecium": {
+    "carpels": 3,
+    "locules": 1,
+    "ovules": 1,
+    "fused": true
+   }
+  },
+  "note": "No petals — six look-alike tepals over a single seed with three angles."
+ },
+ {
+  "id": "bot-pol-ft-1",
+  "type": "feature",
+  "group": "Polygonaceae",
+  "term": "Ocrea",
+  "kind": "Stem & leaf",
+  "description": "A papery tube round the stem just above a leaf base, formed from two stipules fused together.",
+  "where": "Polygonaceae — but not Eriogonum.",
+  "shape": "ocrea",
+  "note": "Slide a finger up the stem and you feel each collar."
+ },
+ {
+  "id": "bot-pol-ft-2",
+  "type": "feature",
+  "group": "Polygonaceae",
+  "term": "Swollen node",
+  "kind": "Stem & leaf",
+  "description": "A joint on the stem visibly thicker than the internode either side of it.",
+  "where": "Polygonaceae — the knots in knotweed.",
+  "shape": "swollenNode"
+ },
+ {
+  "id": "bot-pol-ft-3",
+  "type": "feature",
+  "group": "Polygonaceae",
+  "term": "Tepal",
+  "kind": "Flower",
+  "description": "A perianth part on a flower whose sepals and petals cannot be told apart from each other.",
+  "where": "Polygonaceae, and most monocots."
+ },
+ {
+  "id": "bot-pol-ft-4",
+  "type": "feature",
+  "group": "Polygonaceae",
+  "term": "Trigonous achene",
+  "kind": "Fruit",
+  "description": "A dry one-seeded fruit that does not open, with three flat faces meeting in three sharp angles.",
+  "where": "Polygonaceae.",
+  "shape": "acheneTrigonous",
+  "note": "Three carpels, one seed, three edges."
+ },
+ {
+  "id": "bot-pol-ft-5",
+  "type": "feature",
+  "group": "Polygonaceae",
+  "term": "Involucre (buckwheat)",
+  "kind": "Inflorescence",
+  "description": "A small cup of fused bracts, its rim toothed, holding a cluster of stalked flowers up above it.",
+  "where": "Polygonaceae — Eriogonum and Chorizanthe.",
+  "shape": "involucreCup",
+  "note": "The wild buckwheats have this instead of an ocrea."
+ },
+ {
+  "id": "bot-pol-cl-1",
+  "type": "idclue",
+  "group": "Polygonaceae",
+  "family": "Polygonaceae",
+  "common": "buckwheat family",
+  "clues": [
+   [
+    "At each node",
+    "a papery sheath wrapped round the stem"
+   ],
+   [
+    "Nodes",
+    "swollen"
+   ],
+   [
+    "Flowers",
+    "small, pink, without petals"
+   ]
+  ],
+  "example": "Persicaria, Polygonum"
+ },
+ {
+  "id": "bot-pol-cl-2",
+  "type": "idclue",
+  "group": "Polygonaceae",
+  "family": "Polygonaceae",
+  "common": "buckwheat family",
+  "clues": [
+   [
+    "Perianth",
+    "6 parts, all alike, no petals as such"
+   ],
+   [
+    "Ovary",
+    "superior, 3 carpels but one chamber, one ovule"
+   ],
+   [
+    "Fruit",
+    "one seed, three sharp angles"
+   ]
+  ],
+  "example": "Rumex, Eriogonum"
+ },
+ {
+  "id": "bot-pol-cl-3",
+  "type": "idclue",
+  "group": "Polygonaceae",
+  "family": "Polygonaceae",
+  "common": "buckwheat family",
+  "clues": [
+   [
+    "No sheath",
+    "at the nodes"
+   ],
+   [
+    "Instead",
+    "small toothed cups holding clusters of flowers"
+   ],
+   [
+    "Habit",
+    "grey subshrub of dry slopes, leaves in bundles"
+   ]
+  ],
+  "example": "Eriogonum fasciculatum",
+  "note": "The wild buckwheats swapped the ocrea for an involucre."
+ },
+ {
+  "id": "bot-pol-cl-4",
+  "type": "idclue",
+  "group": "Polygonaceae",
+  "family": "Polygonaceae",
+  "common": "buckwheat family",
+  "clues": [
+   [
+    "Leaves",
+    "sour to taste"
+   ],
+   [
+    "In fruit",
+    "three of the tepals enlarge into wings"
+   ],
+   [
+    "Habit",
+    "coarse herb of ditches and damp ground"
+   ]
+  ],
+  "example": "Rumex"
+ },
+ {
+  "id": "bot-pol-cl-5",
+  "type": "idclue",
+  "group": "Polygonaceae",
+  "family": "Polygonaceae",
+  "common": "buckwheat family",
+  "clues": [
+   [
+    "Habit",
+    "low spiny annual of sand and pavement"
+   ],
+   [
+    "Flowers",
+    "in bracted involucres, perianth of 6 tepals"
+   ],
+   [
+    "Fruit",
+    "an achene with three angles"
+   ]
+  ],
+  "example": "Chorizanthe"
+ },
+ {
+  "id": "bot-bor-ck",
+  "type": "checklist",
+  "group": "Boraginaceae",
+  "family": "Boraginaceae",
+  "common": "borage and waterleaf family",
+  "place": "Bigger than it looks: Phacelia and its allies (once Hydrophyllaceae) sit inside it now.",
+  "rows": [
+   [
+    "Hairs",
+    "stiff and bristly, often rough to the touch"
+   ],
+   [
+    "Inflorescence",
+    "a scorpioid cyme, coiled at the tip"
+   ],
+   [
+    "Corolla",
+    "5 fused lobes, radial, often with throat scales"
+   ],
+   [
+    "Stamens",
+    "5, attached inside the corolla tube"
+   ],
+   [
+    "Ovary",
+    "superior, 2 carpels, 4 lobes, style from the base"
+   ],
+   [
+    "Fruit",
+    "4 nutlets"
+   ]
+  ],
+  "genera": "Phacelia, Cryptantha, Plagiobothrys, Amsinckia, Eriodictyon"
+ },
+ {
+  "id": "bot-bor-fl-1",
+  "type": "floral",
+  "group": "Boraginaceae",
+  "family": "Boraginaceae",
+  "common": "borage and waterleaf family",
+  "form": "flower",
+  "formula": "* K(5) · C(5) · A5 · G(2)",
+  "diagram": {
+   "symmetry": "radial",
+   "ovary": "superior",
+   "bract": false,
+   "axis": true,
+   "whorls": [
+    {
+     "part": "calyx",
+     "n": 5,
+     "fused": true
+    },
+    {
+     "part": "corolla",
+     "n": 5,
+     "fused": true
+    },
+    {
+     "part": "androecium",
+     "n": 5,
+     "fused": false
+    }
+   ],
+   "gynoecium": {
+    "carpels": 2,
+    "locules": 4,
+    "ovules": 4,
+    "fused": true
+   }
+  },
+  "note": "A coiled spray of five-lobed flowers over an ovary split into four."
+ },
+ {
+  "id": "bot-bor-ft-1",
+  "type": "feature",
+  "group": "Boraginaceae",
+  "term": "Scorpioid cyme",
+  "kind": "Inflorescence",
+  "description": "A one-sided flower spray coiled like the head of a fiddle, unrolling from the tip as the oldest flowers open first.",
+  "where": "Boraginaceae.",
+  "shape": "scorpioid",
+  "note": "The genus name Amsinckia's common name, fiddleneck, is this shape."
+ },
+ {
+  "id": "bot-bor-ft-2",
+  "type": "feature",
+  "group": "Boraginaceae",
+  "term": "Nutlets",
+  "kind": "Fruit",
+  "description": "Four small hard one-seeded segments left sitting in the persistent calyx when a single ovary breaks apart.",
+  "where": "Boraginaceae — and, confusingly, Lamiaceae.",
+  "shape": "nutlets4",
+  "note": "Four nutlets alone will not settle the family; check stem and leaves."
+ },
+ {
+  "id": "bot-bor-ft-3",
+  "type": "feature",
+  "group": "Boraginaceae",
+  "term": "Gynobasic style",
+  "kind": "Flower",
+  "description": "A style that rises from a point at the very base of a deeply lobed ovary rather than from its tip.",
+  "where": "Boraginaceae and Lamiaceae.",
+  "shape": "gynobasic",
+  "note": "It is why the ovary can split into four and the style still stands."
+ },
+ {
+  "id": "bot-bor-ft-4",
+  "type": "feature",
+  "group": "Boraginaceae",
+  "term": "Faucal appendages",
+  "kind": "Flower",
+  "description": "Small scales, folds or pads standing in the throat of a fused corolla where the tube opens out.",
+  "where": "Boraginaceae — forget-me-nots wear them as a coloured eye."
+ },
+ {
+  "id": "bot-bor-ft-5",
+  "type": "feature",
+  "group": "Boraginaceae",
+  "term": "Hispid",
+  "kind": "Stem & leaf",
+  "description": "Clothed in stiff, straight, harsh bristles that catch on skin.",
+  "where": "Boraginaceae, characteristically.",
+  "note": "Rough enough that the family is recognisable by touch."
+ },
+ {
+  "id": "bot-bor-cl-1",
+  "type": "idclue",
+  "group": "Boraginaceae",
+  "family": "Boraginaceae",
+  "common": "borage and waterleaf family",
+  "clues": [
+   [
+    "Hairs",
+    "stiff and bristly, rough to the touch"
+   ],
+   [
+    "Inflorescence",
+    "coiled like a fiddle head, uncoiling as it opens"
+   ],
+   [
+    "Fruit",
+    "4 nutlets in the old calyx"
+   ],
+   [
+    "Leaves",
+    "alternate, stem round"
+   ]
+  ],
+  "example": "Amsinckia, Cryptantha",
+  "note": "Four nutlets with alternate leaves and a round stem: not a mint."
+ },
+ {
+  "id": "bot-bor-cl-2",
+  "type": "idclue",
+  "group": "Boraginaceae",
+  "family": "Boraginaceae",
+  "common": "borage and waterleaf family",
+  "clues": [
+   [
+    "Corolla",
+    "5 fused lobes, radial, scales in the throat"
+   ],
+   [
+    "Stamens",
+    "5, attached inside the tube"
+   ],
+   [
+    "Style",
+    "rising from the base of a 4-lobed ovary"
+   ]
+  ],
+  "example": "Myosotis, Plagiobothrys"
+ },
+ {
+  "id": "bot-bor-cl-3",
+  "type": "idclue",
+  "group": "Boraginaceae",
+  "family": "Boraginaceae",
+  "common": "borage and waterleaf family",
+  "clues": [
+   [
+    "Buds",
+    "pink; the open flowers blue"
+   ],
+   [
+    "Spray",
+    "one-sided and curved"
+   ],
+   [
+    "Stem and leaf",
+    "harshly hairy"
+   ]
+  ],
+  "example": "Phacelia, Echium"
+ },
+ {
+  "id": "bot-bor-cl-4",
+  "type": "idclue",
+  "group": "Boraginaceae",
+  "family": "Boraginaceae",
+  "common": "borage and waterleaf family",
+  "clues": [
+   [
+    "Flowers",
+    "bell-shaped, purple, stamens sticking well out"
+   ],
+   [
+    "Spray",
+    "curved, opening from the base"
+   ],
+   [
+    "Ovary",
+    "superior, 2 carpels"
+   ]
+  ],
+  "example": "Phacelia",
+  "note": "Phacelia and its allies used to be a family of their own, Hydrophyllaceae."
+ },
+ {
+  "id": "bot-bor-cl-5",
+  "type": "idclue",
+  "group": "Boraginaceae",
+  "family": "Boraginaceae",
+  "common": "borage and waterleaf family",
+  "clues": [
+   [
+    "Shrub",
+    "of chaparral, leaves sticky or felted beneath"
+   ],
+   [
+    "Corolla",
+    "5 fused lobes in a tube"
+   ],
+   [
+    "Inflorescence",
+    "coiled cymes"
+   ]
+  ],
+  "example": "Eriodictyon",
+  "note": "Yerba santa — a shrubby member of a mostly herbaceous family."
+ },
+ {
+  "id": "bot-cyp-ck",
+  "type": "checklist",
+  "group": "Cyperaceae",
+  "family": "Cyperaceae",
+  "common": "sedge family",
+  "place": "Carex alone runs to well over a hundred taxa in California.",
+  "rows": [
+   [
+    "Stem",
+    "triangular, solid, no swollen nodes"
+   ],
+   [
+    "Leaves",
+    "3-ranked, sheaths closed into a tube"
+   ],
+   [
+    "Flowers",
+    "tiny, one behind each scale of a spike"
+   ],
+   [
+    "Perianth",
+    "absent, or reduced to bristles"
+   ],
+   [
+    "Stamens",
+    "3; stigmas 2 or 3, not feathery"
+   ],
+   [
+    "Fruit",
+    "an achene — in Carex, sealed in a perigynium"
+   ]
+  ],
+  "genera": "Carex, Cyperus, Eleocharis, Schoenoplectus"
+ },
+ {
+  "id": "bot-cyp-fl-1",
+  "type": "floral",
+  "group": "Cyperaceae",
+  "family": "Cyperaceae",
+  "common": "sedge family",
+  "form": "flower",
+  "formula": "* P bristles · A3 · G(3)",
+  "diagram": {
+   "symmetry": "radial",
+   "ovary": "superior",
+   "bract": true,
+   "axis": true,
+   "whorls": [
+    {
+     "part": "calyx",
+     "n": 0,
+     "fused": false,
+     "as": "bristles",
+     "p": true
+    },
+    {
+     "part": "corolla",
+     "n": 0,
+     "fused": false,
+     "as": "absent"
+    },
+    {
+     "part": "androecium",
+     "n": 3,
+     "fused": false
+    }
+   ],
+   "gynoecium": {
+    "carpels": 3,
+    "locules": 1,
+    "ovules": 1,
+    "fused": true
+   }
+  },
+  "note": "One naked flower behind one scale; sedges have edges."
+ },
+ {
+  "id": "bot-cyp-ft-1",
+  "type": "feature",
+  "group": "Cyperaceae",
+  "term": "Trigonous culm",
+  "kind": "Stem & leaf",
+  "description": "A flowering stem triangular in cross-section and solid all the way through, with no swollen joints along it.",
+  "where": "Cyperaceae.",
+  "shape": "culmTriangular",
+  "note": "Sedges have edges."
+ },
+ {
+  "id": "bot-cyp-ft-2",
+  "type": "feature",
+  "group": "Cyperaceae",
+  "term": "Tristichous",
+  "kind": "Stem & leaf",
+  "description": "Leaves borne in three vertical ranks, one every 120 degrees round the stem.",
+  "where": "Cyperaceae.",
+  "shape": "ranks3"
+ },
+ {
+  "id": "bot-cyp-ft-3",
+  "type": "feature",
+  "group": "Cyperaceae",
+  "term": "Perigynium",
+  "kind": "Fruit",
+  "description": "A closed flask-shaped sac enclosing a single ovary, with the stigmas emerging from a beak at its top.",
+  "where": "Cyperaceae — the genus Carex, and only it.",
+  "shape": "perigynium",
+  "note": "Its shape and beak are how Carex species are told apart."
+ },
+ {
+  "id": "bot-cyp-ft-4",
+  "type": "feature",
+  "group": "Cyperaceae",
+  "term": "Floral scale",
+  "kind": "Inflorescence",
+  "description": "A single small bract with one naked flower sitting in its axil, stacked with others into a spike.",
+  "where": "Cyperaceae.",
+  "shape": "sedgeSpike",
+  "note": "One scale, one flower — grasses put two bracts round each."
+ },
+ {
+  "id": "bot-cyp-cl-1",
+  "type": "idclue",
+  "group": "Cyperaceae",
+  "family": "Cyperaceae",
+  "common": "sedge family",
+  "clues": [
+   [
+    "Stem",
+    "triangular in section, solid, no swollen joints"
+   ],
+   [
+    "Leaves",
+    "in 3 ranks, sheaths closed into tubes"
+   ],
+   [
+    "Where",
+    "wet meadow, seep, streambank"
+   ]
+  ],
+  "example": "Carex, Cyperus",
+  "note": "Sedges have edges; it will not roll between your fingers."
+ },
+ {
+  "id": "bot-cyp-cl-2",
+  "type": "idclue",
+  "group": "Cyperaceae",
+  "family": "Cyperaceae",
+  "common": "sedge family",
+  "clues": [
+   [
+    "Each flower",
+    "naked, sitting behind a single scale"
+   ],
+   [
+    "Perianth",
+    "absent, or a few bristles"
+   ],
+   [
+    "Stamens",
+    "3; stigmas 2 or 3, not feathery"
+   ]
+  ],
+  "example": "Eleocharis, Schoenoplectus"
+ },
+ {
+  "id": "bot-cyp-cl-3",
+  "type": "idclue",
+  "group": "Cyperaceae",
+  "family": "Cyperaceae",
+  "common": "sedge family",
+  "clues": [
+   [
+    "Ovary",
+    "sealed inside a small flask"
+   ],
+   [
+    "Out of its beak",
+    "the stigmas"
+   ],
+   [
+    "Fruit",
+    "a hard one-seeded nut inside that flask"
+   ]
+  ],
+  "example": "Carex",
+  "note": "The flask is a perigynium, and only Carex has one."
+ },
+ {
+  "id": "bot-cyp-cl-4",
+  "type": "idclue",
+  "group": "Cyperaceae",
+  "family": "Cyperaceae",
+  "common": "sedge family",
+  "clues": [
+   [
+    "Spike",
+    "male flowers at the top, female below"
+   ],
+   [
+    "Stem",
+    "3-sided"
+   ],
+   [
+    "Fruit",
+    "an achene, often 3-angled"
+   ]
+  ],
+  "example": "Carex"
+ },
+ {
+  "id": "bot-cyp-cl-5",
+  "type": "idclue",
+  "group": "Cyperaceae",
+  "family": "Cyperaceae",
+  "common": "sedge family",
+  "clues": [
+   [
+    "Habit",
+    "grass-like, but leafless green stems in shallow water"
+   ],
+   [
+    "Inflorescence",
+    "a single terminal spike of scales"
+   ],
+   [
+    "Perianth",
+    "reduced to bristles"
+   ]
+  ],
+  "example": "Eleocharis, Schoenoplectus"
+ },
+ {
+  "id": "bot-pla-ck",
+  "type": "checklist",
+  "group": "Plantaginaceae",
+  "family": "Plantaginaceae",
+  "common": "plantain family",
+  "place": "Holds most of what California floras used to file under Scrophulariaceae, Penstemon included.",
+  "rows": [
+   [
+    "Corolla",
+    "5 fused lobes, bilateral, often 2-lipped"
+   ],
+   [
+    "Stamens",
+    "4, didynamous — two pairs of unequal length"
+   ],
+   [
+    "Extra",
+    "a 5th sterile staminode in Penstemon"
+   ],
+   [
+    "Ovary",
+    "superior, 2 carpels, axile placentation"
+   ],
+   [
+    "Fruit",
+    "a capsule with many small seeds"
+   ],
+   [
+    "Not",
+    "no square stem, no mint smell, no nutlets"
+   ]
+  ],
+  "genera": "Penstemon, Collinsia, Antirrhinum, Keckiella, Plantago"
+ },
+ {
+  "id": "bot-pla-fl-1",
+  "type": "floral",
+  "group": "Plantaginaceae",
+  "family": "Plantaginaceae",
+  "common": "plantain family",
+  "form": "flower",
+  "formula": "↓ K(5) · C(5) · A4 · G(2)",
+  "diagram": {
+   "symmetry": "bilateral",
+   "ovary": "superior",
+   "bract": false,
+   "axis": true,
+   "whorls": [
+    {
+     "part": "calyx",
+     "n": 5,
+     "fused": true
+    },
+    {
+     "part": "corolla",
+     "n": 5,
+     "fused": true
+    },
+    {
+     "part": "androecium",
+     "n": 4,
+     "fused": false
+    }
+   ],
+   "gynoecium": {
+    "carpels": 2,
+    "locules": 2,
+    "ovules": 6,
+    "fused": true
+   }
+  },
+  "note": "Two lips and four stamens — but a capsule of many seeds, not four nutlets."
+ },
+ {
+  "id": "bot-pla-ft-1",
+  "type": "feature",
+  "group": "Plantaginaceae",
+  "term": "Bilabiate corolla",
+  "kind": "Flower",
+  "description": "Five fused petals split into an upper lip of two lobes and a lower lip of three.",
+  "where": "Plantaginaceae, Lamiaceae, Orobanchaceae.",
+  "shape": "bilabiate",
+  "note": "Two above, three below."
+ },
+ {
+  "id": "bot-pla-ft-2",
+  "type": "feature",
+  "group": "Plantaginaceae",
+  "term": "Didynamous stamens",
+  "kind": "Flower",
+  "description": "Four stamens in one flower arranged as two pairs of unequal length.",
+  "where": "Plantaginaceae and Lamiaceae.",
+  "shape": "didynamous",
+  "note": "Four, in two lengths — not six."
+ },
+ {
+  "id": "bot-pla-ft-3",
+  "type": "feature",
+  "group": "Plantaginaceae",
+  "term": "Staminode",
+  "kind": "Flower",
+  "description": "A stamen present in the flower but making no pollen, sometimes conspicuous and bearded.",
+  "where": "Plantaginaceae — the fifth stamen of every Penstemon.",
+  "note": "Penstemon means 'five stamens'; the fifth is this sterile one."
+ },
+ {
+  "id": "bot-pla-ft-4",
+  "type": "feature",
+  "group": "Plantaginaceae",
+  "term": "Axile placentation",
+  "kind": "Fruit",
+  "description": "Ovules attached to a central column where the partitions of a several-chambered ovary meet.",
+  "where": "Plantaginaceae, Polemoniaceae, Onagraceae.",
+  "shape": "capsuleAxile"
+ },
+ {
+  "id": "bot-pla-cl-1",
+  "type": "idclue",
+  "group": "Plantaginaceae",
+  "family": "Plantaginaceae",
+  "common": "plantain family",
+  "clues": [
+   [
+    "Corolla",
+    "5 fused lobes, 2 above and 3 below"
+   ],
+   [
+    "Stamens",
+    "4, in two unequal pairs"
+   ],
+   [
+    "Fruit",
+    "a capsule of many small seeds"
+   ],
+   [
+    "Stem",
+    "round, no smell"
+   ]
+  ],
+  "example": "Penstemon, Keckiella",
+  "note": "Two lips and four stamens, but a capsule: not a mint."
+ },
+ {
+  "id": "bot-pla-cl-2",
+  "type": "idclue",
+  "group": "Plantaginaceae",
+  "family": "Plantaginaceae",
+  "common": "plantain family",
+  "clues": [
+   [
+    "Stamens",
+    "4 fertile, plus a fifth making no pollen"
+   ],
+   [
+    "That fifth",
+    "often flattened and bearded"
+   ],
+   [
+    "Flowers",
+    "tubular, in a one-sided spray"
+   ]
+  ],
+  "example": "Penstemon",
+  "note": "The bearded staminode is what gave Penstemon its common name."
+ },
+ {
+  "id": "bot-pla-cl-3",
+  "type": "idclue",
+  "group": "Plantaginaceae",
+  "family": "Plantaginaceae",
+  "common": "plantain family",
+  "clues": [
+   [
+    "Ovary",
+    "superior, 2 carpels, seeds on a central column"
+   ],
+   [
+    "Corolla",
+    "bilateral, fused"
+   ],
+   [
+    "Fruit",
+    "splitting to release many seeds"
+   ]
+  ],
+  "example": "Collinsia, Antirrhinum"
+ },
+ {
+  "id": "bot-pla-cl-4",
+  "type": "idclue",
+  "group": "Plantaginaceae",
+  "family": "Plantaginaceae",
+  "common": "plantain family",
+  "clues": [
+   [
+    "Leaves",
+    "in a basal rosette, strongly ribbed"
+   ],
+   [
+    "Inflorescence",
+    "a dense spike of small brown flowers"
+   ],
+   [
+    "Corolla",
+    "4 papery lobes, stamens sticking out"
+   ]
+  ],
+  "example": "Plantago",
+  "note": "The family's name genus is the odd one out to look at."
+ },
+ {
+  "id": "bot-pla-cl-5",
+  "type": "idclue",
+  "group": "Plantaginaceae",
+  "family": "Plantaginaceae",
+  "common": "plantain family",
+  "clues": [
+   [
+    "Flowers",
+    "tubular red, on a woody-based stem"
+   ],
+   [
+    "Leaves",
+    "opposite, no smell when crushed"
+   ],
+   [
+    "Fruit",
+    "a dry capsule, not four nutlets"
+   ]
+  ],
+  "example": "Keckiella, Penstemon"
+ },
+ {
+  "id": "bot-ple-ck",
+  "type": "checklist",
+  "group": "Polemoniaceae",
+  "family": "Polemoniaceae",
+  "common": "phlox family",
+  "place": "A California-centred family: more of it grows here than anywhere else on earth.",
+  "rows": [
+   [
+    "Corolla",
+    "5 fused lobes, radial, often salverform"
+   ],
+   [
+    "Stamens",
+    "5, attached in the corolla tube"
+   ],
+   [
+    "Ovary",
+    "superior, 3 carpels, 3 chambers"
+   ],
+   [
+    "Style",
+    "one, with 3 stigma lobes"
+   ],
+   [
+    "Fruit",
+    "a capsule, seeds on the central column"
+   ],
+   [
+    "Leaves",
+    "alternate or opposite, often finely divided"
+   ]
+  ],
+  "genera": "Gilia, Leptosiphon, Navarretia, Eriastrum, Phlox"
+ },
+ {
+  "id": "bot-ple-fl-1",
+  "type": "floral",
+  "group": "Polemoniaceae",
+  "family": "Polemoniaceae",
+  "common": "phlox family",
+  "form": "flower",
+  "formula": "* K(5) · C(5) · A5 · G(3)",
+  "diagram": {
+   "symmetry": "radial",
+   "ovary": "superior",
+   "bract": false,
+   "axis": true,
+   "whorls": [
+    {
+     "part": "calyx",
+     "n": 5,
+     "fused": true
+    },
+    {
+     "part": "corolla",
+     "n": 5,
+     "fused": true
+    },
+    {
+     "part": "androecium",
+     "n": 5,
+     "fused": false
+    }
+   ],
+   "gynoecium": {
+    "carpels": 3,
+    "locules": 3,
+    "ovules": 6,
+    "fused": true
+   }
+  },
+  "note": "A narrow tube that flares abruptly into a flat face, over three chambers."
+ },
+ {
+  "id": "bot-ple-ft-1",
+  "type": "feature",
+  "group": "Polemoniaceae",
+  "term": "Salverform corolla",
+  "kind": "Flower",
+  "description": "Five fused petals making a long narrow tube that opens abruptly into a flat, radial face set at right angles to it.",
+  "where": "Polemoniaceae — phlox, gilia, leptosiphon.",
+  "shape": "salverform"
+ },
+ {
+  "id": "bot-ple-ft-2",
+  "type": "feature",
+  "group": "Polemoniaceae",
+  "term": "Loculicidal capsule",
+  "kind": "Fruit",
+  "description": "A dry fruit of several chambers that splits open through the back of each chamber, seeds attached to the central column.",
+  "where": "Polemoniaceae.",
+  "shape": "capsule3",
+  "note": "Three chambers here, matching three carpels."
+ },
+ {
+  "id": "bot-ple-cl-1",
+  "type": "idclue",
+  "group": "Polemoniaceae",
+  "family": "Polemoniaceae",
+  "common": "phlox family",
+  "clues": [
+   [
+    "Corolla",
+    "a narrow tube flaring abruptly into a flat face"
+   ],
+   [
+    "Ovary",
+    "superior, 3 carpels, 3 chambers"
+   ],
+   [
+    "Style",
+    "one, with 3 stigma lobes"
+   ]
+  ],
+  "example": "Gilia, Leptosiphon"
+ },
+ {
+  "id": "bot-ple-cl-2",
+  "type": "idclue",
+  "group": "Polemoniaceae",
+  "family": "Polemoniaceae",
+  "common": "phlox family",
+  "clues": [
+   [
+    "Stamens",
+    "5, attached in the corolla tube"
+   ],
+   [
+    "Fruit",
+    "a capsule splitting into 3, seeds on the axis"
+   ],
+   [
+    "Flower",
+    "radial, 5 fused petals"
+   ]
+  ],
+  "example": "Phlox, Linanthus"
+ },
+ {
+  "id": "bot-ple-cl-3",
+  "type": "idclue",
+  "group": "Polemoniaceae",
+  "family": "Polemoniaceae",
+  "common": "phlox family",
+  "clues": [
+   [
+    "Habit",
+    "small spring annual of open sand"
+   ],
+   [
+    "Leaves",
+    "opposite, cut into thread-fine lobes"
+   ],
+   [
+    "Flowers",
+    "in a tight head, corolla tube long and slender"
+   ]
+  ],
+  "example": "Leptosiphon"
+ },
+ {
+  "id": "bot-ple-cl-4",
+  "type": "idclue",
+  "group": "Polemoniaceae",
+  "family": "Polemoniaceae",
+  "common": "phlox family",
+  "clues": [
+   [
+    "Leaves",
+    "pinnately compound, leaflets in a ladder"
+   ],
+   [
+    "Flowers",
+    "blue, bell-shaped, 5 fused lobes"
+   ],
+   [
+    "Ovary",
+    "superior, 3 chambers"
+   ]
+  ],
+  "example": "Polemonium",
+  "note": "Jacob's ladder — the family's name genus."
+ },
+ {
+  "id": "bot-ple-cl-5",
+  "type": "idclue",
+  "group": "Polemoniaceae",
+  "family": "Polemoniaceae",
+  "common": "phlox family",
+  "clues": [
+   [
+    "Bracts",
+    "spine-tipped, under a head of flowers"
+   ],
+   [
+    "Corolla",
+    "5 fused lobes, blue, tube slender"
+   ],
+   [
+    "Fruit",
+    "a 3-chambered capsule"
+   ]
+  ],
+  "example": "Navarretia, Eriastrum",
+  "note": "Prickly heads, but a 3-chambered capsule rather than an inferior ovary."
+ },
+ {
+  "id": "bot-ona-ck",
+  "type": "checklist",
+  "group": "Onagraceae",
+  "family": "Onagraceae",
+  "common": "evening primrose family",
+  "place": "Clarkia is nearly a California endemic genus, and the family is unusually well represented here.",
+  "rows": [
+   [
+    "Merosity",
+    "in fours: 4 sepals, 4 petals"
+   ],
+   [
+    "Stamens",
+    "8, in two whorls of four"
+   ],
+   [
+    "Tube",
+    "a floral tube (hypanthium) above the ovary"
+   ],
+   [
+    "Ovary",
+    "inferior, 4 carpels, 4 chambers"
+   ],
+   [
+    "Stigma",
+    "capitate or 4-lobed"
+   ],
+   [
+    "Fruit",
+    "usually a capsule splitting into 4"
+   ]
+  ],
+  "genera": "Clarkia, Camissonia, Oenothera, Epilobium, Ludwigia"
+ },
+ {
+  "id": "bot-ona-fl-1",
+  "type": "floral",
+  "group": "Onagraceae",
+  "family": "Onagraceae",
+  "common": "evening primrose family",
+  "form": "flower",
+  "formula": "* K4 · C4 · A4+4 · G(4) inferior",
+  "diagram": {
+   "symmetry": "radial",
+   "ovary": "inferior",
+   "bract": false,
+   "axis": true,
+   "whorls": [
+    {
+     "part": "calyx",
+     "n": 4,
+     "fused": false
+    },
+    {
+     "part": "corolla",
+     "n": 4,
+     "fused": false
+    },
+    {
+     "part": "androecium",
+     "n": 4,
+     "fused": false
+    },
+    {
+     "part": "androecium",
+     "n": 4,
+     "fused": false
+    }
+   ],
+   "gynoecium": {
+    "carpels": 4,
+    "locules": 4,
+    "ovules": 8,
+    "fused": true
+   }
+  },
+  "note": "Count in fours — and check the stigma, which has four lobes too."
+ },
+ {
+  "id": "bot-ona-ft-1",
+  "type": "feature",
+  "group": "Onagraceae",
+  "term": "Hypanthium (floral tube)",
+  "kind": "Flower",
+  "description": "A tube standing above the ovary, formed from the fused bases of sepals, petals and stamens, and carrying all of them at its rim.",
+  "where": "Onagraceae. Also, cup-shaped, in Rosaceae.",
+  "shape": "hypanthiumInferior",
+  "note": "In an evening primrose it can be several centimetres long."
+ },
+ {
+  "id": "bot-ona-ft-2",
+  "type": "feature",
+  "group": "Onagraceae",
+  "term": "Inferior ovary",
+  "kind": "Flower",
+  "description": "An ovary sunk below the point where sepals, petals and stamens are attached, so the flower sits on top of it.",
+  "where": "Onagraceae and Asteraceae, among the ten.",
+  "note": "The swelling behind the flower is the fruit already forming."
+ },
+ {
+  "id": "bot-ona-ft-3",
+  "type": "feature",
+  "group": "Onagraceae",
+  "term": "Four-lobed stigma",
+  "kind": "Flower",
+  "description": "A stigma divided into four arms in a cross, one for each chamber of the ovary below.",
+  "where": "Onagraceae.",
+  "shape": "stigma4",
+  "note": "Counting stigma lobes counts carpels."
+ },
+ {
+  "id": "bot-ona-ft-4",
+  "type": "feature",
+  "group": "Onagraceae",
+  "term": "Tetramerous",
+  "kind": "Flower",
+  "description": "Built in fours: four sepals, four petals, and stamens in fours.",
+  "where": "Onagraceae.",
+  "shape": "merous4",
+  "note": "Most eudicots go in fives; fours are worth noticing."
+ },
+ {
+  "id": "bot-ona-cl-1",
+  "type": "idclue",
+  "group": "Onagraceae",
+  "family": "Onagraceae",
+  "common": "evening primrose family",
+  "clues": [
+   [
+    "Sepals and petals",
+    "4 of each"
+   ],
+   [
+    "Stamens",
+    "8"
+   ],
+   [
+    "Ovary",
+    "below the flower, swelling as a stalk behind it"
+   ]
+  ],
+  "example": "Clarkia, Camissonia"
+ },
+ {
+  "id": "bot-ona-cl-2",
+  "type": "idclue",
+  "group": "Onagraceae",
+  "family": "Onagraceae",
+  "common": "evening primrose family",
+  "clues": [
+   [
+    "Above the ovary",
+    "a slender tube carrying sepals, petals and stamens"
+   ],
+   [
+    "Stigma",
+    "in 4 lobes, or a knob"
+   ],
+   [
+    "Fruit",
+    "a long capsule splitting into 4"
+   ]
+  ],
+  "example": "Oenothera, Epilobium"
+ },
+ {
+  "id": "bot-ona-cl-3",
+  "type": "idclue",
+  "group": "Onagraceae",
+  "family": "Onagraceae",
+  "common": "evening primrose family",
+  "clues": [
+   [
+    "Flowers",
+    "pink or lavender, 4 petals, often fan- or spoon-shaped"
+   ],
+   [
+    "Buds",
+    "nodding before they open"
+   ],
+   [
+    "Ovary",
+    "inferior, 4-chambered"
+   ]
+  ],
+  "example": "Clarkia",
+  "note": "Clarkia is very nearly a California endemic."
+ },
+ {
+  "id": "bot-ona-cl-4",
+  "type": "idclue",
+  "group": "Onagraceae",
+  "family": "Onagraceae",
+  "common": "evening primrose family",
+  "clues": [
+   [
+    "Flowers",
+    "large, yellow, opening at dusk"
+   ],
+   [
+    "Everything",
+    "in fours"
+   ],
+   [
+    "Stigma",
+    "four arms in a cross"
+   ]
+  ],
+  "example": "Oenothera"
+ },
+ {
+  "id": "bot-ona-cl-5",
+  "type": "idclue",
+  "group": "Onagraceae",
+  "family": "Onagraceae",
+  "common": "evening primrose family",
+  "clues": [
+   [
+    "Habit",
+    "streamside herb, leaves willow-like"
+   ],
+   [
+    "Flowers",
+    "4 petals, ovary inferior and long"
+   ],
+   [
+    "Seeds",
+    "each with a tuft of hairs"
+   ]
+  ],
+  "example": "Epilobium, Chamerion"
+ },
+ {
+  "id": "bot-look-fl-1",
+  "type": "floral",
+  "group": "Lookalikes",
+  "family": "Lamiaceae",
+  "common": "mint family — not in the top ten",
+  "form": "flower",
+  "formula": "↓ K(5) · C(5) · A4 · G(2)",
+  "diagram": {
+   "symmetry": "bilateral",
+   "ovary": "superior",
+   "bract": false,
+   "axis": true,
+   "whorls": [
+    {
+     "part": "calyx",
+     "n": 5,
+     "fused": true
+    },
+    {
+     "part": "corolla",
+     "n": 5,
+     "fused": true
+    },
+    {
+     "part": "androecium",
+     "n": 4,
+     "fused": false
+    }
+   ],
+   "gynoecium": {
+    "carpels": 2,
+    "locules": 4,
+    "ovules": 4,
+    "fused": true
+   }
+  },
+  "note": "Same 2 lips and 4 stamens as Plantaginaceae — but a 4-lobed ovary, so four nutlets."
+ },
+ {
+  "id": "bot-look-ft-1",
+  "type": "feature",
+  "group": "Lookalikes",
+  "term": "Square stem",
+  "kind": "Stem & leaf",
+  "description": "A stem four-angled in cross-section, carrying its leaves in opposite pairs set at right angles to the pair below.",
+  "where": "Lamiaceae, characteristically — and some Scrophulariaceae.",
+  "shape": "squareStem",
+  "note": "Square stem plus a smell plus four nutlets is a mint; any one alone is not."
+ },
+ {
+  "id": "bot-look-ft-2",
+  "type": "feature",
+  "group": "Lookalikes",
+  "term": "Verticillaster",
+  "kind": "Inflorescence",
+  "description": "A dense cluster of flowers sitting in the axil of each leaf pair, so the flowers appear to ring the stem at intervals.",
+  "where": "Lamiaceae.",
+  "shape": "verticillaster",
+  "note": "It looks like a whorl but is really two opposed cymes."
+ },
+ {
+  "id": "bot-look-ft-3",
+  "type": "feature",
+  "group": "Lookalikes",
+  "term": "Compound umbel",
+  "kind": "Inflorescence",
+  "description": "Stalks radiating from one point, each ending not in a flower but in a second, smaller set of radiating stalks.",
+  "where": "Apiaceae — carrots, hemlock, cow parsnip.",
+  "shape": "umbelCompound",
+  "note": "A daisy's head is dense and flat; an umbel's stalks are visibly separate."
+ },
+ {
+  "id": "bot-look-ft-4",
+  "type": "feature",
+  "group": "Lookalikes",
+  "term": "Schizocarp",
+  "kind": "Fruit",
+  "description": "A dry fruit that splits at maturity into two one-seeded halves hanging from a forked central stalk.",
+  "where": "Apiaceae. Boraginaceae's four nutlets are the same idea taken further.",
+  "shape": "schizocarp2"
+ },
+ {
+  "id": "bot-look-ft-5",
+  "type": "feature",
+  "group": "Lookalikes",
+  "term": "Raceme",
+  "kind": "Inflorescence",
+  "description": "An unbranched axis of stalked flowers that opens from the bottom upwards and keeps growing at the tip.",
+  "where": "Brassicaceae and Fabaceae, routinely.",
+  "shape": "raceme",
+  "note": "Open flowers below, buds above, fruit below that."
+ },
+ {
+  "id": "bot-look-ft-6",
+  "type": "feature",
+  "group": "Lookalikes",
+  "term": "Actinomorphic",
+  "kind": "Term",
+  "description": "A flower that can be cut through the middle in more than one plane and still give two matching halves.",
+  "where": "Radially symmetrical. Brassicaceae, Polemoniaceae, Boraginaceae."
+ },
+ {
+  "id": "bot-look-ft-7",
+  "type": "feature",
+  "group": "Lookalikes",
+  "term": "Zygomorphic",
+  "kind": "Term",
+  "description": "A flower with exactly one plane of symmetry, so there is only one way to halve it into a matching pair.",
+  "where": "Bilaterally symmetrical. Fabaceae, Plantaginaceae, Lamiaceae."
+ },
+ {
+  "id": "bot-look-ft-8",
+  "type": "feature",
+  "group": "Lookalikes",
+  "term": "Connate",
+  "kind": "Term",
+  "description": "Fused to other parts of the same kind — petals to petals, sepals to sepals.",
+  "where": "Shown by brackets in a floral formula: C(5).",
+  "note": "Fused to a different kind of part is adnate, not this."
+ },
+ {
+  "id": "bot-look-ft-9",
+  "type": "feature",
+  "group": "Lookalikes",
+  "term": "Epipetalous",
+  "kind": "Term",
+  "description": "Describing stamens attached to the inside of the corolla tube rather than to the receptacle.",
+  "where": "Boraginaceae, Polemoniaceae, Plantaginaceae."
+ },
+ {
+  "id": "bot-look-cl-1",
+  "type": "idclue",
+  "group": "Lookalikes",
+  "family": "Lamiaceae",
+  "common": "mint family",
+  "clues": [
+   [
+    "Stem",
+    "square in section"
+   ],
+   [
+    "Leaves",
+    "opposite, crushed leaf aromatic"
+   ],
+   [
+    "Corolla",
+    "2-lipped; stamens 4 or 2"
+   ],
+   [
+    "Fruit",
+    "4 nutlets"
+   ]
+  ],
+  "example": "Salvia, Monardella",
+  "note": "Square stem plus a smell plus nutlets. Any one of the three alone is not enough."
+ },
+ {
+  "id": "bot-look-cl-2",
+  "type": "idclue",
+  "group": "Lookalikes",
+  "family": "Boraginaceae",
+  "common": "borage and waterleaf family",
+  "clues": [
+   [
+    "Fruit",
+    "4 nutlets in the old calyx"
+   ],
+   [
+    "But leaves",
+    "alternate, and the stem round"
+   ],
+   [
+    "And corolla",
+    "radial, not two-lipped"
+   ]
+  ],
+  "example": "Cryptantha, Amsinckia",
+  "note": "Nutlets are shared with the mints; the leaves and the symmetry settle it."
+ },
+ {
+  "id": "bot-look-cl-3",
+  "type": "idclue",
+  "group": "Lookalikes",
+  "family": "Plantaginaceae",
+  "common": "plantain family",
+  "clues": [
+   [
+    "Corolla",
+    "2-lipped, stamens 4 in unequal pairs"
+   ],
+   [
+    "But stem",
+    "round, and no smell"
+   ],
+   [
+    "Fruit",
+    "a capsule of many seeds"
+   ]
+  ],
+  "example": "Penstemon, Collinsia",
+  "note": "Two lips and four stamens are shared with the mints; the fruit settles it."
+ },
+ {
+  "id": "bot-look-cl-4",
+  "type": "idclue",
+  "group": "Lookalikes",
+  "family": "Apiaceae",
+  "common": "carrot family",
+  "clues": [
+   [
+    "Inflorescence",
+    "stalks radiating from one point"
+   ],
+   [
+    "Each stalk",
+    "ending in a second set of radiating stalks"
+   ],
+   [
+    "Stem",
+    "hollow; leaves dissected, sheathing at the base"
+   ],
+   [
+    "Fruit",
+    "splitting into 2 dry halves"
+   ]
+  ],
+  "example": "Daucus, Conium, Heracleum",
+  "note": "Not a head: the stalks are visibly separate, and the fruit is a schizocarp."
+ },
+ {
+  "id": "bot-look-cl-5",
+  "type": "idclue",
+  "group": "Lookalikes",
+  "family": "Cyperaceae",
+  "common": "sedge family",
+  "clues": [
+   [
+    "Grass-like",
+    "and in wet ground"
+   ],
+   [
+    "Stem",
+    "triangular and solid"
+   ],
+   [
+    "Leaves",
+    "in 3 ranks"
+   ]
+  ],
+  "example": "Carex, Cyperus",
+  "note": "Sedges have edges. Grasses are round and hollow; rushes are round and pithy."
+ },
+ {
+  "id": "bot-look-cl-6",
+  "type": "idclue",
+  "group": "Lookalikes",
+  "family": "Poaceae",
+  "common": "grass family",
+  "clues": [
+   [
+    "Grass-like",
+    "and in wet ground"
+   ],
+   [
+    "Stem",
+    "round, hollow, with swollen joints"
+   ],
+   [
+    "Leaves",
+    "in 2 ranks, with a ligule"
+   ]
+  ],
+  "example": "Bromus, Poa",
+  "note": "Round, hollow and jointed, with a ligule: a grass, not a sedge."
+ },
+ {
+  "id": "bot-look-cl-7",
+  "type": "idclue",
+  "group": "Lookalikes",
+  "family": "Asteraceae",
+  "common": "sunflower family",
+  "clues": [
+   [
+    "Many small flowers",
+    "crowded into one dense flat head"
+   ],
+   [
+    "Round the head",
+    "a collar of green bracts"
+   ],
+   [
+    "Ovary",
+    "inferior, one seed each"
+   ]
+  ],
+  "example": "Achillea, Eriophyllum",
+  "note": "Achillea looks like an umbel from a distance; the involucre and the inferior one-seeded ovaries say sunflower family."
+ }
+]

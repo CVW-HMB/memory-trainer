@@ -16,3 +16,10 @@ export const specDetail = (lead, context, notes, kind, ask) =>
 // table so both faces of a card read the same way.
 export const specList = (lead, sub, rows, kind, ask) =>
   ({ mode: "list", lead: lead || "", sub: sub || "", rows: rows || [], kind, ask: ask || "" });
+
+// A drawn figure. `draw` is a function returning an SVG element, supplied by
+// the card type -- so the renderer stays deck-agnostic and no deck ever hands
+// it markup to inject. `lead` sits above the drawing, `sub` and `notes` below.
+export const specFigure = (lead, sub, draw, notes, kind, ask) =>
+  ({ mode: "figure", lead: lead || "", sub: sub || "", draw: draw || null,
+     notes: notes || "", kind, ask: ask || "" });

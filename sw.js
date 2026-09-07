@@ -4,7 +4,7 @@
 // Bump CACHE when the shell changes. Stale-while-revalidate means a stale
 // version self-heals on the next load even if this is forgotten, but bumping
 // makes the update immediate.
-const CACHE = "lacave-v21";
+const CACHE = "lacave-v22";
 
 // Relative URLs resolve against this script's location, so the app still works
 // when served from a subpath such as /memory-trainer/.
@@ -17,12 +17,16 @@ const SHELL = [
   "./src/decks/specs.js",
   "./src/decks/wine.js",
   "./src/decks/vocab.js",
+  "./src/decks/glossary.js",
+  "./src/decks/botany.js",
+  "./src/decks/figures.js",
   "./src/styles.css",
   "./data/decks.json",
   "./data/cards.json",
   "./data/spanish.json",
   "./data/french.json",
   "./data/payments.json",
+  "./data/botany.json",
   "./manifest.webmanifest",
   "./icons/icon-192.png",
   "./icons/icon-512.png",

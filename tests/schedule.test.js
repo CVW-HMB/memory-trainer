@@ -137,6 +137,41 @@ describe("streaks across day boundaries", () => {
 
 /* ---------------- flight cap ---------------- */
 describe("flight cap", () => {
+  // A deck may ask for a shorter flight than the default. That must change how
+  // many cards a flight serves and nothing else: no card twice, new material
+  // still trickles, and the boxes are untouched.
+  test("a deck-supplied size caps the flight instead of FLIGHT_SIZE", () => {
+    const cards = deck(100);
+    const q = buildQueue(cards, states(cards), 1, seeded(), 20);
+    assert.equal(q.length, 20);
+  });
+
+  test("the deck size holds across a run of flights, with no repeats", () => {
+    const cards = deck(100);
+    const st = states(cards);
+    const rand = seeded(11);
+    for (let flight = 1; flight <= 30; flight++) {
+      const q = buildQueue(cards, st, flight, rand, 20);
+      assert.equal(q.length, 20, `flight ${flight}`);
+      assert.equal(new Set(q).size, q.length, `flight ${flight} repeated a card`);
+      for (const id of q) applyAnswer(st[id], flight % 3 !== 0, flight);
+    }
+  });
+
+  test("a size smaller than NEW_PER_FLIGHT still serves exactly that many", () => {
+    const cards = deck(100);
+    const q = buildQueue(cards, states(cards), 1, seeded(), 3);
+    assert.equal(q.length, 3);
+    assert.equal(new Set(q).size, 3);
+  });
+
+  test("omitting the size leaves the default behaviour exactly as it was", () => {
+    const cards = deck(100);
+    const a = buildQueue(cards, states(cards), 1, seeded(5));
+    const b = buildQueue(cards, states(cards), 1, seeded(5), FLIGHT_SIZE);
+    assert.deepEqual(a, b);
+  });
+
   test("the first flight on a fresh 100-card deck is FLIGHT_SIZE, not 100", () => {
     const cards = deck(100);
     const q = buildQueue(cards, states(cards), 1, seeded());

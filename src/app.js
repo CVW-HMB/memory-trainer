@@ -203,7 +203,12 @@ const facesFor = (c, dir) => typeFor(c).faces(c, dir);
 function dueCount() { return pickDue(CARDS, state.cards, state.totalSessions + 1).length; }
 // How many cards the next flight will actually serve. The top-up in buildQueue
 // means a flight is always as full as the due pool allows.
-function flightSize() { return Math.min(FLIGHT_SIZE, dueCount()) || Math.min(FLIGHT_SIZE, CARDS.length); }
+// A deck may ask for a shorter flight than the default; the manifest sets it.
+function deckFlight() {
+  const n = DECK && Number(DECK.flightSize);
+  return Number.isFinite(n) && n > 0 ? Math.floor(n) : FLIGHT_SIZE;
+}
+function flightSize() { const f = deckFlight(); return Math.min(f, dueCount()) || Math.min(f, CARDS.length); }
 const masteredCount = () => CARDS.filter(c => (state.cards[c.id]?.box || 1) >= 5).length;
 const seenCount = () => CARDS.filter(c => (state.cards[c.id]?.seen || 0) > 0).length;
 
@@ -255,7 +260,7 @@ function startSession() {
   saveState(state);
 
   // totalSessions is already incremented, so it is this flight's number.
-  queue = pickQueue(CARDS, state.cards, state.totalSessions);
+  queue = pickQueue(CARDS, state.cards, state.totalSessions, Math.random, deckFlight());
   qpos = 0; flightTotal = queue.length; sGot = 0; sMiss = 0;
   runDir = {}; firstPass = {}; cleared = new Set();
   for (const id of queue) {
@@ -293,6 +298,7 @@ function fillFace(p, s) {
   $(p + "Big").classList.toggle("hidden", s.mode !== "headline");
   $(p + "Detail").classList.toggle("hidden", s.mode !== "detail");
   $(p + "List").classList.toggle("hidden", s.mode !== "list");
+  $(p + "Fig").classList.toggle("hidden", s.mode !== "figure");
 
   // Every field is written every time. Only filling the active mode's fields
   // leaves the hidden ones holding the previous card's text -- invisible until
@@ -319,6 +325,21 @@ function fillFace(p, s) {
     }
     // Long tables get a smaller row so six forms still fit on a phone.
     rows.classList.toggle("dense", (s.rows || []).length > 4);
+  }
+
+  // A figure spec carries a draw function rather than markup, so the renderer
+  // never injects deck data as HTML and stays deck-agnostic: it calls, and puts
+  // whatever element comes back on the face.
+  const lead2 = $(p + "GLead");
+  lead2.textContent = s.mode === "figure" ? (s.lead || "") : "";
+  lead2.classList.toggle("hidden", !(s.mode === "figure" && s.lead));
+  $(p + "GSub").textContent = s.mode === "figure" ? (s.sub || "") : "";
+  $(p + "GNotes").textContent = s.mode === "figure" ? (s.notes || "") : "";
+  const art = $(p + "GArt");
+  art.replaceChildren();
+  if (s.mode === "figure" && typeof s.draw === "function") {
+    // A broken drawing must not take the flight down with it.
+    try { art.appendChild(s.draw()); } catch (err) { console.warn("[decks] figure failed", err); }
   }
 
   const ask = $(p + "Ask");

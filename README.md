@@ -5,7 +5,7 @@ and let the scheduler decide what you see next. One engine, any number of decks:
 the scheduling and the mastery numbers mean the same thing whatever you are
 studying.
 
-Four decks ship today:
+Five decks ship today:
 
 - **Wines, Grapes, Regions** — 161 cards. Learning wine the way it helps you in
   a restaurant: which grapes grow where, and how to read a label you have never
@@ -21,6 +21,19 @@ Four decks ship today:
 - **Payment Cards** — 148 cards. How a swipe actually works: who is involved,
   authorization through settlement, interchange and the economics, card data
   and EMV, risk and compliance, and the rails underneath.
+- **California Plant Families** — 149 cards, and the deck with pictures. The ten
+  families that account for most of the California flora: a **floral diagram**
+  for each, the diagnostic characters that give it away and what they are
+  called, and sets of field clues to key out. An eleventh group holds the
+  lookalikes — how to know a mint from a penstemon, a sedge from a grass.
+  Flights are 20 cards here rather than 35, because a diagram takes longer to
+  read than a word.
+
+  Every diagram is drawn in code as SVG from numbers stored on the card, not
+  fetched as an image, so the deck is offline and weightless like the rest. The
+  floral formula printed under a diagram is derived from that diagram, and
+  `npm run validate` derives it a second time independently and fails if the two
+  disagree — a card cannot claim five petals over a drawing of four.
 
 **Live: https://cvw-hmb.github.io/memory-trainer/** — served by GitHub Pages from
 `main` at the repo root. Every path in the app is relative, so it works under the
@@ -45,11 +58,14 @@ npm start            # or: uv run python -m http.server 8000
 Then open http://localhost:8000.
 
 ```bash
+npm run cards       # regenerate the wine deck
 npm run cards:es    # regenerate the Mexican Spanish deck
 npm run cards:fr    # regenerate the French deck
 npm run cards:pay   # regenerate the Payment Cards deck
+npm run cards:bot   # regenerate the California Plant Families deck
 npm test            # scheduler tests (node --test, no dependencies)
-npm run validate    # dataset schema, unique ids, spoiler check
+npm run validate    # every deck: schema, unique ids, duplicate prompts,
+                    # spoiler check, and floral formula vs. floral diagram
 ```
 
 ## Python environment
@@ -81,30 +97,34 @@ cloning the repo runs step 1 and repeats it.
 
 ## What it does
 
-- Opens on a deck chooser. Two decks: **Wines, Grapes, Regions** (161 cards)
-  and **Spanish – English** (250 cards — the 15 most common verbs and 15 most
-  common reflexive verbs across present, past and future, plus vocabulary for
-  the house, the town and the table).
-- Two card types (see `CLAUDE.md`): region → grape, and bottle decode (label →
-  grape, region, notes).
-- A flight is 35 cards, drawn at random each time and weighted 4:1 toward the
-  cards you keep missing.
-- Every card runs one way: a place or a label on the front, the grape, its
-  region and its notes on the back.
+- Opens on a deck chooser — a dropdown, so a phone gets its native picker.
+- Ten card types across the five decks (see `CLAUDE.md`), including a `figure`
+  render mode for decks that draw rather than describe.
+- A flight is 35 cards by default, or whatever the deck asks for (20 in the
+  botany deck), drawn at random each time and weighted 4:1 toward the cards you
+  keep missing.
+- A card runs one way unless its type declares otherwise. Reversibility is
+  declared, never assumed: a card flips only when both directions have exactly
+  one right answer.
 - Miss a card and it comes back later in the same flight. You do not finish a
   flight until every card in it is right; only the first attempt counts toward
   your box and stats.
 - A 5-level Leitner scheduler: cards you miss come back every session, mastered cards fade to occasional review.
 - Streaks, per-region accuracy, and a "hardest for you" list in the cellar book.
 - Progress is saved in IndexedDB, mirrored to `localStorage` as a fallback, under
-  the deck-namespaced key `srs_v2:wine`. Progress from the old `wine_srs_v1`
-  key migrates automatically on first load.
+  the key `srs_v2:<profile>:<deck>`, so several people can share a browser and
+  no two decks collide. Progress from the old `wine_srs_v1` key migrates
+  automatically on first load.
 - Installable as a PWA and fully usable offline: the service worker precaches
   the shell, the deck and the fonts, so a flight runs in airplane mode.
 
 ## Editing cards
 
-`data/cards.json` (wine) and `data/spanish.json` (Spanish) are the sources of truth. Either edit it directly or edit the definitions in `scripts/generate_cards.py` and run `npm run cards` (Python 3.14, run through the local uv venv). Validate with `npm run validate`. Keep ids stable and only add cards additively so saved progress survives.
+The deck JSON files under `data/` are the sources of truth, but prefer editing
+the matching generator in `scripts/` and regenerating (Python 3.14, run through
+the local uv venv) — see the table of `npm run cards:*` commands above. Validate
+with `npm run validate`. Keep ids stable and only add cards additively so saved
+progress survives.
 
 ## Project layout
 
@@ -114,7 +134,9 @@ data/decks.json       deck index (the "choose a deck" screen)
 data/spanish.json     the Mexican Spanish deck
 data/french.json      the French deck
 data/payments.json    the Payment Cards deck
-src/decks/            card types: registry, render specs, wine, vocab
+data/botany.json      the California Plant Families deck
+src/decks/            card types: registry, render specs, wine, vocab,
+                      glossary, botany — and figures.js, the SVG drawings
 src/app.js            UI, rendering, storage, wiring
 src/engine/schedule.js  the Leitner scheduler (pure, no DOM)
 src/styles.css        styling

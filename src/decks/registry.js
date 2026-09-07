@@ -11,6 +11,7 @@
 import * as wine from "./wine.js";
 import * as vocab from "./vocab.js";
 import * as glossary from "./glossary.js";
+import * as botany from "./botany.js";
 
 export const CARD_TYPES = {
   place2grape: wine.place2grape,
@@ -19,6 +20,10 @@ export const CARD_TYPES = {
   vocab: vocab.vocab,
   conjugation: vocab.conjugation,
   glossary: glossary.glossary,
+  floral: botany.floral,
+  feature: botany.feature,
+  idclue: botany.idclue,
+  checklist: botany.checklist,
 };
 
 // A card of an unregistered type would otherwise crash the renderer mid-flight.

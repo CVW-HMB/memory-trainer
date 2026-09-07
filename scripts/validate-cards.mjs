@@ -4,6 +4,7 @@
 //
 // Run: npm run validate
 import { readFileSync } from "node:fs";
+import { SHAPE_IDS } from "../src/decks/figures.js";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
@@ -18,6 +19,10 @@ const REQUIRED = {
   vocab: ["lang", "term", "gloss", "kindTerm", "kindGloss"],
   conjugation: ["lang", "verb", "english", "tense", "tenseEn", "kindTerm", "kindGloss"],
   glossary: ["term", "short", "definition", "kind"],
+  floral: ["family", "common", "form", "formula", "note"],
+  feature: ["term", "kind", "description", "where"],
+  idclue: ["family", "common", "example"],
+  checklist: ["family", "common", "place", "genera"],
 };
 
 // Which faces a card presents, and whether it may be shown in both directions.
@@ -36,7 +41,48 @@ const FACES = {
                                     back: c => `gloss|${c.english}|${c.tenseEn}` },
   glossary:    { reversible: false, front: c => `term|${c.term}`,
                                     back: c => `def|${c.short}|${c.definition}` },
+  // Botany. None of these flip, and for idclue the answer face is *expected* to
+  // repeat -- one family answers to many clue sets -- so it returns null, which
+  // means "this face is never a prompt, do not check it".
+  floral:      { reversible: false, front: c => `flower|${c.family}|${c.form}`,
+                                    back: c => `diagram|${c.family}|${c.form}|${c.formula}` },
+  feature:     { reversible: false, front: c => `desc|${c.description}`,
+                                    back: c => `term|${c.term}` },
+  idclue:      { reversible: false, front: c => `clues|${JSON.stringify(c.clues)}`,
+                                    back: () => null },
+  checklist:   { reversible: false, front: c => `family|${c.family}`,
+                                    back: () => null },
 };
+
+// An independent re-derivation of a floral formula from the floral diagram.
+// scripts/generate_botany.py derives the string that ships in the deck; this
+// derives it again, in another language, and the check below fails if the two
+// disagree. That is what stops a card from printing "C(5)" over a drawing with
+// four petals.
+function whorlToken(w) {
+  const as = w.as;
+  if (as === "absent") return "0";
+  if (as === "pappus") return " pappus";
+  if (as === "bristles") return " bristles";
+  if (as === "lodicules") return ` ${w.n} lodicules`;
+  if (!w.n) return "0";
+  return w.fused ? `(${w.n})` : String(w.n);
+}
+
+function formulaFor(d) {
+  const perianth = d.whorls.filter(w => w.part !== "androecium");
+  const andro = d.whorls.filter(w => w.part === "androecium");
+  const out = [];
+  const tepal = perianth.find(w => w.p);
+  if (tepal) out.push("P" + whorlToken(tepal));
+  else for (const w of perianth) out.push((w.part === "calyx" ? "K" : "C") + whorlToken(w));
+  out.push("A" + (d.andro || andro.map(whorlToken).join("+")));
+  const gy = d.gynoecium;
+  const fused = gy.fused !== false;
+  out.push("G" + (fused && gy.carpels > 1 ? `(${gy.carpels})` : String(gy.carpels)) +
+           (d.ovary === "inferior" ? " inferior" : ""));
+  return (d.symmetry === "bilateral" ? "↓" : "*") + " " + out.join(" · ");
+}
 
 let failed = false;
 
@@ -67,6 +113,48 @@ for (const deck of read("./data/decks.json")) {
       else if (c.forms.length !== c.formsEn.length) errors.push(`${at}: forms has ${c.forms.length}, formsEn has ${c.formsEn.length}`);
     }
 
+    // A floral diagram has to be drawable, and its numbers have to be the same
+    // numbers the printed formula claims.
+    if (c.type === "floral") {
+      const d = c.diagram;
+      if (!d || !Array.isArray(d.whorls) || !d.gynoecium) {
+        errors.push(`${at}: floral card needs a diagram with whorls and a gynoecium`);
+      } else {
+        for (const w of d.whorls) {
+          if (!["calyx", "corolla", "androecium"].includes(w.part))
+            errors.push(`${at}: unknown whorl "${w.part}"`);
+          if (typeof w.n !== "number" || w.n < 0) errors.push(`${at}: whorl ${w.part} needs a count`);
+        }
+        if (typeof d.gynoecium.carpels !== "number" || d.gynoecium.carpels < 1)
+          errors.push(`${at}: gynoecium needs a carpel count`);
+        // A hand-written androecium token (the legumes' (9)+1) still has to add
+        // up to the number of stamens actually drawn.
+        if (d.andro) {
+          const drawn = d.whorls.filter(w => w.part === "androecium")
+                                .reduce((n, w) => n + (w.n || 0), 0);
+          const claimed = (d.andro.match(/\d+/g) || []).reduce((n, s) => n + Number(s), 0);
+          if (drawn !== claimed)
+            errors.push(`${at}: formula says A${d.andro} (${claimed} stamens) but the diagram draws ${drawn}`);
+        }
+        const derived = formulaFor(d);
+        if (derived !== c.formula)
+          errors.push(`${at}: formula "${c.formula}" does not match the diagram, which reads "${derived}"`);
+      }
+    }
+
+    // A named figure must exist in the shape library, or the card renders a hole.
+    if (c.shape && !SHAPE_IDS.includes(c.shape))
+      errors.push(`${at}: no figure named "${c.shape}" in src/decks/figures.js`);
+
+    // Row tables must be pairs, like the conjugation tables.
+    for (const f of ["rows", "clues"]) {
+      if (c[f] != null) {
+        const ok = Array.isArray(c[f]) && c[f].length >= 2 &&
+                   c[f].every(r => Array.isArray(r) && r.length === 2 && r[0] && r[1]);
+        if (!ok) errors.push(`${at}: ${f} must be an array of [label, text] pairs`);
+      }
+    }
+
     // Spoiler guard: a wine card's tasting notes must not name the grape.
     if ((c.type === "place2grape" || c.type === "decode") && c.notes && c.grape) {
       const g = c.grape.split(" ")[0].toLowerCase();
@@ -82,7 +170,8 @@ for (const deck of read("./data/decks.json")) {
         else map.set(key, c.id);
       };
       claim(fronts, f.front(c), "prompt", true);
-      claim(backs, f.back(c), "answer face", f.reversible);
+      const back = f.back(c);
+      if (back != null) claim(backs, back, "answer face", f.reversible);
     }
   }
 
