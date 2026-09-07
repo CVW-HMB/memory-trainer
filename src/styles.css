@@ -115,10 +115,14 @@ header{display:flex; align-items:baseline; justify-content:space-between; gap:14
 /* drawn figures: botanical line art, sized to whatever room the face has left */
 .figure{flex:1; min-height:0; width:100%; display:flex; flex-direction:column;
   align-items:center; justify-content:center; gap:7px}
-.g-art{flex:1 1 0; min-height:0; width:100%; display:flex; align-items:center; justify-content:center}
-/* The SVG fills its box and letterboxes itself: preserveAspectRatio does the
-   fitting, so a drawing can never push past the card however tall the card is. */
-.g-art svg{display:block; width:100%; height:100%}
+/* The SVG is taken out of flow and pinned to the box, rather than sized with a
+   percentage height. A percentage height resolves against the parent's height,
+   and a flex item's height is not definite in every engine -- Gecko in
+   particular can compute it as auto and let the drawing size itself. Pinning
+   removes the question: preserveAspectRatio letterboxes the drawing inside
+   whatever room the card has left, in any browser. */
+.g-art{flex:1 1 0; min-height:0; width:100%; position:relative}
+.g-art svg{position:absolute; inset:0; display:block; width:100%; height:100%}
 .g-lead{font-family:"Cormorant Garamond",serif; font-weight:600; line-height:1.12;
   font-size:clamp(20px,4.8vw,28px); color:var(--ink)}
 .g-sub{font-size:12px; letter-spacing:.1em; color:var(--brass-dim); font-weight:600; max-width:34ch}

@@ -1,10 +1,10 @@
 // La Cave - service worker. Precaches the app shell and the deck so a flight
 // runs with no network at all.
 //
-// Bump CACHE when the shell changes. Stale-while-revalidate means a stale
-// version self-heals on the next load even if this is forgotten, but bumping
-// makes the update immediate.
-const CACHE = "lacave-v22";
+// Bump CACHE when the shell changes. Every same-origin request is network-first
+// with the cache as an offline fallback, so a deploy is picked up on the next
+// load whether or not this is bumped; bumping evicts the old cache.
+const CACHE = "lacave-v23";
 
 // Relative URLs resolve against this script's location, so the app still works
 // when served from a subpath such as /memory-trainer/.
@@ -64,15 +64,28 @@ self.addEventListener("activate", e => {
   })());
 });
 
-async function staleWhileRevalidate(req) {
+// Network first, cache as the offline fallback.
+//
+// This used to be stale-while-revalidate for code and network-first for deck
+// data, and that split was a bug: on the first load after a deploy the browser
+// got the NEW deck JSON against the OLD renderer. A deck that had gained a card
+// type rendered "No renderer for type ..." on every card of it, and a deck that
+// had asked for a shorter flight got the old length. Code and data ship
+// together, so they have to refresh together -- the app is a handful of small
+// files behind a CDN, and it already blocks on a network-first fetch of a deck
+// file far larger than all of them.
+//
+// `cache: "no-cache"` revalidates against the server rather than the browser's
+// HTTP cache, for the same reason as the install above: GitHub Pages' max-age
+// would otherwise hand back a copy of the file we just replaced.
+async function networkFirst(req, fallback) {
   const cache = await caches.open(CACHE);
-  const hit = await cache.match(req);
-  // Revalidate against the server rather than the HTTP cache, for the same
-  // reason as the install above.
-  const fetching = fetch(new Request(req, { cache: "no-cache" }))
-    .then(res => { if (res && res.ok) cache.put(req, res.clone()); return res; })
-    .catch(() => null);
-  return hit || (await fetching) || new Response("", { status: 504, statusText: "offline" });
+  try {
+    const res = await fetch(new Request(req, { cache: "no-cache" }));
+    if (res && res.ok) { cache.put(req, res.clone()); return res; }
+  } catch (err) { /* offline: fall through to the cache */ }
+  return (await cache.match(req)) || fallback ||
+    new Response("", { status: 504, statusText: "offline" });
 }
 
 self.addEventListener("fetch", e => {
@@ -116,20 +129,14 @@ self.addEventListener("fetch", e => {
     return;
   }
 
-  // Deck data is network-first: a stale deck is the one staleness a user
-  // actually notices ("it still says 200 cards"). Falls back to cache when
-  // offline, so airplane mode is unaffected.
+  // Deck data: an empty deck reads better than a broken one if we are offline
+  // and have never cached this file.
   if (url.origin === self.location.origin && /\/data\/[^/]+\.json$/.test(url.pathname)) {
-    e.respondWith((async () => {
-      const cache = await caches.open(CACHE);
-      try {
-        const res = await fetch(new Request(req, { cache: "no-cache" }));
-        if (res && res.ok) { cache.put(req, res.clone()); return res; }
-      } catch (err) {}
-      return (await cache.match(req)) || new Response("[]", { headers: { "Content-Type": "application/json" } });
-    })());
+    e.respondWith(networkFirst(req,
+      new Response("[]", { headers: { "Content-Type": "application/json" } })));
     return;
   }
 
-  if (url.origin === self.location.origin) e.respondWith(staleWhileRevalidate(req));
+  // Everything else the app is made of, on the same terms.
+  if (url.origin === self.location.origin) e.respondWith(networkFirst(req));
 });

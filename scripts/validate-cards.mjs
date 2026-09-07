@@ -3,7 +3,7 @@
 // determinate answer per prompt.
 //
 // Run: npm run validate
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { SHAPE_IDS } from "../src/decks/figures.js";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
@@ -190,6 +190,27 @@ for (const deck of read("./data/decks.json")) {
     console.error("FAIL:\n" + errors.map(e => "  - " + e).join("\n"));
   } else {
     console.log("OK");
+  }
+}
+
+// The service worker precaches a hand-written list of files, and a file left
+// off it is invisible until someone opens the app offline. `glossary.js` was
+// missing from it for a whole deck's lifetime. Cheap to check here.
+{
+  const sw = readFileSync(join(root, "sw.js"), "utf8");
+  const shell = new Set([...sw.split("const SHELL")[1].split("];")[0]
+    .matchAll(/"(\.\/[^"]+)"/g)].map(m => m[1]));
+  const want = ["./index.html", "./src/styles.css", "./src/app.js"];
+  for (const f of readdirSync(join(root, "src/decks"))) want.push("./src/decks/" + f);
+  for (const f of readdirSync(join(root, "src/engine"))) want.push("./src/engine/" + f);
+  want.push("./data/decks.json", ...read("./data/decks.json").map(d => d.file));
+  const missing = want.filter(f => !shell.has(f));
+  if (missing.length) {
+    failed = true;
+    console.error("\nFAIL: sw.js SHELL is missing:\n" + missing.map(m => "  - " + m).join("\n") +
+      "\n  (the app would not be fully offline; add them and bump CACHE)");
+  } else {
+    console.log("\nsw.js precaches every app file.");
   }
 }
 

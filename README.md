@@ -116,7 +116,12 @@ cloning the repo runs step 1 and repeats it.
   no two decks collide. Progress from the old `wine_srs_v1` key migrates
   automatically on first load.
 - Installable as a PWA and fully usable offline: the service worker precaches
-  the shell, the deck and the fonts, so a flight runs in airplane mode.
+  the shell, every deck and the fonts, so a flight runs in airplane mode.
+  Online, every same-origin request is network-first with the cache as the
+  fallback, so **code and deck data always refresh together** — a deploy is
+  live on the next load, and you can never get new cards against an old
+  renderer. `npm run validate` fails if a source file is missing from the
+  precache list.
 
 ## Editing cards
 
