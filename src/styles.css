@@ -198,6 +198,52 @@ header{display:flex; align-items:baseline; justify-content:space-between; gap:14
 .dp-sub{margin:0; font-size:13.5px; color:var(--muted); line-height:1.5}
 .dp-prog{margin:8px 0 0; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase;
   color:var(--brass-dim); font-variant-numeric:tabular-nums}
+#deckRemoveBtn{color:var(--rose-deep)} #deckRemoveBtn:hover{color:var(--rose)}
+
+/* build your own deck: copy a brief, hand it to an AI, paste the deck back */
+.mkdeck{border:1px solid var(--line); border-radius:14px; background:rgba(49,22,30,.5)}
+.mkdeck > summary{
+  list-style:none; cursor:pointer; padding:15px 18px; min-height:44px;
+  display:flex; align-items:center; gap:8px;
+  font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--brass);
+}
+.mkdeck > summary::-webkit-details-marker{display:none}
+.mkdeck > summary::after{content:"+"; margin-left:auto; font-size:17px; color:var(--brass-dim)}
+.mkdeck[open] > summary::after{content:"\2212"}
+.mkdeck[open] > summary{border-bottom:1px solid var(--line)}
+.mkdeck > *:not(summary){margin:12px 18px}
+.mkdeck > *:last-child{margin-bottom:18px}
+.mk-steps{padding-left:20px; color:var(--muted); font-size:13px; line-height:1.6}
+.mk-steps li{margin-bottom:3px}
+.mk-input,.mk-text{
+  display:block; width:calc(100% - 36px); box-sizing:border-box;
+  background:#24101699; border:1px solid var(--line); border-radius:11px;
+  color:var(--cream); padding:12px 14px; font-size:14px; font-family:inherit;
+}
+.mk-input{min-height:44px}
+.mk-text{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; line-height:1.5; resize:vertical}
+.mk-input:focus,.mk-text:focus{outline:none; border-color:var(--brass)}
+.mk-input::placeholder,.mk-text::placeholder{color:var(--faint)}
+.btn-quiet{
+  width:calc(100% - 36px); min-height:48px; padding:13px;
+  background:linear-gradient(180deg,#40202a,#331620); border:1px solid var(--line);
+  color:var(--cream); border-radius:12px; font-size:14px; letter-spacing:.05em;
+  transition:border-color .15s, opacity .15s;
+}
+.btn-quiet:hover:not(:disabled){border-color:var(--brass)}
+.btn-quiet:disabled{opacity:.4; cursor:not-allowed}
+.mk-note{color:var(--brass-dim); font-size:12.5px; line-height:1.5}
+.mk-report{
+  border:1px solid var(--line); border-left:2px solid var(--brass-dim);
+  border-radius:10px; padding:12px 14px; font-size:12.5px; line-height:1.55;
+}
+.mk-report p{margin:0 0 6px} .mk-report p:last-child{margin-bottom:0}
+.mk-report ul{margin:0 0 8px; padding-left:18px} .mk-report ul:last-child{margin-bottom:0}
+.mk-ok{color:var(--cream); font-family:"Cormorant Garamond",serif; font-size:18px; font-weight:600}
+.mk-bad{color:var(--rose)}
+.mk-meta{color:var(--muted); font-size:11px; letter-spacing:.1em; text-transform:uppercase}
+.mk-errs{color:var(--rose)}
+.mk-warns{color:var(--brass-dim)}
 
 /* profiles */
 #profiles{gap:18px}

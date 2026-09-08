@@ -15,7 +15,17 @@ const ASKS = {
   es: { term: "¿En inglés?", gloss: "In Spanish?" },
   fr: { term: "En anglais ?", gloss: "In French?" },
 };
-const asksFor = c => ASKS[c && c.lang] || { term: "In English?", gloss: "In the other language?" };
+// A deck written outside the repo is not necessarily a language deck -- a pair
+// may be a symbol and its element -- so it declares its own wording once and the
+// importer stamps it onto every card (src/decks/authoring.js). `lang` still
+// picks the wording for the decks that ship here.
+const asksFor = c => {
+  if (c && (c.askTerm || c.askGloss)) {
+    const other = "And the other side?";
+    return { term: c.askTerm || other, gloss: c.askGloss || other };
+  }
+  return ASKS[c && c.lang] || { term: "In English?", gloss: "In the other language?" };
+};
 
 // One word or phrase per side.
 //   { lang, term, gloss, kindTerm, kindGloss }

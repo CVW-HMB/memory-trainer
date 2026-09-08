@@ -207,14 +207,48 @@ Minimum spreadsheet: `type | group | front | back | notes | reversible`.
   duplicate-prompt warning.
 - **D7 — Spreadsheet to deck, offline.** `scripts/import_deck.py` converting
   `.csv`/`.xlsx` to deck JSON via `uv run`, with stable content-derived ids.
-- **D8 — In-browser import.** Drag a spreadsheet onto the launch screen; parse
-  client-side, save to IndexedDB. **Decision:** `.xlsx` via SheetJS (~1 CDN file)
-  vs. CSV-only (zero deps). Recommend SheetJS — importing the spreadsheet you
-  already have is the point. Imported decks live in the browser, not the repo.
-- **D9 — Deck health check.** Surface duplicate prompts, answer-leaking hints,
-  and lopsided groups at import time, with a preview before saving.
+  *(Still open, and now the weaker half of the idea — see D8.)*
+- **D8 — Bring your own deck** — **SHIPPED** *(deck-import branch)*, and not as
+  the spreadsheet importer this said. The app cannot write deck content, but an
+  AI can, so the deck screen hands out a **brief** and takes back the JSON that
+  comes of it. That turned out better than the spreadsheet on every axis: zero
+  dependencies (the SheetJS decision simply evaporates), and the AI can produce
+  real card types instead of flat front/back rows. See "Shipped outside the
+  D-list" below.
+- **D9 — Deck health check** — **SHIPPED** with D8. Duplicate prompts, undeclared
+  groups, answer-leaking labels and lopsided groups are all reported on paste,
+  with the card counts, before anything is saved.
 
 ## Shipped outside the D-list
+
+- **Bring your own deck** *(deck-import branch)* — D8/D9, reshaped. Three parts:
+
+  1. **`src/decks/schema.js`**, the single source of truth. The per-type field
+     tables and the generic check (`checkCards`) moved out of
+     `scripts/validate-cards.mjs` so three things read one file: the Node
+     validator, the in-app check, and the authoring brief itself. The brief is
+     *generated* from the schema, so it cannot describe a deck the app would
+     then reject.
+  2. **`src/decks/authoring.js`** — `buildPrompt(topic)` writes the brief;
+     `parseDeck(text)` reads one back. A pasted deck may use only `glossary` and
+     `vocab`, and each card is **rebuilt** from the schema's field list rather
+     than filtered, so a field the schema does not name cannot reach the
+     renderer. No new card types were needed.
+  3. **Storage.** `srs_v2:customDecks` holds the manifest rows, one per deck;
+     `srs_v2:customCards:<id>` holds the cards. Deck ids are namespaced `user:`,
+     which is what keeps them from colliding with a deck that ships here — and
+     since progress keys off the deck id, the namespace protects progress too.
+
+  Two consequences worth remembering. **Re-pasting a deck under the same name
+  replaces it and keeps its id**, so a revision preserves progress on every card
+  whose id survived — the "ids are stable" rule, now load-bearing for a deck the
+  app did not write. And **a custom deck's backup carries its cards**, because a
+  deck that exists only in one browser is otherwise unrestorable; built-in decks
+  still back up progress alone.
+
+  Also fixed here: restoring a backup never checked that it belonged to the deck
+  being restored into, so a wine backup could overwrite the Spanish deck card
+  for card. A mismatched backup is now refused by name.
 
 - **Botany deck + drawn figures** *(botany-deck branch)*. Five decks now. The
   California Plant Families deck (149 cards) added three things worth naming:

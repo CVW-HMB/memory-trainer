@@ -7,6 +7,7 @@ import {
   applyAnswer, redrill, ymd, nextStreak,
 } from "./engine/schedule.js";
 import { typeFor } from "./decks/registry.js";
+import { buildPrompt, parseDeck } from "./decks/authoring.js";
 
 // Keys are namespaced by profile and deck, so several people can share a
 // browser and adding decks later needs no further migration.
@@ -17,9 +18,12 @@ let DECKS = [];
 const PROFILES_KEY = "srs_v2:profiles";       // [{ id, name, created }]
 const ACTIVE_KEY = "srs_v2:active";           // id of the profile in use
 const LAST_DECK_KEY = "srs_v2:lastDeck";
+const CUSTOM_KEY = "srs_v2:customDecks";      // manifest rows for decks pasted in
 const SHARED_KEY = "srs_v2:wine";             // pre-profile key, adopted by the first profile
 const LEGACY_KEY = "wine_srs_v1";             // pre-M5 key, migrated on first boot
-const progressKey = (pid) => "srs_v2:" + pid + ":" + DECK_ID;
+const keyFor = (pid, deckId) => "srs_v2:" + pid + ":" + deckId;
+const progressKey = (pid) => keyFor(pid, DECK_ID);
+const customCardsKey = (deckId) => "srs_v2:customCards:" + deckId;
 let CARDS = [];
 let BY_ID = {};
 
@@ -540,11 +544,13 @@ const num = (v, d = 0) => (Number.isFinite(v) ? v : d);
 // 13-digit streak. Nothing legitimate approaches this.
 const CAP = 1e6;
 const whole = (v, d = 0) => Math.min(CAP, Math.max(0, Math.round(num(v, d))));
-function sanitizeState(raw) {
+// `deckCards` is the deck the state belongs to -- the open one, unless a backup
+// is restoring a deck of its own that is not open yet.
+function sanitizeState(raw, deckCards = CARDS) {
   if (!raw || typeof raw !== "object") return null;
   const src = (raw.cards && typeof raw.cards === "object") ? raw.cards : {};
   const cards = {};
-  for (const c of CARDS) {
+  for (const c of deckCards) {
     const s = src[c.id];
     cards[c.id] = (s && typeof s === "object")
       ? { box: Math.min(MAX_BOX, Math.max(1, Math.round(num(s.box, 1)))),
@@ -565,16 +571,23 @@ async function exportBackup() {
     if (s) progress[p.id] = s;
   }
   const payload = {
-    app: BACKUP_APP, format: BACKUP_FORMAT, deck: DECK_ID,
+    app: BACKUP_APP, format: BACKUP_FORMAT, deck: DECK_ID, deckName: DECK ? DECK.name : DECK_ID,
     exportedAt: new Date().toISOString(), cardCount: CARDS.length,
     profiles: profiles.map(p => ({ id: p.id, name: p.name, created: p.created })),
     progress,
   };
+  // A deck you wrote yourself exists only in this browser, so its backup has to
+  // carry the cards as well as the progress. Without them, restoring on another
+  // device would be progress for a deck that is not there.
+  if (DECK && DECK.source === "local") {
+    payload.customDeck = { ...DECK, cards: parse(await readKey(customCardsKey(DECK_ID))) || [] };
+  }
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
-  a.href = url;
-  a.download = "la-cave-progress-" + ymd(new Date()) + ".json";
+  // Backups are per-deck, so name the deck in the file or five of them collide.
+  a.download = "la-cave-" + (deckSlug(DECK ? DECK.name : DECK_ID) || "progress") +
+               "-" + ymd(new Date()) + ".json";
   document.body.appendChild(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 2000);
 }
@@ -586,29 +599,74 @@ async function importBackup(file) {
   if (!data || data.app !== BACKUP_APP || !Array.isArray(data.profiles)) {
     alert("That does not look like a La Cave backup."); return;
   }
-  let added = 0, replaced = 0, skipped = 0;
-  for (const p of data.profiles) {
-    const name = (String(p && p.name || "").trim() || "Taster").slice(0, 32);
-    const restored = sanitizeState(data.progress && data.progress[p && p.id]);
-    if (!restored) { skipped++; continue; }
-    // Same name means the same person moving devices: offer to replace rather
-    // than silently creating a duplicate.
-    const existing = profiles.find(x => x.name.toLowerCase() === name.toLowerCase());
-    if (existing) {
-      if (!confirm("Replace " + existing.name + "'s progress with the backup? This cannot be undone.")) { skipped++; continue; }
-      writeKey(progressKey(existing.id), JSON.stringify(restored));
-      replaced++;
-    } else {
-      const who = { id: newProfileId(), name, created: whole(p.created, Date.now()) };
-      profiles.push(who);
-      writeKey(progressKey(who.id), JSON.stringify(restored));
-      added++;
-    }
+
+  // Decks are independent. One deck's progress is meaningless in another and
+  // would overwrite it card for card, so a mismatched backup is refused --
+  // unless it carries its own deck, which is how a deck you wrote yourself
+  // travels to another device.
+  if (data.deck && data.deck !== DECK_ID) {
+    if (data.customDeck) return restoreCustomBackup(data);
+    alert(`That backup is for a different deck (\u201c${data.deckName || data.deck}\u201d).\n\n` +
+          "Open that deck first, then restore into it.");
+    return;
   }
+
+  const { added, replaced, skipped } = await restoreProgress(data, progressKey, CARDS);
   if (added || replaced) { saveProfiles(); await adoptActiveProfile(); }
   renderProfiles(); renderHome();
   alert("Restored from backup.\n" + added + " taster(s) added, " + replaced + " replaced" +
         (skipped ? ", " + skipped + " skipped." : "."));
+}
+
+// Writes each backed-up profile's progress under `keyOf(profileId)`. A profile
+// with a name already on this device is the same person moving devices, so it
+// offers to replace rather than silently making a duplicate taster.
+async function restoreProgress(data, keyOf, deckCards) {
+  let added = 0, replaced = 0, skipped = 0;
+  for (const p of data.profiles) {
+    const name = (String(p && p.name || "").trim() || "Taster").slice(0, 32);
+    const restored = sanitizeState(data.progress && data.progress[p && p.id], deckCards);
+    if (!restored) { skipped++; continue; }
+    const existing = profiles.find(x => x.name.toLowerCase() === name.toLowerCase());
+    if (existing) {
+      if (!confirm("Replace " + existing.name + "'s progress with the backup? This cannot be undone.")) { skipped++; continue; }
+      writeKey(keyOf(existing.id), JSON.stringify(restored));
+      replaced++;
+    } else {
+      const who = { id: newProfileId(), name, created: whole(p.created, Date.now()) };
+      profiles.push(who);
+      writeKey(keyOf(who.id), JSON.stringify(restored));
+      added++;
+    }
+  }
+  return { added, replaced, skipped };
+}
+
+// A backup of a deck someone wrote themselves, restored on a device that does
+// not have that deck: install the deck, then its progress. The deck keeps the
+// id it had in the backup, so restoring the same backup twice updates it rather
+// than making a second copy -- and card ids carry the progress as always.
+async function restoreCustomBackup(data) {
+  const parsed = parseDeck(JSON.stringify({ ...data.customDeck, app: "la-cave" }));
+  if (!parsed.ok) {
+    alert("That backup carries a deck that no longer checks out:\n\n" +
+          parsed.errors.slice(0, 3).join("\n"));
+    return;
+  }
+  const id = typeof data.deck === "string" && data.deck.startsWith("user:") ? data.deck : null;
+  const installed = (await loadCustomDecks()).find(d => d.id === id);
+  if (installed && !confirm(`Replace the deck \u201c${installed.name}\u201d and its progress?`)) return;
+
+  const row = await installCustomDeck(parsed.deck, parsed.cards, id);
+  const { added, replaced, skipped } =
+    await restoreProgress(data, pid => keyFor(pid, row.id), parsed.cards);
+  if (added || replaced) saveProfiles();
+  DECK_ID = row.id;
+  await renderDecks();
+  alert(`Restored the deck \u201c${row.name}\u201d (${parsed.cards.length} cards).\n` +
+        added + " taster(s) added, " + replaced + " replaced" +
+        (skipped ? ", " + skipped + " skipped." : ".") +
+        "\n\nIt is now selected in the deck list.");
 }
 
 /* ---------------- wiring ---------------- */
@@ -628,6 +686,10 @@ function wire() {
   $("toDecks").onclick = async () => { show("decks"); await renderDecks(); };
   $("deckSelect").onchange = describeSelectedDeck;
   $("openDeckBtn").onclick = () => chooseDeck($("deckSelect").value);
+  $("deckRemoveBtn").onclick = removeSelectedDeck;
+  $("copyPromptBtn").onclick = copyPrompt;
+  $("mkPaste").oninput = checkPaste;
+  $("useDeckBtn").onclick = useDeck;
   $("deckWhoBtn").onclick = () => { renderProfiles(); show("profiles"); };
   $("resetBtn").onclick = async () => {
     const who = activeProfile();
@@ -654,20 +716,23 @@ function wire() {
 }
 
 /* ---------------- decks ----------------
-   data/decks.json is the index. Adding a deck is adding an entry plus its card
-   file. Note that only wine-shaped cards render today: a deck of a different
-   shape also needs card-type work (PLAN.md Part 2, D1/D5).               */
+   data/decks.json is the index of the decks that ship here; adding one is an
+   entry plus its card file. Decks someone wrote themselves are appended from
+   storage -- see "your own decks" below.                                   */
 async function loadDecks() {
   const res = await fetch("./data/decks.json");
   const list = await res.json();
   if (!Array.isArray(list) || list.length === 0) throw new Error("decks.json is empty");
-  return list;
+  return [...list, ...await loadCustomDecks()];
 }
 
 async function chooseDeck(id) {
   const deck = DECKS.find(d => d.id === id) || DECKS[0];
   try {
-    CARDS = await (await fetch(deck.file)).json();
+    CARDS = deck.source === "local"
+      ? parse(await readKey(customCardsKey(deck.id)))
+      : await (await fetch(deck.file)).json();
+    if (!Array.isArray(CARDS) || CARDS.length === 0) throw new Error("deck is empty");
   } catch (e) {
     alert("Could not load that deck.");
     return;
@@ -690,7 +755,7 @@ async function chooseDeck(id) {
 // Per-deck summary for the chooser, read from storage rather than from the
 // active state, since the point is to show decks you are not currently in.
 async function deckSummary(deck) {
-  const s = parse(await readKey("srs_v2:" + activeId + ":" + deck.id));
+  const s = parse(await readKey(keyFor(activeId, deck.id)));
   if (!s || !s.cards) return "not started";
   const cards = Object.values(s.cards);
   const mastered = cards.filter(c => c.box >= 5).length;
@@ -721,14 +786,176 @@ async function describeSelectedDeck() {
   const deck = DECKS.find(d => d.id === $("deckSelect").value) || DECKS[0];
   if (!deck) return;
   $("deckSubtitle").textContent = deck.subtitle || "";
+  $("deckRemoveBtn").classList.toggle("hidden", deck.source !== "local");
   $("deckProgress").textContent = "\u2026";
   const summary = await deckSummary(deck);
   // Guard against a slower lookup landing after the choice changed.
   if ($("deckSelect").value === deck.id) $("deckProgress").textContent = summary;
 }
 
+
+/* ---------------- your own decks ----------------
+   The app cannot write deck content, but an AI can. So the deck screen hands
+   out a brief (src/decks/authoring.js generates it from the schema) and takes
+   back the JSON that comes of it.
+
+   A pasted deck lives in storage, never in the repo:
+     srs_v2:customDecks          the manifest rows, same shape as decks.json
+     srs_v2:customCards:<id>     that deck's cards
+   Ids are namespaced `user:`, which is what stops one colliding with a deck
+   that ships here -- and since progress keys off the deck id, that namespace
+   protects progress too. Nothing else in the app treats these decks specially.
+
+   The pasted text is untrusted: parseDeck rebuilds every card from the schema's
+   field list, so a field the schema does not name cannot reach the renderer. */
+
+const deckSlug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+async function loadCustomDecks() {
+  const rows = parse(await readKey(CUSTOM_KEY));
+  if (!Array.isArray(rows)) return [];
+  return rows.filter(d => d && typeof d.id === "string" && d.id.startsWith("user:"));
+}
+
+// Installs a deck and its cards. Reused by the paste flow and by restoring a
+// backup, which is the only way a deck you wrote moves between your devices.
+async function installCustomDeck(deck, cards, deckId) {
+  const id = deckId || "user:" + (deckSlug(deck.name) || "deck").slice(0, 40) +
+                       "-" + Math.random().toString(36).slice(2, 6);
+  const row = { ...deck, id, source: "local", file: null,
+                cardCount: cards.length, saved: Date.now() };
+  writeKey(customCardsKey(id), JSON.stringify(cards));
+  const rows = (await loadCustomDecks()).filter(d => d.id !== id);
+  rows.push(row);
+  writeKey(CUSTOM_KEY, JSON.stringify(rows));
+  DECKS = DECKS.filter(d => d.id !== id).concat([row]);
+  return row;
+}
+
+// Deleting a deck has to take its progress with it, for every taster -- an
+// orphaned progress key would otherwise sit in storage forever, and would be
+// silently adopted if a later deck happened to be given the same id.
+async function removeCustomDeck(id) {
+  writeKey(CUSTOM_KEY, JSON.stringify((await loadCustomDecks()).filter(d => d.id !== id)));
+  await removeKey(customCardsKey(id));
+  for (const p of profiles) await removeKey(keyFor(p.id, id));
+  DECKS = DECKS.filter(d => d.id !== id);
+}
+
+let checked = null;         // the last parseDeck result, or null if it failed
+
+// The brief. Copying is best-effort: clipboard access needs a secure context
+// and a user gesture, and fails outright in some in-app browsers, so a failure
+// falls back to showing the text for the user to select.
+async function copyPrompt() {
+  const text = buildPrompt($("mkTopic").value);
+  const note = $("mkNote");
+  try {
+    await navigator.clipboard.writeText(text);
+    note.textContent = "Brief copied. Paste it into Claude, then bring back the JSON.";
+    note.classList.remove("hidden");
+    $("mkPromptOut").classList.add("hidden");
+  } catch (e) {
+    note.textContent = "Could not reach the clipboard. Select the brief below and copy it.";
+    note.classList.remove("hidden");
+    const out = $("mkPromptOut");
+    out.value = text;
+    out.classList.remove("hidden");
+    out.focus(); out.select();
+  }
+}
+
+// Renders the health check. Everything here is text from a pasted file, so it
+// is set with textContent and never as markup.
+function renderCheck(result) {
+  const box = $("mkReport");
+  box.replaceChildren();
+  if (!result) { box.classList.add("hidden"); return; }
+  box.classList.remove("hidden");
+
+  const line = (cls, text) => {
+    const p = document.createElement("p");
+    p.className = cls;
+    p.textContent = text;
+    box.appendChild(p);
+  };
+  const list = (cls, items) => {
+    const ul = document.createElement("ul");
+    ul.className = cls;
+    for (const t of items.slice(0, 8)) {
+      const li = document.createElement("li");
+      li.textContent = t;
+      ul.appendChild(li);
+    }
+    if (items.length > 8) {
+      const li = document.createElement("li");
+      li.textContent = `…and ${items.length - 8} more`;
+      ul.appendChild(li);
+    }
+    box.appendChild(ul);
+  };
+
+  if (result.ok) {
+    const groups = Object.entries(result.stats.byGroup)
+      .map(([g, n]) => `${g} ${n}`).join(" · ");
+    line("mk-ok", `${result.deck.name} — ${result.stats.count} cards`);
+    line("mk-meta", groups);
+  } else {
+    line("mk-bad", "This deck cannot be used yet:");
+  }
+  if (result.errors.length) list("mk-errs", result.errors);
+  if (result.warnings.length) {
+    line("mk-meta", result.ok ? "Worth fixing:" : "Also:");
+    list("mk-warns", result.warnings);
+  }
+}
+
+function checkPaste() {
+  const text = $("mkPaste").value;
+  checked = text.trim() ? parseDeck(text) : null;
+  renderCheck(checked);
+  $("useDeckBtn").disabled = !(checked && checked.ok);
+}
+
+// Saving under a name that already exists REPLACES that deck rather than making
+// a second one, and keeps its id. That is what lets you revise a deck: cards
+// whose ids survived the revision keep their boxes, because progress is keyed
+// by card id.
+async function useDeck() {
+  if (!checked || !checked.ok) return;
+  const existing = (await loadCustomDecks())
+    .find(d => d.name.toLowerCase() === checked.deck.name.toLowerCase());
+  if (existing && !confirm(
+        `Replace the deck "${existing.name}"?\n\n` +
+        "Cards that kept their id keep their progress. The rest start fresh.")) return;
+
+  const row = await installCustomDeck(checked.deck, checked.cards, existing && existing.id);
+  $("mkPaste").value = "";
+  $("mkPromptOut").classList.add("hidden");
+  $("mkNote").classList.add("hidden");
+  checked = null;
+  renderCheck(null);
+  $("useDeckBtn").disabled = true;
+  $("mkdeck").open = false;
+  DECK_ID = row.id;
+  await renderDecks();
+}
+
+async function removeSelectedDeck() {
+  const deck = DECKS.find(d => d.id === $("deckSelect").value);
+  if (!deck || deck.source !== "local") return;
+  if (!confirm(`Delete "${deck.name}" and every taster's progress in it?\n\n` +
+               "This cannot be undone. Export it first if you want to keep it.")) return;
+  await removeCustomDeck(deck.id);
+  if (DECK_ID === deck.id) DECK_ID = DECKS[0].id;
+  await renderDecks();
+}
+
 /* ---------------- boot ---------------- */
 async function boot() {
+  const persistence = await requestPersistence();
+  // Before loadDecks, not after: decks someone wrote themselves live in storage.
+  await probeBackend();
   try {
     DECKS = await loadDecks();
   } catch (e) {
@@ -737,8 +964,6 @@ async function boot() {
     show("decks");
     return;
   }
-  const persistence = await requestPersistence();
-  await probeBackend();
   await loadProfiles();
   console.info("[store] backend=" + backend + " persistence=" + persistence +
                " profiles=" + profiles.length + " decks=" + DECKS.length);

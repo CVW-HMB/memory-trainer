@@ -51,9 +51,15 @@ title and the footer. The cellar vocabulary that goes with it (flights, tasters,
 the cellar book) is deliberate and stays. Keep app-level *descriptions*
 deck-neutral, though — see "What this is".
 
+**Anyone can add a deck without touching the repo.** The deck screen has a
+"Build your own deck" panel: it copies out a **brief** (generated from the
+schema), you hand that to Claude or any other AI, and you paste the JSON back.
+See "Decks written outside the repo" below.
+
 **Current state of Part 2:** D1 (card-type registry), D3 (deck picker), D5
-(generic card types) and D6 (per-deck validator) have landed. What remains is D2
-(move the decks under `data/decks/`) and D7–D9 (spreadsheet import).
+(generic card types), D6 (per-deck validator) and D8/D9 (bring your own deck)
+have landed. What remains is D2 (move the decks under `data/decks/`) and D7
+(an offline spreadsheet converter, now optional).
 
 **`PLAN.md` is the roadmap — read it before starting feature work and keep it
 updated as work lands.**
@@ -246,6 +252,53 @@ an order and says so. An eleventh group, **Lookalikes**, holds the cards that
 separate confusable families — Lamiaceae and Apiaceae appear there, as contrasts,
 not as members of the top ten.
 
+### Decks written outside the repo (`src/decks/authoring.js`)
+
+The app cannot write deck content, but an AI can, so the deck screen is the two
+halves of that round trip. `buildPrompt(topic)` writes the brief; `parseDeck(text)`
+checks what comes back before it goes anywhere near the renderer.
+
+Three rules hold this together:
+
+- **`src/decks/schema.js` is the single source of truth.** The per-type field
+  tables (`REQUIRED`, `FACES`) and the generic check (`checkCards`) live there,
+  and three things read them: `scripts/validate-cards.mjs`, the in-app check,
+  and the brief itself — which is *generated* from the schema, so it can never
+  describe a deck the app would then reject. Add a field in one place.
+- **A pasted deck may use only `glossary` and `vocab`.** Both already exist and
+  neither needs deck-specific rendering. The wine types and the botany figures
+  stay out of reach of JSON the app did not write.
+- **A pasted card is rebuilt, not filtered.** `normalizeCard` constructs each
+  card from `USER_FIELDS`, so a field the schema does not name — a `shape`, a
+  `diagram`, a `draw` — cannot reach the renderer at all. That, plus the
+  renderer only ever setting text or calling a `draw` function, is why untrusted
+  deck JSON is safe. Do not "helpfully" pass unknown fields through.
+
+Storage, all under the usual prefix:
+
+- `srs_v2:customDecks` — manifest rows, the same shape as one row of `decks.json`.
+- `srs_v2:customCards:<deckId>` — that deck's cards.
+
+Deck ids are namespaced **`user:`**. That is what stops one colliding with a deck
+that ships here, and since progress keys off the deck id, it protects progress
+too. Nothing else in the app treats these decks specially.
+
+Two behaviours that follow from "ids are stable":
+
+- **Re-pasting a deck under the same name replaces it and keeps its id**, so a
+  revision preserves progress on every card whose id survived. This is why the
+  brief tells the model to keep ids across revisions.
+- **A custom deck's backup carries its cards**, since a deck that exists only in
+  one browser is otherwise unrestorable. Built-in decks back up progress alone.
+  A backup is refused if its `deck` is not the deck being restored into — decks
+  are independent, and one deck's progress would overwrite another's card for
+  card.
+
+`vocab` was written for the language decks, where `lang` picks the "now say it
+in the other language" wording. A deck that is a pair but not a translation
+declares its own wording once (`ask.onTerm` / `ask.onGloss`) and the importer
+stamps it onto each card, since a card type only ever sees one card.
+
 **Direction rule lives with the card type**, in `src/decks/`. Each type exports
 `reversible`, `label`, `hint` and `faces`; `src/app.js` only delegates via
 `typeFor()`. To add a type, write it and register it in `src/decks/registry.js`.
@@ -370,6 +423,11 @@ A possible next content step is a "learn" pass that introduces a card as
 - Do not put SVG or any other markup into deck JSON. A card describes a plant;
   the drawing code lives in `src/decks/figures.js` and the renderer only ever
   sets text or calls a `draw` function.
+- Do not widen what a pasted deck may carry. The type whitelist and the
+  rebuild-from-field-list in `src/decks/authoring.js` are the security boundary,
+  not a convenience.
+- Do not let the authoring brief drift from the schema. It is generated from
+  `src/decks/schema.js`; keep it that way rather than hand-editing a copy.
 - Do not hand-write a floral formula. Derive it from the diagram, or the two
   will drift and the validator will be right to stop you.
 - Do not rewrite the scheduler while doing something else. It is already

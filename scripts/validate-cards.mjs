@@ -2,57 +2,20 @@
 // declared groups, and the rule that makes a deck work at all -- one
 // determinate answer per prompt.
 //
+// Those generic checks live in src/decks/schema.js, because the app runs the
+// same ones on a deck pasted in from an AI (src/decks/authoring.js). What stays
+// here is what only the repo's own decks can trip: floral formulas, figure
+// names, conjugation tables and the wine spoiler guard.
+//
 // Run: npm run validate
 import { readFileSync, readdirSync } from "node:fs";
 import { SHAPE_IDS } from "../src/decks/figures.js";
+import { REQUIRED, checkCards } from "../src/decks/schema.js";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const read = rel => JSON.parse(readFileSync(join(root, rel.replace(/^\.\//, "")), "utf8"));
-
-// Required string fields per card type.
-const REQUIRED = {
-  place2grape: ["grape", "country", "region", "notes"],
-  decode: ["appellation", "grape", "country", "region", "notes"],
-  grapehome: ["grape", "home", "also"],
-  vocab: ["lang", "term", "gloss", "kindTerm", "kindGloss"],
-  conjugation: ["lang", "verb", "english", "tense", "tenseEn", "kindTerm", "kindGloss"],
-  glossary: ["term", "short", "definition", "kind"],
-  floral: ["family", "common", "form", "formula", "note"],
-  feature: ["term", "kind", "description", "where"],
-  idclue: ["family", "common", "example"],
-  checklist: ["family", "common", "place", "genera"],
-};
-
-// Which faces a card presents, and whether it may be shown in both directions.
-// This mirrors src/decks/registry.js: if a type flips there, both of its faces
-// must be unique here.
-const FACES = {
-  place2grape: { reversible: false, front: c => `place|${c.country}|${c.region}|${c.notes}`,
-                                    back: c => `grape|${c.grape}` },
-  decode:      { reversible: false, front: c => `label|${c.appellation}`,
-                                    back: c => `wine|${c.grape}|${c.country}|${c.region}|${c.notes}` },
-  grapehome:   { reversible: false, front: c => `grape|${c.grape}`,
-                                    back: c => `home|${c.home}` },
-  vocab:       { reversible: true,  front: c => `term|${c.term}`,
-                                    back: c => `gloss|${c.gloss}` },
-  conjugation: { reversible: true,  front: c => `term|${c.verb}|${c.tense}`,
-                                    back: c => `gloss|${c.english}|${c.tenseEn}` },
-  glossary:    { reversible: false, front: c => `term|${c.term}`,
-                                    back: c => `def|${c.short}|${c.definition}` },
-  // Botany. None of these flip, and for idclue the answer face is *expected* to
-  // repeat -- one family answers to many clue sets -- so it returns null, which
-  // means "this face is never a prompt, do not check it".
-  floral:      { reversible: false, front: c => `flower|${c.family}|${c.form}`,
-                                    back: c => `diagram|${c.family}|${c.form}|${c.formula}` },
-  feature:     { reversible: false, front: c => `desc|${c.description}`,
-                                    back: c => `term|${c.term}` },
-  idclue:      { reversible: false, front: c => `clues|${JSON.stringify(c.clues)}`,
-                                    back: () => null },
-  checklist:   { reversible: false, front: c => `family|${c.family}`,
-                                    back: () => null },
-};
 
 // An independent re-derivation of a floral formula from the floral diagram.
 // scripts/generate_botany.py derives the string that ships in the deck; this
@@ -87,22 +50,14 @@ function formulaFor(d) {
 let failed = false;
 
 for (const deck of read("./data/decks.json")) {
-  const errors = [], warnings = [];
   const cards = read(deck.file);
   const groups = new Set((deck.groups || []).map(g => g.id));
-  const ids = new Set();
-  const fronts = new Map(), backs = new Map();
+  const { errors, warnings } = checkCards(cards, { groups });
 
+  // Everything below is specific to a type that only ships in this repo.
   for (const c of cards) {
     const at = c.id || JSON.stringify(c).slice(0, 40);
-    if (!c.id) errors.push(`missing id: ${at}`);
-    if (ids.has(c.id)) errors.push(`duplicate id: ${c.id}`);
-    ids.add(c.id);
-    if (!groups.has(c.group)) errors.push(`${at}: group ${c.group} is not declared in decks.json`);
-    if (!REQUIRED[c.type]) { errors.push(`${at}: unknown type ${c.type}`); continue; }
-    for (const f of REQUIRED[c.type]) {
-      if (!c[f] || typeof c[f] !== "string") errors.push(`${at}: missing field ${f}`);
-    }
+    if (!REQUIRED[c.type]) continue;
 
     // Conjugation cards must carry the whole table, never a single form, and
     // both languages must line up row for row.
@@ -159,19 +114,6 @@ for (const deck of read("./data/decks.json")) {
     if ((c.type === "place2grape" || c.type === "decode") && c.notes && c.grape) {
       const g = c.grape.split(" ")[0].toLowerCase();
       if (g.length > 3 && c.notes.toLowerCase().includes(g)) errors.push(`${at}: notes leak grape "${g}"`);
-    }
-
-    // One determinate answer per prompt. A face that is never shown as a prompt
-    // only warns; a face that is a prompt must be unique.
-    const f = FACES[c.type];
-    if (f) {
-      const claim = (map, key, label, hard) => {
-        if (map.has(key)) (hard ? errors : warnings).push(`duplicate ${label}: ${map.get(key)} and ${c.id}`);
-        else map.set(key, c.id);
-      };
-      claim(fronts, f.front(c), "prompt", true);
-      const back = f.back(c);
-      if (back != null) claim(backs, back, "answer face", f.reversible);
     }
   }
 

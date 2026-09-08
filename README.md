@@ -98,6 +98,14 @@ cloning the repo runs step 1 and repeats it.
 ## What it does
 
 - Opens on a deck chooser — a dropdown, so a phone gets its native picker.
+- **Build your own deck.** The deck screen copies out a brief describing the
+  format and the rules; hand it to Claude or any other AI, and paste the JSON
+  back. The app checks it — duplicate prompts, undeclared groups, answer-leaking
+  labels, lopsided groups — and shows you what it found before saving anything.
+  Your decks live in your browser, never in this repo, and they behave like any
+  other deck: own progress, own groups, own place in the dropdown. Re-paste a
+  revised deck under the same name and it replaces the old one, keeping progress
+  on every card whose id you kept.
 - Ten card types across the five decks (see `CLAUDE.md`), including a `figure`
   render mode for decks that draw rather than describe.
 - A flight is 35 cards by default, or whatever the deck asks for (20 in the
@@ -140,6 +148,8 @@ data/spanish.json     the Mexican Spanish deck
 data/french.json      the French deck
 data/payments.json    the Payment Cards deck
 data/botany.json      the California Plant Families deck
+src/decks/schema.js   the deck schema: field tables + the shared check
+src/decks/authoring.js the AI brief, and the check for a deck pasted back in
 src/decks/            card types: registry, render specs, wine, vocab,
                       glossary, botany — and figures.js, the SVG drawings
 src/app.js            UI, rendering, storage, wiring

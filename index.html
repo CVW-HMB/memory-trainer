@@ -48,7 +48,31 @@
       <p class="dp-prog" id="deckProgress"></p>
     </div>
     <button class="btn-primary" id="openDeckBtn">Open deck</button>
+
+    <!-- Decks written outside the repo: the app hands out a brief, an AI writes
+         the deck, the JSON comes back here. See src/decks/authoring.js. -->
+    <details class="mkdeck" id="mkdeck">
+      <summary>Build your own deck</summary>
+      <ol class="mk-steps">
+        <li>Say what it should teach, and copy the brief.</li>
+        <li>Paste the brief into Claude, or any other AI, and let it write the deck.</li>
+        <li>Bring the JSON it replies with back here.</li>
+      </ol>
+      <input class="mk-input" id="mkTopic" type="text" maxlength="200"
+             placeholder="What should the deck teach? e.g. the kings of France">
+      <button class="btn-quiet" id="copyPromptBtn">Copy the brief</button>
+      <p class="mk-note hidden" id="mkNote"></p>
+      <textarea class="mk-text hidden" id="mkPromptOut" rows="4" readonly
+                aria-label="The brief, to copy by hand"></textarea>
+      <textarea class="mk-text" id="mkPaste" rows="4" spellcheck="false"
+                aria-label="Paste the deck JSON"
+                placeholder="Paste the deck JSON here"></textarea>
+      <div class="mk-report hidden" id="mkReport" aria-live="polite"></div>
+      <button class="btn-quiet" id="useDeckBtn" disabled>Use deck</button>
+    </details>
+
     <div class="home-foot">
+      <button class="link" id="deckRemoveBtn">Remove this deck</button>
       <button class="link" id="deckWhoBtn">Tasting as <b id="deckWho">Me</b></button>
     </div>
   </section>
