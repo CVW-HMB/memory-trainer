@@ -295,14 +295,18 @@ Minimum spreadsheet: `type | group | front | back | notes | reversible`.
   Also fixed on the way past: `src/decks/glossary.js` was missing from the
   service worker's precache list, so the payments deck was not actually offline.
 
-## Open
+## Backlog
+
+Nothing here is queued. Both ways of getting a deck in — the in-app brief and
+`npm run deck:import` — are shipped, so this is polish, to pick up if it ever
+gets in the way.
 
 - **Share a deck you wrote.** A deck built from the brief or from a spreadsheet
   can only leave the browser inside a progress backup, so there is no way to
   hand one to someone else. A "Copy this deck's JSON" button beside "Remove this
-  deck" on the deck screen closes it: `srs_v2:customCards:<id>` plus the
-  manifest row is already exactly the object `parseDeck` accepts. Small, and the
-  last real gap in the bring-your-own-deck story.
+  deck" would close it: `srs_v2:customCards:<id>` plus the manifest row is
+  already exactly the object `parseDeck` accepts. Note the workaround — anyone
+  who still has the original JSON, or the spreadsheet, can just re-share that.
 
 ## Rules that generalize to every deck
 
