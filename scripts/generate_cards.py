@@ -1,7 +1,7 @@
 """
-Generates data/cards.json from the definitions below.
+Generates data/decks/wine.json from the definitions below.
 This is the single source of truth for card CONTENT. Edit here (or edit
-data/cards.json directly), keep ids stable, and only add cards additively so
+data/decks/wine.json directly), keep ids stable, and only add cards additively so
 saved progress survives. See CLAUDE.md for the schema and the direction rules.
 """
 import json, re, os
@@ -277,7 +277,7 @@ dupes = [i for i in ids if ids.count(i) > 1]
 assert not dupes, "duplicate ids: " + str(sorted(set(dupes)))
 from collections import Counter
 here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-out = os.path.join(here, "data", "cards.json")
+out = os.path.join(here, "data", "decks", "wine.json")
 json.dump(cards, open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 print("TOTAL", len(cards))
 print("group", dict(Counter(c["group"] for c in cards)))

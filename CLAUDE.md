@@ -22,11 +22,11 @@ scheduler (`npm test`).
 **Five decks now.** `data/decks.json` is the index and the app opens on a
 "choose a deck" screen:
 
-- `wine` — "Wines, Grapes, Regions", 161 cards, `data/cards.json`.
-- `spanish` — "Mexican Spanish – English", 254 cards, `data/spanish.json`.
-- `french` — "French – English", 254 cards, `data/french.json`.
-- `payments` — "Payment Cards", 148 cards, `data/payments.json`.
-- `botany` — "California Plant Families", 149 cards, `data/botany.json`.
+- `wine` — "Wines, Grapes, Regions", 161 cards, `data/decks/wine.json`.
+- `spanish` — "Mexican Spanish – English", 254 cards, `data/decks/spanish.json`.
+- `french` — "French – English", 254 cards, `data/decks/french.json`.
+- `payments` — "Payment Cards", 148 cards, `data/decks/payments.json`.
+- `botany` — "California Plant Families", 149 cards, `data/decks/botany.json`.
 
 The picker is a **dropdown**, not a list: it scales, and a phone gets its native
 picker for free.
@@ -76,7 +76,7 @@ Needs a static server because the app `fetch`es `data/decks.json` and the deck f
 
 - `npm run dev` (Node, serves on :8000) or `npm start` (Python).
 - `npm test` runs the scheduler tests. `npm run validate` checks **every** deck in `data/decks.json`.
-- `npm run cards` regenerates `data/cards.json`; `npm run cards:es` regenerates `data/spanish.json`.
+- `npm run cards` regenerates `data/decks/wine.json`; `npm run cards:es` regenerates `data/decks/spanish.json`.
 
 The Python side is managed by **uv** with a local `./.venv`: `npm run setup:py` (= `uv sync`) creates it from `pyproject.toml` + `.python-version` (3.14, the current stable line). The generator is stdlib-only, so the venv pins the interpreter rather than installing packages. Every Python entry point goes through `uv run`, so no manual activation is needed — do not add `python3 ...` calls back into `package.json`. `.venv/` is gitignored; commit `pyproject.toml`, `.python-version`, and `uv.lock`.
 
@@ -382,11 +382,11 @@ once the PWA is installed.
 The deck JSON files are the source of truth, but prefer editing the generator
 and regenerating:
 
-- Wine: `scripts/generate_cards.py` → `npm run cards` → `data/cards.json`.
-- Spanish: `scripts/generate_spanish.py` → `npm run cards:es` → `data/spanish.json`.
-- French: `scripts/generate_french.py` → `npm run cards:fr` → `data/french.json`.
-- Payments: `scripts/generate_payments.py` → `npm run cards:pay` → `data/payments.json`.
-- Botany: `scripts/generate_botany.py` → `npm run cards:bot` → `data/botany.json`.
+- Wine: `scripts/generate_cards.py` → `npm run cards` → `data/decks/wine.json`.
+- Spanish: `scripts/generate_spanish.py` → `npm run cards:es` → `data/decks/spanish.json`.
+- French: `scripts/generate_french.py` → `npm run cards:fr` → `data/decks/french.json`.
+- Payments: `scripts/generate_payments.py` → `npm run cards:pay` → `data/decks/payments.json`.
+- Botany: `scripts/generate_botany.py` → `npm run cards:bot` → `data/decks/botany.json`.
 
 Then `npm run validate`, which walks **every** deck in `data/decks.json` and
 checks each card against its own type's schema, its deck's declared groups,

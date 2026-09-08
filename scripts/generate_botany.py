@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generates data/botany.json -- the California plant families deck.
+"""Generates data/decks/botany.json -- the California plant families deck.
 
 Ten families, ranked by how much of the California flora they account for.
 Every card is written from the sources listed in README; nothing is
@@ -12,7 +12,7 @@ re-derives it independently in JavaScript and fails if the strings differ.
 import json
 import pathlib
 
-OUT = pathlib.Path(__file__).resolve().parent.parent / "data" / "botany.json"
+OUT = pathlib.Path(__file__).resolve().parent.parent / "data" / "decks" / "botany.json"
 
 # --------------------------------------------------------------------------
 # floral formulas, derived from the diagram

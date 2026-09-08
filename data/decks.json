@@ -3,7 +3,7 @@
     "id": "wine",
     "name": "Wines, Grapes, Regions",
     "subtitle": "Read a label, know the grape and where it is from. France-first.",
-    "file": "./data/cards.json",
+    "file": "./data/decks/wine.json",
     "groupsTitle": "By region",
     "groups": [
       {
@@ -25,7 +25,7 @@
     "id": "spanish",
     "name": "Mexican Spanish – English",
     "subtitle": "The most-used verbs across three tenses, plus enough words to hold a conversation. Mexican usage: ustedes, no vosotros.",
-    "file": "./data/spanish.json",
+    "file": "./data/decks/spanish.json",
     "groupsTitle": "By theme",
     "groups": [
       {
@@ -55,7 +55,7 @@
     "id": "french",
     "name": "French – English",
     "subtitle": "The same shape as the Spanish deck: the most-used verbs across three tenses, plus everyday words.",
-    "file": "./data/french.json",
+    "file": "./data/decks/french.json",
     "groupsTitle": "By theme",
     "tagline": "verbs first, then enough to hold a conversation",
     "groups": [
@@ -85,7 +85,7 @@
     "id": "payments",
     "name": "Payment Cards",
     "subtitle": "How a swipe actually works: the four-party model, authorization to settlement, interchange, EMV, risk and the rails.",
-    "file": "./data/payments.json",
+    "file": "./data/decks/payments.json",
     "groupsTitle": "By area",
     "tagline": "from the tap to the settlement file",
     "groups": [
@@ -119,7 +119,7 @@
     "id": "botany",
     "name": "California Plant Families",
     "subtitle": "The ten families that make up most of the California flora: the floral diagram of each, the characters that give it away, and the field clues that key it out.",
-    "file": "./data/botany.json",
+    "file": "./data/decks/botany.json",
     "groupsTitle": "By family",
     "tagline": "read the flower, name the family",
     "flightSize": 20,

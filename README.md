@@ -44,7 +44,7 @@ Five decks ship today:
 
 ## Run it
 
-The app loads `data/cards.json` over `fetch`, so it needs a local web server (opening `index.html` directly from the file system will not work in most browsers).
+The app loads `data/decks.json` and the deck files under `data/decks/` over `fetch`, so it needs a local web server (opening `index.html` directly from the file system will not work in most browsers).
 
 ```bash
 # option A: Node
@@ -144,10 +144,11 @@ progress survives.
 ```
 index.html            app shell
 data/decks.json       deck index (the "choose a deck" screen)
-data/spanish.json     the Mexican Spanish deck
-data/french.json      the French deck
-data/payments.json    the Payment Cards deck
-data/botany.json      the California Plant Families deck
+data/decks/wine.json  the wine deck (161 cards)
+data/decks/spanish.json   the Mexican Spanish deck
+data/decks/french.json    the French deck
+data/decks/payments.json  the Payment Cards deck
+data/decks/botany.json    the California Plant Families deck
 src/decks/schema.js   the deck schema: field tables + the shared check
 src/decks/authoring.js the AI brief, and the check for a deck pasted back in
 src/decks/            card types: registry, render specs, wine, vocab,
@@ -159,7 +160,6 @@ tests/                scheduler tests (node --test)
 sw.js                 service worker (offline precache)
 manifest.webmanifest  PWA manifest
 icons/                app icons (192, 512, maskable, apple-touch, favicon)
-data/cards.json       the 161 cards (source of truth)
 scripts/              card generator + validator
 pyproject.toml        Python project for the generator (uv)
 .python-version       pinned interpreter for uv

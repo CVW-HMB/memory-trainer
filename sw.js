@@ -4,7 +4,7 @@
 // Bump CACHE when the shell changes. Every same-origin request is network-first
 // with the cache as an offline fallback, so a deploy is picked up on the next
 // load whether or not this is bumped; bumping evicts the old cache.
-const CACHE = "lacave-v24";
+const CACHE = "lacave-v25";
 
 // Relative URLs resolve against this script's location, so the app still works
 // when served from a subpath such as /memory-trainer/.
@@ -24,11 +24,11 @@ const SHELL = [
   "./src/decks/figures.js",
   "./src/styles.css",
   "./data/decks.json",
-  "./data/cards.json",
-  "./data/spanish.json",
-  "./data/french.json",
-  "./data/payments.json",
-  "./data/botany.json",
+  "./data/decks/wine.json",
+  "./data/decks/spanish.json",
+  "./data/decks/french.json",
+  "./data/decks/payments.json",
+  "./data/decks/botany.json",
   "./manifest.webmanifest",
   "./icons/icon-192.png",
   "./icons/icon-512.png",

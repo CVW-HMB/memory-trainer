@@ -1,5 +1,5 @@
 """
-Generates data/payments.json -- the payment card industry deck.
+Generates data/decks/payments.json -- the payment card industry deck.
 
 Scope follows the ground covered by Ahmed Siddiqui's "The Anatomy of the Swipe"
 (the four-party model, the authorization/clearing/settlement lifecycle,
@@ -223,7 +223,7 @@ for c in cards:
 
 from collections import Counter
 here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-json.dump(cards, open(os.path.join(here, "data", "payments.json"), "w", encoding="utf-8"),
+json.dump(cards, open(os.path.join(here, "data", "decks", "payments.json"), "w", encoding="utf-8"),
           ensure_ascii=False, indent=2)
 print("TOTAL", len(cards))
 print("group", dict(Counter(c["group"] for c in cards)))

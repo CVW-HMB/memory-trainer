@@ -1,5 +1,5 @@
 """
-Generates data/french.json.
+Generates data/decks/french.json.
 
 Same shape as the Mexican Spanish deck (see CLAUDE.md):
   - Every card is REVERSIBLE; validate-cards.mjs enforces that no two cards
@@ -368,7 +368,7 @@ for c in cards:
 
 from collections import Counter
 here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-json.dump(cards, open(os.path.join(here, "data", "french.json"), "w", encoding="utf-8"),
+json.dump(cards, open(os.path.join(here, "data", "decks", "french.json"), "w", encoding="utf-8"),
           ensure_ascii=False, indent=2)
 print("TOTAL", len(cards))
 print("group", dict(Counter(c["group"] for c in cards)))

@@ -1,5 +1,5 @@
 // La Cave - wine flashcard trainer
-// Data lives in /data/cards.json. Progress persists in IndexedDB, mirrored to
+// Decks live in /data/decks/, indexed by /data/decks.json. Progress persists in IndexedDB, mirrored to
 // localStorage as a fallback. Card types and direction rules are in CLAUDE.md.
 
 import {

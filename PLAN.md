@@ -193,8 +193,13 @@ Minimum spreadsheet: `type | group | front | back | notes | reversible`.
   `facesFor` into `src/decks/wine.js` behind a type registry. Pure refactor, no
   behavior change. Done when `grep -i grape src/app.js` is empty. *(Good first
   move: needs no decisions.)*
-- **D2 — Deck manifest.** `data/decks.json` + `data/decks/wine.json` with
-  metadata; update the generator to emit it.
+- **D2 — Deck manifest** — **SHIPPED** *(deck-file-paths branch)*. The five deck
+  files moved under `data/decks/` (`data/cards.json` became
+  `data/decks/wine.json`) and all five generators emit there. Metadata stayed in
+  `data/decks.json` rather than moving into each deck file, as this PR
+  originally implied: the picker needs every deck's name and subtitle before it
+  fetches any deck, so splitting metadata across five files would mean five
+  fetches to draw one dropdown.
 - **D3 — Deck picker.** Launch screen listing decks; the chosen deck sets the
   session and supplies the app's name, subtitle, and theme. Remember the last
   deck used.

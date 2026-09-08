@@ -1,5 +1,5 @@
 """
-Generates data/spanish.json -- MEXICAN Spanish.
+Generates data/decks/spanish.json -- MEXICAN Spanish.
 
 Deck shape (see CLAUDE.md):
   - Every card is REVERSIBLE. A translation pair is one-to-one by construction,
@@ -386,7 +386,7 @@ for c in cards:
 
 from collections import Counter
 here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-out = os.path.join(here, "data", "spanish.json")
+out = os.path.join(here, "data", "decks", "spanish.json")
 json.dump(cards, open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 print("TOTAL", len(cards))
 print("group", dict(Counter(c["group"] for c in cards)))
