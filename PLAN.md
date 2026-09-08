@@ -138,8 +138,12 @@ that's a bug" is unenforceable without something to catch it.
   clears IndexedDB and the legacy key.
 - Empty and edge states: nothing due, everything mastered, first ever run.
 - Content pass toward ~200 cards, still France-first.
-- Optional, only if it still feels unfinished: a "learn" pass that introduces a
-  card as `place2grape` before it can appear as a `decode` reverse.
+- ~~Optional: a "learn" pass that introduces a card as `place2grape` before it
+  can appear as a `decode` reverse.~~ Written when `decode` was expected to be
+  reversible. It is not, so the "decode reverse" this describes cannot happen.
+  The idea underneath — gate a hard card behind the easier one that teaches its
+  prerequisite — is still open, but it needs a stated prerequisite on the card;
+  it cannot be derived from the deck as it stands. See "Open" in Part 2.
 - Done when: you would send it to someone without a caveat.
 
 ## MVP guardrails
@@ -290,6 +294,15 @@ Minimum spreadsheet: `type | group | front | back | notes | reversible`.
 
   Also fixed on the way past: `src/decks/glossary.js` was missing from the
   service worker's precache list, so the payments deck was not actually offline.
+
+## Open
+
+- **Share a deck you wrote.** A deck built from the brief or from a spreadsheet
+  can only leave the browser inside a progress backup, so there is no way to
+  hand one to someone else. A "Copy this deck's JSON" button beside "Remove this
+  deck" on the deck screen closes it: `srs_v2:customCards:<id>` plus the
+  manifest row is already exactly the object `parseDeck` accepts. Small, and the
+  last real gap in the bring-your-own-deck story.
 
 ## Rules that generalize to every deck
 

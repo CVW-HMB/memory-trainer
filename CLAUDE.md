@@ -426,11 +426,11 @@ deploy, session-length cap, touch pass, PWA/offline, IndexedDB, scheduler tests,
 edge cases). Part 2 is the multi-deck generalization, deferred until Part 1 ships.
 Do not keep a competing list here — update `PLAN.md` as work lands.
 
-The deck is at 161 cards (France 119 / Italy 25 / Rest 17 — 74% France, a
-little above the 70% target since retiring `grapehome` removed proportionally
-more Italy and Rest cards; rebalance on the next content pass).
-A possible next content step is a "learn" pass that introduces a card as
-`place2grape` before it can appear as a `decode` reverse.
+The deck is at 161 cards (France 119 / Italy 25 / Rest 17 — 74% France). The
+target was ~70%; 74% is the same deck for any practical purpose and is **not**
+a defect to fix. Do not "rebalance" it by adding Italy and Rest cards nobody
+asked for, and do not treat the number as a constraint on a future content
+pass — France-first is the point, and the exact percentage is not.
 
 ### Guardrails
 - Do not make `place2grape` or `grapehome` reversible. It produces ambiguous prompts.
