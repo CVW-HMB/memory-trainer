@@ -13,6 +13,8 @@
     "cards:fr": "uv run python scripts/generate_french.py",
     "cards:pay": "uv run python scripts/generate_payments.py",
     "cards:bot": "uv run python scripts/generate_botany.py",
+    "deck:import": "uv run python scripts/import_deck.py",
+    "deck:check": "node scripts/check-deck.mjs",
     "validate": "node scripts/validate-cards.mjs",
     "setup:py": "uv sync"
   },

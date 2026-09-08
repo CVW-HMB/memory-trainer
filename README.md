@@ -64,6 +64,9 @@ npm run cards:fr    # regenerate the French deck
 npm run cards:pay   # regenerate the Payment Cards deck
 npm run cards:bot   # regenerate the California Plant Families deck
 npm test            # scheduler tests (node --test, no dependencies)
+npm run deck:import -- sheet.csv --name "My Deck"   # spreadsheet -> deck JSON
+npm run deck:check my-deck.json                     # check a deck before using it
+
 npm run validate    # every deck: schema, unique ids, duplicate prompts,
                     # spoiler check, and floral formula vs. floral diagram
 ```
@@ -106,6 +109,12 @@ cloning the repo runs step 1 and repeats it.
   other deck: own progress, own groups, own place in the dropdown. Re-paste a
   revised deck under the same name and it replaces the old one, keeping progress
   on every card whose id you kept.
+- **Already have a spreadsheet?** `npm run deck:import -- cards.xlsx --name "…"`
+  converts `.csv`, `.tsv` or `.xlsx` into the same format, and
+  `npm run deck:check` runs the app's own check over the result. A sheet with
+  `term`/`answer`/`definition` columns becomes a one-directional deck; add
+  `--vocab` (or a `translation` column) only when every front has exactly one
+  back *and* every back exactly one front.
 - Ten card types across the five decks (see `CLAUDE.md`), including a `figure`
   render mode for decks that draw rather than describe.
 - A flight is 35 cards by default, or whatever the deck asks for (20 in the
@@ -160,7 +169,7 @@ tests/                scheduler tests (node --test)
 sw.js                 service worker (offline precache)
 manifest.webmanifest  PWA manifest
 icons/                app icons (192, 512, maskable, apple-touch, favicon)
-scripts/              card generator + validator
+scripts/              deck generators, the validator, the spreadsheet importer
 pyproject.toml        Python project for the generator (uv)
 .python-version       pinned interpreter for uv
 CLAUDE.md             architecture + roadmap for Claude Code

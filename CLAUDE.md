@@ -77,6 +77,9 @@ Needs a static server because the app `fetch`es `data/decks.json` and the deck f
 - `npm run dev` (Node, serves on :8000) or `npm start` (Python).
 - `npm test` runs the scheduler tests. `npm run validate` checks **every** deck in `data/decks.json`.
 - `npm run cards` regenerates `data/decks/wine.json`; `npm run cards:es` regenerates `data/decks/spanish.json`.
+- `npm run deck:import <sheet>` turns a `.csv`/`.tsv`/`.xlsx` into a deck;
+  `npm run deck:check <file>` checks one. Both are for decks that live in a
+  browser, not in this repo — see "Decks written outside the repo".
 
 The Python side is managed by **uv** with a local `./.venv`: `npm run setup:py` (= `uv sync`) creates it from `pyproject.toml` + `.python-version` (3.14, the current stable line). The generator is stdlib-only, so the venv pins the interpreter rather than installing packages. Every Python entry point goes through `uv run`, so no manual activation is needed — do not add `python3 ...` calls back into `package.json`. `.venv/` is gitignored; commit `pyproject.toml`, `.python-version`, and `uv.lock`.
 
@@ -387,6 +390,22 @@ and regenerating:
 - French: `scripts/generate_french.py` → `npm run cards:fr` → `data/decks/french.json`.
 - Payments: `scripts/generate_payments.py` → `npm run cards:pay` → `data/decks/payments.json`.
 - Botany: `scripts/generate_botany.py` → `npm run cards:bot` → `data/decks/botany.json`.
+
+A deck that is **not** going in the repo comes in through the app instead: paste
+it into "Build your own deck", or convert a spreadsheet first —
+
+```bash
+npm run deck:import -- sheet.xlsx --name "Kings of France"   # -> kings-of-france.json
+npm run deck:check kings-of-france.json                      # the app's own check
+```
+
+`scripts/import_deck.py` emits exactly the object the paste box accepts, so
+there is one deck format and one check, not two. It is stdlib-only like the
+other generators: `.xlsx` is a zip of XML, which `zipfile` and `ElementTree`
+read without help. Ids are the accent-folded slug of the front, so re-importing
+an edited sheet keeps progress on every row whose front did not change — which
+is also why the importer reports two rows that derive the same id, by row
+number, and exits nonzero.
 
 Then `npm run validate`, which walks **every** deck in `data/decks.json` and
 checks each card against its own type's schema, its deck's declared groups,

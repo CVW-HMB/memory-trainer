@@ -210,9 +210,25 @@ Minimum spreadsheet: `type | group | front | back | notes | reversible`.
   when a hand-written Spanish deck trains end to end with no new JS.
 - **D6 — Generalize the validator.** Per-deck schema, unique ids, and a
   duplicate-prompt warning.
-- **D7 — Spreadsheet to deck, offline.** `scripts/import_deck.py` converting
-  `.csv`/`.xlsx` to deck JSON via `uv run`, with stable content-derived ids.
-  *(Still open, and now the weaker half of the idea — see D8.)*
+- **D7 — Spreadsheet to deck, offline** — **SHIPPED** *(spreadsheet-import
+  branch)*. `scripts/import_deck.py` reads `.csv`, `.tsv` and `.xlsx` and emits
+  **the same object the D8 paste box accepts**, so a converted sheet and an
+  AI-written deck are one artifact checked one way. Ids are content-derived
+  (accent-folded slug of the front), so a re-import lands on the same cards and
+  keeps their progress; two rows deriving one id is reported by row number.
+
+  `.xlsx` is read with `zipfile` + `ElementTree` — it is a zip of XML — so the
+  SheetJS-vs-CSV decision this PR was waiting on is moot in both directions and
+  the repo stays dependency-free. The reader follows the workbook relationships
+  to the real first tab rather than assuming `sheet1.xml`.
+
+  **A bare front/back sheet becomes a `glossary` deck, not `vocab`.**
+  Reversibility is declared, never assumed, and front/back pairs are not
+  necessarily one-to-one. `--vocab`, a `translation` column, or an explicit
+  `type` column opts in.
+
+  `npm run deck:check <file>` runs the app's own `parseDeck` over a deck file,
+  so the command line and the paste box cannot disagree.
 - **D8 — Bring your own deck** — **SHIPPED** *(deck-import branch)*, and not as
   the spreadsheet importer this said. The app cannot write deck content, but an
   AI can, so the deck screen hands out a **brief** and takes back the JSON that
